@@ -7,6 +7,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+<!-----      Navigation   ------->
+
 <!-- navbar-collapse menu burger-->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -31,6 +34,77 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+
+<!--------    Image header    --------->
+<div class="row">
+    <div class="col-xs-12">
+
+    </div>
+</div>
+
+
+<!-------    Section presentation  -------->
+
+<!-------       Titre       -------->
+
+
+<!-------    Paragraphe presentation  -------->
+
+
+<!-------     Valeur Ecologie  -------->
+
+
+<!-------      Valeur Client     -------->
+
+
+<!-------      Image Transition 1     -------->
+
+
+<!-------     Section Best Realisations    -------->
+
+
+<!-------         Best Real 1         -------->
+
+
+<!-------         Best Real 2         -------->
+
+
+<!-------      Section Liste Prestations     -------->
+
+
+<!-------        Prestation 1        -------->
+
+
+<!-------        Prestation 2        -------->
+
+
+<!-------        Prestation 3        -------->
+
+
+<!-------        Prestation 4        -------->
+
+
+<!-------        Prestation 5        -------->
+
+
+<!-------        Prestation 6        -------->
+
+
+<!-------     Section Conseil du mois     -------->
+
+
+<!-------       Section Livre d'or      -------->
+
+
+<!-------     Section Formulaire     -------->
+
+
+<!-------           Footer           -------->
+
+
+
+
 
 </body>
 </html>
