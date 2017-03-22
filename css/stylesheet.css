@@ -1,3 +1,9 @@
+/*------        Général      ------*/
+
+p {
+    font-size: 16px;
+}
+
 /*------      Navigation      ------*/
 
 
@@ -23,11 +29,36 @@
 
 /*------  Section Best Realisations  ------*/
 
+.real-titre {
+    background-color: rgb(247,247,247);
+    margin-top: 60px;
+    text-align: center;
+    padding-bottom: 20px;
+}
 
-/*-------     Best Real 1     ------*/
+.real {
+    background-color: rgb(247,247,247);
+}
 
+/*-------     Best Real    ------*/
 
-/*-------     Best Real 2     ------*/
+.beforeAfter {
+    position: relative;
+}
+
+.container-fluid {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.beforeAfter .after {
+    position: absolute;
+    width: 0;
+    max-width: 85%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
 
 
 /*-------   Section Liste Prestations  ------*/
@@ -35,6 +66,31 @@
 
 /*-------     Prestations     ------*/
 
+.presta-titre {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.row-presta {
+    padding-bottom: 100px;
+}
+
+.blocPresta {
+    position: relative;
+}
+
+.etiquette {
+    position: absolute;
+    bottom: -50px;
+    right: -40px;
+    background-color: white;
+    border : solid lightgrey 1px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgb(170, 170, 170);
+    width: 450px;
+    height: auto;
+    padding-left : 5px;
+}
 
 /*-------    Section Conseil du mois    ------*/
 
@@ -46,3 +102,12 @@
 
 
 /*-------       Footer      ------*/
+
+
+/*-------      Media Queries      ------*/
+
+@media screen and (max-width: 1200px) {
+    .blocPresta {
+        margin-bottom: 80px;
+    }
+}
