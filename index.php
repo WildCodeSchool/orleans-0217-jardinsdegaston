@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Les Jardins de Gaston</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
 </head>
 <body>
