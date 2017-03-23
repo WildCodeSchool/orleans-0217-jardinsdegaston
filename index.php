@@ -256,13 +256,86 @@
 </div>
 
 <!-------     Section Conseil du mois     -------->
-
+    <div class="row Conseilbackground col-lg-10 col-lg-offset-1">
+        <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+            <div class="col-lg-1 col-lg-offset-1">
+                <h4>Conseil du Jour</h4>
+            </div>
+            <div class="ConseilText col-lg-6 col-lg-offset-2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+        </div>
+    </div>
 
 <!-------       Section Livre d'or      -------->
 
+    <div class="row col-xs-10 col-xs-offset-1">
+        <div id="carousel-livredor" class="carousel slide fade in" data-ride="carousel" data-interval="false">
+
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item col-xs-8 col-xs-offset-2 active">
+                    <div class="caption">
+                        <h3>PDOLivredorNom</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
+
+
+                <div class="item col-xs-8 col-xs-offset-2">
+                    <div class="caption">
+                        <h3>PDOLivredorNom1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#carousel-livredor" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-livredor" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
 
 <!-------     Section Formulaire     -------->
-    <div class="row vide"><div class="col-xs-12 text-center">Formulaire contact</div></div>
+    <div class="row Contact col-xs-12">
+        <img class=" ImgForm col-lg-6" src="http://placehold.it/500x470">
+
+
+        <div class="col-lg-6 col-xs-12 formulaire">
+
+            <h2>CONTACTEZ-NOUS</h2>
+            <p>Tel: 06 00 00 00 00</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <form name="ajout-citation" method="POST" action="ajout.php">
+
+                <div class="form-group">
+                    <label for="Nom">Nom</label>
+                    <input required ="required" class="form-control" type="text" id="Nom" name="Nom" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Prenom">Prenom</label>
+                    <input required ="required" class="form-control" type="text" id="Prenom" name="Prenom"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input required ="required" class="form-control" type="text" id="Email" name="Email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Texte">Texte</label>
+                    <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
+                </div>
+
+                <input class="btn btn-success" type="submit" name="add" value="Envoyer">
+
+        </div>
+
+    </div>
 
 <!-------           Footer           -------->
     <div class="row footer">
@@ -355,8 +428,8 @@
 
 </div> <!-- fermeture du container-fluid -->
 
-<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/beforeAfterEffect.js"></script>
 
 </body>
