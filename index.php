@@ -49,6 +49,7 @@
 <!--------    Image header    --------->
     <div class="row">
         <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
+        <h1 id="accroche">Jardinier par nature ...</h1>
     </div>
 
 

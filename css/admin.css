@@ -1,0 +1,12 @@
+.titre h1
+{
+    font-family: 'Chicle', cursive;
+    color: #00ab0c;
+    font-size: 30px;
+    padding: 20px;
+    margin-top:100px;
+}
+.navbar-collapse li a:hover {
+    text-transform: none;
+    color: #00ab0c;
+}
