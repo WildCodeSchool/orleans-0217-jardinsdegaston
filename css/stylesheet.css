@@ -18,14 +18,14 @@ p {
 .headtitle
 {
     font-family: 'Chicle', cursive;
-    color: white;
+    color: #00ab0c;
     font-size: 30px;
     padding: 20px;
 }
 
 .navbar-inverse
 {
-    opacity: 0.8;
+    background: rgba(0,0,0,0.8);
     border-color: #0000;
 }
 
@@ -44,7 +44,6 @@ p {
 #logo
 {
     padding: 10px;
-    opacity: 1;
 }
 /*------     Image header     ------*/
 .bg-img1-lg, .bg-img1-md {
