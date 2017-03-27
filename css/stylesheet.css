@@ -8,7 +8,7 @@ p {
 /* ---   provisoire   ---*/
 .vide {
     height: 400px;
-    line-height: 300px;
+    line-height: 400px;
     background: #EEEEEE;
 }
 
@@ -182,9 +182,9 @@ p {
     height: 80px;
 }
 #footer-logo-gaston {
-    margin-top:20px;
+    margin-top:10px;
     width: 100%;
-    max-width: 320px;
+    max-width: 350px;
 }
 .infolegale h4 {
     font-size: 18px;
@@ -200,12 +200,13 @@ p {
 .wcs {
     float :right;
     width:140px;
-    height:100px;
-    margin-top: 95px;
+    height:90px;
+    margin-top: 90px;
+    padding-right: 70px;
     background-image: url('../img/logo-wcs-vo.png');
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 60px;
+    background-size: 70px;
 }
 .legal-logo-wcs {
     height: 60px;
