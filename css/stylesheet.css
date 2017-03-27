@@ -8,7 +8,7 @@ p {
 /* ---   provisoire   ---*/
 .vide {
     height: 400px;
-    line-height: 300px;
+    line-height: 400px;
     background: #EEEEEE;
 }
 
@@ -111,7 +111,7 @@ p {
 
 /*-------     Best Real    ------*/
 
-.beforeAfter {
+/*.beforeAfter {
     position: relative;
 }
 
@@ -127,7 +127,44 @@ p {
     top: 0;
     bottom: 0;
     overflow: hidden;
+}*/
+
+.cd-image-container {
+    position: relative;
 }
+
+.cd-resize-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    /* Force Hardware Acceleration in WebKit */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+.is-visible .cd-resize-img {
+    width: 50%;
+    /* bounce in animation of the modified image */
+    animation: cd-bounce-in 0.7s;
+}
+@keyframes cd-bounce-in {
+    0% {
+        width: 0;
+    }
+    60% {
+        width: 55%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.cd-handle {
+    border: solid black 1px;
+}
+
 
 
 /*-------   Section Liste Prestations  ------*/
@@ -226,9 +263,9 @@ p {
     height: 80px;
 }
 #footer-logo-gaston {
-    margin-top:20px;
+    margin-top:10px;
     width: 100%;
-    max-width: 320px;
+    max-width: 350px;
 }
 .infolegale h4 {
     font-size: 18px;
@@ -244,12 +281,13 @@ p {
 .wcs {
     float :right;
     width:140px;
-    height:100px;
-    margin-top: 95px;
+    height:90px;
+    margin-top: 90px;
+    padding-right: 70px;
     background-image: url('../img/logo-wcs-vo.png');
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 60px;
+    background-size: 70px;
 }
 .legal-logo-wcs {
     height: 60px;
