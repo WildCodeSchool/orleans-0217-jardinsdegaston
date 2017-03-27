@@ -85,7 +85,20 @@
 <div class="row real">
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-1 col-lg-4 real1">
         <div class="thumbnail">
-            <div class="beforeAfter">
+
+            <figure class="cd-image-container">
+                <img src="img/test_img_1_rsz.jpg" alt="Original Image">
+                <span class="cd-image-label" data-type="original">Original</span>
+
+                <div class="cd-resize-img"> <!-- the resizable image on top -->
+                    <img src="img/test_img_2.jpg" alt="Modified Image">
+                    <span class="cd-image-label" data-type="modified">Modified</span>
+                </div>
+
+                <span class="cd-handle"></span> <!-- slider handle -->
+            </figure> <!-- cd-image-container -->
+
+            <!--<div class="beforeAfter">
                 <div class="container-fluid">
 
                     <figure class="before"> <img class="img-responsive" src="img/test_img_1_rsz.jpg" />
@@ -94,7 +107,9 @@
                     </figure>
 
                 </div>
-            </div>
+
+            </div>-->
+
             <div class="caption">
                 <h3>Titre 3</h3>
                 <p>Lorem ipsum</p>
@@ -104,7 +119,20 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4 real2">
         <div class="thumbnail">
-            <div class="beforeAfter">
+
+            <figure class="cd-image-container">
+                <img src="img/test2_avant.jpg" alt="Original Image">
+                <span class="cd-image-label" data-type="original">Original</span>
+
+                <div class="cd-resize-img"> <!-- the resizable image on top -->
+                    <img src="img/test2_apres.jpg" alt="Modified Image">
+                    <span class="cd-image-label" data-type="modified">Modified</span>
+                </div>
+
+                <span class="cd-handle"></span> <!-- slider handle -->
+            </figure> <!-- cd-image-container -->
+
+            <!--<div class="beforeAfter">
                 <div class="container-fluid">
 
                     <figure class="before"> <img class="img-responsive" src="img/test2_avant.jpg" />
@@ -113,7 +141,8 @@
                     </figure>
 
                 </div>
-            </div>
+
+            </div>-->
             <div class="caption">
                 <h3>Titre 3</h3>
                 <p>Lorem Ipsum</p>
