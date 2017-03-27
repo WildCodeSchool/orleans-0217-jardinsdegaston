@@ -162,12 +162,56 @@ p {
 }
 
 /*-------    Section Conseil du mois    ------*/
+.Conseilbackground {
+    margin-bottom: 5%;
+    background-image: url('http://placehold.it/1200x150');
+}
 
+.Conseil {
+    background-color: #985f0d;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    opacity: 0.7
+}
+
+.ConseilText {
+    margin-top: 3%
+}
 
 /*-------    Section Livre d'or    ------*/
+#carousel-livredor {
+    height: 200px;
+}
 
+.carousel .item {
+    margin-top: 5%;
+}
+
+.carousel .left {
+    background-image: none;
+}
+
+.carousel .right {
+    background-image: none;
+}
 
 /*-------    Section Formulaire   ------*/
+.ImgForm {
+    margin-top: 5%;
+}
+
+.formulaire {
+    margin-top: 5%;
+}
+
+.formulaire h2 {
+    text-align: center;
+    border-bottom:1px solid black;
+}
+
+.formulaire p {
+    text-align: center;
+}
 
 
 /*-------       Footer      ------*/
@@ -218,5 +262,11 @@ p {
 @media screen and (max-width: 1200px) {
     .blocPresta {
         margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .ImgForm {
+        display: none;
     }
 }
