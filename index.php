@@ -272,7 +272,7 @@
 
 <!-------     Section Formulaire     -------->
     <div class="row Contact col-xs-12">
-        <img class=" ImgForm col-lg-6" src="http://placehold.it/500x470">
+        <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
 
 
         <div class="col-lg-6 col-xs-12 formulaire">
