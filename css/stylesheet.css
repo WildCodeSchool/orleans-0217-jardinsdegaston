@@ -1,3 +1,17 @@
+/*------        Général      ------*/
+
+p {
+    font-size: 16px;
+}
+
+
+/* ---   provisoire   ---*/
+.vide {
+    height: 400px;
+    line-height: 400px;
+    background: #EEEEEE;
+}
+
 /*------      Navigation      ------*/
 
 
@@ -32,7 +46,38 @@
     padding: 10px;
 }
 /*------     Image header     ------*/
+.bg-img1-lg, .bg-img1-md {
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    /*margin-top: 50px*/
+}
+.bg-img1-xs {
+    background-image: url("../img/bgimg1-xs.jpg");
+    background-size: cover;
+    margin-top: 50px
+}
+.bg-img1-lg, .bg-img2-lg {
+    height: 900px;
+}
+.bg-img1-md, .bg-img2-md {
+    height: 400px;
+}
+.bg-img1-xs, .bg-img2-xs{
+    height: 300px;
+}
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.bg-img2-lg, .bg-img2-md, .bg-img2-xs {
+    background-image: url("../img/bgimg1.jpg");
+    background-size: cover;
+}
+.bg-change {
+    margin-top: 100px;
+}
 
 /*------ Section presentation ------*/
 
@@ -49,15 +94,76 @@
 
 
 /*------   Image Transition   ------*/
-
+/*   voir image header plus haut    */
 
 /*------  Section Best Realisations  ------*/
 
+.real-titre {
+    background-color: rgb(247,247,247);
+    text-align: center;
+    padding-bottom: 20px;
+}
 
-/*-------     Best Real 1     ------*/
+.real {
+    background-color: rgb(247,247,247);
+}
 
+/*-------     Best Real    ------*/
 
-/*-------     Best Real 2     ------*/
+/*.beforeAfter {
+    position: relative;
+}
+
+.beforeAfter .container-fluid {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.beforeAfter .after {
+    position: absolute;
+    width: 0;
+    max-width: 85%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}*/
+
+.cd-image-container {
+    position: relative;
+}
+
+.cd-resize-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    /* Force Hardware Acceleration in WebKit */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+.is-visible .cd-resize-img {
+    width: 50%;
+    /* bounce in animation of the modified image */
+    animation: cd-bounce-in 0.7s;
+}
+@keyframes cd-bounce-in {
+    0% {
+        width: 0;
+    }
+    60% {
+        width: 55%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.cd-handle {
+    border: solid black 1px;
+}
+
 
 
 /*-------   Section Liste Prestations  ------*/
@@ -65,17 +171,138 @@
 
 /*-------     Prestations     ------*/
 
+.presta-titre {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.row-presta {
+    padding-bottom: 100px;
+}
+
+.blocPresta {
+    position: relative;
+}
+
+.etiquette {
+    position: absolute;
+    bottom: -50px;
+    right: -40px;
+    background-color: white;
+    border : solid lightgrey 1px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgb(170, 170, 170);
+    width: 450px;
+    height: auto;
+    padding-left : 10px;
+}
 
 /*-------    Section Conseil du mois    ------*/
+.Conseilbackground {
+    margin-bottom: 5%;
+    background-image: url('http://placehold.it/1200x150');
+}
 
+.Conseil {
+    background-color: #985f0d;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    opacity: 0.7
+}
+
+.ConseilText {
+    margin-top: 3%
+}
 
 /*-------    Section Livre d'or    ------*/
+#carousel-livredor {
+    height: 200px;
+}
 
+.carousel .item {
+    margin-top: 5%;
+}
+
+.carousel .left {
+    background-image: none;
+}
+
+.carousel .right {
+    background-image: none;
+}
 
 /*-------    Section Formulaire   ------*/
+.ImgForm {
+    margin-top: 5%;
+}
+
+.formulaire {
+    margin-top: 5%;
+}
+
+.formulaire h2 {
+    text-align: center;
+    border-bottom:1px solid black;
+}
+
+.formulaire p {
+    text-align: center;
+}
 
 
 /*-------       Footer      ------*/
 
+.footer {
+    height: 200px;
+    border-top:2px solid #EEEEEE;
+}
+#footer-logo-sp {
+    margin-top: 50px;
+    margin-left: 30px;
+    height: 80px;
+}
+#footer-logo-gaston {
+    margin-top:10px;
+    width: 100%;
+    max-width: 350px;
+}
+.infolegale h4 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+.infolegale p {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.wcs {
+    float :right;
+    width:140px;
+    height:90px;
+    margin-top: 90px;
+    padding-right: 70px;
+    background-image: url('../img/logo-wcs-vo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 70px;
+}
+.legal-logo-wcs {
+    height: 60px;
+}
 
-/*-------       Media Query      ------*/
+
+/*-------       Media Queries     ------*/
+
+@media screen and (max-width: 1200px) {
+    .blocPresta {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .ImgForm {
+        display: none;
+    }
+}
