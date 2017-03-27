@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="img/logo.png"/></div>
+                <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="img/logo_vert.png"/></div>
                 <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
             </div>
 
