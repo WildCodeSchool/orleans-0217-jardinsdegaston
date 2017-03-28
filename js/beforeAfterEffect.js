@@ -2,7 +2,7 @@
  * Created by wilder3 on 22/03/17.
  */
 
-/*
+
 $('body').ready(function(){
 
     var where = $('#where');
@@ -72,9 +72,9 @@ $('body').ready(function(){
 
     });
 
-});*/
+});
 
-jQuery(document).ready(function($){
+/*jQuery(document).ready(function($){
     //function to check if the .cd-image-container is in the viewport here
     // ...
 
@@ -86,8 +86,8 @@ jQuery(document).ready(function($){
 
     //function to upadate images label visibility here
     // ...
-});
-
+});*/
+/*
 //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
 function drags(dragElement, resizeElement, container) {
     dragElement.on("mousedown vmousedown", function(e) {
@@ -132,5 +132,5 @@ function drags(dragElement, resizeElement, container) {
         dragElement.removeClass('draggable');
         resizeElement.removeClass('resizable');
     });
-}
+}*/
 

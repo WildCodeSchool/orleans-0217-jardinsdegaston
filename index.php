@@ -176,7 +176,7 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+                <img src="http://placehold.it/500x500" alt="prestation1">
             <div class="etiquette">
                 <h3>Prestation 1</h3>
                 <p>Lorem ipsum dolor ....</p>
