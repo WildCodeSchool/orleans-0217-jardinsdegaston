@@ -25,8 +25,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="img/logo_vert2.png"/></div>
-                <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
+                <img class="logo" src="img/logo_blanc.png">
+
             </div>
 
             <!-- navbar-collapse navigation -->
@@ -48,7 +48,7 @@
 
 <!--------    Image header    --------->
     <div class="row">
-        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
+        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax "></div>
     </div>
 
 
@@ -176,10 +176,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/tondeusersz.jpg" alt="tondeuse">
             <div class="etiquette">
-                <h3>Prestation 1</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Entretien des pelouses</h3>
+                <p>Tonte, emoussage, scarification, regarnissage ...</p>
             </div>
         </div>
     </div>
@@ -189,10 +189,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/haiersz.jpg" alt="taille-haie">
             <div class="etiquette">
-                <h3>Prestation 2</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Taille</h3>
+                <p>Haies, arbustes, arbres fruitiers ...</p>
             </div>
         </div>
     </div>
@@ -205,11 +205,11 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/entretien_massifrsz.jpg" alt="secateur">
             <div class="etiquette">
-                <h3>Prestation 3</h3>
-                <p>Lorem ipsum dolor ....</p>
-            </div>
+                <h3>Entretien des massifs</h3>
+                <p>Désherbage, paillage ...</p>
+        </div>
         </div>
     </div>
 
@@ -217,10 +217,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/potagerrsz.jpg" alt="potager">
             <div class="etiquette">
-                <h3>Prestation 4</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Potager</h3>
+                <p>Mise en place et entretien</p>
             </div>
         </div>
     </div>
@@ -233,9 +233,9 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/evacuationrsz.jpg" alt="brouette de déchet">
             <div class="etiquette">
-                <h3>Prestation 5</h3>
+                <h3>Evacuation des déchets végétaux</h3>
                 <p>Lorem ipsum dolor ....</p>
             </div>
         </div>
@@ -245,10 +245,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/entretien_exterieurrsz.jpg" alt="lasurrage">
             <div class="etiquette">
-                <h3>Prestation 6</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Entretien des exterieurs</h3>
+                <p>Déneigement, peinture, lasure, nettoyage haute pression ...</p>
             </div>
         </div>
     </div>
