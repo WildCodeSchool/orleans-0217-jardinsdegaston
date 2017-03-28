@@ -178,20 +178,25 @@ p {
 
 
 
-/*-------   Section Liste Prestations  ------*/
+/*-------   Separation ------*/
 
+.separe {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(186, 186, 186, 0.75), rgba(0, 0, 0, 0));
+    border: 0 none;
+    color: rgb(186, 186, 186);
+    height: 1px;
+}
 
 /*-------     Prestations     ------*/
 
 .presta-titre {
     text-align: center;
     padding-bottom: 20px;
-    background-color:  #fbfff3;
+    border-top: solid rgba
 }
 
 .row-presta {
     padding-bottom: 100px;
-    background-color:  #fbfff3;
 }
 
 .blocPresta {

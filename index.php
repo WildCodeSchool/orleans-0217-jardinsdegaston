@@ -142,10 +142,9 @@
 </div>
 
 
-<!-------         Best Real 1         -------->
+<!-------         Separation         -------->
 
-
-<!-------         Best Real 2         -------->
+<hr class="separe">
 
 
 <!-------      Section Liste Prestations     -------->
