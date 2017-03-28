@@ -89,7 +89,7 @@ h1#accroche{
     background-repeat: no-repeat;
 }
 .bg-img2-lg, .bg-img2-md, .bg-img2-xs {
-    background-image: url("../img/bgimg2.jpg");
+    background-image: url("../img/bgimg2p.jpg");
     background-size: cover;
 }
 .bg-change {
@@ -225,16 +225,20 @@ h1#accroche{
     margin-bottom: 5%;
     background-image: url('../img/imgConseil.jpg');
     background-size: cover;
-    height: 200px;
+    max-height: 600px;
 }
 
 .Conseil {
-    margin-top: 3.5%;
-    margin-bottom: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
 }
 
 .ConseilTitre {
-    margin-top: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
     border:1px solid white;
 
@@ -247,6 +251,7 @@ h1#accroche{
 
 .ConseilText {
     margin-top: 2.5%;
+
 }
 
 .ConseilText p {
