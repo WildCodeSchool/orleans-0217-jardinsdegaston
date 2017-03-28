@@ -56,6 +56,7 @@ h1#accroche{
     width: 100%;
     text-align: center;
     background-color: transparent;
+    font-family: 'Chicle', cursive;
     font-size: 100px;
     font-weight: bold;
     color: white;
@@ -87,7 +88,7 @@ h1#accroche{
     background-repeat: no-repeat;
 }
 .bg-img2-lg, .bg-img2-md, .bg-img2-xs {
-    background-image: url("../img/bgimg1.jpg");
+    background-image: url("../img/bgimg2.jpg");
     background-size: cover;
 }
 .bg-change {

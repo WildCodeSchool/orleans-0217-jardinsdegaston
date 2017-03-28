@@ -19,21 +19,22 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <!--
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        data-target="#navbar" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-            -->
-            <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_vert.png"/></div>
+            <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
             <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
         </div>
 
         <!-- navbar-collapse navigation -->
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.php">Images de fond</a></li>
                 <li><a href="avantapres.php">Avant/Après</a></li>
