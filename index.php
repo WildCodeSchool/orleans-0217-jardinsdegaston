@@ -6,7 +6,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
 </head>
 <body>
 <!-----      Navigation   ------->
@@ -14,7 +14,7 @@
 
 <!-- navbar-collapse menu burger-->
 
-<header">
+<header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -59,7 +59,22 @@
 
 
 <!-------    Paragraphe presentation  -------->
-    <div class="row vide"><div class="col-xs-12 text-center">Présentation</div></div>
+    <div class="row presentation">
+        <div class="col-xs-12 col-lg-offset-2 col-lg-8 text-center">
+            <div class="presentation-header">
+            <h1>Bienvenue dans les Jardins de Gaston</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div class="value1">
+                <h3>Valeur 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div class="value2">
+                <h3>Valeur 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </div>
 
 
 <!-------     Valeur Ecologie  -------->
@@ -86,29 +101,16 @@
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-1 col-lg-4 real1">
         <div class="thumbnail">
 
-            <figure class="cd-image-container">
-                <img src="img/test_img_1_rsz.jpg" alt="Original Image">
-                <span class="cd-image-label" data-type="original">Original</span>
+ <!-- cd-image-container -->
 
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
-                    <img src="img/test_img_2.jpg" alt="Modified Image">
-                    <span class="cd-image-label" data-type="modified">Modified</span>
-                </div>
-
-                <span class="cd-handle"></span> <!-- slider handle -->
-            </figure> <!-- cd-image-container -->
-
-            <!--<div class="beforeAfter">
+            <div class="beforeAfter">
                 <div class="container-fluid">
-
                     <figure class="before"> <img class="img-responsive" src="img/test_img_1_rsz.jpg" />
                     </figure>
                     <figure class="after"> <img src="img/test_img_2.jpg" />
                     </figure>
-
                 </div>
-
-            </div>-->
+            </div>
 
             <div class="caption">
                 <h3>Titre 3</h3>
@@ -120,29 +122,16 @@
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4 real2">
         <div class="thumbnail">
 
-            <figure class="cd-image-container">
-                <img src="img/test2_avant.jpg" alt="Original Image">
-                <span class="cd-image-label" data-type="original">Original</span>
+<!-- cd-image-container -->
 
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
-                    <img src="img/test2_apres.jpg" alt="Modified Image">
-                    <span class="cd-image-label" data-type="modified">Modified</span>
-                </div>
-
-                <span class="cd-handle"></span> <!-- slider handle -->
-            </figure> <!-- cd-image-container -->
-
-            <!--<div class="beforeAfter">
+            <div class="beforeAfter">
                 <div class="container-fluid">
-
                     <figure class="before"> <img class="img-responsive" src="img/test2_avant.jpg" />
                     </figure>
                     <figure class="after"> <img src="img/test2_apres.jpg" />
                     </figure>
-
                 </div>
-
-            </div>-->
+            </div>
             <div class="caption">
                 <h3>Titre 3</h3>
                 <p>Lorem Ipsum</p>
@@ -426,7 +415,7 @@
         </div>
     </div>
 
-</div> <!-- fermeture du container-fluid -->
+</div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
