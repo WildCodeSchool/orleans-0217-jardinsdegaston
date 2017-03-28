@@ -276,7 +276,7 @@
 </div>
 
 <!-------     Section Conseil du mois     -------->
-    <div class="container-fluid">
+
     <div class="row Conseilbackground">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
@@ -289,7 +289,7 @@
                 </div>
         </div>
     </div>
-    </div>
+
 
 <!-------       Section Livre d'or      -------->
     <div class="row col-xs-10 col-xs-offset-1 LDOR">

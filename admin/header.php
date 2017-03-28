@@ -29,8 +29,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
-            <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
+            <div class="row hidden-xs hidden-md hidden-sm"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
+            <div class="row hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
         </div>
 
         <!-- navbar-collapse navigation -->
@@ -41,6 +41,7 @@
                 <li><a href="prestations.php">Prestations</a></li>
                 <li><a href="conseils.php">Conseils</a></li>
                 <li><a href="livredor.php">Livre d'or</a></li>
+                <li><a href="messageRecu.php">Message Recus</a></li>
                 <li><a href="chezgaston.php">Chez Gaston</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

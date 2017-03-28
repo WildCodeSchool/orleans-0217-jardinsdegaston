@@ -247,6 +247,7 @@ h1#accroche{
 .ConseilTitre h4 {
     color: white;
     font-size: 25px;
+    opacity: 1;
 }
 
 .ConseilText {
@@ -257,6 +258,7 @@ h1#accroche{
 .ConseilText p {
     color: white;
     font-size: 22px;
+    opacity: 1;
 }
 
 /*-------    Section Livre d'or    ------*/
