@@ -48,7 +48,8 @@
 
 <!--------    Image header    --------->
     <div class="row">
-        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax "></div>
+        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
+        <h1 id="accroche">Jardinier par nature ...</h1>
     </div>
 
 
@@ -158,6 +159,25 @@
 
 <!-------         Best Real 2         -------->
 
+    <!--    Section Blog    -->
+
+    <div class="row Blog">
+
+        <div class="col-xs-9 col-xs-offset-1">
+            <div class="thumbnail">
+                <div class="BlogThumb">
+                    <a href="blog.php"><h3>Et pendant ce temps chez Gaston...</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
 
 <!-------      Section Liste Prestations     -------->
 
@@ -256,52 +276,66 @@
 </div>
 
 <!-------     Section Conseil du mois     -------->
-    <div class="row Conseilbackground col-lg-10 col-lg-offset-1">
+
+    <div class="row Conseilbackground">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
-            <div class="col-lg-1 col-lg-offset-1">
+            <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
                 <h4>Conseil du Jour</h4>
             </div>
-            <div class="ConseilText col-lg-6 col-lg-offset-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-            </div>
+                <div>
+                    <div class="ConseilText col-lg-11 col-lg-offset-1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
         </div>
     </div>
+
 
 <!-------       Section Livre d'or      -------->
+    <div class="row col-xs-10 col-xs-offset-1 LDOR">
+        <div class="row">
 
-    <div class="row col-xs-10 col-xs-offset-1">
-        <div id="carousel-livredor" class="carousel slide fade in" data-ride="carousel" data-interval="false">
-
-            <div class="carousel-inner" role="listbox">
-
-                <div class="item col-xs-8 col-xs-offset-2 active">
-                    <div class="caption">
-                        <h3>PDOLivredorNom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                    </div>
-                </div>
-
-
-                <div class="item col-xs-8 col-xs-offset-2">
-                    <div class="caption">
-                        <h3>PDOLivredorNom1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                    </div>
-                </div>
+            <div class="LivreDor-titre">
+                <h2>Livre d'Or</h2>
             </div>
 
-            <a class="left carousel-control" href="#carousel-livredor" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-livredor" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </a>
+        </div>
+
+        <div class="row">
+            <div id="carousel-livredor" class="carousel slide fade in" data-ride="carousel" data-interval="false">
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item col-xs-8 col-xs-offset-2 active">
+                        <div class="caption">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                            <p>Monsieur X</p>
+                        </div>
+                    </div>
+
+
+                    <div class="item col-xs-8 col-xs-offset-2">
+                        <div class="caption">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                            <p>Madame X</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#carousel-livredor" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-livredor" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+            </div>
         </div>
     </div>
+
 
 <!-------     Section Formulaire     -------->
     <div class="row Contact col-xs-12">
-        <img class=" ImgForm col-lg-6" src="http://placehold.it/500x470">
+        <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
 
 
         <div class="col-lg-6 col-xs-12 formulaire">

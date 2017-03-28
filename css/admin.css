@@ -1,0 +1,75 @@
+
+body {
+    font-size: 16px;
+}
+.cache {
+    visibility: hidden;
+}
+
+/* --- navbar ---------------------------------------------------- */
+.navbar-inverse
+{
+    background-color: #2b542c;
+    border-bottom: 2px solid white;
+}
+
+.titre h1
+{
+    font-family: 'Chicle', cursive;
+    /*color: #00ab0c;*/
+    color: #2b542c;
+    font-size: 30px;
+    /*padding: 20px;*/
+    margin-top:120px;
+}
+.navbar-collapse li a:hover {
+    text-transform: none;
+    color: #00ab0c;
+}
+
+/* --- blocs ----------------------------------------------------- */
+.bandeau {
+    height: 34px;
+    line-height: 34px;
+    font-size: 20px;
+    background-color: #2b542c;
+    color: white;
+    margin-top:20px;
+}
+.contenu {
+    background-color: #eef6ef;
+    padding: 10px;
+}
+input.btn, label.btn {
+    width: 200px;
+    margin: 2px;
+}
+/* --- grandes images -------------------------------------------- */
+.gimg {
+    max-height: 200px;
+    border: 0px;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* --- upload ---------------------------------------------------- */
+#faitchier {
+    display: inline-block;
+    color: red;
+}
+
+/* --- galerie petites images ------------------------------------ */
+.pimg {
+    max-width: 200px;
+    border: 0px;
+    margin: 10px;
+}
+.blocimg {
+    background-color: #eef6ef;
+    padding:10px 0 30px 0;
+    margin-bottom: 20px;
+    /*
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    */
+}
