@@ -48,7 +48,9 @@
 
 <!--------    Image header    --------->
     <div class="row">
-        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
+        <div class="col-lg-12 bg-img1-lg visible-lg img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-md visible-md img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-xs visible-xs img-responsive parallax"></div>
         <h1 id="accroche">Jardinier par nature ...</h1>
     </div>
 
@@ -322,11 +324,11 @@
 
 
 <!-------     Section Formulaire     -------->
-     <div class="row Contact col-xs-12">
-        <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
+    <div class="row Contact col-xs-12">
+        <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500">
 
 
-        <div class="col-lg-6 col-xs-12 formulaire">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
             <span id="formulaireAnchor" class="ancre"></span>
             <h2>CONTACTEZ-NOUS</h2>
             <p>Tel: 06 00 00 00 00</p>
