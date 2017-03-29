@@ -1,12 +1,12 @@
 
 <?php // --- provisoire ---
 $prestations = [
-        ['titre' => 'Pelouses', 'detail' => 'Tonte, émoussage, scarification, regarnissage, ...', 'img' => 'noimg.png'],
-        ['titre' => 'Haies', 'detail' => 'Taille des haies, arbustes, arbres fruitiers, ...', 'img' => 'noimg.png'],
-        ['titre' => 'Massifs', 'detail' => 'Entretien des massifs, désherbage, paillage, ...', 'img' => 'noimg.png'],
-        ['titre' => 'Potager', 'detail' => 'Mise en place et entretien de potagers, ...', 'img' => 'noimg.png'],
-        ['titre' => 'Evacuation des déchets', 'detail' => 'Evacuation des déchets végétaux, ...', 'img' => 'noimg.png'],
-        ['titre' => 'Autres', 'detail' => 'Tonte, émoussage, scarification, regarnissage, ...', 'img' => 'noimg.png'],
+        ['titre' => 'Entretien des pelouses', 'detail' => 'Tonte, émoussage, scarification, regarnissage, ...', 'img' => 'tondeusersz.jpg'],
+        ['titre' => 'Taille de haies', 'detail' => 'Taille des haies, arbustes, arbres fruitiers, ...', 'img' => 'haiersz.jpg'],
+        ['titre' => 'Entretien des massifs', 'detail' => 'Entretien des massifs, désherbage, paillage, ...', 'img' => 'entretien_massifrsz.jpg'],
+        ['titre' => 'Potager', 'detail' => 'Mise en place et entretien de potagers, ...', 'img' => 'potagerrsz.jpg'],
+        ['titre' => 'Evacuation des déchets végétaux', 'detail' => 'Evacuation des déchets végétaux, ...', 'img' => 'evacuationrsz.jpg'],
+        ['titre' => 'Entretien des extérieurs', 'detail' => 'Déneigement, peinture, lasure, nettoyage haute pression, ...', 'img' => 'entretien_exterieurrsz.jpg'],
 ]
 ?>
 
