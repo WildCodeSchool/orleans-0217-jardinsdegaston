@@ -323,10 +323,10 @@
 
 <!-------     Section Formulaire     -------->
     <div class="row Contact col-xs-12">
-        <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
+        <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500">
 
 
-        <div class="col-lg-6 col-xs-12 formulaire">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
 
             <h2>CONTACTEZ-NOUS</h2>
             <p>Tel: 06 00 00 00 00</p>
