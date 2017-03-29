@@ -73,3 +73,11 @@ input.btn, label.btn {
     border-right: 2px solid white;
     */
 }
+/* --- galerie petites images ------------------------------------ */
+.thumbnail {
+    margin-left: 10px;
+}
+
+.ThumbLdor {
+    margin-top: 3%;
+}
