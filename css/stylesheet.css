@@ -58,18 +58,18 @@ p {
 .parallax {
     z-index: -1;
 }
-h1#accroche{
+h4#accroche{
     display: block;
     position: fixed;
-    top: 200px;
+    top: 40%;
     width: 100%;
     text-align: center;
     background-color: transparent;
-    font-family: 'Chicle', cursive;
-    font-size: 100px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 80px;
     font-weight: bold;
     color: white;
-    text-shadow: 0px 0px 30px black;
+    text-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     z-index: -1;
 }
 .bg-img1-lg, .bg-img1-md {
@@ -192,22 +192,30 @@ h1#accroche{
     overflow: hidden;
 }
 
-/*-------   Section Blog  ------*/
-.Blog {
-    background-color: rgb(247,247,247);
-}
-
-.BlogThumb {
-    text-align: center;
-}
-
 /*-------   Separation ------*/
 
-.separe {
+/*.separe {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(186, 186, 186, 0.75), rgba(0, 0, 0, 0));
     border: 0 none;
     color: rgb(186, 186, 186);
     height: 1px;
+}*/
+
+/*-------   Section Blog  ------*/
+.Blog {
+    background-image: url('../img/imgConseil.jpg');
+    background-size: cover;
+    padding: 20px 0 20px 0;
+}
+
+.BlogThumb {
+    text-align: center;
+    color: white;
+}
+
+.BlogThumb h2 {
+    color: #557e02;
+    text-shadow: 1px 1px 1px;
 }
 
 /*-------     Prestations     ------*/
@@ -250,8 +258,7 @@ h1#accroche{
 .Conseil {
     margin-top: 4%;
     margin-bottom: 4%;
-    background-color: black;
-    opacity: 0.8;
+    background-color: rgba(0,0,0,0.3);
     display: flex;
 }
 
@@ -291,10 +298,6 @@ h1#accroche{
     padding-bottom: 10px;
 }
 
-/*#carousel-livredor {*/
-    /*height: 200px;*/
-/*}*/
-
 .carousel .item {
     margin-top: 5%;
 }
@@ -332,16 +335,16 @@ h1#accroche{
 /*-------       Footer      ------*/
 
 .footer [class*="col-"] {
-    background-color: white;
+    background-color: #202020;
 }
 .footer {
+    padding-top: 10px;
+    background-color: #202020;
     height: 200px;
-    border-top:2px solid #EEEEEE;
 }
 #footer-logo-sp {
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: 30px;
-    height: 80px;
 }
 #footer-logo-gaston {
     margin-top:10px;
@@ -359,20 +362,22 @@ h1#accroche{
     margin-bottom: 30px;
     text-align: justify;
 }
-.wcs {
-    float :right;
-    width:140px;
-    height:90px;
-    margin-top: 90px;
-    padding-right: 70px;
-    background-image: url('../img/logo-wcs-vo.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 70px;
-}
+
 .legal-logo-wcs {
-    height: 60px;
+    height: 30px;
+    margin-left: -35px;
 }
+
+.logoWCS {
+    margin-top: 30px;
+}
+
+.logoWCS a {
+    color: white;
+    text-decoration: none;
+}
+
+
 
 
 
@@ -439,6 +444,24 @@ h1#accroche{
         font-size: 14px;
     }
 
+    .presentation {
+        height: 650px;
+    }
+
+    .value1 {
+        bottom: -190px;
+        left: 4%;
+        width: 80%;
+    }
+
+    .value2 {
+        bottom: -350px;
+        right: 5%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 455px) {
     .presentation {
         height: 790px;
     }

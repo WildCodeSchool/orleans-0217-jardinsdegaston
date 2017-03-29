@@ -49,7 +49,7 @@
 <!--------    Image header    --------->
     <div class="row">
         <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
-        <h1 id="accroche">Jardinier par nature ...</h1>
+        <h4 id="accroche">Jardinier par nature ...</h4>
     </div>
 
 
@@ -145,19 +145,19 @@
 
 <!-------         Separation         -------->
 
-<hr class="separe">
+<!--<hr class="separe">-->
 
     <!--    Section Blog    -->
 
     <div class="row Blog">
 
         <div class="col-xs-9 col-xs-offset-1">
-            <div class="thumbnail">
-                <div class="BlogThumb">
-                    <a href="blog.php"><h3>Et pendant ce temps chez Gaston...</h3></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
+
+            <div class="BlogThumb">
+                <a href="blog.php"><h3>Et pendant ce temps chez Gaston...</h3></a>
+                <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
             </div>
+
         </div>
 
     </div>
@@ -280,92 +280,95 @@
 
 
 <!-------       Section Livre d'or      -------->
-    <div class="row col-xs-10 col-xs-offset-1 LDOR">
-        <div class="row">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 LDOR">
+            <div class="row">
 
-            <div class="LivreDor-titre">
-                <h2>Livre d'Or</h2>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div id="carousel-livredor" class="carousel slide fade in" data-ride="carousel" data-interval="false">
-
-                <div class="carousel-inner" role="listbox">
-
-                    <div class="item col-xs-8 col-xs-offset-2 active">
-                        <div class="caption">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
-                            <p>Monsieur X</p>
-                        </div>
-                    </div>
-
-
-                    <div class="item col-xs-8 col-xs-offset-2">
-                        <div class="caption">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
-                            <p>Madame X</p>
-                        </div>
-                    </div>
+                <div class="LivreDor-titre">
+                    <h2>Livre d'Or</h2>
                 </div>
 
-                <a class="left carousel-control" href="#carousel-livredor" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-livredor" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                </a>
+            </div>
+
+            <div class="row">
+                <div id="carousel-livredor" class="carousel slide fade in" data-ride="carousel" data-interval="false">
+
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item col-xs-8 col-xs-offset-2 active">
+                            <div class="caption">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                                <p>Monsieur X</p>
+                            </div>
+                        </div>
+
+
+                        <div class="item col-xs-8 col-xs-offset-2">
+                            <div class="caption">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                                <p>Madame X</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-livredor" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-livredor" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-------     Section Formulaire     -------->
+    <div class="row">
+        <div class="Contact col-xs-12">
+            <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
 
-<!-------     Section Formulaire     -------->
-    <div class="row Contact col-xs-12">
-        <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
 
+            <div class="col-lg-6 col-xs-12 formulaire">
 
-        <div class="col-lg-6 col-xs-12 formulaire">
+                <h2>CONTACTEZ-NOUS</h2>
+                <p>Tel: 06 00 00 00 00</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <form name="ajout-citation" method="POST" action="ajout.php">
 
-            <h2>CONTACTEZ-NOUS</h2>
-            <p>Tel: 06 00 00 00 00</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-            <form name="ajout-citation" method="POST" action="ajout.php">
+                    <div class="form-group">
+                        <label for="Nom">Nom</label>
+                        <input required ="required" class="form-control" type="text" id="Nom" name="Nom" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="Nom">Nom</label>
-                    <input required ="required" class="form-control" type="text" id="Nom" name="Nom" />
-                </div>
+                    <div class="form-group">
+                        <label for="Prenom">Prenom</label>
+                        <input required ="required" class="form-control" type="text" id="Prenom" name="Prenom"/>
+                    </div>
 
-                <div class="form-group">
-                    <label for="Prenom">Prenom</label>
-                    <input required ="required" class="form-control" type="text" id="Prenom" name="Prenom"/>
-                </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input required ="required" class="form-control" type="text" id="Email" name="Email" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input required ="required" class="form-control" type="text" id="Email" name="Email" />
-                </div>
+                    <div class="form-group">
+                        <label for="Texte">Texte</label>
+                        <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label for="Texte">Texte</label>
-                    <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
-                </div>
+                    <input class="btn btn-success" type="submit" name="add" value="Envoyer">
 
-                <input class="btn btn-success" type="submit" name="add" value="Envoyer">
+            </div>
 
         </div>
-
     </div>
 
-<!-------           Footer           -------->
+    <!-------           Footer           -------->
     <div class="row footer">
-        <div class="col-xs-4 vcenter">
-            <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img id="footer-logo-sp" src="img/service.jpg" alt="Logo Service à la personne" /></a>
+        <div class="col-xs-2 vcenter">
+            <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img id="footer-logo-sp" src="img/Logosap.png" alt="Logo Service à la personne" /></a>
         </div>
-        <div class="col-xs-4 text-center">
-            <img id="footer-logo-gaston" class="hidden-xs" src="img/logo-gaston.png" alt="logo Les Jardins de Gaston">
+        <div class="col-xs-8 text-center">
+            <img id="footer-logo-gaston" class="hidden-xs" src="img/logo_blanc.png" alt="logo Les Jardins de Gaston">
             <span class="visible-xs">Les Jardins de Gaston</span><br />
             <br />
             <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#infolegale">Mentions légales</button>
@@ -422,12 +425,12 @@
                             </p>
 
                             <h4>Conception et réalisation</h4>
-                            Isabelle MULIGO, Jérémie DAVIAUD, Sylvain JAN, Patrick FAUCHEUX
-                            <p>
-                                <a href="https://wildcodeschool.fr/orleans/" target="_blanc">
-                                    <img class="legal-logo-wcs" src="img/logo-wcs-ho" alt="logo Wild Code School" />
-                                </a>
-                            </p>
+                            <a href="https://wildcodeschool.fr/orleans/" target="_blanc">
+                                <img class="legal-logo-wcs" src="img/logo-wcs-ho.png" alt="logo Wild Code School" />
+                            </a>
+                            <span>
+                                Isabelle MULIGO, Jérémie DAVIAUD, Sylvain JAN, Patrick FAUCHEUX
+                            </span>
 
                         </div>
                         <div class="modal-footer">
@@ -439,12 +442,13 @@
             <!-- fin modale infos legales -->
 
         </div>
-        <div class="col-xs-4">
-            <a href="http://wildcodeschool.fr/orleans" target="_blanc">
-                <div class="wcs text-right">
-                    <br/><br/>Site<br/>créé par
-                </div>
-            </a>
+        <div class="col-xs-2 logoWCS">
+            <div class="row">
+                <a href="http://wildcodeschool.fr/orleans" target="_blanc">Design par</a>
+            </div>
+            <div class="row">
+                <img src="img/logo-wcs-vo-alter-small.png" alt="logo Wild Code School" />
+            </div>
         </div>
     </div>
 
@@ -453,6 +457,7 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/beforeAfterEffect.js"></script>
+<script type="text/javascript" src="js/tagline.js"></script>
 
 </body>
 
