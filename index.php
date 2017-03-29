@@ -8,13 +8,13 @@
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
 </head>
-<body>
+<body id="top">
 <!-----      Navigation   ------->
 
 
 <!-- navbar-collapse menu burger-->
 
-<header>
+<header id="top">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -25,16 +25,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="logo" src="img/logo_blanc.png">
+                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
 
             </div>
 
             <!-- navbar-collapse navigation -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Les prestations</a></li>
-                    <li><a href="#">Le conseil du mois</a></li>
-                    <li><a class="btn btn-success" href="#" role="button">Nous contacter</a></li>
+                    <li><a href="#prestationAnchor">Les prestations</a></li>
+                    <li><a href="#conseilAnchor">Le conseil du mois</a></li>
+                    <li><a class="btn btn-success" href="#formulaireAnchor" role="button">Nous contacter</a></li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -168,7 +168,7 @@
 
 
 <!-------      Section Liste Prestations     -------->
-
+<span id="prestationAnchor" class="ancre"></span>
 <div class="row presta-titre">
 
     <div class="col-xs-12">
@@ -264,7 +264,7 @@
 </div>
 
 <!-------     Section Conseil du mois     -------->
-
+    <span id="conseilAnchor" class="ancre"></span>
     <div class="row Conseilbackground">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
@@ -322,12 +322,12 @@
 
 
 <!-------     Section Formulaire     -------->
-    <div class="row Contact col-xs-12">
+     <div class="row Contact col-xs-12">
         <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
 
 
         <div class="col-lg-6 col-xs-12 formulaire">
-
+            <span id="formulaireAnchor" class="ancre"></span>
             <h2>CONTACTEZ-NOUS</h2>
             <p>Tel: 06 00 00 00 00</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>

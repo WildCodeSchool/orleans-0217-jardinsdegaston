@@ -22,9 +22,12 @@ p {
     background: #EEEEEE;
 }
 
+.ancre
+{
+    padding-top: 80px;
+}
 
 /*------      Navigation      ------*/
-
 .navbar-toggle {
 
     padding: 25px 10px;
@@ -211,11 +214,9 @@ h1#accroche{
 }
 
 /*-------     Prestations     ------*/
-
 .presta-titre {
     text-align: center;
     padding-bottom: 20px;
-    border-top: solid rgba
 }
 
 .row-presta {
