@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Les Jardins de Gaston</title>
-
+    <link rel="icon" type="image/png" href="img/arrosoir2_xsmall.png" sizes="32x32" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
@@ -34,7 +34,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du mois</a></li>
-                    <li><a class="btn btn-success" href="#formulaireAnchor" role="button">Nous contacter</a></li>
+                    <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
+                </ul>
+                <ul>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -373,7 +375,7 @@
                     <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
                 </div>
 
-                <input class="btn btn-success" type="submit" name="add" value="Envoyer">
+                <input class="btn btn-default hover" type="submit" name="add" value="Envoyer">
 
             </form>
 
