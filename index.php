@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Les Jardins de Gaston</title>
-
+    <link rel="icon" type="image/png" href="img/arrosoir2_xsmallvert.png" sizes="32x32" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
@@ -35,7 +35,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du mois</a></li>
-                    <li><a class="btn btn-success" href="#formulaireAnchor" role="button">Nous contacter</a></li>
+                    <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
+                </ul>
+                <ul>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -275,21 +277,34 @@
 
 <!-------     Section Conseil du mois     -------->
     <span id="conseilAnchor" class="ancre"></span>
-    <div class="row Conseilbackground">
+    <div class="row Conseilbackground-lg">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
                 <h4>Conseil du Jour</h4>
             </div>
-                <div>
-                    <div class="ConseilText col-lg-11 col-lg-offset-1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                    </div>
+            <div>
+                <div class="ConseilText col-lg-11 col-lg-offset-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row Conseilbackground-xs">
+        <div class="row Conseil-xs col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+            <div class="col-lg-3 col-lg-offset-1 ConseilTitre-xs">
+                <h4>Conseil du Jour</h4>
+            </div>
+            <div class="row">
+                <div class="ConseilText-xs col-lg-11 col-lg-offset-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
         </div>
     </div>
 
 
-<!-------       Section Livre d'or      -------->
+
+    <!-------       Section Livre d'or      -------->
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1 LDOR">
             <div class="row">
@@ -345,6 +360,7 @@
             <span id="formulaireAnchor" class="ancre"></span>
 
             <h2>CONTACTEZ-NOUS</h2>
+            <hr class="separe">
             <p>Tel: 06 00 00 00 00</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
             <form name="ajout-citation" method="POST" action="ajout.php">
@@ -370,7 +386,7 @@
                     <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
                 </div>
 
-                <input class="btn btn-success" type="submit" name="add" value="Envoyer">
+                <input class="btn btn-default hover" type="submit" name="add" value="Envoyer">
 
             </form>
 
