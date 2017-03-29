@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Les Jardins de Gaston</title>
-    <link rel="icon" type="image/png" href="img/arrosoir2_xsmall.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/arrosoir2_xsmallvert.png" sizes="32x32" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
