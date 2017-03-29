@@ -1,5 +1,15 @@
 /*------        Général      ------*/
 
+h1 {
+    padding : 15px 0 20px 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #557e02;
+}
+
 p {
     font-size: 16px;
 }
@@ -15,13 +25,9 @@ p {
 
 /*------      Navigation      ------*/
 
+.navbar-toggle {
 
-.headtitle
-{
-    font-family: 'Chicle', cursive;
-    color: #00ab0c;
-    font-size: 30px;
-    padding: 20px;
+    padding: 25px 10px;
 }
 
 .navbar-inverse
@@ -42,10 +48,12 @@ p {
     padding: 20px;
 }
 
-#logo
+.logo
 {
-    padding: 10px;
+    width: 250px;
+    padding: 5%
 }
+
 /*------     Image header     ------*/
 .parallax {
     z-index: -1;
@@ -95,7 +103,25 @@ h1#accroche{
 .bg-change {
     margin-top: 100px;
 }
+
+
 /*------ Section presentation ------*/
+
+.presentation {
+    background: #fff;
+    position: relative;
+    height: 495px;
+}
+
+.presentation p {
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.img-header-prez {
+    line-height: 20px;
+}
+
 
 /*------         Titre        ------*/
 
@@ -105,8 +131,30 @@ h1#accroche{
 
 /*------     Valeur Ecologie  ------*/
 
+.value1 {
+    position: absolute;
+    bottom: -210px;
+    left: 6%;
+    width: 45%;
+    background-color:  #fbfff3;
+    box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
+    border: solid #f9f9f9 1px;
+    padding: 0 20px 5px 20px;}
+
 
 /*------    Valeur Client     ------*/
+
+.value2 {
+    position: absolute;
+    bottom: -250px;
+    right: 6%;
+    width: 45%;
+    background-color: #fbfff3;
+    box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
+    border: solid #f9f9f9 1px;
+    padding: 0 20px 5px 20px;
+
+}
 
 
 /*------   Image Transition   ------*/
@@ -115,18 +163,18 @@ h1#accroche{
 /*------  Section Best Realisations  ------*/
 
 .real-titre {
-    background-color: rgb(247,247,247);
+    background-color: #ffffff;
     text-align: center;
     padding-bottom: 20px;
 }
 
 .real {
-    background-color: rgb(247,247,247);
+    background-color: #ffffff;
 }
 
 /*-------     Best Real    ------*/
 
-/*.beforeAfter {
+.beforeAfter {
     position: relative;
 }
 
@@ -142,42 +190,6 @@ h1#accroche{
     top: 0;
     bottom: 0;
     overflow: hidden;
-}*/
-
-.cd-image-container {
-    position: relative;
-}
-
-.cd-resize-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    overflow: hidden;
-    /* Force Hardware Acceleration in WebKit */
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
-.is-visible .cd-resize-img {
-    width: 50%;
-    /* bounce in animation of the modified image */
-    animation: cd-bounce-in 0.7s;
-}
-@keyframes cd-bounce-in {
-    0% {
-        width: 0;
-    }
-    60% {
-        width: 55%;
-    }
-    100% {
-        width: 50%;
-    }
-}
-
-.cd-handle {
-    border: solid black 1px;
 }
 
 /*-------   Section Blog  ------*/
@@ -189,14 +201,21 @@ h1#accroche{
     text-align: center;
 }
 
-/*-------   Section Liste Prestations  ------*/
+/*-------   Separation ------*/
 
+.separe {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(186, 186, 186, 0.75), rgba(0, 0, 0, 0));
+    border: 0 none;
+    color: rgb(186, 186, 186);
+    height: 1px;
+}
 
 /*-------     Prestations     ------*/
 
 .presta-titre {
     text-align: center;
     padding-bottom: 20px;
+    border-top: solid rgba
 }
 
 .row-presta {
@@ -356,16 +375,83 @@ h1#accroche{
 }
 
 
+
+
 /*-------       Media Queries     ------*/
+
+@media screen and (max-width: 1340px) {
+
+    .presentation {
+        height: 630px;
+    }
+
+    .value1 {
+        bottom: -180px;
+        left: 4%;
+        width: 80%;
+    }
+
+    .value2 {
+        bottom: -315px;
+        right: 5%;
+        width: 80%;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .blocPresta {
         margin-bottom: 80px;
+    }
+
+    .presentation {
+        height: 600px;
+    }
+
+    .value1 {
+        bottom: -170px;
+        left: 4%;
+        width: 80%;
+    }
+
+    .value2 {
+        bottom: -305px;
+        right: 5%;
+        width: 80%;
     }
 }
 
 @media only screen and (max-width: 992px){
     .ImgForm {
         display: none;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .presentation {
+        height: 790px;
+    }
+
+    .value1 {
+        bottom: -220px;
+        left: 4%;
+        width: 80%;
+    }
+
+    .value2 {
+        bottom: -420px;
+        right: 5%;
+        width: 80%;
     }
 }
