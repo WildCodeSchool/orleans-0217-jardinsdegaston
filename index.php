@@ -8,13 +8,13 @@
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
 </head>
-<body>
+<body id="top">
 <!-----      Navigation   ------->
 
 
 <!-- navbar-collapse menu burger-->
 
-<header>
+<header id="top">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -25,16 +25,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="logo" src="img/logo_blanc.png">
+                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
 
             </div>
 
             <!-- navbar-collapse navigation -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Les prestations</a></li>
-                    <li><a href="#">Le conseil du mois</a></li>
-                    <li><a class="btn btn-success" href="#" role="button">Nous contacter</a></li>
+                    <li><a href="#prestationAnchor">Les prestations</a></li>
+                    <li><a href="#conseilAnchor">Le conseil du mois</a></li>
+                    <li><a class="btn btn-success" href="#formulaireAnchor" role="button">Nous contacter</a></li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -48,15 +48,11 @@
 
 <!--------    Image header    --------->
     <div class="row">
-<<<<<<< HEAD
-        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
-        <h4 id="accroche">Jardinier par nature ...</h4>
-=======
+
         <div class="col-lg-12 bg-img1-lg visible-lg img-responsive parallax"></div>
         <div class="col-lg-12 bg-img1-md visible-md img-responsive parallax"></div>
         <div class="col-lg-12 bg-img1-xs visible-xs img-responsive parallax"></div>
-        <h1 id="accroche">Jardinier par nature ...</h1>
->>>>>>> 698c9c82daac836e62fc84ab03ac1052f13026f0
+        <h4 id="accroche">Jardinier par nature ...</h4>
     </div>
 
 
@@ -175,7 +171,7 @@
 
 
 <!-------      Section Liste Prestations     -------->
-
+<span id="prestationAnchor" class="ancre"></span>
 <div class="row presta-titre">
 
     <div class="col-xs-12">
@@ -271,7 +267,7 @@
 </div>
 
 <!-------     Section Conseil du mois     -------->
-
+    <span id="conseilAnchor" class="ancre"></span>
     <div class="row Conseilbackground">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
@@ -336,36 +332,39 @@
 
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
 
+            <span id="formulaireAnchor" class="ancre"></span>
 
-        <h2>CONTACTEZ-NOUS</h2>
-                <p>Tel: 06 00 00 00 00</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                <form name="ajout-citation" method="POST" action="ajout.php">
+            <h2>CONTACTEZ-NOUS</h2>
+            <p>Tel: 06 00 00 00 00</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <form name="ajout-citation" method="POST" action="ajout.php">
 
 
-                    <div class="form-group">
-                        <label for="Nom">Nom</label>
-                        <input required ="required" class="form-control" type="text" id="Nom" name="Nom" />
-                    </div>
+                <div class="form-group">
+                    <label for="Nom">Nom</label>
+                    <input required ="required" class="form-control" type="text" id="Nom" name="Nom" />
+                </div>
 
-                    <div class="form-group">
-                        <label for="Prenom">Prenom</label>
-                        <input required ="required" class="form-control" type="text" id="Prenom" name="Prenom"/>
-                    </div>
+                <div class="form-group">
+                    <label for="Prenom">Prenom</label>
+                    <input required ="required" class="form-control" type="text" id="Prenom" name="Prenom"/>
+                </div>
 
-                    <div class="form-group">
-                        <label for="Email">Email</label>
-                        <input required ="required" class="form-control" type="text" id="Email" name="Email" />
-                    </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input required ="required" class="form-control" type="text" id="Email" name="Email" />
+                </div>
 
-                    <div class="form-group">
-                        <label for="Texte">Texte</label>
-                        <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="Texte">Texte</label>
+                    <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
+                </div>
 
-                    <input class="btn btn-success" type="submit" name="add" value="Envoyer">
+                <input class="btn btn-success" type="submit" name="add" value="Envoyer">
 
-            </div>
+            </form>
+
+        </div>
 
         </div>
     </div>
