@@ -424,11 +424,6 @@ h1#accroche{
     }
 }
 
-/*@media only screen and (max-width: 992px){*/
-    /*.ImgForm {*/
-        /*display: none;*/
-    /*}*/
-/*}*/
 
 @media screen and (max-width: 760px) {
     h1 {
@@ -457,5 +452,13 @@ h1#accroche{
         bottom: -420px;
         right: 5%;
         width: 80%;
+    }
+
+
+}
+
+@media only screen and (max-width: 560px){
+    .ConseilText p {
+    font-size: 14px;
     }
 }
