@@ -60,7 +60,7 @@ $test = [   '0' =>
                     <td >'.$value["Texte"].'</td >
 
 
-                    <td ><a href = "" class="btn btn-warning btn-sm" role = "button" >Sauvegarder</a > <a href = "" class="btn btn-danger btn-sm" role = "button" >Supprimer</a ></td >
+                    <td ><a href = "" class="btn btn-success btn-sm" role = "button" >Sauvegarder</a >&nbsp;&nbsp;<a href = "" class="btn btn-danger btn-sm" role = "button" >Supprimer</a ></td >
 
                 </tr >';
             }

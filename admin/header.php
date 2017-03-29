@@ -29,11 +29,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <div class="row hidden-xs hidden-md hidden-sm"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
-            <div class="row hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
-        </div>
+            <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
+             <div class="row hidden-lg hidden-md hidden-sm"><span class="headtitle">Les Jardins de Gaston</span></div>
+         </div>
 
-        <!-- navbar-collapse navigation -->
+         <!-- navbar-collapse navigation -->
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.php">Images de fond</a></li>

@@ -27,6 +27,12 @@ body {
     color: #00ab0c;
 }
 
+#logo
+{
+    max-width: 250px;
+    padding: 5%
+}
+
 /* --- blocs ----------------------------------------------------- */
 .bandeau {
     height: 34px;
@@ -73,11 +79,16 @@ input.btn, label.btn {
     border-right: 2px solid white;
     */
 }
-/* --- galerie petites images ------------------------------------ */
+/* --- Livre d'Or ------------------------------------ */
 .thumbnail {
     margin-left: 10px;
 }
 
 .ThumbLdor {
-    margin-top: 3%;
+    margin-top: 2%;
+}
+
+/* --- Conseils ------------------------------------ */
+#TexteConseil {
+    margin-bottom: 10px;
 }
