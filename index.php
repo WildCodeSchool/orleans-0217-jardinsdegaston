@@ -48,8 +48,15 @@
 
 <!--------    Image header    --------->
     <div class="row">
+<<<<<<< HEAD
         <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
         <h4 id="accroche">Jardinier par nature ...</h4>
+=======
+        <div class="col-lg-12 bg-img1-lg visible-lg img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-md visible-md img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-xs visible-xs img-responsive parallax"></div>
+        <h1 id="accroche">Jardinier par nature ...</h1>
+>>>>>>> 698c9c82daac836e62fc84ab03ac1052f13026f0
     </div>
 
 
@@ -106,9 +113,9 @@
 
             <div class="beforeAfter">
                 <div class="container-fluid">
-                    <figure class="before"> <img class="img-responsive" src="img/test_img_1_rsz.jpg" />
+                    <figure class="before"> <img class="img-responsive" src="img/test_img_2.jpg" />
                     </figure>
-                    <figure class="after"> <img src="img/test_img_2.jpg" />
+                    <figure class="after"> <img src="img/test_img_1_rsz.jpg" />
                     </figure>
                 </div>
             </div>
@@ -127,9 +134,9 @@
 
             <div class="beforeAfter">
                 <div class="container-fluid">
-                    <figure class="before"> <img class="img-responsive" src="img/test2_avant.jpg" />
+                    <figure class="before"> <img class="img-responsive" src="img/test2_apres.jpg" />
                     </figure>
-                    <figure class="after"> <img src="img/test2_apres.jpg" />
+                    <figure class="after"> <img src="img/test2_avant.jpg" />
                     </figure>
                 </div>
             </div>
@@ -324,16 +331,17 @@
 
     <!-------     Section Formulaire     -------->
     <div class="row">
-        <div class="Contact col-xs-12">
-            <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
+    <div class="Contact col-xs-12">
+        <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500">
+
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
 
 
-            <div class="col-lg-6 col-xs-12 formulaire">
-
-                <h2>CONTACTEZ-NOUS</h2>
+        <h2>CONTACTEZ-NOUS</h2>
                 <p>Tel: 06 00 00 00 00</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 <form name="ajout-citation" method="POST" action="ajout.php">
+
 
                     <div class="form-group">
                         <label for="Nom">Nom</label>
