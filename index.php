@@ -6,7 +6,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
 </head>
 <body>
 <!-----      Navigation   ------->
@@ -14,7 +14,7 @@
 
 <!-- navbar-collapse menu burger-->
 
-<header">
+<header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -25,8 +25,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="img/logo_vert2.png"/></div>
-                <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
+                <img class="logo" src="img/logo_blanc.png">
+
             </div>
 
             <!-- navbar-collapse navigation -->
@@ -62,7 +62,22 @@
 
 
 <!-------    Paragraphe presentation  -------->
-    <div class="row vide"><div class="col-xs-12 text-center">Présentation</div></div>
+    <div class="row presentation">
+        <div class="col-xs-12 col-lg-offset-2 col-lg-8 text-center">
+            <div class="presentation-header">
+            <h1>Bienvenue dans les Jardins de Gaston</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div class="value1">
+                <h3>Valeur 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div class="value2">
+                <h3>Valeur 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </div>
 
 
 <!-------     Valeur Ecologie  -------->
@@ -89,29 +104,16 @@
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-1 col-lg-4 real1">
         <div class="thumbnail">
 
-            <figure class="cd-image-container">
-                <img src="img/test_img_1_rsz.jpg" alt="Original Image">
-                <span class="cd-image-label" data-type="original">Original</span>
+ <!-- cd-image-container -->
 
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
-                    <img src="img/test_img_2.jpg" alt="Modified Image">
-                    <span class="cd-image-label" data-type="modified">Modified</span>
-                </div>
-
-                <span class="cd-handle"></span> <!-- slider handle -->
-            </figure> <!-- cd-image-container -->
-
-            <!--<div class="beforeAfter">
+            <div class="beforeAfter">
                 <div class="container-fluid">
-
                     <figure class="before"> <img class="img-responsive" src="img/test_img_1_rsz.jpg" />
                     </figure>
                     <figure class="after"> <img src="img/test_img_2.jpg" />
                     </figure>
-
                 </div>
-
-            </div>-->
+            </div>
 
             <div class="caption">
                 <h3>Titre 3</h3>
@@ -123,29 +125,16 @@
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4 real2">
         <div class="thumbnail">
 
-            <figure class="cd-image-container">
-                <img src="img/test2_avant.jpg" alt="Original Image">
-                <span class="cd-image-label" data-type="original">Original</span>
+<!-- cd-image-container -->
 
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
-                    <img src="img/test2_apres.jpg" alt="Modified Image">
-                    <span class="cd-image-label" data-type="modified">Modified</span>
-                </div>
-
-                <span class="cd-handle"></span> <!-- slider handle -->
-            </figure> <!-- cd-image-container -->
-
-            <!--<div class="beforeAfter">
+            <div class="beforeAfter">
                 <div class="container-fluid">
-
                     <figure class="before"> <img class="img-responsive" src="img/test2_avant.jpg" />
                     </figure>
                     <figure class="after"> <img src="img/test2_apres.jpg" />
                     </figure>
-
                 </div>
-
-            </div>-->
+            </div>
             <div class="caption">
                 <h3>Titre 3</h3>
                 <p>Lorem Ipsum</p>
@@ -156,10 +145,9 @@
 </div>
 
 
-<!-------         Best Real 1         -------->
+<!-------         Separation         -------->
 
-
-<!-------         Best Real 2         -------->
+<hr class="separe">
 
     <!--    Section Blog    -->
 
@@ -198,10 +186,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/tondeusersz.jpg" alt="tondeuse">
             <div class="etiquette">
-                <h3>Prestation 1</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Entretien des pelouses</h3>
+                <p>Tonte, emoussage, scarification, regarnissage ...</p>
             </div>
         </div>
     </div>
@@ -211,10 +199,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/haiersz.jpg" alt="taille-haie">
             <div class="etiquette">
-                <h3>Prestation 2</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Taille</h3>
+                <p>Haies, arbustes, arbres fruitiers ...</p>
             </div>
         </div>
     </div>
@@ -227,11 +215,11 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/entretien_massifrsz.jpg" alt="secateur">
             <div class="etiquette">
-                <h3>Prestation 3</h3>
-                <p>Lorem ipsum dolor ....</p>
-            </div>
+                <h3>Entretien des massifs</h3>
+                <p>Désherbage, paillage ...</p>
+        </div>
         </div>
     </div>
 
@@ -239,10 +227,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/potagerrsz.jpg" alt="potager">
             <div class="etiquette">
-                <h3>Prestation 4</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Potager</h3>
+                <p>Mise en place et entretien</p>
             </div>
         </div>
     </div>
@@ -255,9 +243,9 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/evacuationrsz.jpg" alt="brouette de déchet">
             <div class="etiquette">
-                <h3>Prestation 5</h3>
+                <h3>Evacuation des déchets végétaux</h3>
                 <p>Lorem ipsum dolor ....</p>
             </div>
         </div>
@@ -267,10 +255,10 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="http://placehold.it/500x500" alt="prestation1">
+            <img src="img/entretien_exterieurrsz.jpg" alt="lasurrage">
             <div class="etiquette">
-                <h3>Prestation 6</h3>
-                <p>Lorem ipsum dolor ....</p>
+                <h3>Entretien des exterieurs</h3>
+                <p>Déneigement, peinture, lasure, nettoyage haute pression ...</p>
             </div>
         </div>
     </div>
@@ -278,16 +266,20 @@
 </div>
 
 <!-------     Section Conseil du mois     -------->
+
     <div class="row Conseilbackground">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
                 <h4>Conseil du Jour</h4>
             </div>
-            <div class="ConseilText col-lg-6 col-lg-offset-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-            </div>
+                <div>
+                    <div class="ConseilText col-lg-11 col-lg-offset-1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
         </div>
     </div>
+
 
 <!-------       Section Livre d'or      -------->
     <div class="row col-xs-10 col-xs-offset-1 LDOR">
@@ -333,10 +325,10 @@
 
 <!-------     Section Formulaire     -------->
     <div class="row Contact col-xs-12">
-        <img class=" ImgForm col-lg-6" src="http://placehold.it/600x470">
+        <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500">
 
 
-        <div class="col-lg-6 col-xs-12 formulaire">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
 
             <h2>CONTACTEZ-NOUS</h2>
             <p>Tel: 06 00 00 00 00</p>
@@ -458,7 +450,7 @@
         </div>
     </div>
 
-</div> <!-- fermeture du container-fluid -->
+</div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>

@@ -30,10 +30,10 @@
                     <span class="icon-bar"></span>
                 </button>
             <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
-            <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
-        </div>
+             <div class="row hidden-lg hidden-md hidden-sm"><span class="headtitle">Les Jardins de Gaston</span></div>
+         </div>
 
-        <!-- navbar-collapse navigation -->
+         <!-- navbar-collapse navigation -->
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.php">Images de fond</a></li>
@@ -41,6 +41,7 @@
                 <li><a href="prestations.php">Prestations</a></li>
                 <li><a href="conseils.php">Conseils</a></li>
                 <li><a href="livredor.php">Livre d'or</a></li>
+                <li><a href="messageRecu.php">Message Recus</a></li>
                 <li><a href="chezgaston.php">Chez Gaston</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
