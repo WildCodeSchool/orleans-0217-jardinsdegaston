@@ -4,6 +4,7 @@ body {
 }
 .cache {
     visibility: hidden;
+    height: 5px;
 }
 
 /* --- navbar ---------------------------------------------------- */

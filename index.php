@@ -48,7 +48,9 @@
 
 <!--------    Image header    --------->
     <div class="row">
-        <div class="col-lg-12 bg-img1-lg img-responsive visible-lg parallax"></div>
+        <div class="col-lg-12 bg-img1-lg visible-lg img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-md visible-md img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-xs visible-xs img-responsive parallax"></div>
         <h1 id="accroche">Jardinier par nature ...</h1>
     </div>
 
