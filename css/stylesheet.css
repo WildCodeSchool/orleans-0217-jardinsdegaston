@@ -26,7 +26,26 @@ p {
 {
     padding-top: 80px;
 }
+.btn-default
+{
+    background-color: #557e02;
+    border-color: #557E02;
+    border-radius: 6px;
+    color: white;
 
+}
+
+.btn-default:hover
+{
+    border-color: #557E02;
+}
+
+.hover:hover
+{
+    background-color: #557E02;
+    border-radius: 6px;
+    color: white;
+}
 /*------      Navigation      ------*/
 .navbar-toggle {
 
