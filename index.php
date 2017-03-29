@@ -268,21 +268,34 @@
 
 <!-------     Section Conseil du mois     -------->
     <span id="conseilAnchor" class="ancre"></span>
-    <div class="row Conseilbackground">
+    <div class="row Conseilbackground-lg">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
                 <h4>Conseil du Jour</h4>
             </div>
-                <div>
-                    <div class="ConseilText col-lg-11 col-lg-offset-1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                    </div>
+            <div>
+                <div class="ConseilText col-lg-11 col-lg-offset-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row Conseilbackground-xs">
+        <div class="row Conseil-xs col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+            <div class="col-lg-3 col-lg-offset-1 ConseilTitre-xs">
+                <h4>Conseil du Jour</h4>
+            </div>
+            <div class="row">
+                <div class="ConseilText-xs col-lg-11 col-lg-offset-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
         </div>
     </div>
 
 
-<!-------       Section Livre d'or      -------->
+
+    <!-------       Section Livre d'or      -------->
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1 LDOR">
             <div class="row">

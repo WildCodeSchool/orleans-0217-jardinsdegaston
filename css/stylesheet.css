@@ -250,7 +250,14 @@ h4#accroche{
 }
 
 /*-------    Section Conseil du mois    ------*/
-.Conseilbackground {
+.Conseilbackground-lg {
+    margin-bottom: 5%;
+    background-image: url('../img/imgConseil.jpg');
+    background-size: cover;
+    max-height: 600px;
+}
+
+.Conseilbackground-xs {
     margin-bottom: 5%;
     background-image: url('../img/imgConseil.jpg');
     background-size: cover;
@@ -264,9 +271,25 @@ h4#accroche{
     display: flex;
 }
 
+.Conseil-xs {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: rgba(0,0,0,0.3);
+}
+
 .ConseilTitre {
     margin-top: auto;
     margin-bottom: auto;
+    text-align: center;
+    border:1px solid white;
+
+}
+
+.ConseilTitre-xs {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 11%;
+    margin-right: 11%;
     text-align: center;
     border:1px solid white;
 
@@ -278,7 +301,18 @@ h4#accroche{
     opacity: 1;
 }
 
+.ConseilTitre-xs h4 {
+    color: white;
+    font-size: 25px;
+    opacity: 1;
+}
+
 .ConseilText {
+    margin-top: 2.5%;
+
+}
+
+.ConseilText-xs {
     margin-top: 2.5%;
 
 }
@@ -286,6 +320,12 @@ h4#accroche{
 .ConseilText p {
     color: white;
     font-size: 22px;
+    opacity: 1;
+}
+
+.ConseilText-xs p {
+    color: white;
+    font-size: 14px;
     opacity: 1;
 }
 
@@ -310,6 +350,14 @@ h4#accroche{
 
 .carousel .right {
     background-image: none;
+}
+
+.glyphicon-chevron-right {
+    color: #557e02;
+}
+
+.glyphicon-chevron-left {
+    color: #557e02;
 }
 
 /*-------    Section Formulaire   ------*/
@@ -491,8 +539,15 @@ h4#accroche{
     }
 }
 
-@media only screen and (max-width: 560px){
-    .ConseilText p {
-    font-size: 14px;
+@media only screen and (max-width: 600px){
+    .Conseilbackground-lg {
+        display: none;
     }
+}
+
+@media only screen and (min-width: 600px){
+    .Conseilbackground-xs {
+        display: none;
+    }
+
 }
