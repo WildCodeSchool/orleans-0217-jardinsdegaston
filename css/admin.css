@@ -8,6 +8,7 @@ body {
 }
 
 /* --- navbar ---------------------------------------------------- */
+@grid-float-breakpoint: 1200;
 .navbar-inverse
 {
     background-color: #2b542c;
@@ -16,7 +17,7 @@ body {
 
 .titre h1
 {
-    font-family: 'Chicle', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
     /*color: #00ab0c;*/
     color: #2b542c;
     font-size: 30px;

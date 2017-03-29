@@ -102,7 +102,7 @@
 
 
 
-</div>
+</div> <!-- fermeture de la row principale -->
 
 
 <!-- le container-fluid est ouvert dans le header.php et ferme dans le footer.php -->
