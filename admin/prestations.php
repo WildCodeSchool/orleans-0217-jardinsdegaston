@@ -50,7 +50,7 @@ $prestations = [
                                 <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
                             </form>
                             <br />
-                            Ordre d\'affichage & nbsp;&nbsp;&nbsp;
+                            Ordre d\'affichage &nbsp;&nbsp;&nbsp;
                             <a href = "#" class="btn btn-default btn-xs" > Monter</a >&nbsp;&nbsp;&nbsp;
                             <a href = "#" class="btn btn-default btn-xs" > Descendre</a >
                         </div>
