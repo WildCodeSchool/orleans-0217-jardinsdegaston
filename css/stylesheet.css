@@ -2,7 +2,13 @@
 
 h1 {
     padding : 15px 0 20px 0;
+    font-size: 44px;
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
 }
 
 h3 {
@@ -12,6 +18,27 @@ h3 {
 
 p {
     font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button, input, select, textarea {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.separe {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(85, 126, 2, 0.75), rgba(0, 0, 0, 0));
+    border: 0 none;
+    color: #557e02;
+    height: 1px;
+    margin-bottom: 10px;
 }
 
 
@@ -37,6 +64,11 @@ p {
 {
     background: rgba(0,0,0,0.8);
     border-color: #0000;
+}
+
+.navbar-inverse.scrolled {
+    background-color: #202020 !important;
+    transition: background-color 300ms linear;
 }
 
 .navbar-inverse .navbar-nav > li > a
@@ -76,36 +108,37 @@ h4#accroche{
     z-index: -1;
 }
 .bg-img1-lg, .bg-img1-md, .bg-img1-sm, .bg-img1-xs {
-    background-image: url("../img/bgimg1.jpg");
+    background-image: url("../img/bg1.jpg");
     background-size: cover;
 }
 .bg-img2-lg, .bg-img2-md, .bg-img2-sm, .bg-img2-xs {
-    background-image: url("../img/bgimg2.jpg");
+    background-image: url("../img/garden2.jpg");
     background-size: cover;
 }
-.bg-img1-md {
+
+.bg-img1-lg, .bg-img1-md {
+    height: 870px;
+}
+
+.bg-img1-md, .bg-img1-sm, .bg-img1-xs {
     margin-top: 50px
 }
-.bg-img1-lg {
-    height: 750px;
+
+.bg-img2-lg{
+    height: 400px;
 }
-.bg-img1-md, .bg-img2-lg{
-    height: 550px;
-}
-.bg-img1-xs, .bg-img2-md, .bg-img2-xs{
+.bg-img1-xs, .bg-img2-md {
     height: 300px;
 }
+
+.bg-img2-xs {
+
+}
+
 .parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-}
-.bg-img2-lg, .bg-img2-md, .bg-img2-xs {
-    background-image: url("../img/bgimg2p.jpg");
-    background-size: cover;
-}
-.bg-change {
-    margin-top: 100px;
 }
 
 
@@ -160,16 +193,11 @@ h4#accroche{
 
 }
 
-
-/*------   Image Transition   ------*/
-/*   voir image header plus haut    */
-
 /*------  Section Best Realisations  ------*/
 
 .real-titre {
     background-color: #ffffff;
     text-align: center;
-    padding-bottom: 20px;
 }
 
 .real {
@@ -196,36 +224,47 @@ h4#accroche{
     overflow: hidden;
 }
 
-/*-------   Separation ------*/
-
-/*.separe {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(186, 186, 186, 0.75), rgba(0, 0, 0, 0));
-    border: 0 none;
-    color: rgb(186, 186, 186);
-    height: 1px;
-}*/
 
 /*-------   Section Blog  ------*/
 .Blog {
     background-image: url('../img/imgConseil.jpg');
     background-size: cover;
     padding: 20px 0 20px 0;
+    height: 185px;
 }
 
 .BlogThumb {
     text-align: center;
     color: white;
+    font-weight: bold;
 }
 
-.BlogThumb h2 {
-    color: #557e02;
-    text-shadow: 1px 1px 1px;
+.BlogThumb h3 {
+    /*
+    color: #d5f88d;
+    */
+    color: #7c0f1a;
+    text-shadow: 0 0 1px #c43d4b;
+    font-size: 36px;
+    padding-top: 20px;
+}
+
+.BlogThumb p {
+    text-shadow: 0 0 1px black;
+    font-size: 18px;
+}
+
+.BlogThumb a:hover {
+    text-decoration: none;
 }
 
 /*-------     Prestations     ------*/
 .presta-titre {
     text-align: center;
-    padding-bottom: 20px;
+}
+
+.presta .separe{
+    margin-bottom: 2%;
 }
 
 .row-presta {
@@ -251,7 +290,7 @@ h4#accroche{
 
 /*-------    Section Conseil du mois    ------*/
 .Conseilbackground {
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     background-image: url('../img/imgConseil.jpg');
     background-size: cover;
     max-height: 600px;
@@ -260,7 +299,7 @@ h4#accroche{
 .Conseil {
     margin-top: 4%;
     margin-bottom: 4%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
     display: flex;
 }
 
@@ -297,7 +336,9 @@ h4#accroche{
 
 .LivreDor-titre {
     text-align: center;
-    padding-bottom: 10px;
+    /*
+    padding-bottom: 5px;
+    */
 }
 
 .carousel .item {
@@ -314,13 +355,13 @@ h4#accroche{
 
 /*-------    Section Formulaire   ------*/
 .ImgForm {
-    margin-top: 5%;
+    margin-top: 1%;
     max-height: 495px;
 }
 
 .formulaire {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 2%;
 
 }
 
@@ -341,18 +382,24 @@ h4#accroche{
 }
 .footer {
     padding-top: 10px;
+    padding-bottom: 20px;
     background-color: #202020;
-    height: 200px;
 }
-#footer-logo-sp {
-    margin-top: 40px;
-    margin-left: 30px;
+
+.logo-sap {
+    padding: 40px 0 10px 0;
 }
+
 #footer-logo-gaston {
     margin-top:10px;
     width: 100%;
     max-width: 350px;
 }
+
+.logo-gaston-footer {
+    padding-top: 10px;
+}
+
 .infolegale h4 {
     font-size: 18px;
     font-weight: bold;
@@ -371,17 +418,29 @@ h4#accroche{
 }
 
 .logoWCS {
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .logoWCS a {
     color: white;
     text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.linkModal {
+    padding-top: 20px;
+}
 
+.linkModal a {
+    color: #557e02;
+    font-size: 18px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
 
-
+.linkModal a:hover {
+    color: white;
+    text-decoration: none;
+}
 
 
 /*-------       Media Queries     ------*/
@@ -435,6 +494,14 @@ h4#accroche{
     h1#accroche{
         font-size:72px;
     }
+}
+
+@media screen and (max-width: 760px) {
+    h4#accroche {
+        top: 25%;
+        font-size: 50px;
+    }
+
 }
 
 @media screen and (max-width: 760px) {
@@ -495,4 +562,24 @@ h4#accroche{
     .ConseilText p {
     font-size: 14px;
     }
+}
+
+
+@media only screen and (max-width: 360px){
+
+}
+.logo-sap {
+    height: 20px;
+}
+
+#footer-logo-gaston {
+    width: 80%;
+}
+
+.legal-logo-wcs {
+    height: 10px;
+}
+
+.linkModal a {
+    font-size: 16px;
 }

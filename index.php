@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Open+Sans|Open+Sans+Condensed:300|PT+Sans+Narrow|Roboto" rel="stylesheet">
 </head>
 <body id="top">
 <!-----      Navigation   ------->
@@ -15,7 +16,7 @@
 <!-- navbar-collapse menu burger-->
 
 <header id="top">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarColor">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -50,7 +51,7 @@
     <div class="row">
 
         <div class="col-lg-12 bg-img1-lg visible-lg img-responsive parallax"></div>
-        <div class="col-lg-12 bg-img1-md visible-md img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-md visible-md visible-sm img-responsive parallax"></div>
         <div class="col-lg-12 bg-img1-xs visible-xs img-responsive parallax"></div>
         <h4 id="accroche">Jardinier par nature ...</h4>
     </div>
@@ -90,6 +91,7 @@
 <!-------      Image Transition 1     -------->
     <div class="row">
         <div class="col-lg-12 bg-img2-lg img-responsive visible-lg parallax"></div>
+        <div class="col-lg-12 bg-img2-md visible-md visible-sm hidden-xs img-responsive parallax"></div>
     </div>
 
 
@@ -99,6 +101,9 @@
     <div class="col-xs-12">
         <h2>Nos plus belles réalisations</h2>
     </div>
+</div>
+<div class="row presta">
+    <hr class="separe">
 </div>
 
 <div class="row real">
@@ -154,10 +159,10 @@
 
     <div class="row Blog">
 
-        <div class="col-xs-9 col-xs-offset-1">
+        <div class="col-xs-12">
 
             <div class="BlogThumb">
-                <a href="blog.php"><h3>Et pendant ce temps chez Gaston...</h3></a>
+                <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
                 <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
             </div>
 
@@ -177,7 +182,9 @@
     <div class="col-xs-12">
         <h2>Nos prestations</h2>
     </div>
-
+</div>
+<div class="row presta">
+    <hr class="separe">
 </div>
 
 
@@ -288,9 +295,12 @@
             <div class="row">
 
                 <div class="LivreDor-titre">
-                    <h2>Livre d'Or</h2>
+                    <h2>Notre livre d'Or</h2>
                 </div>
 
+            </div>
+            <div class="row">
+                <hr class="separe">
             </div>
 
             <div class="row">
@@ -371,14 +381,18 @@
 
     <!-------           Footer           -------->
     <div class="row footer">
-        <div class="col-xs-2 vcenter">
-            <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img id="footer-logo-sp" src="img/Logosap.png" alt="Logo Service à la personne" /></a>
+        <div class="hidden-xs col-sm-2 text-center">
+            <div class="row logo-sap">
+                <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img src="img/Logosap.png" alt="Logo Service à la personne" /></a>
+            </div>
         </div>
-        <div class="col-xs-8 text-center">
-            <img id="footer-logo-gaston" class="hidden-xs" src="img/logo_blanc.png" alt="logo Les Jardins de Gaston">
-            <span class="visible-xs">Les Jardins de Gaston</span><br />
-            <br />
-            <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#infolegale">Mentions légales</button>
+        <div class="col-xs-12 push-xs-6 col-sm-8 text-center">
+            <div class="row logo-gaston-footer">
+                <img id="footer-logo-gaston" src="img/logo_blanc.png" alt="logo Les Jardins de Gaston">
+            </div>
+            <div class="row linkModal">
+                <a href="#" data-toggle="modal" data-target="#infolegale">mentions légales</a>
+            </div>
 
             <!-- modale mentions legales -->
             <div class="modal fade" id="infolegale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -449,7 +463,12 @@
             <!-- fin modale infos legales -->
 
         </div>
-        <div class="col-xs-2 logoWCS">
+        <div class="col-xs-6 hidden-sm hidden-md hidden-lg text-center">
+            <div class="row logo-sap">
+                <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img src="img/Logosap.png" alt="Logo Service à la personne" /></a>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-2 text-center logoWCS">
             <div class="row">
                 <a href="http://wildcodeschool.fr/orleans" target="_blanc">Design par</a>
             </div>
@@ -465,6 +484,7 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/beforeAfterEffect.js"></script>
 <script type="text/javascript" src="js/tagline.js"></script>
+<script type="text/javascript" src="js/navbar.js"></script>
 
 </body>
 
