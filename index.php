@@ -99,77 +99,7 @@
 
 <!-------     Section Best Realisations    -------->
 
-    <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-            <div class="row real-titre">
-                <div class="col-xs-12">
-                    <h2>Nos plus belles réalisations</h2>
-                </div>
-            </div>
-            <div class="row">
-                <hr class="separe">
-            </div>
-
-            <div class="row">
-                <div id="carousel-real" class="carousel slide fade in" data-ride="carousel" data-interval="false">
-
-                    <div class="carousel-inner" role="listbox">
-
-                        <div class="item col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-lg-offset-3 col-lg-6 real1 active ">
-                            <div class="thumbnail">
-
-                                <!-- cd-image-container -->
-
-                                <div class="beforeAfter">
-                                    <div class="container-fluid">
-                                        <figure class="before"> <img class="img-responsive" src="http://placehold.it/750x400" />
-                                        </figure>
-                                        <figure class="after"> <img class="img-responsive" src="http://placehold.it/750x400" />
-                                        </figure>
-                                    </div>
-                                </div>
-
-                                <div class="caption">
-                                    <h3>Titre 3</h3>
-                                    <p>Lorem ipsum</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="item col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-lg-offset-3 col-lg-6 real2">
-                            <div class="thumbnail">
-
-                                <!-- cd-image-container -->
-
-                                <div class="beforeAfter">
-                                    <div class="container-fluid">
-                                        <figure class="before"> <img class="img-responsive" src="http://placehold.it/750x400" />
-                                        </figure>
-                                        <figure class="after"> <img class="img-responsive" src="http://placehold.it/750x400" />
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3>Titre 3</h3>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a class="left carousel-control" href="#carousel-real" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-real" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--<div class="row real-titre">
+<div class="row real-titre">
     <div class="col-xs-12">
         <h2>Nos plus belles réalisations</h2>
     </div>
@@ -179,18 +109,16 @@
 </div>
 
 <div class="row real">
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 real1">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 real1">
         <div class="thumbnail">
 
-<!-- cd-image-container
+<!-- cd-image-container-->
 
-            <div class="beforeAfter">
-                <div class="container-fluid">
-                    <figure class="before"> <img class="img-responsive" src="img/test_img_2.jpg" />
-                    </figure>
-                    <figure class="after"> <img src="img/test_img_1_rsz.jpg" />
-                    </figure>
-                </div>
+            <div id="comparison">
+                <figure>
+                    <div id="divisor"></div>
+                </figure>
+                <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
             </div>
 
             <div class="caption">
@@ -200,27 +128,7 @@
         </div>
     </div>
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-3 col-lg-6 real2">
-        <div class="thumbnail">
-
-<!-- cd-image-container
-
-            <div class="beforeAfter">
-                <div class="container-fluid">
-                    <figure class="before"> <img class="img-responsive" src="img/test2_apres.jpg" />
-                    </figure>
-                    <figure class="after"> <img src="img/test2_avant.jpg" />
-                    </figure>
-                </div>
-            </div>
-            <div class="caption">
-                <h3>Titre 3</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-        </div>
-    </div>
-
-</div>-->
+</div>
 
 
     <!--    Section Blog    -->
@@ -569,9 +477,8 @@
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/beforeAfterEffect.js"></script>
-<script type="text/javascript" src="js/tagline.js"></script>
-<script type="text/javascript" src="js/navbar.js"></script>
+<script type="text/javascript" src="js/beforeAfter.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 

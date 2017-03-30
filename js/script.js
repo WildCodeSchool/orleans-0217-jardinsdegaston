@@ -1,7 +1,9 @@
-/**
- * Created by wilder3 on 22/03/17.
- */
+/* -------------------------------------------------------///
+ ------------ Scripts Jardins de Gaston ------------------///
+///-------------------------------------------------------*/
 
+
+/* Script beforeAfter - effet avant/apres dans les realisations */
 
 $('body').ready(function(){
 
@@ -74,4 +76,37 @@ $('body').ready(function(){
 
 });
 
+/* Script navbar - changement de couleur de la navbar au scroll */
 
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $(".navbar-inverse");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > 700);
+    });
+});
+
+/* Script Tagline - disparition de Jardinier par nature dans le header  */
+
+function tagline() {
+    var scroll = $(window).scrollTop();
+    if ($(window).width() > 200) {
+        if (scroll >= 600) {
+            $('#accroche').addClass('hidden');
+        } else {
+            $('#accroche').removeClass('hidden');
+        }
+
+    }
+}
+
+tagline();
+
+$(function() {
+    if ($(window).width() > 200) {
+        $(window).scroll(function () {
+            tagline();
+        });
+    }
+});
+
+/*--------------- Fin -----------*/
