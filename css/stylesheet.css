@@ -225,14 +225,13 @@ h4#accroche{
 }
 
 .beforeAfter .container-fluid {
-    width: 90%;
-    margin-top: 10px;
+    width: 100%;
 }
 
 .beforeAfter .after {
     position: absolute;
     width: 0;
-    max-width: 85%;
+    max-width: 95%;
     top: 0;
     bottom: 0;
     overflow: hidden;
@@ -248,19 +247,21 @@ h4#accroche{
 }
 
 .BlogThumb {
-    text-align: center;
     color: white;
+    text-align: center;
     font-weight: bold;
 }
 
 .BlogThumb h3 {
     /*
-    color: #d5f88d;
+    color: #c1eb6a; !* Teinte verte (si on ne veut pas du rouge cerise) *!
     */
     color: #7c0f1a;
     text-shadow: 0 0 1px #c43d4b;
-    font-size: 36px;
+    font-size: 40px;
+    /*
     padding-top: 20px;
+    */
 }
 
 .BlogThumb p {
@@ -396,8 +397,12 @@ h4#accroche{
     */
 }
 
-.carousel .item {
+/*.carousel .item {
     margin-top: 5%;
+}*/
+
+.carousel {
+    margin-top: 3%;
 }
 
 .carousel .left {
@@ -562,20 +567,17 @@ h4#accroche{
 }
 
 @media screen and (max-width: 760px) {
-    h4#accroche {
-        top: 25%;
-        font-size: 50px;
-    }
-
-}
-
-@media screen and (max-width: 760px) {
     h1 {
         font-size: 28px;
     }
 
     h3 {
         font-size: 20px;
+    }
+
+    h4#accroche {
+        top: 25%;
+        font-size: 50px;
     }
 
     p {
@@ -599,6 +601,45 @@ h4#accroche{
     }
 }
 
+@media (max-width: 768px) {
+    h1#accroche{
+        font-size:36px;
+    }
+
+    .Blog {
+        padding: 0;
+    }
+
+    .BlogThumb {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-bottom: 5px;
+        margin-top: 8%;
+    }
+
+    .BlogThumb h3 {
+        color: #c1eb6a;
+        font-size: 26px;
+        padding-top: 5px;
+    }
+
+    .BlogThumb p {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .Conseilbackground-lg {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .Conseilbackground-xs {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 455px) {
     .presentation {
         height: 790px;
@@ -615,43 +656,32 @@ h4#accroche{
         right: 5%;
         width: 80%;
     }
-}
 
-@media (max-width: 768px) {
-    h1#accroche{
-        font-size:36px;
+    .BlogThumb {
+        margin-top: 0;
     }
 }
-
-@media only screen and (max-width: 600px){
-    .Conseilbackground-lg {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 600px){
-    .Conseilbackground-xs {
-        display: none;
-    }
-
-}
-
 
 @media only screen and (max-width: 360px){
 
-}
-.logo-sap {
-    height: 20px;
-}
+    h2 {
+        font-size: 26px;
+    }
 
-#footer-logo-gaston {
-    width: 80%;
-}
+    .logo-sap {
+        height: 20px;
+    }
 
-.legal-logo-wcs {
-    height: 10px;
-}
+    #footer-logo-gaston {
+        width: 80%;
+    }
 
-.linkModal a {
-    font-size: 16px;
+    .legal-logo-wcs {
+        height: 10px;
+    }
+
+    .linkModal a {
+        font-size: 16px;
+    }
+
 }

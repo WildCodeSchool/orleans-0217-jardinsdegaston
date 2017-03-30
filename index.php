@@ -99,7 +99,77 @@
 
 <!-------     Section Best Realisations    -------->
 
-<div class="row real-titre">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="row real-titre">
+                <div class="col-xs-12">
+                    <h2>Nos plus belles réalisations</h2>
+                </div>
+            </div>
+            <div class="row">
+                <hr class="separe">
+            </div>
+
+            <div class="row">
+                <div id="carousel-real" class="carousel slide fade in" data-ride="carousel" data-interval="false">
+
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-lg-offset-3 col-lg-6 real1 active ">
+                            <div class="thumbnail">
+
+                                <!-- cd-image-container -->
+
+                                <div class="beforeAfter">
+                                    <div class="container-fluid">
+                                        <figure class="before"> <img class="img-responsive" src="http://placehold.it/750x400" />
+                                        </figure>
+                                        <figure class="after"> <img class="img-responsive" src="http://placehold.it/750x400" />
+                                        </figure>
+                                    </div>
+                                </div>
+
+                                <div class="caption">
+                                    <h3>Titre 3</h3>
+                                    <p>Lorem ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-lg-offset-3 col-lg-6 real2">
+                            <div class="thumbnail">
+
+                                <!-- cd-image-container -->
+
+                                <div class="beforeAfter">
+                                    <div class="container-fluid">
+                                        <figure class="before"> <img class="img-responsive" src="http://placehold.it/750x400" />
+                                        </figure>
+                                        <figure class="after"> <img class="img-responsive" src="http://placehold.it/750x400" />
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <h3>Titre 3</h3>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-real" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-real" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--<div class="row real-titre">
     <div class="col-xs-12">
         <h2>Nos plus belles réalisations</h2>
     </div>
@@ -109,10 +179,10 @@
 </div>
 
 <div class="row real">
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-1 col-lg-4 real1">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 real1">
         <div class="thumbnail">
 
- <!-- cd-image-container -->
+<!-- cd-image-container
 
             <div class="beforeAfter">
                 <div class="container-fluid">
@@ -130,10 +200,10 @@
         </div>
     </div>
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4 real2">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-3 col-lg-6 real2">
         <div class="thumbnail">
 
-<!-- cd-image-container -->
+<!-- cd-image-container
 
             <div class="beforeAfter">
                 <div class="container-fluid">
@@ -150,12 +220,8 @@
         </div>
     </div>
 
-</div>
+</div>-->
 
-
-<!-------         Separation         -------->
-
-<!--<hr class="separe">-->
 
     <!--    Section Blog    -->
 
@@ -308,11 +374,9 @@
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1 LDOR">
             <div class="row">
-
                 <div class="LivreDor-titre">
                     <h2>Notre livre d'Or</h2>
                 </div>
-
             </div>
             <div class="row">
                 <hr class="separe">
@@ -456,9 +520,16 @@
                                 formellement interdite sauf autorisation expresse du responsable de publication.
                             </p>
 
+                            <h4>Polices de caractères - Copyright</h4>
+                            <p>
+                                Police de caractères 'Montserrat Alternates' - Designer : Steve Matteson - Open Font License.
+                                <br/>
+                                Police de caractères 'Open Sans' - Designer : Julieta Ulanovsky - Apache License Version 2.0.
+                            </p>
+
                             <h4>Fonctionnement</h4>
                             <p>
-                                Pour toute remarque ou suggestion sur le fonctionnement du site, veuillez adresser un message via le formulaire de contact.</a>
+                                Pour toute remarque ou suggestion sur le fonctionnement du site, veuillez adresser un message via le <a>formulaire de contact.</a>
                             </p>
 
                             <h4>Conception et réalisation</h4>
