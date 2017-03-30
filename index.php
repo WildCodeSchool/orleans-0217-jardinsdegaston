@@ -187,12 +187,12 @@
 
 <div class="row row-presta">
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
             <img src="img/tondeusersz.jpg" alt="tondeuse">
             <div class="etiquette">
                 <h3>Entretien des pelouses</h3>
-                <p>Tonte, emoussage, scarification, regarnissage ...</p>
+                <p>Tonte, émoussage, scarification, regarnissage ...</p>
             </div>
         </div>
     </div>
@@ -200,7 +200,7 @@
 
 <!-------        Prestation 2        -------->
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
             <img src="img/haiersz.jpg" alt="taille-haie">
             <div class="etiquette">
@@ -216,7 +216,7 @@
 
 <div class="row row-presta">
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
             <img src="img/entretien_massifrsz.jpg" alt="secateur">
             <div class="etiquette">
@@ -228,7 +228,7 @@
 
 <!-------        Prestation 4        -------->
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
             <img src="img/potagerrsz.jpg" alt="potager">
             <div class="etiquette">
@@ -244,7 +244,7 @@
 
 <div class="row row-presta">
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
             <img src="img/evacuationrsz.jpg" alt="brouette de déchet">
             <div class="etiquette">
@@ -256,7 +256,7 @@
 
 <!-------        Prestation 6        -------->
 
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-1 col-lg-4">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
             <img src="img/entretien_exterieurrsz.jpg" alt="lasurrage">
             <div class="etiquette">
