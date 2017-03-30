@@ -21,8 +21,15 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+
+.ancre
+{
+    padding-top: 80px;
+}
+
 label {
     font-family: 'Open Sans', sans-serif;
+
 }
 
 a {
@@ -44,10 +51,6 @@ button, input, select, textarea {
 
 /* ---   provisoire   ---*/
 
-.ancre
-{
-    padding-top: 80px;
-}
 .btn-default
 {
     background-color: #557e02;
@@ -68,6 +71,8 @@ button, input, select, textarea {
     border-radius: 6px;
     color: white;
 }
+
+
 /*------      Navigation      ------*/
 .navbar-toggle {
 
@@ -297,9 +302,19 @@ h4#accroche{
     border : solid lightgrey 1px;
     border-radius: 4px;
     box-shadow: 2px 2px 8px rgb(170, 170, 170);
-    width: 450px;
+    width: 400px;
     height: auto;
     padding-left : 10px;
+}
+
+.thumbnail
+{
+    border: none;
+}
+
+.thumbnail>img
+{
+    border-radius: 6px;
 }
 
 /*-------    Section Conseil du mois    ------*/
@@ -508,6 +523,8 @@ h4#accroche{
 }
 
 
+
+
 /*-------       Media Queries     ------*/
 
 @media screen and (max-width: 1340px) {
@@ -527,6 +544,7 @@ h4#accroche{
         right: 5%;
         width: 80%;
     }
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -552,6 +570,10 @@ h4#accroche{
 
     .ImgForm {
         display: none;
+    }
+
+    .row-presta {
+        padding-bottom: 5px;
     }
 }
 
@@ -615,6 +637,11 @@ h4#accroche{
         right: 5%;
         width: 80%;
     }
+
+    .etiquette{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 768px) {
