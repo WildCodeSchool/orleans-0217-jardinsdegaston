@@ -35,7 +35,6 @@
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du mois</a></li>
                     <li><a class="btn btn-success" href="#formulaireAnchor" role="button">Nous contacter</a></li>
-
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

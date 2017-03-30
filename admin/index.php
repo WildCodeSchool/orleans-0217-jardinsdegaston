@@ -50,32 +50,6 @@
     ?>
 
 
-    <!-- upload image ------------------------------------------ -->
-
-    <div class="col-xs-12 bandeau text-center">
-        Charger une nouvelle image
-    </div>
-    <div class="col-xs-12 contenu text-center">
-        <form method="post" action="upldimg.php" enctype="multipart/form-data">
-            <input type="hidden" name="source" value="fond_ecran" />
-            <label for="fichier" class="btn btn-default">Choisir une image</label>
-            <input class="cache" type="file" name="fichier" id="fichier" />
-            <label for="saison">Saison associée :</label>
-            <?php
-                foreach ( $saisons as $saison ) {
-                    echo '&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="saison" id="saison'.strtolower($saison[0]).'" value="'.strtolower($saison[0]).'"';
-                    if ( $saison == 'Printemps' ) echo ' checked';
-                    echo ' />&nbsp;'.$saison;
-                }
-            ?>
-            <br />
-            <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
-            <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
-            <input class="btn btn-default" type="submit" name="galerie" value="Ajouter à la galerie" />
-        </form>
-    </div>
-
-
     <!-- Galerie ------------------------------------------------ -->
 
     <div class="col-xs-12 bandeau text-center">
@@ -99,6 +73,46 @@
             ';
         }
     ?>
+
+
+    <!-- upload image ------------------------------------------ -->
+
+    <div class="col-xs-12 bandeau text-center">
+        Charger une nouvelle image
+    </div>
+    <div class="col-xs-12">
+        <div class="row contenu">
+            <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
+                <img class="img-fluid pimg bloc-right" src="../img/noimg.png" alt="" />
+                <br />
+                <form method="post" action="modifimg.php" enctype="multipart/form-data">
+                    <input type="hidden" name="source" value="fond_ecran" />
+                    <input class="cache" type="file" name="fichier" id="fichier" />
+                    <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                </form>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <br />
+                <form method="post" action="majbg">
+                    <label for="saison">Saison associée :</label><br />
+                    <?php
+                    foreach ( $saisons as $saison ) {
+                        if ( $saison != 'Printemps' ) {
+                            echo '&nbsp;&nbsp;&nbsp;&nbsp;';
+                        }
+                        echo '<input type="radio" name="saison" id="saison'.strtolower($saison[0]).'" value="'.strtolower($saison[0]).'"';
+                        if ( $saison == 'Printemps' ) echo ' checked';
+                        echo ' />&nbsp;'.$saison;
+                    }
+                    ?>
+                    <br /><br />
+                    <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
+                    <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
+                    <input class="btn btn-default" type="submit" name="galerie" value="Ajouter à la galerie" />
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 

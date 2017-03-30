@@ -24,9 +24,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
             <!--
             <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
@@ -39,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.php">Images de fond</a></li>
-                <li><a href="avantapres.php">Avant/Après</a></li>
+                <li><a href="realisations.php">Réalisations</a></li>
                 <li><a href="prestations.php">Prestations</a></li>
                 <li><a href="conseils.php">Conseils</a></li>
                 <li><a href="livredor.php">Livre d'or</a></li>

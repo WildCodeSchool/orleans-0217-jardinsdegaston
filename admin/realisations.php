@@ -4,7 +4,7 @@
 <div class="row">
     <div class="row titre">
         <div class="col-xs-12 text-center">
-            <h1>Gestion de la zone Avant/après</h1>
+            <h1>Gestion des plus belles réalisations</h1>
         </div>
     </div>
 
@@ -12,7 +12,7 @@
     <!-- Premier bloc Avant/Après ----------------------------------- -->
 
     <div class="col-xs-12 bandeau text-center">
-        Premier bloc Avant/Après
+        Premier bloc
     </div>
 
     <div class="col-xs-12">
@@ -54,7 +54,7 @@
     <!-- Second bloc Avant/Après ------------------------------------ -->
 
     <div class="col-xs-12 bandeau text-center">
-        Second bloc Avant/Après
+        Second bloc
     </div>
 
     <div class="col-xs-12">
