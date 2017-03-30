@@ -68,15 +68,16 @@ $prestations = [
     </div>
     <div class="col-xs-12">
         <div class="row contenu">
-            <div class="col-xs-12 col-md-6 text-center">
+            <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
                 <img class="img-fluid pimg bloc-right" src="../img/noimg.png" alt="" />
                 <br />
                 <form method="post" action="modifimg.php" enctype="multipart/form-data">
+                    <input type="hidden" name="source" value="prestation" />
                     <input class="cache" type="file" name="fichier" id="fichier" />
                     <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
                 </form>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-6 col-lg-4">
                 <form method="post" action="majpresta">
                     <label for="titre">Titre de la prestation </label><br />
                     <input class="form-control" type="text" name="titre" id="titre" value="" /><br />

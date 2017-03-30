@@ -18,40 +18,79 @@
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Lato|Raleway" rel="stylesheet">
 </head>
-<body>
+<body id="top">
 <!-----      Navigation   ------->
 
-
-<!-- navbar-collapse menu burger-->
-
-<header>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse" id="navbarColor">
     <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-        <!-- navbar-right -->
-        <div class="nav navbar-nav navbar-right">
-                <div class="navbar-header">
-                    <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="img/logo_blanc_test.png"/></div>
-                    <div class="row hidden-sm hidden-md hidden-lg"><span class="headtitle">Les Jardins de Gaston</span></div>
-                </div>
-            <div class="row">
-                <h2>Et pendant ce temps-là chez Gaston...</h2>
-            </div>
         </div>
-    </div> <!-- /.container-fluid -->
+
+        <!-- navbar-collapse navigation -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
+            <ul class="nav navbar-nav navbar-right">
+                <li><form class="search-form" role="search">
+                        <div class="form-group waves-light">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form></li>
+                <li><a href="blog.php#top">Retour en haut</a></li>
+                <li><a href="index.php#top">Revenir sur le site</a></li>
+            </ul>
+            <ul>
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 
-<!--    <div class="row">
-        <div class="col-xs-12 headerBlog">
-            <img src="img/header_blog.jpg" alt="jardin" class="imgHeader"/>
-            <div class="logo">
-                <img src="img/logo_blanc_test.png">
-            </div>
-            <div class="blogTitle">
-                <h2>Et pendant ce temps-là chez Gaston...</h2>
-            </div>
-        </div>
-    </div>-->
+<!--<!-- SideNav slide-out button -->
+<!--<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>-->
+<!--<!--/. SideNav slide-out button -->
+<!---->
+<!--<!-- Sidebar navigation -->
+<!--<div id="slide-out" class="side-nav fixed sn-bg-1 custom-scrollbar">-->
+<!--    <!-- Logo -->
+<!---->
+<!--        <div class="logo-wrapper waves-light">-->
+<!--            <a href="index.php#top"><img src="img/logo_blanc_test.png" class="img-fluid flex-center"></a>-->
+<!--        </div>-->
+<!---->
+<!--    <!--/. Logo -->
+<!---->
+<!--    <!--Search Form-->
+<!---->
+<!--        <form class="search-form" role="search">-->
+<!--            <div class="form-group waves-light">-->
+<!--                <input type="text" class="form-control" placeholder="Search">-->
+<!--            </div>-->
+<!--        </form>-->
+<!---->
+<!--    <!--/.Search Form-->
+<!---->
+<!--    <!-- Side navigation links -->
+<!--    <div class="btnNav">-->
+<!--        <div>-->
+<!--            <a href="blog.php#top">Retour en haut</a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a href="index.php#top">Revenir sur le site</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <!--/. Side navigation links -->
+<!--    <div class="sidenav-bg mask-strong"></div>-->
+<!--</div>-->
+
+
 </header>
 
 

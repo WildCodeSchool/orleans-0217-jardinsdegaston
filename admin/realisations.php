@@ -1,10 +1,15 @@
+<?php // --- provisoire ---
+    $lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Sit amet, consectetur adipiscing elit.';
+?>
+
+
 
 <?php include 'header.php'; ?>
 <!-- le container-fluid est ouvert dans le header.php et ferme dans le footer.php -->
 <div class="row">
     <div class="row titre">
         <div class="col-xs-12 text-center">
-            <h1>Gestion de la zone Avant/après</h1>
+            <h1>Gestion des plus belles réalisations</h1>
         </div>
     </div>
 
@@ -12,7 +17,7 @@
     <!-- Premier bloc Avant/Après ----------------------------------- -->
 
     <div class="col-xs-12 bandeau text-center">
-        Premier bloc Avant/Après
+        Premier bloc
     </div>
 
     <div class="col-xs-12">
@@ -41,9 +46,7 @@
                     <label for="titre">Titre de la rubrique </label><br />
                     <input class="form-control" type="text" name="titre" id="titre" value="Titre" /><br />
                     <label for="detail">Commentaires</label><br />
-                    <textarea class="form-control" row="3" name="detail">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </textarea><br />
+                    <textarea class="form-control" row="3" name="detail"><?php echo $lorem; ?></textarea><br />
                     <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
                 </form>
             </div>
@@ -54,7 +57,7 @@
     <!-- Second bloc Avant/Après ------------------------------------ -->
 
     <div class="col-xs-12 bandeau text-center">
-        Second bloc Avant/Après
+        Second bloc
     </div>
 
     <div class="col-xs-12">
@@ -83,9 +86,7 @@
                     <label for="titre">Titre de la rubrique </label><br />
                     <input class="form-control" type="text" name="titre" id="titre" value="Titre" /><br />
                     <label for="detail">Commentaires</label><br />
-                    <textarea class="form-control" row="3" name="detail">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </textarea><br />
+                    <textarea class="form-control" row="3" name="detail"><?php echo $lorem; ?></textarea><br />
                     <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
                 </form>
             </div>

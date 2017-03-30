@@ -11,29 +11,45 @@
 .navbar-inverse
 {
     position: fixed;
-    background-image: url('../img/header_blog.jpg');
+    background:rgba(0, 0, 0, 1);
     z-index: 99999;
+    height: 100%;
+    width: 175px;
 }
 
-.navbar-right
-{
-    padding: 5px 20px 0 0;
+.icon-bar {
+    color: black;
 }
 
-
-#logo
-{
-    padding: 30px 20px 30px 0;
-}
-
-h2 {
+.navbar-inverse .navbar-nav > li > a {
     color: white;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Clicker Script', cursive;
-    padding-left: 5px;
-    padding-bottom: 20px;
 }
+
+
+.navbar-toggle {
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.btnNav {
+    text-align: center;
+}
+
+.container {
+    padding-left: 200px;
+}
+
+.search-form {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    }
+
+.logo {
+    padding-top: 20px;
+}
+
 
 /*--- Timeline   ---*/
 
@@ -50,7 +66,7 @@ img { border: 0; max-width: 100%; }
     font-size: 2.5em;
     text-align: center;
     color: black;
-    margin-top: 230px;
+    margin-top: 30px;
 }
 
 /** timeline box structure **/
@@ -211,7 +227,12 @@ img { border: 0; max-width: 100%; }
     .timeline li .timeline-panel {
         width: 44%;
     }
+
+    .sr-only {
+
+    }
 }
+
 
 @media (max-width: 700px) {
     .page-header h1 { font-size: 1.8em; }
@@ -254,5 +275,45 @@ img { border: 0; max-width: 100%; }
         border-right-width: 14px;
         left: -14px;
         right: auto;
+    }
+
+    .collapse {
+        display: none;
+    }
+
+    .navbar-header {
+        display: block;
+
+    }
+
+    .navbar-inverse
+    {
+        height: 100%;
+        width: 100px;
+        background:rgba(0, 0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    .navbar-inverse > .container-fluid > .navbar-header > .navbar-toggle{
+        background:rgba(0, 0, 0, .4);
+
+    }
+
+
+
+    .navbar-inverse .in
+    {
+
+        background:rgba(0, 0, 0, .3);
+
+    }
+
+
+    .logo {
+        display: none;
+    }
+
+    .container {
+        padding-left: 1px;
     }
 }
