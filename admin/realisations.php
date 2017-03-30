@@ -1,3 +1,8 @@
+<?php // --- provisoire ---
+    $lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Sit amet, consectetur adipiscing elit.';
+?>
+
+
 
 <?php include 'header.php'; ?>
 <!-- le container-fluid est ouvert dans le header.php et ferme dans le footer.php -->
@@ -41,9 +46,7 @@
                     <label for="titre">Titre de la rubrique </label><br />
                     <input class="form-control" type="text" name="titre" id="titre" value="Titre" /><br />
                     <label for="detail">Commentaires</label><br />
-                    <textarea class="form-control" row="3" name="detail">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </textarea><br />
+                    <textarea class="form-control" row="3" name="detail"><?php echo $lorem; ?></textarea><br />
                     <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
                 </form>
             </div>
@@ -83,9 +86,7 @@
                     <label for="titre">Titre de la rubrique </label><br />
                     <input class="form-control" type="text" name="titre" id="titre" value="Titre" /><br />
                     <label for="detail">Commentaires</label><br />
-                    <textarea class="form-control" row="3" name="detail">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </textarea><br />
+                    <textarea class="form-control" row="3" name="detail"><?php echo $lorem; ?></textarea><br />
                     <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
                 </form>
             </div>

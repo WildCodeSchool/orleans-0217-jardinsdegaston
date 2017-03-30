@@ -35,14 +35,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du mois</a></li>
-<<<<<<< HEAD
-                    <li><a class="btn btn-success" href="#formulaireAnchor" role="button">Nous contacter</a></li>
-=======
                     <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
-                </ul>
-                <ul>
-
->>>>>>> 585aae47b198ca5302aa00e0435a9e25ebd9f0b7
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

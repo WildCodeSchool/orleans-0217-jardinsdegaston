@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Administration - Les Jardins de Gaston</title>
-
+    <link rel="icon" type="image/png" href="../img/arrosoir2_xsmallvert.png" sizes="32x32" />
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/stylesheet.css" rel="stylesheet">
     <link href="../css/admin.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
 </head>
 <body>
-<!-----      Navigation   ------->
 
 
 <!-- navbar-collapse menu burger-->
