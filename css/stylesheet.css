@@ -123,7 +123,7 @@ h4#accroche{
     font-size: 80px;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 2px black;
     z-index: -1;
 }
 .bg-img1-lg, .bg-img1-md, .bg-img1-sm, .bg-img1-xs {
@@ -307,23 +307,32 @@ input[type=range]:focus::-moz-range-thumb {
 .Blog {
     background-image: url('../img/imgConseil.jpg');
     background-size: cover;
-    padding: 20px 0 20px 0;
+    padding: 25px 0 20px 0;
     height: 185px;
+}
+
+.glyph-mouse {
+    padding : 35px 0 0 70px;
 }
 
 .BlogThumb {
     color: white;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
+    padding-left: 10px;
+    /*
+    background-color: rgba(0, 0, 0, 0.2);
+    */
 }
 
 .BlogThumb h3 {
     /*
     color: #c1eb6a; !* Teinte verte (si on ne veut pas du rouge cerise) *!
     */
-    color: #7c0f1a;
-    text-shadow: 0 0 1px #c43d4b;
-    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 1px black;
+    font-size: 34px;
+    font-weight: 500;
     /*
     padding-top: 20px;
     */
@@ -336,6 +345,10 @@ input[type=range]:focus::-moz-range-thumb {
 
 .BlogThumb a:hover {
     text-decoration: none;
+}
+
+.BlogThumb a:hover h3 {
+    color: #c1eb6a;
 }
 
 /*-------     Prestations     ------*/
@@ -585,6 +598,12 @@ input[type=range]:focus::-moz-range-thumb {
 
 /*-------       Media Queries     ------*/
 
+@media screen and (max-width: 1650px) {
+    .glyph-mouse {
+        padding: 35px 0 0 20px;
+    }
+}
+
 @media screen and (max-width: 1340px) {
 
     .presentation {
@@ -641,6 +660,42 @@ input[type=range]:focus::-moz-range-thumb {
     }
 }
 
+@media (max-width: 768px) {
+    h1#accroche{
+        font-size:36px;
+    }
+
+    .Blog {
+        padding: 0;
+    }
+
+    .BlogThumb {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-bottom: 5px;
+        margin-top: 8%;
+    }
+
+
+    .etiquette{
+        width: 100%;
+    }
+
+
+    .BlogThumb h3 {
+        color: #c1eb6a;
+        font-size: 26px;
+        padding-top: 5px;
+    }
+
+    .BlogThumb p {
+        font-size: 14px;
+    }
+
+    .glyph-mouse {
+        padding: 70px 0 0 5px;
+    }
+}
+
 @media screen and (max-width: 760px) {
     h1 {
         font-size: 28px;
@@ -674,37 +729,12 @@ input[type=range]:focus::-moz-range-thumb {
         right: 5%;
         width: 80%;
     }
+
 }
 
-@media (max-width: 768px) {
-    h1#accroche{
-        font-size:36px;
-    }
-
-    .Blog {
-        padding: 0;
-    }
-
-    .BlogThumb {
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-bottom: 5px;
-        margin-top: 8%;
-    }
-
-
-    .etiquette{
-        width: 100%;
-    }
-
-
-    .BlogThumb h3 {
-        color: #c1eb6a;
-        font-size: 26px;
-        padding-top: 5px;
-    }
-
-    .BlogThumb p {
-        font-size: 14px;
+@media screen and (max-width: 660px) {
+    .glyph-mouse {
+        display: none;
     }
 }
 

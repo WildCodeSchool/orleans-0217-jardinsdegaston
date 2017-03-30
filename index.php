@@ -132,13 +132,15 @@
 
     <div class="row Blog">
 
-        <div class="col-xs-12">
+        <div class="col-xs-1">
+        <img src="img/glyph_mouse.png" alt="souris" class="glyph-mouse"/>
+        </div>
 
+        <div class="col-xs-11">
             <div class="BlogThumb">
                 <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
                 <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
             </div>
-
         </div>
 
     </div>
