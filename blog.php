@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <title>Et pendant ce temps-là chez Gaston</title>
-
+    <link rel="icon" type="image/png" href="img/herbes_picto_xtraSmallvert.png" sizes="32x32" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/blog_stylesheet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
