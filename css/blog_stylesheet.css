@@ -11,7 +11,10 @@
 
 nav.sidebar.navbar {
     position: fixed;
-    opacity: 0.8;
+    background-color: #303030;
+    opacity: 0.9;
+    border: none;
+
 }
 
 nav.sidebar, .main{
@@ -20,7 +23,6 @@ nav.sidebar, .main{
     -o-transition: margin 200ms ease-out;
     transition: margin 200ms ease-out;
 }
-
 
 
 /* .....NavBar: Icon only with coloring/layout.....*/
@@ -36,19 +38,19 @@ nav.sidebar, .main{
 
     /*Center Brand*/
     nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-        margin-left: 0px;
+        margin-left: 0;
     }
     /*Center Brand*/
     nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
         text-align: center;
         width: 100%;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
 
     nav.sidebar .navbar-nav > li{
-        margin-left: 20px;
-        margin-right: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
 
@@ -60,7 +62,7 @@ nav.sidebar, .main{
 
     /*gives sidebar width/height*/
     nav.sidebar{
-        width: 180px;
+        width: 220px;
         height: 100%;
         margin-left: -160px;
         float: left;
@@ -80,20 +82,20 @@ nav.sidebar, .main{
 
 }
 
-/* .....NavBar: Fully showing nav bar..... */
+    /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 900px) {
+    @media (min-width: 900px) {
 
-    /*Show all nav*/
-    nav.sidebar{
-        margin-left: 0px;
-        float: left;
+        /*Show all nav*/
+        nav.sidebar{
+            margin-left: 0px;
+            float: left;
+        }
+        /*Show hidden items on nav*/
+        nav.sidebar .forAnimate{
+            opacity: 1;
+        }
     }
-    /*Show hidden items on nav*/
-    nav.sidebar .forAnimate{
-        opacity: 1;
-    }
-}
 
 nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
     color: #CCC;
@@ -118,18 +120,25 @@ section{
     }
 
 .logo {
-    padding-top: 20px;
+    padding: 20px 10px 0 10px;
 }
 
+/*--- main --- */
+
+/*---   Background   ---*/
+
+body {
+    background-image: url(../img/bgimg1_transp.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 /*--- Timeline   ---*/
-
-body { background: white; }
 
 img { border: 0; max-width: 100%; }
 
 .page-header {
-    border-bottom: 1px solid rgb(218, 247, 166);
+    border-bottom: 1px solid rgba(85, 126, 2, 0.7);
 }
 
 .page-header h1 {
@@ -161,8 +170,8 @@ img { border: 0; max-width: 100%; }
 .tldate {
     display: block;
     width: 200px;
-    background: rgb(249, 249, 240);
-    color: #666666;
+    background: white;
+    color: rgb(85, 126, 2);
     margin: 0 auto;
     padding: 3px 0;
     font-weight: bold;
