@@ -65,6 +65,14 @@ button, input, select, textarea {
     border-color: #557E02;
 }
 
+.btn-default:focus
+{
+    border-color: #557E02;
+    background-color: #557e02;
+    color: white;
+}
+
+
 .hover:hover
 {
     background-color: #557E02;
@@ -321,8 +329,8 @@ input[type=range]:focus::-moz-range-thumb {
     /*
     color: #c1eb6a; !* Teinte verte (si on ne veut pas du rouge cerise) *!
     */
-    color: #7c0f1a;
-    text-shadow: 0 0 1px #c43d4b;
+    color: white;
+    text-shadow: 0 0 1px black;
     font-size: 40px;
     /*
     padding-top: 20px;

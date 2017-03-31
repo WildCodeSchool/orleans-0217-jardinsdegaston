@@ -137,6 +137,7 @@
             <div class="BlogThumb">
                 <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
                 <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
+                <a type="button" class="btn btn-default hover" href="blog.php">J'y vais</a>
             </div>
 
         </div>
