@@ -106,22 +106,23 @@
 </div>
 
 <div class="row real">
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 real1">
-        <div class="thumbnail">
 
-<!-- cd-image-container-->
+    <div class="col-xs-offset-1 col-xs-10 col-lg-offset-2 col-lg-4">
+        <div class="side-real">
+            <h3>Transformez votre jardin avec quelques idées et un peu d'entretien</h3>
+            <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        </div>
+    </div>
 
-            <div id="comparison">
-                <figure>
-                    <div id="divisor"></div>
-                </figure>
-                <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
-            </div>
-
-            <div class="caption">
-                <h3>Titre 3</h3>
-                <p>Lorem ipsum</p>
-            </div>
+    <div class="col-xs-offset-1 col-xs-10 col-lg-5 blocCompare">
+        <div id="comparison">
+            <figure>
+                <div id="divisor"></div>
+            </figure>
+            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+        </div>
+        <div class="caption">
+            <i>Cliquez sur le carré vert et faites le glisser de gauche à droite.</i>
         </div>
     </div>
 
@@ -132,20 +133,15 @@
 
     <div class="row Blog">
 
-        <div class="col-xs-12">
-
+        <div class="col-xs-offset-1 col-xs-11">
             <div class="BlogThumb">
                 <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
                 <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
+                <a type="button" class="btn btn-default hover" href="blog.php">J'y vais</a>
             </div>
-
         </div>
 
     </div>
-
-
-
-
 
 
 <!-------      Section Liste Prestations     -------->
