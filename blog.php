@@ -26,6 +26,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header hidden-md hidden-sm hidden-lg">
             <ul class="nav navbar-nav">
+                <li><span class="icone-nav showopacity glyphicon glyphicon-home"></span></li>
                 <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
                 <li><form class="search-form" role="search">
                         <div class="form-group waves-light">
