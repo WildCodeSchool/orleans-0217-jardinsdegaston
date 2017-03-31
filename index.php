@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#prestationAnchor">Les prestations</a></li>
-                    <li><a href="#conseilAnchor">Le conseil du mois</a></li>
+                    <li><a href="#conseilAnchor">Le conseil du moment</a></li>
                     <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -242,12 +242,12 @@
 
 </div>
 
-<!-------     Section Conseil du mois     -------->
+<!-------     Section Conseil du moment     -------->
     <span id="conseilAnchor" class="ancre"></span>
     <div class="row Conseilbackground-lg">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
-                <h4>Conseil du Jour</h4>
+                <h4>Conseil du moment</h4>
             </div>
             <div>
                 <div class="ConseilText col-lg-11 col-lg-offset-1">
@@ -318,7 +318,8 @@
     <!-------     Section Formulaire     -------->
     <div class="row">
     <div class="Contact col-xs-12">
-        <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500">
+        <!-- <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500"> -->
+        <img class=" ImgForm col-lg-6 col-lg-offset-0" src="img/jardinage.jpg">
 
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
 

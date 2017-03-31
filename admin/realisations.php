@@ -94,20 +94,7 @@
     </div>
 
 
-    <!-- Galerie --------------------------------------------------- -->
-
-    <div class="col-xs-12 bandeau text-center">
-        Galerie Avant/Après
-    </div>
-
-    <?php
-    ?>
-
 </div> <!-- fermeture de la row principale -->
-
-
-
-
 
 
 <!-- le container-fluid est ouvert dans le header.php et ferme dans le footer.php -->
