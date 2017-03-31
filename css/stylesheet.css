@@ -521,7 +521,7 @@ input[type=range]:focus::-moz-range-thumb {
 
 /*-------    Section Formulaire   ------*/
 .ImgForm {
-    margin-top: 1%;
+    margin-top: 2%;
     max-height: 495px;
 }
 
