@@ -24,10 +24,10 @@
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header hidden-md hidden-sm hidden-lg">
+        <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><span class="icone-nav showopacity glyphicon glyphicon-home"></span></li>
-                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
+                <a href="#top"><img class="logo-xs" src="img/logo_blanc.png"></a>
                 <li><form class="search-form" role="search">
                         <div class="form-group waves-light">
                             <input type="text" class="form-control" placeholder="Search">
@@ -41,7 +41,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
+                <a href="#top"><img class="logo-lg" src="img/logo_blanc.png"></a>
                 <li><form class="search-form" role="search">
                         <div class="form-group waves-light">
                             <input type="text" class="form-control" placeholder="Search">
