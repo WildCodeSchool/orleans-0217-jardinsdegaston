@@ -48,16 +48,13 @@ button, input, select, textarea {
     margin-bottom: 10px;
 }
 
-
-/* ---   provisoire   ---*/
-
 .btn-default
 {
     background-color: #557e02;
     border-color: #557E02;
     border-radius: 6px;
     color: white;
-
+    padding: 6px 20px;
 }
 
 .btn-default:hover
@@ -71,7 +68,6 @@ button, input, select, textarea {
     background-color: #557e02;
     color: white;
 }
-
 
 .hover:hover
 {
@@ -341,7 +337,7 @@ input[type=range]:focus::-moz-range-thumb {
 .Blog {
     background-image: url('../img/imgConseil.jpg');
     background-size: cover;
-    padding: 25px 0 20px 0;
+    padding: 15px 0 20px 0;
     height: 185px;
 }
 
@@ -365,14 +361,11 @@ input[type=range]:focus::-moz-range-thumb {
 .BlogThumb p {
     text-shadow: 0 0 1px black;
     font-size: 18px;
+    padding-bottom: 5px;
 }
 
 .BlogThumb a:hover {
     text-decoration: none;
-}
-
-.BlogThumb a:hover h3 {
-    color: #c1eb6a;
 }
 
 /*-------     Prestations     ------*/
