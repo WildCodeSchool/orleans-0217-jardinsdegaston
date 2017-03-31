@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Administration - Les Jardins de Gaston</title>
     <link rel="icon" type="image/png" href="../img/arrosoir2_xsmallvert.png" sizes="32x32" />
+    <meta name="robots" content="noindex, nofollow">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/stylesheet.css" rel="stylesheet">
     <link href="../css/admin.css" rel="stylesheet">
@@ -24,10 +25,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--
-            <div class="row hidden-xs"><img hidden-xs hidden-sm id="logo" src="../img/logo_blanc.png"/></div>
-            <div class="row hidden-lg hidden-md hidden-sm"><span class="headtitle">Les Jardins de Gaston</span></div>
-            -->
             <div class="row"><img id="logo" src="../img/logo_blanc.png"/></div>
          </div>
 
