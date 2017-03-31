@@ -21,23 +21,12 @@
 <body id="top">
 <!-----      Navigation   ------->
 
-<nav class="navbar navbar-inverse" id="navbarColor">
+<nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-        </div>
-
-        <!-- navbar-collapse navigation -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
-            <ul class="nav navbar-nav navbar-right">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header hidden-md hidden-sm hidden-lg">
+            <ul class="nav navbar-nav">
+                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
                 <li><form class="search-form" role="search">
                         <div class="form-group waves-light">
                             <input type="text" class="form-control" placeholder="Search">
@@ -46,50 +35,23 @@
                 <li><a href="blog.php#top">Retour en haut</a></li>
                 <li><a href="index.php#top">Revenir sur le site</a></li>
             </ul>
-            <ul>
 
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
+                <li><form class="search-form" role="search">
+                        <div class="form-group waves-light">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form></li>
+                <li><a href="blog.php#top">Retour en haut</a></li>
+                <li><a href="index.php#top">Revenir sur le site</a></li>
             </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
-
-<!--<!-- SideNav slide-out button -->
-<!--<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>-->
-<!--<!--/. SideNav slide-out button -->
-<!---->
-<!--<!-- Sidebar navigation -->
-<!--<div id="slide-out" class="side-nav fixed sn-bg-1 custom-scrollbar">-->
-<!--    <!-- Logo -->
-<!---->
-<!--        <div class="logo-wrapper waves-light">-->
-<!--            <a href="index.php#top"><img src="img/logo_blanc_test.png" class="img-fluid flex-center"></a>-->
-<!--        </div>-->
-<!---->
-<!--    <!--/. Logo -->
-<!---->
-<!--    <!--Search Form-->
-<!---->
-<!--        <form class="search-form" role="search">-->
-<!--            <div class="form-group waves-light">-->
-<!--                <input type="text" class="form-control" placeholder="Search">-->
-<!--            </div>-->
-<!--        </form>-->
-<!---->
-<!--    <!--/.Search Form-->
-<!---->
-<!--    <!-- Side navigation links -->
-<!--    <div class="btnNav">-->
-<!--        <div>-->
-<!--            <a href="blog.php#top">Retour en haut</a>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <a href="index.php#top">Revenir sur le site</a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <!--/. Side navigation links -->
-<!--    <div class="sidenav-bg mask-strong"></div>-->
-<!--</div>-->
-
 
 </header>
 
