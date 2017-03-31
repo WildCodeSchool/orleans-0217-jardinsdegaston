@@ -109,7 +109,7 @@
 
     <div class="col-xs-offset-1 col-xs-10 col-lg-offset-2 col-lg-4">
         <div class="side-real">
-            <h3>Transformez votre jardin avec quelques idées et beaucoup d'entretien</h3>
+            <h3>Transformez votre jardin avec quelques idées et un peu d'entretien</h3>
             <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
         </div>
     </div>
@@ -133,22 +133,15 @@
 
     <div class="row Blog">
 
-        <div class="col-xs-1">
-        <img src="img/glyph_mouse.png" alt="souris" class="glyph-mouse"/>
-        </div>
-
-        <div class="col-xs-11">
+        <div class="col-xs-offset-1 col-xs-11">
             <div class="BlogThumb">
                 <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
                 <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
+                <a type="button" class="btn btn-default hover" href="blog.php">J'y vais</a>
             </div>
         </div>
 
     </div>
-
-
-
-
 
 
 <!-------      Section Liste Prestations     -------->
