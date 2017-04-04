@@ -33,7 +33,7 @@ if ( isset($_GET['p']) ) {
 if ( array_key_exists($page, $routes) ) {
 
     // --- initialisation twig ---
-    $loader = new Twig_Loader_Filesystem(__DIR__.'/../../src/view/adm/');
+    $loader = new Twig_Loader_Filesystem(__DIR__.'/../../src/view/admin/');
     $twig = new Twig_Environment($loader, [
         'cache' => false, //__DIR__ . '/../../tmp',
         'debug' => true,
@@ -41,9 +41,9 @@ if ( array_key_exists($page, $routes) ) {
     $twig->addExtension(new Twig_Extension_Debug());
 
     // --- appel du controleur concerne
-    $ctrlName = 'wcs\\controller\\adm\\'.$routes[$page].'Controller';
-    $controller = new $ctrlName($post);
-    echo $controller->index($twig);
+    $ctrlName = 'wcs\\controller\\admin\\'.$routes[$page].'Controller';
+    $controller = new $ctrlName($twig, $post);
+    echo $controller->index();
 }
 else {
     // --- il faudra mettre ici une erreur 404 - not found !!! ---

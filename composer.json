@@ -1,6 +1,6 @@
 {
     "name": "wcs/jardinsdegaston",
-    "description": "Site web Las Jardins de Gaston",
+    "description": "Site web Les Jardins de Gaston",
     "require": {"twig/twig": "^2.3"},
     "autoload": {"psr-4": {"wcs\\": "src/"}}
 
