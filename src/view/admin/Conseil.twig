@@ -1,0 +1,81 @@
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Conseils - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des conseils</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Liste des  conseils --------------------------------------- -- #}
+        <div class="col-xs-12 bandeau text-center">
+            Liste des conseils déjà enregistrés
+        </div>
+        {# -- selecteur d'affichage -- #}
+        <div class="col-xs-12 contenu text-center">
+            <form action="index.php?p=conseil" method="post">
+                <span class="like-label">Sélection de l'affichage :</span>
+                {% for affsaison in affsaisons %}
+                    {% set refaff = affsaison | first %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="{{ refaff }}" id="saison{{ refaff }}" value="{{ refaff }}"
+                    {% if refaff in post %} checked {% endif %}
+                    />
+                    <label class="normal-text" for="saison{{ refaff }}">{{ affsaison }}</label>
+                {% endfor %}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-default" type="submit">Actualiser l'affichage</button>
+            </form>
+        </div>
+
+        {% for conseil in conseils %}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center {{ conseil.visible }}">
+                <div class="blocimg">
+                    <form method="post" action="#">
+                        {#<input class="form-control" type="text" name="conseil" value="{{ conseil.contenu }}" /><br />#}
+                        <textarea class="form-control" name="conseil" rows="4">{{ conseil.contenu }}</textarea><br />
+                        {% for saison in saisons %}
+                            {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp; {% endif %}
+                            {% set refsaison = saison | first %}
+                            <input type="checkbox" name="saison{{ refsaison }}" id="saison{{ refsaison }}{{ conseil.id }}" value="{{ refsaison }}"
+                            {% if refsaison|lower in conseil.saison %} checked {% endif %}
+                            />
+                            <label class="normal-text" for="saison{{ refsaison }}{{ conseil.id }}">{{ saison }}</label>
+                        {% endfor %}
+                        <br />
+                        <input type="hidden" name="id" value="{{ conseil.id }}" />
+                        <input class="btn btn-default" type="submit" name="enregistre" value="Enregistrer les modifications" /><br />
+                        <input class="btn btn-default" type="submit" name="supprime" value="Supprimer de la galerie" />
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+
+                            {#<a href = "" class="btn btn-warning btn-sm" role = "button" >Modifier</a >#}
+                            {#<a href = "" class="btn btn-danger btn-sm" role = "button" >Supprimer</a>#}
+
+
+
+
+        {# -- Créer un nouveau conseil ---------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Ajouter un conseil
+        </div>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,74 @@
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Réalisations - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des plus belles réalisations</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Bloc 2 images avec titre et contenu ----------------------- -- #}
+        {% for realisation in realisations %}
+            {# --- barre de titre --- #}
+            <div class="col-xs-12 bandeau text-center">
+                Réalisation {{ loop.index }}
+            </div>
+            {# --- bloc infos --- #}
+            <div class="col-xs-12">
+                <div class="row contenu">
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Après</h3>
+                        <img class="gimg" src="../img/imgR-{{ realisation.id_img_ap }}.jpg">
+                        <form method="post" action="majimg.php" enctype="multipart/form-data">
+                            <input type="hidden" name="rubrique" value="R" />
+                            <input type="hidden" name="id" value="{{ realisation.id }}" />
+                            <input type="hidden" name="id_img_ap" value="{{ realisation.id_img_ap }}" />
+                            <input class="cache" type="file" name="fichier" id="fichier" />
+                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Avant</h3>
+                        <img class="gimg" src="../img/imgR-{{ realisation.id_img_av }}.jpg">
+                        <form method="post" action="majimg.php" enctype="multipart/form-data">
+                            <input type="hidden" name="rubrique" value="R" />
+                            <input type="hidden" name="id" value="{{ realisation.id }}" />
+                            <input type="hidden" name="id_img_ap" value="{{ realisation.id_img_av }}" />
+                            <input class="cache" type="file" name="fichier" id="fichier" />
+                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                        </form>
+                    </div>
+                    <div class="col-sm-12 col-md-4 ">
+                        <div class="hidden-xs hidden-sm"><br /><br /></div>
+                        <form method="post" action="majavap.php">
+                            <label for="titre">Titre de la rubrique </label><br />
+                            <input class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
+                            <label for="detail">Commentaires</label><br />
+                            <textarea class="form-control" row="3" name="detail">{{ realisation.contenu }}</textarea><br />
+                            <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}
+
+
+
+
+
+
+
+
