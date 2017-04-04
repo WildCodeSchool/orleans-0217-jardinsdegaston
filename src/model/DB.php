@@ -1,13 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder10
- * Date: 02/04/17
- * Time: 08:26
- */
+// --- src/model/Bgimage.php ---
 
 namespace wcs\model;
-
 
 /**
  * Class DB permettant de se connecter à une base de données et d'effectuer des requetes basiques
@@ -15,10 +9,11 @@ namespace wcs\model;
  */
 class DB
 {
+
     /**
      * @var \PDO
      */
-    private $db;
+    protected $db;
 
     /**
      * DB constructor.
@@ -26,7 +21,10 @@ class DB
     public function __construct()
     {
         // on instancie un objet PDO
-        $this->db = new \PDO(DSN, USER, PASS);
+//        $this->db = new \PDO(DSN, USER, PASS);
+        $this->db = new \PDO('mysql:host=localhost;dbname=db_gaston', 'gaston', 'gaSt0n%');
+        $this->db->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
+        $this->db->exec("set names utf8");
     }
 
     /**
@@ -35,10 +33,13 @@ class DB
      * @param $table
      * @return array
      */
-    public function findAll($table) {
+    public function findAll($table, $opt=null) {
         $req = "SELECT * FROM $table";
+        if ( null !== $opt ) {
+            $req .= " ".$opt;
+        }
         $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, '\wcs\adm\model\\'.ucfirst($table));
+        return $res->fetchAll(\PDO::FETCH_CLASS, '\wcs\model\\'.ucfirst($table));
     }
 
     /**
@@ -55,7 +56,7 @@ class DB
 
         $prep->execute();
 
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, '\wcs\adm\model\\'.ucfirst($table));
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, '\wcs\model\\'.ucfirst($table));
         return $res[0];
     }
 }

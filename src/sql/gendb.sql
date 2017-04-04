@@ -157,15 +157,15 @@ DROP TABLE IF EXISTS image;
 CREATE TABLE image (
 id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 rubrique CHAR(1),
-saison char(1) DEFAULT '',
+saison char(10) DEFAULT '',
 date DATETIME DEFAULT NOW()
 );
 INSERT INTO image (id, rubrique, saison) VALUES (1,'B','');
 INSERT INTO image (id, rubrique, saison) VALUES (2,'P','');
 INSERT INTO image (id, rubrique, saison) VALUES (3,'R','');
 INSERT INTO image (id, rubrique, saison) VALUES (4,'J','');
-INSERT INTO image (id, rubrique, saison) VALUES (5,'B','p');
-INSERT INTO image (id, rubrique, saison) VALUES (6,'B','e');
+INSERT INTO image (id, rubrique, saison) VALUES (5,'B','Printemps');
+INSERT INTO image (id, rubrique, saison) VALUES (6,'B','Eté');
 INSERT INTO image (id, rubrique, saison) VALUES (7,'R','');
 INSERT INTO image (id, rubrique, saison) VALUES (8,'R','');
 INSERT INTO image (id, rubrique, saison) VALUES (9,'R','');
@@ -190,9 +190,10 @@ SELECT * FROM image;
 DROP TABLE IF EXISTS bgimage;
 CREATE TABLE bgimage (
 id INT UNSIGNED NOT NULL PRIMARY KEY,
+saison VARCHAR(10),
 id_img INT UNSIGNED NOT NULL DEFAULT 1
 );
-INSERT INTO bgimage (id, id_img) VALUES (1,5),(2,1),(3,1),(4,1),(5,1),(6,6),(7,1),(8,1);
+INSERT INTO bgimage (id, saison, id_img) VALUES (1,'Printemps',5),(2,'Eté',1),(3,'Automne',1),(4,'Hiver',1),(5,'Printemps',1),(6,'Eté',6),(7,'Automne',1),(8,'Hiver',1);
 # --- controle ---
 DESCRIBE bgimage;
 SELECT * FROM bgimage;

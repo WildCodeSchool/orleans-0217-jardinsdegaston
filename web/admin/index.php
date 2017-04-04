@@ -1,4 +1,5 @@
 <?php
+// --- web/admin/index.$php ---
 
 // --- recup des parametres POST d'entree
 $post = [];
