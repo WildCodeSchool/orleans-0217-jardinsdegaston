@@ -28,7 +28,7 @@ DROP TABLE IF EXISTS presentation;
 CREATE TABLE presentation (
   id INT UNSIGNED NOT NULL PRIMARY KEY,
   titre VARCHAR(50) NOT NULL,
-  contenu TEXT
+  contenu TEXT NOT NULL
 );
 # --- La table est preremplie ---
 INSERT INTO presentation VALUES
