@@ -461,7 +461,9 @@
                 <a href="http://wildcodeschool.fr/orleans" target="_blanc">Design par</a>
             </div>
             <div class="row">
+                <a href="https://wildcodeschool.fr/orleans/" target="_blanc">
                 <img src="img/logo-wcs-vo-alter-small.png" alt="logo Wild Code School" />
+                </a>
             </div>
         </div>
     </div>
