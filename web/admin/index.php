@@ -18,7 +18,7 @@ $routes = [
     'realisation' => 'Realisation',
     'prestation' => 'Prestation',
     'conseil' => 'Conseil',
-    'livredor' => 'LivredOr',
+    'livredor' => 'Livredor',
     'contact' => 'Contact',
     'chezgaston' => 'ChezGaston',
 
