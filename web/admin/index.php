@@ -2,10 +2,14 @@
 // --- web/admin/index.$php ---
 
 // --- recup des parametres POST d'entree
+$method = 'index';
 $post = [];
 if (isset($_POST)) {
     foreach ( $_POST as $key => $value ) {
         $post[$key] = $value;
+    }
+    if ( isset($_POST['method']) ) {
+        $method = $_POST['method'];
     }
 }
 
@@ -44,7 +48,7 @@ if ( array_key_exists($page, $routes) ) {
     // --- appel du controleur concerne
     $ctrlName = 'wcs\\controller\\admin\\'.$routes[$page].'Controller';
     $controller = new $ctrlName($twig, $post);
-    echo $controller->index();
+    echo $controller->$method();
 }
 else {
     // --- il faudra mettre ici une erreur 404 - not found !!! ---
