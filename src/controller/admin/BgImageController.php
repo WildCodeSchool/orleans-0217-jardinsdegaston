@@ -17,6 +17,7 @@ class BgImageController extends Controller
     {
         $bgimg = new Bgimage;
         $param = [
+            'saisons' => ['Printemps', 'Eté', 'Automne', 'Hiver'],
             'bgimg1' => $bgimg->getImgP(),
             'bgimg2' => $bgimg->getImgS(),
             'galerie' => $bgimg->getImg(),

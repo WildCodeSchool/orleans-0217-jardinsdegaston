@@ -164,7 +164,7 @@ INSERT INTO image (id, rubrique, saison) VALUES (1,'B','');
 INSERT INTO image (id, rubrique, saison) VALUES (2,'P','');
 INSERT INTO image (id, rubrique, saison) VALUES (3,'R','');
 INSERT INTO image (id, rubrique, saison) VALUES (4,'J','');
-INSERT INTO image (id, rubrique, saison) VALUES (5,'B','Printemps');
+INSERT INTO image (id, rubrique, saison) VALUES (5,'B','Eté');
 INSERT INTO image (id, rubrique, saison) VALUES (6,'B','Eté');
 INSERT INTO image (id, rubrique, saison) VALUES (7,'R','');
 INSERT INTO image (id, rubrique, saison) VALUES (8,'R','');
@@ -176,6 +176,7 @@ INSERT INTO image (id, rubrique, saison) VALUES (13,'P','');
 INSERT INTO image (id, rubrique, saison) VALUES (14,'P','');
 INSERT INTO image (id, rubrique, saison) VALUES (15,'P','');
 INSERT INTO image (id, rubrique, saison) VALUES (16,'P','');
+INSERT INTO image (id, rubrique, saison) VALUES (17,'B','Printemps');
 
 # --- controle ---
 DESCRIBE image;
@@ -193,7 +194,7 @@ id INT UNSIGNED NOT NULL PRIMARY KEY,
 saison VARCHAR(10),
 id_img INT UNSIGNED NOT NULL DEFAULT 1
 );
-INSERT INTO bgimage (id, saison, id_img) VALUES (1,'Printemps',5),(2,'Eté',1),(3,'Automne',1),(4,'Hiver',1),(5,'Printemps',1),(6,'Eté',6),(7,'Automne',1),(8,'Hiver',1);
+INSERT INTO bgimage (id, saison, id_img) VALUES (1,'Printemps',17),(2,'Eté',5),(3,'Automne',1),(4,'Hiver',1),(5,'Printemps',1),(6,'Eté',6),(7,'Automne',1),(8,'Hiver',1);
 # --- controle ---
 DESCRIBE bgimage;
 SELECT * FROM bgimage;
