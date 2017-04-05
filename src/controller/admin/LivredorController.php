@@ -48,17 +48,17 @@ class LivredorController extends Controller
 
     public function addLdor()
     {
-//        if (isset($_POST)) {
-//            foreach ($_POST as $key => $val) {
-//                $postClean[$key] = htmlentities(trim($val));
-//            }
-//        }
-        if (isset($post)) {
-            $db = new DB();
+        if (isset($_POST)) {
+            foreach ($_POST as $key => $val) {
+                $postClean[$key] = htmlentities(trim($val));
+            }
+        }
+        if (isset($_POST)) {
+            $test = new DB();
             $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
-            $prep = $db->prepare($query);
-            $prep->bindValue(':NomLDor', $post['NomLDor'], \PDO::PARAM_STR);
-            $prep->bindValue(':TexteLDor', $post['TexteLDor'], \PDO::PARAM_STR);
+            $prep = $test->db->prepare($query);
+            $prep->bindValue(':NomLDor', $_POST['NomLDor'], \PDO::PARAM_STR);
+            $prep->bindValue(':TexteLDor', $_POST['TexteLDor'], \PDO::PARAM_STR);
             $prep->execute();
             }
         return $this->index();
