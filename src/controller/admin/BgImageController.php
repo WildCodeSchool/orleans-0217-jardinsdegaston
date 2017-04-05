@@ -3,7 +3,6 @@
 
 namespace wcs\controller\admin;
 use \wcs\controller\Controller;
-use \wcs\model\Bgimage;
 
 /**
  * Class BgImageController
@@ -12,20 +11,22 @@ use \wcs\model\Bgimage;
  */
 class BgImageController extends Controller
 {
+    private $saisons = ['Printemps', 'Eté', 'Automne', 'Hiver'];
 
     public function index()
     {
-        $bgimg = new Bgimage;
-        $param = [
-            'saisons' => ['Printemps', 'Eté', 'Automne', 'Hiver'],
-            'bgimg1' => $bgimg->getImgP(),
-            'bgimg2' => $bgimg->getImgS(),
-            'galerie' => $bgimg->getImg(),
-        ];
-        return $this->twig->render('BgImage.twig',$param);
+        $this->img->resetTmp('background');
+        return $this->twig->render('BgImage.twig', ['saisons' => $this->saisons]);
     }
 
+    public function imgupload()
+    {
+        $this->img->recupImg('background');
+        return $this->twig->render('BgImage.twig', ['saisons' => $this->saisons]);
+    }
 
-
-
+    public function imgswitch()
+    {
+        die('switch');
+    }
 }

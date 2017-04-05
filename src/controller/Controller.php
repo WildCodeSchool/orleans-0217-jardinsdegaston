@@ -2,7 +2,7 @@
 // --- src/controller/Controller.php ---
 
 namespace wcs\controller;
-//use \vendor\
+use \wcs\model\Image;
 
 /**
  * Classe mere de tous les controleurs
@@ -12,10 +12,10 @@ namespace wcs\controller;
 class Controller
 {
     /**
-     * recuperation des entrees $_POST (si existe)
-     * @var array
+     * connexion base de donnees
+     * @var PDO
      */
-    protected $post = [];
+    protected $db;
 
     /**
      * objet twig initialise
@@ -23,10 +23,19 @@ class Controller
      */
     protected $twig;
 
-    public function __construct($twig, $post=[])
+    /**
+     * @var
+     */
+    protected $img;
+
+
+    public function __construct($twig, $db)
     {
         $this->twig = $twig;
-        $this->post = $post;
+        $this->db = $db;
+        if ( !isset($this->img) ) {
+            $this->img = new Image();
+        }
     }
 
     /**

@@ -2,85 +2,56 @@
 
 namespace wcs\model;
 
-/**
- * Modele (entity) correspondant à la table image de la base de donnees. Un objet Image est instancie et hydrate
- * automatiquement lors de l'utilisation de pdo fetchAll avec le style FETCH_CLASS
- * @class Eleve
- */
 
-class Image extends DB
+class Image
 {
 
-    /* --- Proprietes --------------------------------- */
-    /**
-     * index dans la table
-     * @var integer
-     */
-    private $id;
+    const TMPDIR = '../../tmp/';
 
-    /**
-     * identifie le type d'image : B = background (1920x1200), P = prestations (400x400), R = realisation (750x400), j = journal (..x..)
-     * @var char
-     */
-    private $rubrique;
-
-    /**
-     * date de (re)chargement de l'image
-     * @var DateTime
-     */
-    private $date;
-
-
-    /* --- Geters et setters -------------------------- */
-    /**
-     * @return int
-     */
-    public function getId() : int
+    private function clean($filetype)
     {
-        return $this->id;
+        // --- suppression d'un eventuel fichier residuel
+        if ( file_exists(self::TMPDIR.'img'.$filetype.'-tmp.jpg') ) {
+            unlink(self::TMPDIR.'img'.$filetype.'-tmp.jpg');
+        }
+    }
+    private function reset($filetype)
+    {
+        // --- restauration du fichier vide
+        copy(self::TMPDIR.'img'.$filetype.'-ref.jpg', self::TMPDIR.'img'.$filetype.'-tmp.jpg');
+    }
+    private function rwx($filetype)
+    {
+        chmod(self::TMPDIR.'img'.$filetype.'-tmp.jpg', 0777);
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId(int $id) : Image
+
+    public function resetTmp($typeimg)
     {
-        $this->id = $id;
-        return $this;
+        switch ($typeimg) {
+            case 'background' :
+                $this->clean('B');
+                $this->reset('B');
+                $this->rwx('B');
+                break;
+        }
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRubrique() : string
-    {
-        return $this->rubrique;
-    }
 
-    /**
-     * @param mixed $rubrique
-     */
-    public function setRubrique($rubrique) : Image
+    public function recupImg($typeimg)
     {
-        $this->rubrique = $rubrique;
-        return $this;
-    }
+        switch ($typeimg) {
+            case 'background' :
+                $this->clean('B');
+                if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'imgB-tmp.jpg') ) {
 
-    /**
-     * @return mixed
-     */
-    public function getDate() : \DateTime
-    {
-        return $this->date;
-    }
+                    // --- erreur upload unfructueux ---
 
-    /**
-     * @param mixed $date
-     */
-    public function setDate($date) : Image
-    {
-        $this->date = $date;
-        return $this;
+                    $this->reset('B');
+                }
+                $this->rwx('B');
+                break;
+        }
     }
 
 }
