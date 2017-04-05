@@ -1,3 +1,5 @@
+{# --- src/view/admin/BgImage.twig --- #}
+
 {% extends 'layout.twig' %}
 
 
@@ -22,8 +24,8 @@
         </div>
         {% for image in bgimg1 %}
             <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
-                <img class="gimg" src="../img/imgB-{{ image.bgimg1 }}.jpg"><br />
-                {{ image.nom }}
+                <img class="gimg" src="../img/imgB-{{ image.id_img }}.jpg"><br />
+                {{ image.saison }}
             </div>
         {% endfor %}
 
@@ -35,8 +37,8 @@
         </div>
         {% for image in bgimg2 %}
             <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
-                <img class="gimg" src="../img/imgB-{{ image.bgimg2 }}.jpg"><br />
-                {{ image.nom }}
+                <img class="gimg" src="../img/imgB-{{ image.id_img }}.jpg"><br />
+                {{ image.saison }}
             </div>
         {% endfor %}
 

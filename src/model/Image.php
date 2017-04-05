@@ -8,7 +8,7 @@ namespace wcs\model;
  * @class Eleve
  */
 
-class Image
+class Image extends DB
 {
 
     /* --- Proprietes --------------------------------- */
