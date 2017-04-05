@@ -1,0 +1,104 @@
+{# --- src/view/admin/BgImage.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Images de fond - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des images de fond</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Image principale ------------------------------------------ -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Image principale - sélection actuelle
+        </div>
+        {% for image in bgimg1 %}
+            <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
+                <img class="gimg" src="../img/imgB-{{ image.id_img }}.jpg"><br />
+                {{ image.saison }}
+            </div>
+        {% endfor %}
+
+
+        {# -- Image secondaire ------------------------------------------ -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Image secondaire - sélection actuelle
+        </div>
+        {% for image in bgimg2 %}
+            <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
+                <img class="gimg" src="../img/imgB-{{ image.id_img }}.jpg"><br />
+                {{ image.saison }}
+            </div>
+        {% endfor %}
+
+
+        {# -- Galerie --------------------------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Gérer la galerie
+        </div>
+        {% for image in galerie %}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                <div class="blocimg">
+                    <img class="img-fluid pimg" src="../img/imgB-{{ image.id }}"><br />
+                    {{ image.saison }}<br />
+                    <form method="post" action="majimg.php" enctype="multipart/form-data">
+                        <input type="hidden" name="rubrique" value="B" />
+                        <input type="hidden" name="id" value="{{ image.id }}" />
+                        <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
+                        <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
+                        <input class="btn btn-default" type="submit" name="supprime" value="Supprimer de la galerie" />
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+
+
+        {# -- upload image ---------------------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Charger une nouvelle image
+        </div>
+        <div class="col-xs-12">
+            <div class="row contenu">
+                <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
+                    <img class="img-fluid pimg bloc-right" src="../img/imgB-1.jpg" alt="" />
+                    <br />
+                    <form method="post" action="upldimg.php" enctype="multipart/form-data">
+                        <input type="hidden" name="source" value="fond_ecran" />
+                        <input class="cache" type="file" name="fichier" id="fichier" />
+                        <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                    </form>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <form method="post" action="majbgimg.php">
+                        <input type="hidden" name="id" value="0" />
+                        <span class="like-label">Saison associée :</span><br />
+                        {% for saison in saisons %}
+                            {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp;&nbsp; {% endif %}
+                            <input type="radio" name="saison" id="saison{{ saison | first }}" value="{{ saison | first }}" />
+                            <label class="normal-text" for="saison{{ saison | first }}">{{ saison }}</label>
+                        {% endfor %}
+                        <br /><br />
+                        <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
+                        <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
+                        <input class="btn btn-default" type="submit" name="galerie" value="Ajouter à la galerie" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}

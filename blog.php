@@ -24,12 +24,13 @@
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header hidden-md hidden-sm hidden-lg">
+        <div class="navbar-header">
             <ul class="nav navbar-nav">
-                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
+                <li><span class="icone-nav showopacity glyphicon glyphicon-home"></span></li>
+                <a href="#top"><img class="logo-xs" src="img/logo_blanc.png"></a>
                 <li><form class="search-form" role="search">
                         <div class="form-group waves-light">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Recherche">
                         </div>
                     </form></li>
                 <li><a href="blog.php#top">Retour en haut</a></li>
@@ -40,14 +41,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <a href="#top"><img class="logo" src="img/logo_blanc.png"></a>
+                <a href="#top"><img class="logo-lg" src="img/logo_blanc.png"></a>
                 <li><form class="search-form" role="search">
                         <div class="form-group waves-light">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
                     </form></li>
-                <li><a href="blog.php#top">Retour en haut</a></li>
                 <li><a href="index.php#top">Revenir sur le site</a></li>
+                <li><a href="blog.php#top">Retour en haut</a></li>
             </ul>
         </div>
     </div>
@@ -60,7 +61,7 @@
 
 <div class="container">
     <header class="page-header">
-        <h1>L'évolution du jardin de Gaston</h1>
+        <h1>Et pendant ce temps-là chez Gaston...</h1>
     </header>
 
     <ul class="timeline">
@@ -140,7 +141,7 @@
             <div class="timeline-panel noarrow">
                 <div class="tl-heading">
                     <h4>Titre</h4>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 février 2017</small></p>
+                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 février 2017</small></p>
                 </div>
                 <div class="tl-body">
                     <p>Lorem Ipsum and such.</p>

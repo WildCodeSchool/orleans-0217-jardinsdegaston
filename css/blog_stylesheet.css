@@ -11,7 +11,10 @@
 
 nav.sidebar.navbar {
     position: fixed;
-    opacity: 0.8;
+    background-color: #303030;
+    opacity: 0.9;
+    border: none;
+
 }
 
 nav.sidebar, .main{
@@ -21,79 +24,90 @@ nav.sidebar, .main{
     transition: margin 200ms ease-out;
 }
 
-
+.icone-nav {
+    margin-left: 170px;
+    color: white;
+}
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 
 /*small/medium side display*/
-@media (min-width: 300px) {
 
 
+@media (min-width: 250px) {
     /*lets nav bar to be showed on mouseover*/
-    nav.sidebar:hover + .main{
+    nav.sidebar:hover + .main {
         margin-left: 200px;
     }
 
     /*Center Brand*/
     nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-        margin-left: 0px;
+        margin-left: 0;
     }
+
     /*Center Brand*/
-    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
         text-align: center;
         width: 100%;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
 
     nav.sidebar .navbar-nav > li{
-        margin-left: 20px;
+        margin-left: 10px;
         margin-right: 40px;
     }
 
-
     /*allows nav box to use 100% width*/
-    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
-        padding: 0 0px 0 0px;
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
+        padding: 0 0 0 0;
     }
-
 
     /*gives sidebar width/height*/
     nav.sidebar{
-        width: 180px;
+        width: 190px;
         height: 100%;
         margin-left: -160px;
         float: left;
         z-index: 9999999;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
-
 
     /* Move nav to full on mouse over*/
-    nav.sidebar:hover{
-        margin-left: 0px;
+    nav.sidebar:hover {
+        margin-left: 0;
     }
+
     /*for hiden things when navbar hidden*/
-    .forAnimate{
+    .forAnimate {
         opacity: 0;
     }
 
+    .logo-xs {
+        padding: 20px;
+        padding-right: 55px;
+        margin-left: 7px;
+    }
 }
 
 /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
 
-    /*Show all nav*/
-    nav.sidebar{
-        margin-left: 0px;
-        float: left;
+    .navbar-header {
+        display: none;
     }
-    /*Show hidden items on nav*/
-    nav.sidebar .forAnimate{
-        opacity: 1;
+
+        /*Show all nav*/
+        nav.sidebar{
+            margin-left: 0px;
+            float: left;
+        }
+        /*Show hidden items on nav*/
+        nav.sidebar .forAnimate{
+            opacity: 1;
+        }
     }
-}
 
 nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
     color: #CCC;
@@ -108,7 +122,7 @@ section{
 }
 
 .container {
-    padding-left: 100px;
+    padding-left: 200px;
 }
 
 .search-form {
@@ -117,19 +131,26 @@ section{
     padding-top: 30px;
     }
 
-.logo {
-    padding-top: 20px;
+.logo-lg {
+    padding: 20px 10px 0 10px;
 }
 
+/*--- main --- */
+
+/*---   Background   ---*/
+
+body {
+    background-image: url(../img/bgimg1_transp.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 /*--- Timeline   ---*/
-
-body { background: white; }
 
 img { border: 0; max-width: 100%; }
 
 .page-header {
-    border-bottom: 1px solid rgb(218, 247, 166);
+    border-bottom: 1px solid rgba(85, 126, 2, 0.7);
 }
 
 .page-header h1 {
@@ -161,8 +182,8 @@ img { border: 0; max-width: 100%; }
 .tldate {
     display: block;
     width: 200px;
-    background: rgb(249, 249, 240);
-    color: #666666;
+    background: white;
+    color: rgb(85, 126, 2);
     margin: 0 auto;
     padding: 3px 0;
     font-weight: bold;
@@ -294,19 +315,19 @@ img { border: 0; max-width: 100%; }
 }
 
 /** media queries **/
+/*
 @media (max-width: 991px) {
     .timeline li .timeline-panel {
         width: 44%;
     }
 
 
-    .logo {
-        padding: 35px;
-    }
+
 }
+*/
 
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
     .page-header h1 { font-size: 1.8em; }
 
     ul.timeline:before {
@@ -349,4 +370,9 @@ img { border: 0; max-width: 100%; }
         right: auto;
     }
 
+    .container {
+        padding-left: 50px;
+    }
+
 }
+
