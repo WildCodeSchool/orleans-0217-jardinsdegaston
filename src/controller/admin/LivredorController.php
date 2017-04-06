@@ -15,33 +15,14 @@ use wcs\model\DB;
 
 class LivredorController extends Controller
 {
+
     public function index()
     {
-        // --- provisoire ---
-//        $test = [   '0' =>
-//            [   'Nom' => 'Mr.pouet',
-//                'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-//            '1' =>
-//                [   'Nom' => 'Mme.pouet',
-//                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-//            '2' =>
-//                [   'Nom' => 'Mr.pouet',
-//                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-//            '3' =>
-//                [   'Nom' => 'Mme.pouet',
-//                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-//            '4' =>
-//                [   'Nom' => 'Mr.pouet',
-//                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-//            '5' =>
-//                [   'Nom' => 'Mr.pouet',
-//                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor']
-//        ];
 
         $form = new LivredorForm();
         $Ldor = new Livredor();
         $param = ["content" => $Ldor->getLdor(),
-                   'form'=>$form];
+            'form' => $form];
 
         return $this->twig->render('Livredor.twig', $param);
     }
@@ -53,14 +34,54 @@ class LivredorController extends Controller
                 $postClean[$key] = htmlentities(trim($val));
             }
         }
-        if (isset($_POST)) {
-            $test = new DB();
-            $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
-            $prep = $test->db->prepare($query);
-            $prep->bindValue(':NomLDor', $_POST['NomLDor'], \PDO::PARAM_STR);
-            $prep->bindValue(':TexteLDor', $_POST['TexteLDor'], \PDO::PARAM_STR);
+        $pdo = new DB();
+
+        if (!empty($_POST['id'])) {
+            $query = "UPDATE livredor SET nom=:NomLDor, contenu=:TexteLDor WHERE id=:id";
+            $prep = $pdo->db->prepare($query);
+            $prep->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
+            $prep->bindValue(':NomLDor', $postClean['NomLDor'], \PDO::PARAM_STR);
+            $prep->bindValue(':TexteLDor', $postClean['TexteLDor'], \PDO::PARAM_STR);
             $prep->execute();
-            }
+            return $this->index();
+        }
+
+        $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
+
+        $prep = $pdo->db->prepare($query);
+        $prep->bindValue(':NomLDor', $postClean['NomLDor'], \PDO::PARAM_STR);
+        $prep->bindValue(':TexteLDor', $postClean['TexteLDor'], \PDO::PARAM_STR);
+        $prep->execute();
+
         return $this->index();
+    }
+
+    public function deleteLdor()
+    {
+
+        if (isset($_POST['id'])) {
+
+            $pdo = new DB();
+            $query = "DELETE FROM livredor WHERE id=:id" ;
+            $prep = $pdo->db->prepare($query);
+            $prep->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
+            $prep->execute();
+        }
+        return $this->index();
+    }
+
+    public function updateLdor()
+    {
+        if (isset($_POST['id'])) {
+
+
+            $form = new LivredorForm();
+            $Ldor = new Livredor();
+            $param = ["content" => $Ldor->getLdor(),
+                'form' => $form,
+                'value' => $Ldor->findOne('livredor', $_POST['id'])];
+            return $this->twig->render('Livredor.twig', $param);
+        }
+
     }
 }

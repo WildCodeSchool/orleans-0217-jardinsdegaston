@@ -85,7 +85,6 @@ class Livredor extends DB
 
     public function getLdor()
     {
-
         return $this->findAll('livredor');
     }
 

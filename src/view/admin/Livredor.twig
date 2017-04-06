@@ -14,7 +14,7 @@
 
 {% block content %}
     {% do form.prepare() %}
-    {{ dump () }}
+    {#{{ dump () }}#}
 
 
 
@@ -25,16 +25,17 @@
 
                 <div class="form-group">
                     <label for="{{ form.get('NomLDor').name }}">{{ form.get('NomLDor').label }}</label>
-                    <input required ="required" class="form-control" type="text" id="{{ form.get('NomLDor').name }}" name="{{ form.get('NomLDor').name }}" />
+                    <input required ="required" class="form-control" value="{{ value.nom }}" type="text" id="{{ form.get('NomLDor').name }}" name="{{ form.get('NomLDor').name }}" />
                 </div>
 
                 <div class="form-group">
                     <label for="{{ form.get('TexteLDor').name }}">{{ form.get('TexteLDor').label }}</label>
-                    <textarea required ="required" class="form-control" id="{{ form.get('TexteLDor').name }}" name="{{ form.get('TexteLDor').name }}"></textarea>
+                    <textarea required ="required" class="form-control" id="{{ form.get('TexteLDor').name }}" name="{{ form.get('TexteLDor').name }}">{{ value.contenu }}</textarea>
                 </div>
 
                 <input class="btn btn-success" type="submit" name="addLdor" value="Envoyer">
                 <input type="hidden" name="method" value="addLdor">
+                <input type="hidden" name="id" value="{{ value.id }}">
             </form>
         </div>
 
@@ -49,14 +50,23 @@
     <div class="row ThumbLdor">
         <div class="col-lg-10 col-lg-offset-2">
 
-    {% for Livredor in content %}
-            <div class="col-lg-4 thumbnail text-center">
-            <h3>{{ Livredor.contenu }}</h3>
-            <p>{{ Livredor.nom }}</p>
-            <a href = "" class="btn btn-warning btn-sm" role = "button" >Modifier</a > <a href = "" class="btn btn-danger btn-sm" role = "button" >Supprimer</a>
+            {% for Livredor in content %}
+                    <div class="col-lg-4 thumbnail text-center">
+                    <h3>{{ Livredor.contenu }}</h3>
+                    <p>{{ Livredor.nom }}</p>
+                        <form action="index.php?p=livredor" method="post">
+                        <input type="hidden" name="id" value="{{ Livredor.id }}">
+                        <input type="hidden" name="method" value="updateLdor">
+                        <input class="btn btn-warning" type="submit" name="updateLdor" value="Modifier">
+                        </form>
+                        <form action="index.php?p=livredor" method="post">
+                            <input type="hidden" name="id" value="{{ Livredor.id }}">
+                            <input type="hidden" name="method" value="deleteLdor">
+                            <input class="btn btn-danger" type="submit" name="deleteLdor" value="Supprimer">
+                        </form>
+                    </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-    </div>
 
     </div>
 
