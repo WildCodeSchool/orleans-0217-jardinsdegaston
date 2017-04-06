@@ -38,7 +38,7 @@
         <div class="col-xs-12">
             <div class="row contenu">
                 <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
-                    <img class="img-fluid pimg bloc-right" src="../../tmp/imgB-tmp.jpg" alt="" />
+                    <img class="img-fluid pimg bloc-right" src="../../tmp/{{ formimage }}.jpg" alt="" />
                     <br />
                     <form id="loadimg" method="post" action="index.php?p=imgfond" enctype="multipart/form-data">
                         <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
@@ -49,7 +49,8 @@
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <form method="post" action="index.php?p=imgfond">
-                        <input type="hidden" name="method" value="imgswitch" /><br /><br />
+                        <input type="hidden" name="method" value="imgswitch" />
+                        <p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>
                         <span class="like-label">Saison associée :</span><br />
                         {% for saison in saisons %}
                             {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp;&nbsp; {% endif %}

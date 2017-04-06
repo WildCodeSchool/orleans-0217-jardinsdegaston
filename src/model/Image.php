@@ -7,50 +7,103 @@ class Image
 {
 
     const TMPDIR = '../../tmp/';
+    const IMGDIR = '../../web/img/';
+    private $imgTypes = [
+        'B' => ['type' => 'Background', 'larg' => 1920, 'haut' => 1200],
+        'P' => ['type' => 'Prestations', 'larg' => 400, 'haut' => 400],
+        'R' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
+        'J' => ['type' => 'Journal', 'larg' => 750, 'haut' => 400],
+    ];
+    /**
+     * convertion code saison (Printemps, Eté, Automne, Hiver) en numéro associé
+     * @var array
+     */
+    private $numsaisons = ['P' => 1, 'E' => 2, 'A' => 3, 'H' => 4,];
 
-    private function clean($filetype)
+    /**
+     * Controle si fichier image temporaire existe
+     * @param $codetype
+     * @return bool
+     */
+    public function tmpImgExists($codetype) {
+        return file_exists(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
+    }
+
+    /**
+     * Supprime fichier image temporaire
+     * @param $codetype
+     */
+    private function clean($codetype)
     {
-        // --- suppression d'un eventuel fichier residuel
-        if ( file_exists(self::TMPDIR.'img'.$filetype.'-tmp.jpg') ) {
-            unlink(self::TMPDIR.'img'.$filetype.'-tmp.jpg');
+        if ( $this->tmpImgExists($codetype) ) {
+            unlink(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
         }
     }
-    private function reset($filetype)
+
+    /**
+     * retablit tous les droits sur le fichier image temporaire
+     * @param $codetype
+     */
+    private function rwx($codetype)
     {
-        // --- restauration du fichier vide
-        copy(self::TMPDIR.'img'.$filetype.'-ref.jpg', self::TMPDIR.'img'.$filetype.'-tmp.jpg');
+        chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
     }
-    private function rwx($filetype)
+
+    /**
+     * Supprime le fichier image temporaire
+     * @param $codetype
+     */
+    private function reset($codetype)
     {
-        chmod(self::TMPDIR.'img'.$filetype.'-tmp.jpg', 0777);
+        copy(self::TMPDIR.'img'.$codetype.'-ref.jpg', self::TMPDIR.'img'.$codetype.'-tmp.jpg');
     }
 
 
-    public function resetTmp($typeimg)
+    public function resetTmp($codetype)
     {
-        switch ($typeimg) {
-            case 'background' :
-                $this->clean('B');
-                $this->reset('B');
-                $this->rwx('B');
-                break;
+        $this->clean($codetype);
+    }
+    public function getTmpName($codetype)
+    {
+        if ( $this->tmpImgExists($codetype) ) {
+            return 'img'.$codetype.'-tmp';
+        }
+        else {
+            return 'img'.$codetype.'-ref';
         }
     }
-
-
-    public function recupImg($typeimg)
+    public function resize($codetype)
     {
-        switch ($typeimg) {
-            case 'background' :
-                $this->clean('B');
-                if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'imgB-tmp.jpg') ) {
 
-                    // --- erreur upload unfructueux ---
+    }
 
-                    $this->reset('B');
-                }
-                $this->rwx('B');
-                break;
+    public function recupImg($codetype)
+    {
+        $this->clean($codetype);
+        if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+
+            // --- erreur upload unfructueux ---
+
+            $this->reset($codetype);
+        }
+        $this->rwx($codetype);
+        // $this->resize($codetype);
+    }
+
+    public function deplace($codetype, $codesaison)
+    {
+//        die(self::TMPDIR . 'imgB-tmp.img --- '.self::IMGDIR.'imgB-'.$this->numsaisons[$codesaison].'.jpg');
+        if ( $this->tmpImgExists($codetype) ) {
+            switch ( $codetype ) {
+                case 'B' :
+                    if ( false === rename(self::TMPDIR . 'imgB-tmp.jpg', self::IMGDIR.'imgB-'.$this->numsaisons[$codesaison].'.jpg') ) {
+
+                        die('PAS GLOP');
+                        // --- erreur deplacement infructueux
+
+                    }
+                    break;
+            }
         }
     }
 
