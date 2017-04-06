@@ -21,7 +21,6 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-
 .ancre
 {
     padding-top: 80px;
@@ -79,7 +78,6 @@ button, input, select, textarea {
 
 /*------      Navigation      ------*/
 .navbar-toggle {
-
     padding: 25px 10px;
 }
 
@@ -109,7 +107,7 @@ button, input, select, textarea {
 .logo
 {
     width: 250px;
-    padding: 5%
+    padding-top: 15px;
 }
 
 /*------     Image header     ------*/
@@ -151,7 +149,7 @@ h4#accroche{
     height: 400px;
 }
 .bg-img1-xs, .bg-img2-md {
-    height: 300px;
+    height: 650px;
 }
 
 .bg-img2-xs {
@@ -168,14 +166,14 @@ h4#accroche{
 /*------ Section presentation ------*/
 
 .presentation {
-    background: #fff;
+    background: #fbfff3;
     position: relative;
-    height: 495px;
+    height: 580px;
 }
 
 .presentation p {
     text-align: left;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .img-header-prez {
@@ -193,13 +191,13 @@ h4#accroche{
 
 .value1 {
     position: absolute;
-    bottom: -210px;
+    bottom: -250px;
     left: 6%;
     width: 45%;
-    background-color:  #fbfff3;
+    background-color:  #ffffff;
     box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
-    padding: 0 20px 5px 20px;
+    padding: 10px 20px 15px 20px;
 }
 
 
@@ -207,13 +205,13 @@ h4#accroche{
 
 .value2 {
     position: absolute;
-    bottom: -250px;
-    right: 6%;
+    bottom: -290px;
+    right: 5%;
     width: 45%;
-    background-color: #fbfff3;
+    background-color: #ffffff;
     box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
-    padding: 0 20px 5px 20px;
+    padding: 10px 20px 15px 20px;
 
 }
 
@@ -226,43 +224,40 @@ h4#accroche{
 
 .real {
     background-color: #ffffff;
-    padding-bottom: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 3.5%;
 }
 
-.blocCompare {
-    margin-left: -1%;
-}
 
 .side-real {
-    margin-top: 8%;
-    width: 100%;
+    margin-top: 20%;
+    width: 125%;
     background-color:  #ffffff;
-    box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 6px 30px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
-    padding: 12% 20px 12% 20px;
+    padding: 15% 25px 15% 25px;
     text-align: center;
 }
 
-.side-real p {
-    font-style: italic;
+.realBloc .carousel {
+    margin-top: 0;
 }
 
-i {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 11px;
-    font-weight: bold;
+.realClass .carousel-control {
+    width: 5%;
 }
 
 /*-------     Best Real    ------*/
 
-div#comparison {
+div#comparison1, div#comparison2, div#comparison3 {
     width: 60vw;
     height: 60vw;
-    max-width: 590px;
-    max-height: 400px;
+    max-width: 750px;
+    max-height: 509px;
     overflow: hidden; }
-div#comparison figure {
-    background-image: url(../img/test2_apres.jpg);
+
+div#comparison1 figure {
+    background-image: url(../img/test_img_1_rsz.jpg);
     background-size: cover;
     position: relative;
     font-size: 0;
@@ -270,15 +265,58 @@ div#comparison figure {
     height: 100%;
     margin: 0;
 }
-div#comparison figure > img {
+
+div#comparison2 figure {
+    background-image: url(../img/test2_avant.jpg);
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+div#comparison3 figure {
+    background-image: url(../img/test3_avant.jpg);
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+div#comparison1 figure > img, div#comparison2 figure > img, div#comparison3 figure > img {
     position: relative;
     width: 100%;
 }
-div#comparison figure div {
-    background-image: url(../img/test2_avant.jpg);
+div#comparison1 figure div {
+    background-image: url(../img/test_img_2.jpg);
     background-size: cover;
     position: absolute;
-    width: 50%;
+    width: 40%;
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    overflow: hidden;
+    bottom: 0;
+    height: 100%;
+}
+
+div#comparison2 figure div {
+    background-image: url(../img/test2_apres.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 40%;
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    overflow: hidden;
+    bottom: 0;
+    height: 100%;
+}
+
+div#comparison3 figure div {
+    background-image: url(../img/test3_apres.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 40%;
     box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
     overflow: hidden;
     bottom: 0;
@@ -312,6 +350,7 @@ input[type=range]::active {
     border: none;
     outline: none;
 }
+
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance:none;
     width: 20px; height: 15px;
@@ -335,37 +374,36 @@ input[type=range]:focus::-moz-range-thumb {
 
 /*-------   Section Blog  ------*/
 .Blog {
-    background-image: url('../img/imgConseil.jpg');
+    background-image: url('../img/garden4.jpg');
     background-size: cover;
-    padding: 15px 0 20px 0;
-    height: 185px;
+    height: 800px;
 }
 
 .BlogThumb {
-    color: white;
-    text-align: left;
-    font-weight: bold;
-    padding-left: 10px;
+    margin-top: 18%;
+    padding: 25% 7% 28% 7%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
 }
 
-.BlogThumb h3 {
-    /*
-    color: #c1eb6a; !* Teinte verte (si on ne veut pas du rouge cerise) *!
-    */
-    color: white;
-    text-shadow: 0 0 1px black;
-    font-size: 34px;
-    font-weight: 500;
+.BlogThumb h2 {
+    color: #557E02;
+    padding-bottom: 4%;
 }
 
 .BlogThumb p {
-    text-shadow: 0 0 1px black;
+    color: black;
     font-size: 18px;
-    padding-bottom: 5px;
+    padding-bottom: 6%;
 }
 
 .BlogThumb a:hover {
     text-decoration: none;
+}
+
+.BlogThumb .btn-default {
+    padding: 10px 40px;
+    font-weight: bold;
 }
 
 /*-------     Prestations     ------*/
@@ -412,68 +450,70 @@ input[type=range]:focus::-moz-range-thumb {
 
 .Conseilbackground-lg {
     margin-bottom: 1%;
-    background-image: url('../img/imgConseil.jpg');
+    background-image: url('../img/garden3.jpg');
     background-size: cover;
-    max-height: 600px;
+    height: 410px;
 }
 
 .Conseilbackground-xs {
     margin-bottom: 1%;
-    background-image: url('../img/imgConseil.jpg');
+    background-image: url('../img/garden3.jpg');
     background-size: cover;
-    max-height: 600px;
+    height: 410px;
 }
 
 .Conseil {
-    margin-top: 2%;
-    margin-bottom: 4%;
-    background-color: rgba(0,0,0,0.4);
+    margin-top: 4.5%;
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
+    padding: 3% 0 3% 1%;
 }
 
 .Conseil-xs {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    background-color: rgba(0,0,0,0.5);
+    margin-top: 12%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3%;
 }
 
 .ConseilTitre {
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    border:1px solid white;
+    border:2px solid white;
 
 }
 
 .ConseilTitre-xs {
     margin-top: 3%;
-    margin-bottom: 2%;
     margin-left: 11%;
     margin-right: 11%;
     text-align: center;
-    border:1px solid white;
+    border:2px solid white;
 
 }
 
-.ConseilTitre h4 {
+.ConseilTitre h2 {
     color: white;
-    font-size: 25px;
+    font-size: 26px;
     opacity: 1;
+    font-weight: bold;
+    padding: 10%;
 }
 
-.ConseilTitre-xs h4 {
+.ConseilTitre-xs h2 {
     color: white;
-    font-size: 25px;
+    font-size: 26px;
     opacity: 1;
+    font-weight: bold;
+    padding: 0 2% 2% 2%;
 }
 
 .ConseilText {
-    margin-top: 2.5%;
-
+    margin-top: 2%;
 }
 
 .ConseilText-xs {
-    margin-top: 2.5%;
+    margin-top: 2%;
     text-align: center;
 }
 
@@ -481,18 +521,20 @@ input[type=range]:focus::-moz-range-thumb {
     color: white;
     font-size: 22px;
     opacity: 1;
+    font-weight: bold;
 }
 
 .ConseilText-xs p {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     opacity: 1;
+    font-weight: bold;
 }
 
 /*-------    Section Livre d'or    ------*/
 .LDOR {
 
-    height: 300px;
+    height: 320px;
 }
 
 .LivreDor-titre {
@@ -615,9 +657,39 @@ input[type=range]:focus::-moz-range-thumb {
 
 /*-------       Media Queries     ------*/
 
-@media screen and (max-width: 1650px) {
-    .glyph-mouse {
-        padding: 35px 0 0 20px;
+@media screen and (max-width: 1700px) {
+
+    div#comparison1, div#comparison2, div#comparison3 {
+        max-width: 650px;
+        max-height: 441px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    div#comparison1, div#comparison2, div#comparison3 {
+        max-width: 600px;
+        max-height: 407px;
+    }
+
+    .side-real {
+        margin-top: 10%;
+    }
+
+    .Blog {
+        height: 720px;
+    }
+
+    .Conseil {
+        margin-top: 6%;
+    }
+
+}
+
+@media screen and (max-width: 1380px) {
+    div#comparison1, div#comparison2, div#comparison3 {
+        max-width: 500px;
+        max-height: 339px;
     }
 }
 
@@ -631,23 +703,57 @@ input[type=range]:focus::-moz-range-thumb {
         bottom: -180px;
         left: 4%;
         width: 80%;
+        padding: 0 20px 0 20px;
     }
 
     .value2 {
         bottom: -315px;
         right: 5%;
         width: 80%;
+        padding: 0 20px 0 20px;
     }
 
 }
 
-@media screen and (max-width: 1200px) {
-    .blocPresta {
-        margin-bottom: 80px;
+@media screen and (max-width: 1300px) {
+
+    .Conseil {
+        margin-top: 8%;
     }
 
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1199px) {
+    .presentation {
+        height: 680px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 852px) {
     .presentation {
         height: 600px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    div#comparison1, div#comparison2, div#comparison3 {
+        max-width: 650px;
+        max-height: 441px;
+    }
+
+    .logo {
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .Blog {
+        height: 650px;
+    }
+
+    .blocPresta {
+        margin-bottom: 80px;
     }
 
     .value1 {
@@ -673,7 +779,7 @@ input[type=range]:focus::-moz-range-thumb {
     .side-real {
         padding: 2% 20px 2% 20px;
         width: 100%;
-        margin-top: 4%;
+        margin-top: 2%;
     }
 
     .blocCompare {
@@ -690,14 +796,53 @@ input[type=range]:focus::-moz-range-thumb {
 
 
 @media (max-width: 992px) {
-    h1#accroche{
+    h4#accroche{
+        /*
+        top: 35%;
+        */
         font-size:72px;
+    }
+
+    .BlogThumb {
+        margin-top: 20%;
+        padding: 10% 7% 10% 7%;
+    }
+}
+
+@media screen and (max-width: 852px) and (min-width: 760px) {
+    .presentation {
+        height: 720px;
+    }
+
+    .value1 {
+        bottom: -180px;
+        left: 4%;
+        width: 80%;
+    }
+
+    .value2 {
+        bottom: -330px;
+        right: 5%;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .Conseilbackground-xs {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
-    h1#accroche{
-        font-size:36px;
+
+    .Conseilbackground-lg {
+        display: none;
+    }
+
+    h4#accroche{
+/*        top: 15%;*/
+        font-size: 60px;
     }
 
     .Blog {
@@ -705,29 +850,20 @@ input[type=range]:focus::-moz-range-thumb {
     }
 
     .BlogThumb {
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-bottom: 5px;
-        margin-top: 8%;
+        margin-top: 25%;
+        padding: 15% 7% 15% 7%;
     }
 
-
-    .etiquette{
-        width: 100%;
-    }
-
-
-    .BlogThumb h3 {
-        color: #c1eb6a;
+    .BlogThumb h2 {
         font-size: 26px;
-        padding-top: 5px;
     }
 
     .BlogThumb p {
         font-size: 14px;
     }
 
-    .glyph-mouse {
-        padding: 70px 0 0 5px;
+    .etiquette{
+        width: 100%;
     }
 }
 
@@ -738,11 +874,6 @@ input[type=range]:focus::-moz-range-thumb {
 
     h3 {
         font-size: 20px;
-    }
-
-    h4#accroche {
-        top: 25%;
-        font-size: 50px;
     }
 
     p {
@@ -767,27 +898,25 @@ input[type=range]:focus::-moz-range-thumb {
 
 }
 
-@media screen and (max-width: 660px) {
-    .glyph-mouse {
-        display: none;
-    }
-}
+@media screen and (max-width: 600px) {
 
-@media only screen and (max-width: 600px){
-    .Conseilbackground-lg {
-        display: none;
+    .Blog {
+        height: 600px;
     }
-}
 
-@media only screen and (min-width: 600px){
-    .Conseilbackground-xs {
-        display: none;
+    .BlogThumb {
+        margin-top: 35%;
     }
+
+    .Conseil-xs {
+        margin-top: 15%;
+    }
+
 }
 
 @media screen and (max-width: 455px) {
     .presentation {
-        height: 790px;
+        height: 850px;
     }
 
     .value1 {
@@ -797,13 +926,13 @@ input[type=range]:focus::-moz-range-thumb {
     }
 
     .value2 {
-        bottom: -420px;
+        bottom: -440px;
         right: 5%;
         width: 80%;
     }
 
     .BlogThumb {
-        margin-top: 0;
+        margin-top: 40%;
     }
 }
 

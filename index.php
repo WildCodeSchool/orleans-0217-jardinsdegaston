@@ -33,8 +33,10 @@
             <!-- navbar-collapse navigation -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#presentationAnchor">A propos de Gaston</a></li>
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du moment</a></li>
+                    <li><a href="blog.php">Le journal de Gaston</a></li>
                     <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -63,11 +65,12 @@
 
 
 <!-------    Paragraphe presentation  -------->
+    <span id="presentationAnchor" class="ancre"></span>
     <div class="row presentation">
         <div class="col-xs-12 col-lg-offset-2 col-lg-8 text-center">
             <div class="presentation-header">
             <h1>Bienvenue dans les Jardins de Gaston</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor sit amet, consectetur adipiscing do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
             <div class="value1">
                 <h3>Valeur 1</h3>
@@ -98,45 +101,109 @@
 
 <div class="row real-titre">
     <div class="col-xs-12">
-        <h2>Un exemple de réalisation</h2>
+        <h2>Nos réalisations</h2>
     </div>
 </div>
+
 <div class="row presta">
     <hr class="separe">
 </div>
 
-<div class="row real">
 
-    <div class="col-xs-offset-1 col-xs-10 col-lg-offset-2 col-lg-4">
-        <div class="side-real">
-            <h3>Transformez votre jardin avec quelques idées et un peu d'entretien</h3>
-            <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <div class="row">
+        <div class="col-xs-12 realBloc">
+            <div id="carousel-real" class="carousel slide fade in realClass" data-ride="carousel" data-interval="false">
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item row real active">
+                        <div class="col-xs-offset-1 col-xs-10 col-lg-offset-1 col-lg-4">
+                            <div class="side-real">
+                                <h3>Transformez votre jardin avec quelques idées et un peu d'entretien</h3>
+                                <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-offset-1 col-xs-10 col-lg-5 blocCompare">
+                            <div id="comparison1">
+                                <figure>
+                                    <div id="divisor1"></div>
+                                </figure>
+                                <input type="range" min="0" max="100" value="40" class="realSlide1" id="slider1" oninput="moveDivisor1()">
+                            </div>
+                            <div class="caption">
+                                <i>Cliquez sur le carré vert et faites le glisser de gauche à droite.</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item row real">
+                        <div class="col-xs-offset-1 col-xs-10 col-lg-offset-1 col-lg-4">
+                            <div class="side-real">
+                                <h3>Un peu d'entretien et votre jardin se fait une nouvelle jeunesse</h3>
+                                <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-offset-1 col-xs-10 col-lg-5 blocCompare">
+                            <div id="comparison2">
+                                <figure>
+                                    <div id="divisor2"></div>
+                                </figure>
+                                <input type="range" min="0" max="100" value="40" class="realSlide2" id="slider2" oninput="moveDivisor2()">
+                            </div>
+                            <div class="caption">
+                                <i>Cliquez sur le carré vert et faites le glisser de gauche à droite.</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item row real">
+                        <div class="col-xs-offset-1 col-xs-10 col-lg-offset-1 col-lg-4">
+                            <div class="side-real">
+                                <h3>Le printemps arrive, donncez du peps à votre jardin</h3>
+                                <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-offset-1 col-xs-10 col-lg-5 blocCompare">
+                            <div id="comparison3">
+                                <figure>
+                                    <div id="divisor3"></div>
+                                </figure>
+                                <input type="range" min="0" max="100" value="40" class="realSlide3" id="slider3" oninput="moveDivisor3()">
+                            </div>
+                            <div class="caption">
+                                <i>Cliquez sur le carré vert et faites le glisser de gauche à droite.</i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="left carousel-control" href="#carousel-real" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-real" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+            </div>
+
         </div>
+
     </div>
 
-    <div class="col-xs-offset-1 col-xs-10 col-lg-5 blocCompare">
-        <div id="comparison">
-            <figure>
-                <div id="divisor"></div>
-            </figure>
-            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
-        </div>
-        <div class="caption">
-            <i>Cliquez sur le carré vert et faites le glisser de gauche à droite.</i>
-        </div>
-    </div>
 
-</div>
 
 
     <!--    Section Blog    -->
 
     <div class="row Blog">
 
-        <div class="col-xs-offset-1 col-xs-11">
+        <div class="col-xs-offset-2 col-xs-8 col-md-offset-7 col-md-4">
             <div class="BlogThumb">
-                <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
-                <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
+                <a href="blog.php"><h2>Et pendant ce temps-là chez Gaston...</h2></a>
+                <p>Découvrez le journal de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin.</p>
                 <a type="button" class="btn btn-default hover" href="blog.php">J'y vais</a>
             </div>
         </div>
@@ -247,7 +314,7 @@
     <div class="row Conseilbackground-lg">
         <div class="row Conseil col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre">
-                <h4>Conseil du moment</h4>
+                <h2>CONSEIL DU MOMENT</h2>
             </div>
             <div>
                 <div class="ConseilText col-lg-11 col-lg-offset-1">
@@ -259,7 +326,7 @@
     <div class="row Conseilbackground-xs">
         <div class="row Conseil-xs col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
             <div class="col-lg-3 col-lg-offset-1 ConseilTitre-xs">
-                <h4>Conseil du Jour</h4>
+                <h2>CONSEIL DU MOMENT</h2>
             </div>
             <div class="row">
                 <div class="ConseilText-xs col-lg-11 col-lg-offset-1">
@@ -316,6 +383,8 @@
     </div>
 
     <!-------     Section Formulaire     -------->
+    <hr class="separe hidden-lg ">
+
     <div class="row">
     <div class="Contact col-xs-12">
         <!-- <img class=" ImgForm col-lg-6 col-lg-offset-0" src="http://placehold.it/600x500"> -->
