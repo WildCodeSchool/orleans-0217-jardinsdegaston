@@ -2,7 +2,6 @@
 // --- src/controller/Controller.php ---
 
 namespace wcs\controller;
-//use \vendor\
 
 /**
  * Classe mere de tous les controleurs
@@ -12,10 +11,10 @@ namespace wcs\controller;
 class Controller
 {
     /**
-     * recuperation des entrees $_POST (si existe)
-     * @var array
+     * connexion base de données
+     * @var PDO
      */
-    protected $post = [];
+    protected $db;
 
     /**
      * objet twig initialise
@@ -23,10 +22,11 @@ class Controller
      */
     protected $twig;
 
-    public function __construct($twig, $post=[])
+
+    public function __construct($twig, $db)
     {
         $this->twig = $twig;
-        $this->post = $post;
+        $this->db = $db;
     }
 
     /**

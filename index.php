@@ -129,15 +129,15 @@
 </div>
 
 
-    <!--    Section Blog    -->
+    <!--    Section Journal    -->
 
     <div class="row Blog">
 
         <div class="col-xs-offset-1 col-xs-11">
             <div class="BlogThumb">
-                <a href="blog.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
+                <a href="journal.php"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
                 <p>Découvrez le blog de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
-                <a type="button" class="btn btn-default hover" href="blog.php">J'y vais</a>
+                <a type="button" class="btn btn-default hover" href="journal.php">J'y vais</a>
             </div>
         </div>
 

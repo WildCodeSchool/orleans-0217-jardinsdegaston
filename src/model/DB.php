@@ -1,5 +1,5 @@
 <?php
-// --- src/model/Bgimage.php ---
+
 
 namespace wcs\model;
 
@@ -22,7 +22,7 @@ class DB
     {
         // on instancie un objet PDO
 //        $this->db = new \PDO(DSN, USER, PASS);
-        $this->db = new \PDO('mysql:host=localhost;dbname=db_gaston', 'gaston', 'gaSt0n%');
+        $this->db = new \PDO(DSN, USER, PASS);
         $this->db->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
         $this->db->exec("set names utf8");
     }
