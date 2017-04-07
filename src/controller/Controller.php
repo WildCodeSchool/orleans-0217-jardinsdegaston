@@ -15,7 +15,7 @@ class Controller
      * connexion base de donnees
      * @var PDO
      */
-    protected $db;
+    protected $bdd;
 
     /**
      * objet twig initialise
@@ -29,10 +29,10 @@ class Controller
     protected $img;
 
 
-    public function __construct($twig, $db)
+    public function __construct($twig, \PDO $bdd)
     {
         $this->twig = $twig;
-        $this->db = $db;
+        $this->bdd = $bdd;
         if ( !isset($this->img) ) {
             $this->img = new Image();
         }

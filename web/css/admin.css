@@ -22,7 +22,7 @@ body {
 p.erreur {
     color: red;
     font-weight: bold;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 /* --- navbar ---------------------------------------------------- */

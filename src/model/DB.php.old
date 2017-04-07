@@ -13,8 +13,12 @@ class DB
     /**
      * @var \PDO
      */
-    private $db;
+    protected $bdd;
 
+    public function __construct(\PDO $bdd)
+    {
+        $this->bdd = $bdd;
+    }
 
     /**
      * requete permettant de récupérer tous les enregistrement de la table $table et d'instancier
@@ -22,12 +26,12 @@ class DB
      * @param $table
      * @return array
      */
-    public function findAll($db, $table, $opt=null) {
+    public function findAll($table, $opt=null) {
         $req = "SELECT * FROM $table";
         if ( null !== $opt ) {
             $req .= " ".$opt;
         }
-        $res = $db->query($req);
+        $res = $this->bdd->query($req);
         return $res->fetchAll(\PDO::FETCH_CLASS, '\wcs\model\\'.ucfirst($table));
     }
 
@@ -38,14 +42,15 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOne($db, $table, $id) {
+    public function findOne($table, $id) : Prestation
+    {
         $req = "SELECT * FROM $table WHERE id=:id";
-        $prep = $db->prepare($req);
+        $prep = $this->bdd->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
 
-        $prep->execute();
+        //$prep->execute();
 
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, '\wcs\model\\'.ucfirst($table));
-        return $res[0];
+        return $res;
     }
 }

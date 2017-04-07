@@ -13,16 +13,25 @@ class BgImageController extends Controller
 {
     private $saisons = ['Printemps', 'Eté', 'Automne', 'Hiver'];
 
+    /** **********************************************************
+     * premier acces a la page
+     * @return mixed
+     */
     public function index()
     {
         $this->img->resetTmp('B');
         $params = [
             'saisons' => $this->saisons,
+            // --- recuperation de l'image a afficher dans le formulaire (a priori image vide)
             'formimage' => $this->img->getTmpName('B'),
         ];
         return $this->twig->render('BgImage.twig', $params);
     }
 
+    /** **********************************************************
+     * methode sollicitee apres upload nouvelle image
+     * @return mixed
+     */
     public function imgupload()
     {
         $erreur = '';
@@ -38,8 +47,16 @@ class BgImageController extends Controller
         return $this->twig->render('BgImage.twig', $params);
     }
 
+    /** **********************************************************
+     * methode sollicitee apres soumission d'une nouvelle image pour remplacer une image existante
+     * @return mixed
+     */
     public function imgswitch()
     {
+        if ( isset($_POST['annule']) ) {
+            // --- on recharge la page initiale (qui reinitialise le formulaire)
+            header('location:index.php?p=imgfond');
+        }
         $erreur = '';
         $ok = true;
         if (!$this->img->tmpImgExists('B')) {
@@ -53,7 +70,6 @@ class BgImageController extends Controller
             $ok = false;
         }
         if ( $ok ) {
-            var_dump($_POST);
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('B', $_POST['saison']);
             // --- recharger page index
