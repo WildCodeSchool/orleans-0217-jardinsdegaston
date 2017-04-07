@@ -1,5 +1,5 @@
 <?php
-// --- src/model/Bgimage.php ---
+
 
 namespace wcs\model;
 
@@ -13,7 +13,10 @@ class DB
     /**
      * @var \PDO
      */
-    public $db;
+
+    private $db;
+
+
 
     /**
      * DB constructor.
@@ -22,7 +25,9 @@ class DB
     {
         // on instancie un objet PDO
 //        $this->db = new \PDO(DSN, USER, PASS);
-        $this->db = new \PDO('mysql:host=localhost;dbname=db_gaston', 'test', 'test');
+
+        $this->db = new \PDO(DSN, USER, PASS);
+
         $this->db->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
         $this->db->exec("set names utf8");
     }
@@ -33,12 +38,12 @@ class DB
      * @param $table
      * @return array
      */
-    public function findAll($table, $opt=null) {
+    public function findAll($db, $table, $opt=null) {
         $req = "SELECT * FROM $table";
         if ( null !== $opt ) {
             $req .= " ".$opt;
         }
-        $res = $this->db->query($req);
+        $res = $db->query($req);
         return $res->fetchAll(\PDO::FETCH_CLASS, '\wcs\model\\'.ucfirst($table));
     }
 
@@ -49,9 +54,9 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOne($table, $id) {
+    public function findOne($db, $table, $id) {
         $req = "SELECT * FROM $table WHERE id=:id";
-        $prep = $this->db->prepare($req);
+        $prep = $db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
 
         $prep->execute();
