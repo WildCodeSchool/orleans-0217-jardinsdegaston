@@ -3,3 +3,6 @@
 
 
 /vendor/
+/src/model/DB.php
+/.gitignore
+/web/admin/test.php

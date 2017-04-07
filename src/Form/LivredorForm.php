@@ -8,6 +8,7 @@
 
 namespace wcs\Form;
 
+use Zend\Form\Element\Csrf;
 use Zend\Form\Element\Text;
 use Zend\Form\Element\Textarea;
 use Zend\Form\Form;
@@ -32,6 +33,11 @@ class LivredorForm extends Form
             'options' => [
                 'label' => 'Texte',
             ],
+        ]);
+
+        $this->add([
+            'type' => Csrf::class,
+            'name' => 'csrf',
         ]);
     }
 }

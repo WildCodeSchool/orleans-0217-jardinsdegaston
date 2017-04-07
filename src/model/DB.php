@@ -13,7 +13,9 @@ class DB
     /**
      * @var \PDO
      */
+
     private $db;
+
 
 
     /**
@@ -23,7 +25,9 @@ class DB
     {
         // on instancie un objet PDO
 //        $this->db = new \PDO(DSN, USER, PASS);
+
         $this->db = new \PDO(DSN, USER, PASS);
+
         $this->db->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
         $this->db->exec("set names utf8");
     }
