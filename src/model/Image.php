@@ -2,85 +2,109 @@
 
 namespace wcs\model;
 
-/**
- * Modele (entity) correspondant à la table image de la base de donnees. Un objet Image est instancie et hydrate
- * automatiquement lors de l'utilisation de pdo fetchAll avec le style FETCH_CLASS
- * @class Eleve
- */
 
-class Image extends DB
+class Image
 {
 
-    /* --- Proprietes --------------------------------- */
+    const TMPDIR = '../../tmp/';
+    const IMGDIR = '../../web/img/';
+    private $imgTypes = [
+        'B' => ['type' => 'Background', 'larg' => 1920, 'haut' => 1200],
+        'P' => ['type' => 'Prestations', 'larg' => 400, 'haut' => 400],
+        'R' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
+        'J' => ['type' => 'Journal', 'larg' => 750, 'haut' => 400],
+    ];
     /**
-     * index dans la table
-     * @var integer
+     * convertion code saison (Printemps, Eté, Automne, Hiver) en numéro associé
+     * @var array
      */
-    private $id;
+    private $numsaisons = ['P' => 1, 'E' => 2, 'A' => 3, 'H' => 4,];
 
     /**
-     * identifie le type d'image : B = background (1920x1200), P = prestations (400x400), R = realisation (750x400), j = journal (..x..)
-     * @var char
+     * Controle si fichier image temporaire existe
+     * @param $codetype
+     * @return bool
      */
-    private $rubrique;
-
-    /**
-     * date de (re)chargement de l'image
-     * @var DateTime
-     */
-    private $date;
-
-
-    /* --- Geters et setters -------------------------- */
-    /**
-     * @return int
-     */
-    public function getId() : int
-    {
-        return $this->id;
+    public function tmpImgExists($codetype) {
+        return file_exists(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
     }
 
     /**
-     * @param mixed $id
+     * Supprime fichier image temporaire
+     * @param $codetype
      */
-    public function setId(int $id) : Image
+    private function clean($codetype)
     {
-        $this->id = $id;
-        return $this;
+        if ( $this->tmpImgExists($codetype) ) {
+            unlink(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
+        }
     }
 
     /**
-     * @return mixed
+     * retablit tous les droits sur le fichier image temporaire
+     * @param $codetype
      */
-    public function getRubrique() : string
+    private function rwx($codetype)
     {
-        return $this->rubrique;
+        chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
     }
 
     /**
-     * @param mixed $rubrique
+     * Supprime le fichier image temporaire
+     * @param $codetype
      */
-    public function setRubrique($rubrique) : Image
+    private function reset($codetype)
     {
-        $this->rubrique = $rubrique;
-        return $this;
+        copy(self::IMGDIR.'img'.$codetype.'-ref.jpg', self::TMPDIR.'img'.$codetype.'-tmp.jpg');
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDate() : \DateTime
+
+    public function resetTmp($codetype)
     {
-        return $this->date;
+        $this->clean($codetype);
+    }
+    public function getTmpName($codetype)
+    {
+        if ( $this->tmpImgExists($codetype) ) {
+            return 'img'.$codetype.'-tmp';
+        }
+        else {
+            return 'img'.$codetype.'-ref';
+        }
+    }
+    public function resize($codetype)
+    {
+
     }
 
-    /**
-     * @param mixed $date
-     */
-    public function setDate($date) : Image
+    public function recupImg($codetype)
     {
-        $this->date = $date;
-        return $this;
+        $this->clean($codetype);
+        if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+            $this->reset($codetype);
+
+            // --- erreur upload unfructueux ---
+
+        }
+        $this->rwx($codetype);
+        // $this->resize($codetype);
+    }
+
+    public function deplace($codetype, $codesaison)
+    {
+//        die(self::TMPDIR . 'imgB-tmp.img --- '.self::IMGDIR.'imgB-'.$this->numsaisons[$codesaison].'.jpg');
+        if ( $this->tmpImgExists($codetype) ) {
+            switch ( $codetype ) {
+                case 'B' :
+                    if ( false === rename(self::TMPDIR . 'imgB-tmp.jpg', self::IMGDIR.'imgB-'.$this->numsaisons[$codesaison].'.jpg') ) {
+
+                        die('PAS GLOP');
+                        // --- erreur deplacement infructueux
+
+                    }
+                    break;
+            }
+        }
     }
 
 }

@@ -17,7 +17,8 @@
     <!-- Image principale ------------------------------------------ -->
 
     <div class="col-xs-12 bandeau text-center">
-        Image principale - sélection actuelle
+<!--        Image principale - sélection actuelle-->
+        Image d'accueil
     </div>
 
     <?php
@@ -34,51 +35,52 @@
 
     <!-- Image secondaire ------------------------------------------ -->
 
-    <div class="col-xs-12 bandeau text-center">
-        Image secondaire - sélection actuelle
-    </div>
-
-    <?php
-        foreach ( $saisons as $saison ) {
-            echo '
-                <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
-                    <img class="img-fluid gimg" src="../img/bgimg2'.strtolower($saison[0]).'.jpg"><br />
-                    '.$saison.'
-                </div>
-            ';
-        }
-    ?>
+<!--    <div class="col-xs-12 bandeau text-center">-->
+<!--        Image secondaire - sélection actuelle-->
+<!--    </div>-->
+<!---->
+<!--    --><?php
+//        foreach ( $saisons as $saison ) {
+//            echo '
+//                <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
+//                    <img class="img-fluid gimg" src="../img/bgimg2'.strtolower($saison[0]).'.jpg"><br />
+//                    '.$saison.'
+//                </div>
+//            ';
+//        }
+//    ?>
 
 
     <!-- Galerie ------------------------------------------------ -->
 
-    <div class="col-xs-12 bandeau text-center">
-        Gérer la galerie
-    </div>
-    <?php
-        for ( $i=0; $i<$nbimages; $i++ ) {
-            echo '
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
-                    <div class="blocimg">
-                        <img class="img-fluid pimg" src="../img/noimg.png"><br />
-                        Saison<br />
-                        <form method="post" action="modifimg.php" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="#" />
-                            <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
-                            <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
-                            <input class="btn btn-default" type="submit" name="supprime" value="Supprimer de la galerie" />
-                        </form>
-                    </div>
-                </div>
-            ';
-        }
-    ?>
+<!--    <div class="col-xs-12 bandeau text-center">-->
+<!--        Gérer la galerie-->
+<!--    </div>-->
+<!--    --><?php
+//        for ( $i=0; $i<$nbimages; $i++ ) {
+//            echo '
+//                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+//                    <div class="blocimg">
+//                        <img class="img-fluid pimg" src="../img/noimg.png"><br />
+//                        Saison<br />
+//                        <form method="post" action="modifimg.php" enctype="multipart/form-data">
+//                            <input type="hidden" name="id" value="#" />
+//                            <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
+//                            <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
+//                            <input class="btn btn-default" type="submit" name="supprime" value="Supprimer de la galerie" />
+//                        </form>
+//                    </div>
+//                </div>
+//            ';
+//        }
+//    ?>
 
 
     <!-- upload image ------------------------------------------ -->
 
     <div class="col-xs-12 bandeau text-center">
-        Charger une nouvelle image
+<!--        Charger une nouvelle image-->
+        Remplacer une image
     </div>
     <div class="col-xs-12">
         <div class="row contenu">
@@ -93,7 +95,7 @@
             </div>
             <div class="col-xs-12 col-md-6 col-lg-4">
                 <br />
-                <form method="post" action="majbg">
+                <form method="post" action="majbg"><br /><br />
                     <label for="saison">Saison associée :</label><br />
                     <?php
                     foreach ( $saisons as $saison ) {
@@ -105,10 +107,11 @@
                         echo ' />&nbsp;'.$saison;
                     }
                     ?>
-                    <br /><br />
-                    <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />
-                    <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />
-                    <input class="btn btn-default" type="submit" name="galerie" value="Ajouter à la galerie" />
+                    <br /><br /><br />
+<!--                    <input class="btn btn-default" type="submit" name="bgimg1" value="Placer en image principale" /><br />-->
+<!--                    <input class="btn btn-default" type="submit" name="bgimg2" value="Placer en image secondaire" /><br />-->
+<!--                    <input class="btn btn-default" type="submit" name="galerie" value="Ajouter à la galerie" />-->
+                    <input class="btn btn-default" type="submit" name="galerie" value="Remplacer l'image" />
                 </form>
             </div>
         </div>

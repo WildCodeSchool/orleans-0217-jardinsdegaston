@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class Livredor
+class Livredor extends DB
 {
     /* --- Proprietes --------------------------------- */
     /**
@@ -32,7 +32,7 @@ class Livredor
     /**
      * @return int
      */
-    public function getId() : int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -41,7 +41,7 @@ class Livredor
      * @param int $id
      * @return Livredor
      */
-    public function setId(int $id) : Livredor
+    public function setId(int $id): Livredor
     {
         $this->id = $id;
         return $this;
@@ -50,7 +50,7 @@ class Livredor
     /**
      * @return string
      */
-    public function getContenu() : string
+    public function getContenu(): string
     {
         return $this->contenu;
     }
@@ -59,7 +59,7 @@ class Livredor
      * @param string $contenu
      * @return Livredor
      */
-    public function setContenu(string $contenu) : Livredor
+    public function setContenu(string $contenu): Livredor
     {
         $this->contenu = $contenu;
         return $this;
@@ -68,7 +68,7 @@ class Livredor
     /**
      * @return string
      */
-    public function getNom() : string
+    public function getNom(): string
     {
         return $this->nom;
     }
@@ -77,10 +77,20 @@ class Livredor
      * @param string $nom
      * @return Livredor
      */
-    public function setNom(string $nom) : Livredor
+    public function setNom(string $nom): Livredor
     {
         $this->nom = $nom;
         return $this;
     }
 
+    public function getLdor()
+    {
+        return $this->findAll('livredor');
+    }
+
+//    public function addLdorQuery($query)
+//    {
+//        $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
+//        return $this->addLdorQuery();
+//    }
 }

@@ -3,11 +3,14 @@
 
 namespace wcs\controller;
 
+use \wcs\model\Image;
+
 /**
  * Classe mere de tous les controleurs
  *
  * @package wcs\controller
  */
+
 class Controller
 {
     /**
@@ -22,11 +25,19 @@ class Controller
      */
     protected $twig;
 
+    /**
+     * @var
+     */
+    protected $img;
+
 
     public function __construct($twig, $db)
     {
         $this->twig = $twig;
         $this->db = $db;
+        if ( !isset($this->img) ) {
+            $this->img = new Image();
+        }
     }
 
     /**
