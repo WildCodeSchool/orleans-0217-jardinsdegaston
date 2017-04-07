@@ -88,9 +88,40 @@ class Livredor extends DB
         return $this->findAll('livredor');
     }
 
-//    public function addLdorQuery($query)
-//    {
-//        $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
-//        return $this->addLdorQuery();
-//    }
+    public function delete()
+    {
+        $pdo = new DB();
+        $query = "DELETE FROM livredor WHERE id=:id" ;
+        $prep = $pdo->db->prepare($query);
+        $prep->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
+        $prep->execute();
+    }
+
+    public function addorUpdate()
+    {
+        if (isset($_POST)) {
+            foreach ($_POST as $key => $val) {
+                $postClean[$key] = htmlentities(trim($val));
+            }
+        }
+        $pdo = new DB();
+
+        if (!empty($_POST['id'])) {
+            $query = "UPDATE livredor SET nom=:NomLDor, contenu=:TexteLDor WHERE id=:id";
+            $prep = $pdo->db->prepare($query);
+            $prep->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
+            $prep->bindValue(':NomLDor', $postClean['NomLDor'], \PDO::PARAM_STR);
+            $prep->bindValue(':TexteLDor', $postClean['TexteLDor'], \PDO::PARAM_STR);
+            $prep->execute();
+            return $this;
+        }
+
+        $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
+
+        $prep = $pdo->db->prepare($query);
+        $prep->bindValue(':NomLDor', $postClean['NomLDor'], \PDO::PARAM_STR);
+        $prep->bindValue(':TexteLDor', $postClean['TexteLDor'], \PDO::PARAM_STR);
+        $prep->execute();
+    }
+
 }
