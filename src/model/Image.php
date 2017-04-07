@@ -55,7 +55,7 @@ class Image
      */
     private function reset($codetype)
     {
-        copy(self::TMPDIR.'img'.$codetype.'-ref.jpg', self::TMPDIR.'img'.$codetype.'-tmp.jpg');
+        copy(self::IMGDIR.'img'.$codetype.'-ref.jpg', self::TMPDIR.'img'.$codetype.'-tmp.jpg');
     }
 
 
@@ -81,10 +81,10 @@ class Image
     {
         $this->clean($codetype);
         if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+            $this->reset($codetype);
 
             // --- erreur upload unfructueux ---
 
-            $this->reset($codetype);
         }
         $this->rwx($codetype);
         // $this->resize($codetype);
