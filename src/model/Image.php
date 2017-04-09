@@ -6,26 +6,34 @@ namespace wcs\model;
 
 class Image
 {
-    /* --- Proprietes ------------------------------------------- */
-
+    // --- repertoire temporaire pour twig et images uploadees
     const TMPDIR = '../../tmp/';
+    // --- repertoire de stockage des images
     const IMGDIR = '../../web/img/';
+
+    /* --- Proprietes ------------------------------------------- */
+    /**
+     * infos images en fonction du type
+     * @var array
+     */
     private $imgTypes = [
         'B' => ['type' => 'Background', 'larg' => 1920, 'haut' => 1200],
         'P' => ['type' => 'Prestations', 'larg' => 400, 'haut' => 400],
         'Rav' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
         'Rap' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
-        'J' => ['type' => 'Journal', 'larg' => 750, 'haut' => 400],
+        'J' => ['type' => 'Journal', 'larg' => 600, 'haut' => 400],
     ];
-    /**
-     * convertion code saison (Printemps, Eté, Automne, Hiver) en numéro associé
-     * @var array
-     */
-    private $numsaisons = ['P' => 1, 'E' => 2, 'A' => 3, 'H' => 4,];
-
 
 
     /* --- Geters et setters ------------------------------------- */
+    private function getLargImg($codetype) : int
+    {
+        return $this->imgTypes[$codetype]['larg'];
+    }
+    private function getHautImg($codetype) : int
+    {
+        return $this->imgTypes[$codetype]['haut'];
+    }
 
     /**
      * **************************************************************
@@ -36,15 +44,19 @@ class Image
     {
         chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
     }
-//
-//    /**
-//     * Supprime le fichier image temporaire
-//     * @param $codetype
-//     */
-//    private function reset($codetype)
-//    {
-//        copy(self::IMGDIR.'img'.$codetype.'-ref.jpg', self::TMPDIR.'img'.$codetype.'-tmp.jpg');
-//    }
+
+
+    private function ctrlTmp()
+    {
+        if ( !file_exists(self::TMPDIR) ) {
+            // --- si repertoire tmp n'existe pas, on le cree
+            mkdir(self::TMPDIR);
+        }
+        else {
+            // --- s'il existe, on lui (re)affecte tous les droits
+            chmod(self::TMPDIR, 0777);
+        }
+    }
 
     /**
      * **************************************************************
@@ -84,6 +96,18 @@ class Image
         }
     }
 
+    /**
+     * **************************************************************
+     * retourne le chemin et nom de l'image vide
+     * @param $codetype
+     * @return string
+     */
+    public function getImageVide($codetype)
+    {
+        return self::IMGDIR.'img'.$codetype.'-ref.jpg';
+    }
+
+
 //    public function resize($codetype)
 //    {
 //
@@ -120,12 +144,18 @@ class Image
      * @param $codetype
      * @param $codesaison
      */
-    public function deplace($codetype, $codesaison)
+    public function deplace($codetype, $identif)
     {
         if ( $this->tmpImgExists($codetype) ) {
             switch ( $codetype ) {
                 case 'B' :
-                    if ( false === rename(self::TMPDIR . 'imgB-tmp.jpg', self::IMGDIR.'imgB-'.$this->numsaisons[$codesaison].'.jpg') ) {
+                case 'P' :
+                    $urldest = self::IMGDIR.'img'.$codetype.'-'.$identif.'.jpg';
+                    if ( file_exists($urldest) ) {
+                        // --- on supprime l'ancienne image
+                        unlink($urldest);
+                    }
+                    if ( false === rename(self::TMPDIR . 'img'.$codetype.'-tmp.jpg', $urldest) ) {
 
                         die('PAS GLOP');
                         // --- erreur deplacement infructueux

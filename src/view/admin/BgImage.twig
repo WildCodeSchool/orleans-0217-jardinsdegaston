@@ -43,7 +43,7 @@
                     <form id="loadimg" method="post" action="index.php?p=imgfond" enctype="multipart/form-data">
                         <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
                         <input type="hidden" name="method" value="imgupload" />
-                        <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="submit();"/>
+                        <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
                         <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
                     </form>
                 </div>
@@ -52,7 +52,7 @@
                         <input type="hidden" name="method" value="imgswitch" />
                         <p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>
                         <p>
-                            <span class="like-label">Saison associée :</span><br />
+                            <span class="label-like">Saison associée :</span><br />
                             {% for saison in saisons %}
                                 {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp;&nbsp; {% endif %}
                                 <input type="radio" name="saison" id="saison{{ saison | first }}" value="{{ saison | first }}" />
@@ -70,6 +70,6 @@
 
     </div> {# -- fermeture de la row principale -- #}
 
-    <script>function submit() {document.getElementById('loadimg').submit;}</script>
+    <script>function valide() {document.getElementById('loadimg').submit();}</script>
 
 {% endblock %}
