@@ -1,86 +1,148 @@
 <?php
+// --- src/models/Image.php ---
 
 namespace wcs\model;
 
-/**
- * Modele (entity) correspondant à la table image de la base de donnees. Un objet Image est instancie et hydrate
- * automatiquement lors de l'utilisation de pdo fetchAll avec le style FETCH_CLASS
- * @class Eleve
- */
 
-class Image extends DB
+class Image
 {
+    /* --- Proprietes ------------------------------------------- */
 
-    /* --- Proprietes --------------------------------- */
+    const TMPDIR = '../../tmp/';
+    const IMGDIR = '../../web/img/';
+    private $imgTypes = [
+        'B' => ['type' => 'Background', 'larg' => 1920, 'haut' => 1200],
+        'P' => ['type' => 'Prestations', 'larg' => 400, 'haut' => 400],
+        'Rav' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
+        'Rap' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
+        'J' => ['type' => 'Journal', 'larg' => 750, 'haut' => 400],
+    ];
     /**
-     * index dans la table
-     * @var integer
+     * convertion code saison (Printemps, Eté, Automne, Hiver) en numéro associé
+     * @var array
      */
-    private $id;
+    private $numsaisons = ['P' => 1, 'E' => 2, 'A' => 3, 'H' => 4,];
+
+
+
+    /* --- Geters et setters ------------------------------------- */
 
     /**
-     * identifie le type d'image : B = background (1920x1200), P = prestations (400x400), R = realisation (750x400), j = journal (..x..)
-     * @var char
+     * **************************************************************
+     * retablit tous les droits sur le fichier image temporaire
+     * @param $codetype
      */
-    private $rubrique;
-
-    /**
-     * date de (re)chargement de l'image
-     * @var DateTime
-     */
-    private $date;
-
-
-    /* --- Geters et setters -------------------------- */
-    /**
-     * @return int
-     */
-    public function getId() : int
+    private function rwx($codetype)
     {
-        return $this->id;
+        chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
+    }
+//
+//    /**
+//     * Supprime le fichier image temporaire
+//     * @param $codetype
+//     */
+//    private function reset($codetype)
+//    {
+//        copy(self::IMGDIR.'img'.$codetype.'-ref.jpg', self::TMPDIR.'img'.$codetype.'-tmp.jpg');
+//    }
+
+    /**
+     * **************************************************************
+     * Controle si fichier image temporaire existe (dans tmp)
+     * @param $codetype
+     * @return bool
+     */
+    public function tmpImgExists($codetype) {
+        return file_exists(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
     }
 
     /**
-     * @param mixed $id
+     * **************************************************************
+     * Efface l'image temportaire
+     * @param $codetype
      */
-    public function setId(int $id) : Image
+    public function resetTmp($codetype)
     {
-        $this->id = $id;
-        return $this;
+        if ( $this->tmpImgExists($codetype) ) {
+            unlink(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
+        }
     }
 
     /**
-     * @return mixed
+     * **************************************************************
+     * retourne le chemin et nom de l'image temporaire a afficher
+     * @param $codetype
+     * @return string
      */
-    public function getRubrique() : string
+    public function getTmpName($codetype)
     {
-        return $this->rubrique;
+        if ( $this->tmpImgExists($codetype) ) {
+            return self::TMPDIR.'img'.$codetype.'-tmp.jpg';
+        }
+        else {
+            return self::IMGDIR.'img'.$codetype.'-ref.jpg';
+        }
+    }
+
+//    public function resize($codetype)
+//    {
+//
+//    }
+
+    /**
+     * **************************************************************
+     * rapatrie l'image uploadee vers le tmp et la renomme en xxx-tmp.jpg
+     * @param $codetype
+     */
+    public function recupImg($codetype)
+    {
+        $this->resetTmp($codetype);
+        if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+            $this->reset($codetype);
+
+            //voir aussi $_FILES['fichier']['error'] > 0 (il y a eu une erreur)
+            //           $_FILES['fichier']['size'] > maxsize (fichier trop gros)
+
+
+            // --- erreur upload foireux ---
+
+            return false;
+
+        }
+        $this->rwx($codetype);
+        // **** PENSER A ACTIVER LA LIGNE CI-DESSOUS (et implementer la fonction) ***********
+        // $this->resize($codetype);
     }
 
     /**
-     * @param mixed $rubrique
+     * **************************************************************
+     * Deplace l'image temporaire vers son emplacement de production (et la renomme)
+     * @param $codetype
+     * @param $codesaison
      */
-    public function setRubrique($rubrique) : Image
+    public function deplace($codetype, $codesaison)
     {
-        $this->rubrique = $rubrique;
-        return $this;
-    }
+        if ( $this->tmpImgExists($codetype) ) {
+            switch ( $codetype ) {
+                case 'B' :
+                    if ( false === rename(self::TMPDIR . 'imgB-tmp.jpg', self::IMGDIR.'imgB-'.$this->numsaisons[$codesaison].'.jpg') ) {
 
-    /**
-     * @return mixed
-     */
-    public function getDate() : \DateTime
-    {
-        return $this->date;
-    }
+                        die('PAS GLOP');
+                        // --- erreur deplacement infructueux
 
-    /**
-     * @param mixed $date
-     */
-    public function setDate($date) : Image
-    {
-        $this->date = $date;
-        return $this;
+                    }
+                    break;
+// ********* A VALIDER *************************
+//                default :
+//                    if ( false === rename(self::TMPDIR . 'img'.$codetype.'-tmp.jpg', self::IMGDIR.'img'.$codetype.'-'.$this->numsaisons[$codesaison].'.jpg') ) {
+//
+//                        die('PAS GLOP');
+//                        // --- erreur deplacement infructueux
+//
+//                    }
+// **********************************************
+            }
+        }
     }
 
 }

@@ -1,47 +1,84 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder10
- * Date: 02/04/17
- * Time: 09:06
- */
+// --- src/models/Prestation.php ---
 
 namespace wcs\model;
 
 
-class Prestation extends Presentation
+class Prestation
 {
-
-    /* --- Proprietes ----------------------------- */
+    /* --- Proprietes ------------------------------------------- */
 
     /**
      * @var int
      */
-    private $idImg;
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $titre;
+
+    /**
+     * @var string
+     */
+    private $contenu;
 
     /**
      * @var int
      */
     private $ordreAff;
 
-
-    /* --- Geters et setters ---------------------- */
+    /* --- Geters et setters ------------------------------------- */
 
     /**
      * @return int
      */
-    public function getIdImg() : int
+    public function getId() : int
     {
-        return $this->idImg;
+        return $this->id;
     }
 
     /**
      * @param int $idImg
      * @return Prestation
      */
-    public function setIdImg(int $idImg) : Prestation
+    public function setId(int $id) : Prestation
     {
-        $this->idImg = $idImg;
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param string $titre
+     */
+    public function setTitre($titre) : Prestation
+    {
+        $this->titre = $titre;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * @param string $contenu
+     */
+    public function setContenu($contenu) : Prestation
+    {
+        $this->contenu = $contenu;
         return $this;
     }
 
@@ -62,6 +99,4 @@ class Prestation extends Presentation
         $this->ordreAff = $ordreAff;
         return $this;
     }
-
-
 }

@@ -4,21 +4,21 @@
 // --- recup des parametres POST d'entree
 $method = 'index';
 $post = [];
-if (isset($_POST)) {
-    foreach ( $_POST as $key => $value ) {
-        $post[$key] = $value;
-    }
+//if (isset($_POST)) {
+//    foreach ( $_POST as $key => $value ) {
+//        $post[$key] = $value;
+//    }
     if ( isset($_POST['method']) ) {
         $method = $_POST['method'];
     }
-}
+//}
 
 $routes = [
     'imgfond' => 'BgImage',
     'realisation' => 'Realisation',
     'prestation' => 'Prestation',
     'conseil' => 'Conseil',
-    'livredor' => 'LivredOr',
+    'livredor' => 'Livredor',
     'contact' => 'Contact',
     'chezgaston' => 'ChezGaston',
 
@@ -45,9 +45,15 @@ if ( array_key_exists($page, $routes) ) {
     ]);
     $twig->addExtension(new Twig_Extension_Debug());
 
+    // --- initialisation des acces a la base de donnees
+    require '../../src/model/connect.php';
+    $bdd = new \PDO(DSN, USER, PASS);
+    $bdd->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
+    $bdd->exec("set names utf8");
+
     // --- appel du controleur concerne
     $ctrlName = 'wcs\\controller\\admin\\'.$routes[$page].'Controller';
-    $controller = new $ctrlName($twig, $post);
+    $controller = new $ctrlName($twig, $bdd);
     echo $controller->$method();
 }
 else {
