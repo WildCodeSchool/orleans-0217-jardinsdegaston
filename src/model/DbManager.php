@@ -91,6 +91,7 @@ class DbManager
     public function findOne(int $id)
     {
         $req = "SELECT * FROM " . $this->getTableName()." WHERE id=$id";
+        echo $req;die();
         $res = $this->getBdd()->query($req);
         return $res->fetch(\PDO::FETCH_ASSOC);
     }
