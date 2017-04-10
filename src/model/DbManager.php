@@ -21,6 +21,13 @@ class DbManager
      */
     private $entity;
 
+    private $tableName;
+
+    private function getTableName() : string
+    {
+        return $this->tableName;
+    }
+
     /**
      * @return \PDO
      */
@@ -54,10 +61,11 @@ class DbManager
     public function setEntity($entity)
     {
         $this->entity = $entity;
+        // --- identification de la table SQL concernee
+        $elements = explode('\\', $this->getEntity());
+        $this->tableName = strtolower(end($elements));
         return $this;
     }
-
-
 
     public function __construct(\PDO $bdd, $entityClassName)
     {
@@ -65,16 +73,32 @@ class DbManager
         $this->setEntity($entityClassName);
     }
 
-    public function findAll($opt=null)
+    public function findAll(string $opt=null)
     {
-        $elements = explode('\\', $this->getEntity());
-        $table = strtolower(end($elements));
-        $req = "SELECT * FROM $table";
+        $req = "SELECT * FROM " . $this->getTableName();
         if ( null !== $opt ) {
             $req .= " ".$opt;
         }
         $res = $this->getBdd()->query($req);
         return $res->fetchAll(\PDO::FETCH_CLASS, $this->getEntity());
+    }
+
+    public function countAll(string $opt=null)
+    {
+        return count($this->findAll($opt));
+    }
+
+    public function findOne(int $id)
+    {
+        $req = "SELECT * FROM " . $this->getTableName()." WHERE id=$id";
+        $res = $this->getBdd()->query($req);
+        return $res->fetch(\PDO::FETCH_ASSOC);
+    }
+
+    public function delOne(int $id)
+    {
+        $req = "DELETE FROM " . $this->getTableName()." WHERE id=$id";
+        return $this->getBdd()->exec($req);
     }
 
 }

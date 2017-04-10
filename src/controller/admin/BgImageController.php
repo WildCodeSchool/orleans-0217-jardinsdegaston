@@ -7,13 +7,13 @@ use \wcs\controller\Controller;
 /**
  * Class BgImageController
  * Controlleur permettant la gestion des images de fond
- * @package wcs\adm\controller
+ * @package wcs\controller\admin
  */
 class BgImageController extends Controller
 {
-    private $saisons = ['Printemps', 'Eté', 'Automne', 'Hiver'];
 
-    /** **********************************************************
+    /**
+     * **********************************************************
      * premier acces a la page
      * @return mixed
      */
@@ -21,14 +21,15 @@ class BgImageController extends Controller
     {
         $this->img->resetTmp('B');
         $params = [
-            'saisons' => $this->saisons,
+            'saisons' => $this->getSaisons(),
             // --- recuperation de l'image a afficher dans le formulaire (a priori image vide)
             'formimage' => $this->img->getTmpName('B'),
         ];
         return $this->twig->render('BgImage.twig', $params);
     }
 
-    /** **********************************************************
+    /**
+     * **********************************************************
      * methode sollicitee apres upload nouvelle image
      * @return mixed
      */
@@ -40,14 +41,15 @@ class BgImageController extends Controller
             $this->img->resetTmp('B');
         }
         $params = [
-            'saisons' => $this->saisons,
+            'saisons' => $this->getSaisons(),
             'formimage' => $this->img->getTmpName('B'),
             'erreur' => $erreur,
         ];
         return $this->twig->render('BgImage.twig', $params);
     }
 
-    /** **********************************************************
+    /**
+     * **********************************************************
      * methode sollicitee apres soumission d'une nouvelle image pour remplacer une image existante
      * @return mixed
      */
@@ -71,14 +73,14 @@ class BgImageController extends Controller
         }
         if ( $ok ) {
             // --- deplacer image temporaire vers emplacement définitif
-            $this->img->deplace('B', $_POST['saison']);
+            $this->img->deplace('B', $this->getNumSaison($_POST['saison']));
             // --- recharger page index
             header('location:index.php?p=imgfond');
         }
         else {
             // --- recharger la page en affichant l'erreur
             $params = [
-                'saisons' => $this->saisons,
+                'saisons' => $this->getSaisons(),
                 'formimage' => $this->img->getTmpName('B'),
                 'erreur' => $erreur,
             ];

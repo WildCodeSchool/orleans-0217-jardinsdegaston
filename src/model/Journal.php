@@ -117,4 +117,12 @@ class Journal extends DB
         $this->image = $image;
     }
 
+    public function hydrate(int $id, string $titre, string $contenu, \DateTime $date)
+    {
+        $this->setId($id);
+        $this->setTitre($titre);
+        $this->setContenu($contenu);
+        $this->setDate($date);
+    }
+
 }

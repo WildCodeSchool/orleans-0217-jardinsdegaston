@@ -99,4 +99,12 @@ class Prestation
         $this->ordreAff = $ordreAff;
         return $this;
     }
+
+    public function hydrate(int $id, string $titre, string $contenu='', int $ordreaff)
+    {
+        $this->setId($id);
+        $this->setTitre($titre);
+        $this->setContenu($contenu);
+        $this->setOrdreAff($ordreaff);
+    }
 }

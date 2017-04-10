@@ -2,6 +2,9 @@
 body {
     font-size: 16px;
 }
+.pointer {
+    cursor: pointer;
+}
 .cache {
     visibility: hidden;
     height: 5px;
@@ -12,6 +15,11 @@ body {
     background-color: #eef6ef;
     border-color: #2b542c;
     color: #2b542c;
+}
+.btn-xs {
+    padding: 0;
+    width: 100px;
+    height: 20px;
 }
 .form-control, .thumbnail {
     border: 1px solid #2b542c;
@@ -71,6 +79,20 @@ input.btn, label.btn {
     width: 230px;
     margin: 2px;
 }
+<<<<<<< HEAD
+=======
+.normal-text {
+    font-weight: normal;
+}
+.label-like {
+    font-weight: 700;
+    font-size: 16px;
+}
+.textarea-like {
+    height: auto;
+    min-height: 34px;
+}
+>>>>>>> 175307bedd1fd0f899cea6684e646b001fd4e385
 /* --- grandes images -------------------------------------------- */
 .gimg {
     max-height: 200px;
@@ -89,7 +111,7 @@ input.btn, label.btn {
 .pimg {
     max-width: 200px;
     border: 0px;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
 }
 .blocimg {
     background-color: #eef6ef;
@@ -100,7 +122,7 @@ input.btn, label.btn {
     border-right: 2px solid white;
     */
 }
-/* --- Livre d'Or ------------------------------------ */
+/* --- Livre d'Or ------------------------------------------------ */
 .thumbnail {
     margin-left: 10px;
 }
@@ -109,12 +131,28 @@ input.btn, label.btn {
     margin-top: 2%;
 }
 
+<<<<<<< HEAD
 /* --- Conseils ------------------------------------ */
+=======
+/* --- Conseils -------------------------------------------------- */
+.bloc-conseil {
+    margin-top: 5px;
+    padding: 10px 0px;
+    border-top: 1px solid #2b542c;
+    /*background-color: #eef6ef;*/
+}
+>>>>>>> 175307bedd1fd0f899cea6684e646b001fd4e385
 #TexteConseil {
     margin-bottom: 10px;
 }
 
-
+/* --- footer ---------------------------------------------------- */
+.footer {
+    margin-top:20px;
+    height:70px;
+    padding-right: 50px;
+    background-color: #2b542c;
+}
 
 
 

@@ -1,3 +1,5 @@
+{# --- src/view/admin/Prestation.twig --- #}
+
 {% extends 'layout.twig' %}
 
 
@@ -8,6 +10,13 @@
 
 {% block pagetitle %}
     <h1>Gestion des prestations</h1>
+    <p>
+        <form method="post" action="index.php?p=prestation">
+            <input type="hidden" name="method" value="ajout" />
+            <input class="btn btn-default" type="submit" name="ajoute" value="Ajouter une prestation" />
+        </form>
+    </p>
+
 {% endblock %}
 
 
@@ -24,31 +33,29 @@
             {# --- contenu de la prestation --- #}
             <div class="col-xs-12">
                 <div class="row contenu">
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
-                        <img class="img-fluid pimg bloc-right" src="../img/imgP-{{ prestation.id_img }}.jpg" alt="Image prestation {{ prestation.titre }}" />
-                        <br />
-                        <form method="post" action="majimg.php" enctype="multipart/form-data">
-                            <input type="hidden" name="rubrique" value="P" />
-                            <input type="hidden" name="id" value="{{ prestation.id }}" />
-                            <input type="hidden" name="id_img_ap" value="{{ prestation.id_img }}" />
-                            <input class="cache" type="file" name="fichier" id="fichier" />
-                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
-                        </form>
+                    <div class="col-xs-12 col-md-4 col-lg-3 col-lg-offset-2 text-center">
+                        <img class="img-fluid pimg bloc-right" src="../img/imgP-{{ prestation.id }}.jpg?{{ random(9999) }}" alt="Image prestation {{ prestation.titre }}" />
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-4">
-                        <form method="post" action="majprestation.php">
-                            <label for="titre">Titre de la prestation </label><br />
-                            <input class="form-control" type="text" name="titre" id="titre" value="{{ prestation.titre }}" /><br />
-                            <label for="detail">Détails de la prestation</label><br />
-                            <textarea class="form-control" row="3" name="detail">{{ prestation.contenu }}</textarea><br />
-                            <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
-                        </form>
-                        <br />
-                        Ordre d\'affichage &nbsp;&nbsp;&nbsp;
-                        <a href = "#" class="btn btn-default btn-xs" > Monter</a >&nbsp;&nbsp;&nbsp;
-                        <a href = "#" class="btn btn-default btn-xs" > Descendre</a >
+                    <div class="col-xs-12 col-md-8 col-lg-5">
+                        <p class="label-like">Titre de la prestation</p>
+                        <p class="input-like form-control">{{ prestation.titre }}</p>
+                        <p class="label-like">Détails de la prestation</p>
+                        <p class="textarea-like form-control">{{ prestation.contenu }}</p>
+                        <p>
+                            <form method="post" action="index.php?p=prestation">
+                                <input type="hidden" name="method" value="modif">
+                                <input type="hidden" name="id" value="{{ prestation.id }}">
+                                <input class="btn btn-default" type="submit" name="valide" value="Modifier la prestation" />
+                                &nbsp;&nbsp;
+                                <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
+                            </form>
+                        </p>
+                        <p>
+                            Ordre d'affichage &nbsp;&nbsp;
+                            <a href="movepresta.php?move=up&id={{ prestation.id }}" class="btn btn-default btn-xs">Monter</a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="movepresta.php?move=dn&id={{ prestation.id }}" class="btn btn-default btn-xs">Descendre</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -56,40 +63,38 @@
 
         {# -- Créer une nouvelle prestation ----------------------------- -- #}
 
-        <div class="col-xs-12 bandeau text-center">
-            Ajouter une prestation
-        </div>
-        <div class="col-xs-12">
-            <div class="row contenu">
-                <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
-                    <img class="img-fluid pimg bloc-right" src="../img/imgP-2.jpg" alt="" />
-                    <br />
-                    <form method="post" action="modifimg.php" enctype="multipart/form-data">
-                        <input type="hidden" name="source" value="prestation" />
-                        <input class="cache" type="file" name="fichier" id="fichier" />
-                        <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
-                    </form>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-4">
-                    <form method="post" action="majpresta">
-                        <label for="titre">Titre de la prestation </label><br />
-                        <input class="form-control" type="text" name="titre" id="titre" value="" /><br />
-                        <label for="detail">Détails de la prestation</label><br />
-                        <textarea class="form-control" row="3" name="detail"></textarea><br />
-                        <input class="btn btn-default" type="submit" name="valide" value="Ajouter" />
-                    </form>
-                </div>
-            </div>
-        </div>
+        {#<div class="col-xs-12 bandeau text-center">#}
+            {#Ajouter une prestation#}
+        {#</div>#}
+        {#<div class="col-xs-12">#}
+            {#<div class="row contenu">#}
+                {#<div class="col-xs-12 col-md-4 col-lg-3 col-lg-offset-2 text-center">#}
+                    {#<img class="img-fluid pimg bloc-right" src="{{ tmpinfos.tmpimage }}?{{ random(9999) }}" alt="" />#}
+                    {#<br />#}
+                    {#<form id="loadimg" method="post" action="index.php?p=prestation" enctype="multipart/form-data">#}
+                        {#<input type="hidden" name="MAX_FILE_SIZE" value="20000000" />#}
+                        {#<input type="hidden" name="method" value="imgupload" />#}
+                        {#<input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="submit();" />#}
+                        {#<label for="fichier" class="btn btn-default">Nouvelle image</label><br />#}
+                    {#</form>#}
+                {#</div>#}
+                {#<div class="col-xs-12 col-md-8 col-lg-5">#}
+                    {#<p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>#}
+                    {#<form method="post" action="index.php?p=prestation">#}
+                        {#<input type="hidden" name="method" value="pluspresta" />#}
+                        {#<label for="titre">Titre de la prestation </label><br />#}
+                        {#<input class="form-control" type="text" name="titre" id="titre" value="{{ tmpinfos.titre }}" /><br />#}
+                        {#<label for="detail">Détails de la prestation</label><br />#}
+                        {#<textarea class="form-control" row="3" name="detail">{{ tmpinfos.contenu }}</textarea><br />#}
+                        {#<input class="btn btn-default" type="submit" name="valide" value="Ajouter la prestation" />#}
+                        {#&nbsp;&nbsp;&nbsp;&nbsp;#}
+                        {#<input class="btn btn-default" type="submit" name="annule" value="Annuler l'opération" />#}
+                    {#</form>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
 
-
-
-
-
-
-
-
-
+        {#<script>function submit() {document.getElementById('loadimg').submit;}</script>#}
 
     </div> {# -- fermeture de la row principale -- #}
 
