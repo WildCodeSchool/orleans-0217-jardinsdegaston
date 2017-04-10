@@ -73,7 +73,7 @@ class DbManager
         $this->setEntity($entityClassName);
     }
 
-    public function findAll(string $opt=null)
+    public function findAll(string $opt=null) : array
     {
         $req = "SELECT * FROM " . $this->getTableName();
         if ( null !== $opt ) {
@@ -83,20 +83,21 @@ class DbManager
         return $res->fetchAll(\PDO::FETCH_CLASS, $this->getEntity());
     }
 
-    public function countAll(string $opt=null)
+    public function countAll(string $opt=null) : int
     {
         return count($this->findAll($opt));
     }
 
-    public function findOne(int $id)
+    public function findOne(int $id) : Prestation
     {
         $req = "SELECT * FROM " . $this->getTableName()." WHERE id=$id";
         echo $req;die();
         $res = $this->getBdd()->query($req);
-        return $res->fetch(\PDO::FETCH_ASSOC);
+        $ret = $res->fetchAll(\PDO::FETCH_CLASS, $this->getEntity());
+        return $ret[0];
     }
 
-    public function delOne(int $id)
+    public function delOne(int $id) : int
     {
         $req = "DELETE FROM " . $this->getTableName()." WHERE id=$id";
         return $this->getBdd()->exec($req);

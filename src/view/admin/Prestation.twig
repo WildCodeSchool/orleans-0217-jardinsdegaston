@@ -40,7 +40,7 @@
                         <p class="label-like">Titre de la prestation</p>
                         <p class="input-like form-control">{{ prestation.titre }}</p>
                         <p class="label-like">Détails de la prestation</p>
-                        <p class="textarea-like form-control">{{ prestation.contenu }}</p>
+                        <p class="textarea-like form-control">{{ prestation.contenu | nl2br }}</p>
                         <p>
                             <form method="post" action="index.php?p=prestation">
                                 <input type="hidden" name="method" value="modif">
@@ -50,12 +50,17 @@
                                 <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
                             </form>
                         </p>
-                        <p>
-                            Ordre d'affichage &nbsp;&nbsp;
-                            <a href="movepresta.php?move=up&id={{ prestation.id }}" class="btn btn-default btn-xs">Monter</a>
-                            &nbsp;&nbsp;&nbsp;
-                            <a href="movepresta.php?move=dn&id={{ prestation.id }}" class="btn btn-default btn-xs">Descendre</a>
-                        </p>
+                        <form action="index.php?p=prestation" method="post">
+                            <p>
+                                Ordre d'affichage &nbsp;&nbsp;
+                                <button class="btn btn-default btn-xs{% if loop.index == 1 %}{{ ' cache' }}{% endif %}" type="submit" name="up">Monter</button>
+                                &nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-default btn-xs{% if loop.index == prestations | length %}{{ ' cache' }}{% endif %}" type="submit" name="dn">Descendre</button>
+                                <input type="hidden" name="method" value="updown">
+                                <input type="hidden" name="id" value="{{ prestation.id }}">
+                                <input type="hidden" name="ordreaff" value="{{ prestation.ordreaff }}">
+                            </p>
+                        </form>
                     </div>
                 </div>
             </div>

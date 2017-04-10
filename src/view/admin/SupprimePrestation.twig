@@ -37,6 +37,7 @@
                         <form method="post" action="index.php?p=prestation">
                             <input type="hidden" name="method" value="delpresta">
                             <input type="hidden" name="id" value="{{ prestation.id }}">
+                            <input type="hidden" name="ordreaff" value="{{ prestation.ordreaff }}">
                             <input class="btn btn-default" type="submit" name="supprime" value="Confirmer la suppression" />
                             &nbsp;&nbsp;
                             <input class="btn btn-default" type="submit" name="annule" value="Ne pas supprimer" />

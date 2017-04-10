@@ -168,7 +168,7 @@ class PrestationController extends Controller
             $erreur = 'Charger d\'abord une image.';
             $ok = false;
         }
-        elseif ( !isset($_POST['titre'])) {
+        elseif ( !isset($_POST['titre']) || trim($_POST['titre']) == '') {
             // --- controler si titre saisi
             $erreur = 'La saisie d\'un titre est obligatoire.';
             $ok = false;
@@ -211,7 +211,21 @@ class PrestationController extends Controller
             $this->img->delImg('P', $_POST['id']);
         }
         header('location:index.php?p=prestation');
-
     }
+
+    public function updown()
+    {
+        $manager = new PrestationManager($this->bdd, Prestation::class);
+        $id = $_POST['id'];
+        $ordreaff = $_POST['ordreaff'];
+        if ( isset($_POST['up']) ) {
+            $manager->up($id, $ordreaff);
+        }
+        elseif ( isset($_POST['dn']) ) {
+            $manager->dn($id, $ordreaff);
+        }
+        header('location:index.php?p=prestation');
+    }
+
 
 }
