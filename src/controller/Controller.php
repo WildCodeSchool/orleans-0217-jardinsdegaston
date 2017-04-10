@@ -2,7 +2,7 @@
 // --- src/controller/Controller.php ---
 
 namespace wcs\controller;
-//use \vendor\
+use \wcs\model\Image;
 
 /**
  * Classe mere de tous les controleurs
@@ -12,10 +12,10 @@ namespace wcs\controller;
 class Controller
 {
     /**
-     * recuperation des entrees $_POST (si existe)
-     * @var array
+     * connexion base de donnees
+     * @var PDO
      */
-    protected $post = [];
+    protected $bdd;
 
     /**
      * objet twig initialise
@@ -23,32 +23,87 @@ class Controller
      */
     protected $twig;
 
-    public function __construct($twig, $post=[])
+    /**
+     * @var
+     */
+    protected $img;
+
+    /**
+     * Libelle des saisons
+     * @var array
+     */
+    protected $saisons = [
+        'P' => ['nom' => 'Printemps', 'numsaison' => 1],
+        'E' => ['nom' => 'Eté', 'numsaison' => 2],
+        'A' => ['nom' => 'Automne', 'numsaison' => 3],
+        'H' => ['nom' => 'Hiver', 'numsaison' => 4]
+    ];
+
+
+    public function __construct($twig, \PDO $bdd)
     {
-        $this->twig = $twig;
-        $this->post = $post;
+        $this->setTwig($twig);
+        $this->setBdd($bdd);
+        if ( !isset($this->img) ) {
+            $this->img = new Image();
+        }
     }
 
     /**
-     * function permettant de faire le rendu d'une vue
-     * @param $path (le  fichier twig a utiliser pour le rendu)
-     * @param $param (la liste des parametres necesaires pour le rendu twig)
-     * @return string (le code html a afficher)
+     * @return PDO
      */
-//    public function render ($path, $param)
-//    {
-//        // transforme un tableau de clé / valeur en variable
-//        // ex ['eleve'=>'toto', 'ecole'=>'orléans'] sera transformé en $eleve='toto' et $ecole='orleans'
-//        // du coup, dans le fichier $path appelé ensuite, on peut utiliser directement les variables $eleve et $ecole
-//        extract($param);
-//
-//        // crée un buffer (tampon) , c'est à dire met en "pause" l'affichage de php
-//        ob_start();
-//        // si on ne fait pas de mise en tampon, le fichier $path s'affiche au moment de require (comme si on faisait un echo), ce qui n'est pas voulu
-//        require '../../src/view/'.$path;
-//        // récupère tout ce qui a été mis en tampon et l'enregistre dans la variable buffer
-//        $buffer = ob_get_clean();
-//
-//        return $buffer;
-//    }
+    public function getBdd(): PDO
+    {
+        return $this->bdd;
+    }
+
+    /**
+     * @param PDO $bdd
+     */
+    public function setBdd(\PDO $bdd)
+    {
+        $this->bdd = $bdd;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTwig()
+    {
+        return $this->twig;
+    }
+
+    /**
+     * @param mixed $twig
+     */
+    public function setTwig($twig)
+    {
+        $this->twig = $twig;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    public function getNomSaison($codesaison) : string
+    {
+        return $this->saison[$codesaison]['nom'];
+    }
+    public function getSaisons() : array
+    {
+        $noms = [];
+        foreach ( $this->saisons as $key => $value ) {
+            $noms[] = $value['nom'];
+        }
+        return $noms;
+    }
+    public function getNumSaison($codesaison) : int
+    {
+        return $this->saisons[$codesaison]['numsaison'];
+    }
+
 }

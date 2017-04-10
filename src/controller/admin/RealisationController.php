@@ -10,6 +10,8 @@ namespace wcs\controller\admin;
 use \wcs\controller\Controller;
 use wcs\Form\RealisationForm;
 use wcs\model\Realisation;
+use wcs\model\RealisationManager;
+
 
 
 class RealisationController extends Controller
@@ -18,10 +20,10 @@ class RealisationController extends Controller
 
     public function index()
     {
-
+        $manager = new RealisationManager($this->bdd, Realisation::class);
         $form = new RealisationForm();
-        $Real = new Realisation();
-        $param = ["content" => $Real->getReal(),
+
+        $param = ["content" => $manager->getReal(),
             'form' => $form];
 
         return $this->twig->render('Realisation.twig', $param);
@@ -29,8 +31,8 @@ class RealisationController extends Controller
 
     public function updateReal()
     {
-        $upd = new Realisation();
-        $upd->update();
+        $manager = new RealisationManager($this->bdd, Realisation::class);
+        $manager->update();
         return $this->index();
 
     }

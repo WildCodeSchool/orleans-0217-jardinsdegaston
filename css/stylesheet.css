@@ -609,6 +609,12 @@ input[type=range]:focus::-moz-range-thumb {
     color: white;
     text-decoration: none;
 }
+.modal.modal-wide .modal-dialog {
+    width: 70%;
+}
+.modal-wide .modal-body {
+    overflow-y: auto;
+}
 
 
 
@@ -729,6 +735,10 @@ input[type=range]:focus::-moz-range-thumb {
     .glyph-mouse {
         padding: 70px 0 0 5px;
     }
+    .modal.modal-wide .modal-dialog {
+        width: 95%;
+    }
+
 }
 
 @media screen and (max-width: 760px) {

@@ -1,86 +1,178 @@
 <?php
+// --- src/models/Image.php ---
 
 namespace wcs\model;
 
-/**
- * Modele (entity) correspondant à la table image de la base de donnees. Un objet Image est instancie et hydrate
- * automatiquement lors de l'utilisation de pdo fetchAll avec le style FETCH_CLASS
- * @class Eleve
- */
 
-class Image extends DB
+class Image
 {
+    // --- repertoire temporaire pour twig et images uploadees
+    const TMPDIR = '../../tmp/';
+    // --- repertoire de stockage des images
+    const IMGDIR = '../../web/img/';
 
-    /* --- Proprietes --------------------------------- */
+    /* --- Proprietes ------------------------------------------- */
     /**
-     * index dans la table
-     * @var integer
+     * infos images en fonction du type
+     * @var array
      */
-    private $id;
-
-    /**
-     * identifie le type d'image : B = background (1920x1200), P = prestations (400x400), R = realisation (750x400), j = journal (..x..)
-     * @var char
-     */
-    private $rubrique;
-
-    /**
-     * date de (re)chargement de l'image
-     * @var DateTime
-     */
-    private $date;
+    private $imgTypes = [
+        'B' => ['type' => 'Background', 'larg' => 1920, 'haut' => 1200],
+        'P' => ['type' => 'Prestations', 'larg' => 400, 'haut' => 400],
+        'Rav' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
+        'Rap' => ['type' => 'Réalisations', 'larg' => 750, 'haut' => 400],
+        'J' => ['type' => 'Journal', 'larg' => 600, 'haut' => 400],
+    ];
 
 
-    /* --- Geters et setters -------------------------- */
-    /**
-     * @return int
-     */
-    public function getId() : int
+    /* --- Geters et setters ------------------------------------- */
+    private function getLargImg($codetype) : int
     {
-        return $this->id;
+        return $this->imgTypes[$codetype]['larg'];
+    }
+    private function getHautImg($codetype) : int
+    {
+        return $this->imgTypes[$codetype]['haut'];
     }
 
     /**
-     * @param mixed $id
+     * **************************************************************
+     * retablit tous les droits sur le fichier image temporaire
+     * @param $codetype
      */
-    public function setId(int $id) : Image
+    private function rwx($codetype)
     {
-        $this->id = $id;
-        return $this;
+        chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
+    }
+
+
+    private function ctrlTmp()
+    {
+        if ( !file_exists(self::TMPDIR) ) {
+            // --- si repertoire tmp n'existe pas, on le cree
+            mkdir(self::TMPDIR);
+        }
+        else {
+            // --- s'il existe, on lui (re)affecte tous les droits
+            chmod(self::TMPDIR, 0777);
+        }
     }
 
     /**
-     * @return mixed
+     * **************************************************************
+     * Controle si fichier image temporaire existe (dans tmp)
+     * @param $codetype
+     * @return bool
      */
-    public function getRubrique() : string
-    {
-        return $this->rubrique;
+    public function tmpImgExists($codetype) {
+        return file_exists(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
     }
 
     /**
-     * @param mixed $rubrique
+     * **************************************************************
+     * Efface l'image temportaire
+     * @param $codetype
      */
-    public function setRubrique($rubrique) : Image
+    public function resetTmp($codetype)
     {
-        $this->rubrique = $rubrique;
-        return $this;
+        if ( $this->tmpImgExists($codetype) ) {
+            unlink(self::TMPDIR.'img'.$codetype.'-tmp.jpg');
+        }
     }
 
     /**
-     * @return mixed
+     * **************************************************************
+     * retourne le chemin et nom de l'image temporaire a afficher
+     * @param $codetype
+     * @return string
      */
-    public function getDate() : \DateTime
+    public function getTmpName($codetype)
     {
-        return $this->date;
+        if ( $this->tmpImgExists($codetype) ) {
+            return self::TMPDIR.'img'.$codetype.'-tmp.jpg';
+        }
+        else {
+            return self::IMGDIR.'img'.$codetype.'-ref.jpg';
+        }
     }
 
     /**
-     * @param mixed $date
+     * **************************************************************
+     * retourne le chemin et nom de l'image vide
+     * @param $codetype
+     * @return string
      */
-    public function setDate($date) : Image
+    public function getImageVide($codetype)
     {
-        $this->date = $date;
-        return $this;
+        return self::IMGDIR.'img'.$codetype.'-ref.jpg';
+    }
+
+
+//    public function resize($codetype)
+//    {
+//
+//    }
+
+    /**
+     * **************************************************************
+     * rapatrie l'image uploadee vers le tmp et la renomme en xxx-tmp.jpg
+     * @param $codetype
+     */
+    public function recupImg($codetype)
+    {
+        $this->resetTmp($codetype);
+        if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+            $this->reset($codetype);
+
+            //voir aussi $_FILES['fichier']['error'] > 0 (il y a eu une erreur)
+            //           $_FILES['fichier']['size'] > maxsize (fichier trop gros)
+
+
+            // --- erreur upload foireux ---
+
+            return false;
+
+        }
+        $this->rwx($codetype);
+        // **** PENSER A ACTIVER LA LIGNE CI-DESSOUS (et implementer la fonction) ***********
+        // $this->resize($codetype);
+    }
+
+    /**
+     * **************************************************************
+     * Deplace l'image temporaire vers son emplacement de production (et la renomme)
+     * @param $codetype
+     * @param $codesaison
+     */
+    public function deplace($codetype, $identif)
+    {
+        if ( $this->tmpImgExists($codetype) ) {
+            switch ( $codetype ) {
+                case 'B' :
+                case 'P' :
+                    $urldest = self::IMGDIR.'img'.$codetype.'-'.$identif.'.jpg';
+                    if ( file_exists($urldest) ) {
+                        // --- on supprime l'ancienne image
+                        unlink($urldest);
+                    }
+                    if ( false === rename(self::TMPDIR . 'img'.$codetype.'-tmp.jpg', $urldest) ) {
+
+                        die('PAS GLOP');
+                        // --- erreur deplacement infructueux
+
+                    }
+                    break;
+// ********* A VALIDER *************************
+//                default :
+//                    if ( false === rename(self::TMPDIR . 'img'.$codetype.'-tmp.jpg', self::IMGDIR.'img'.$codetype.'-'.$this->numsaisons[$codesaison].'.jpg') ) {
+//
+//                        die('PAS GLOP');
+//                        // --- erreur deplacement infructueux
+//
+//                    }
+// **********************************************
+            }
+        }
     }
 
 }

@@ -10,6 +10,7 @@ namespace wcs\controller\admin;
 use wcs\controller\Controller;
 use wcs\Form\LivredorFilter;
 use \wcs\model\Livredor;
+use \wcs\model\LivredorManager;
 use wcs\Form\LivredorForm;
 
 
@@ -19,12 +20,11 @@ class LivredorController extends Controller
 
     public function index()
     {
-
+        $manager = new LivredorManager($this->bdd, Livredor::class);
         $form = new LivredorForm();
         $filter = new LivredorFilter();
         $form->setInputFilter($filter);
-        $Ldor = new Livredor();
-        $param = ["content" => $Ldor->getLdor(),
+        $param = ["content" => $manager->getLdor(),
             'form' => $form];
 
         return $this->twig->render('Livredor.twig', $param);
@@ -33,15 +33,15 @@ class LivredorController extends Controller
     public function addLdor()
     {
 
-        $add = new Livredor();
-        $add->addorUpdate();
+        $manager = new LivredorManager($this->bdd, Livredor::class);
+        $manager->addorUpdate();
         return $this->index();
     }
 
     public function deleteLdor()
     {
-        $del = new Livredor();
-        $del->delete();
+        $manager = new LivredorManager($this->bdd, Livredor::class);
+        $manager->delete();
         return $this->index();
     }
 
@@ -52,10 +52,11 @@ class LivredorController extends Controller
             $filter = new LivredorFilter();
             $form->setInputFilter($filter);
 
-            $Ldor = new Livredor();
-            $param = ["content" => $Ldor->getLdor(),
+            $manager = new LivredorManager($this->bdd, Livredor::class);
+            $param = ["content" => $manager->getLdor(),
                 'form' => $form,
-                'value' => $Ldor->findOne('livredor', $_POST['id'])];
+                'value' => $manager->findOne($_POST['id'])];
+
             return $this->twig->render('Livredor.twig', $param);
         }
     }

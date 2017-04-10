@@ -3,6 +3,9 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
+.pointer {
+    cursor: pointer;
+}
 .cache {
     visibility: hidden;
     height: 5px;
@@ -14,11 +17,21 @@ body {
     border-color: #2b542c;
     color: #2b542c;
 }
+.btn-xs {
+    padding: 0;
+    width: 100px;
+    height: 20px;
+}
 .form-control, .thumbnail {
     border: 1px solid #2b542c;
     border-radius: 6px;
 }
 
+p.erreur {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0px;
+}
 
 /* --- navbar ---------------------------------------------------- */
 @grid-float-breakpoint: 1200;
@@ -75,9 +88,13 @@ input.btn, label.btn {
 .normal-text {
     font-weight: normal;
 }
-.like-label {
+.label-like {
     font-weight: 700;
     font-size: 16px;
+}
+.textarea-like {
+    height: auto;
+    min-height: 34px;
 }
 /* --- grandes images -------------------------------------------- */
 .gimg {
@@ -97,7 +114,7 @@ input.btn, label.btn {
 .pimg {
     max-width: 200px;
     border: 0px;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
 }
 .blocimg {
     background-color: #eef6ef;
@@ -109,7 +126,7 @@ input.btn, label.btn {
     border-right: 2px solid white;
     */
 }
-/* --- Livre d'Or ------------------------------------ */
+/* --- Livre d'Or ------------------------------------------------ */
 .thumbnail {
     margin-left: 10px;
 }
@@ -118,7 +135,7 @@ input.btn, label.btn {
     margin-top: 2%;
 }
 
-/* --- Conseils ------------------------------------ */
+/* --- Conseils -------------------------------------------------- */
 .bloc-conseil {
     margin-top: 5px;
     padding: 10px 0px;
@@ -132,7 +149,13 @@ input.btn, label.btn {
     display: none;
 }
 
-
+/* --- footer ---------------------------------------------------- */
+.footer {
+    margin-top:20px;
+    height:70px;
+    padding-right: 50px;
+    background-color: #2b542c;
+}
 
 
 
