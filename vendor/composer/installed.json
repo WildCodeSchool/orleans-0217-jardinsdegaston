@@ -173,6 +173,70 @@
         ]
     },
     {
+        "name": "zendframework/zend-hydrator",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-hydrator.git",
+            "reference": "0ac0d3e569781f1895670b0c8d0dc7f25b8a3182"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/0ac0d3e569781f1895670b0c8d0dc7f25b8a3182",
+            "reference": "0ac0d3e569781f1895670b0c8d0dc7f25b8a3182",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5 || ^7.0",
+            "zendframework/zend-stdlib": "^3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.5",
+            "squizlabs/php_codesniffer": "^2.3.1",
+            "zendframework/zend-eventmanager": "^3.0",
+            "zendframework/zend-filter": "^2.6",
+            "zendframework/zend-inputfilter": "^2.6",
+            "zendframework/zend-serializer": "^2.6.1",
+            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
+        },
+        "suggest": {
+            "zendframework/zend-eventmanager": "^2.6.2 || ^3.0, to support aggregate hydrator usage",
+            "zendframework/zend-filter": "^2.6, to support naming strategy hydrator usage",
+            "zendframework/zend-serializer": "^2.6.1, to use the SerializableStrategy",
+            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3, to support hydrator plugin manager usage"
+        },
+        "time": "2016-04-18T17:59:29+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-release-1.0": "1.0-dev",
+                "dev-release-1.1": "1.1-dev",
+                "dev-master": "2.2-dev",
+                "dev-develop": "2.3-dev"
+            },
+            "zf": {
+                "component": "Zend\\Hydrator",
+                "config-provider": "Zend\\Hydrator\\ConfigProvider"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\Hydrator\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "homepage": "https://github.com/zendframework/zend-hydrator",
+        "keywords": [
+            "hydrator",
+            "zf2"
+        ]
+    },
+    {
         "name": "psr/container",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -449,70 +513,6 @@
         ]
     },
     {
-        "name": "zendframework/zend-hydrator",
-        "version": "2.2.1",
-        "version_normalized": "2.2.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/zendframework/zend-hydrator.git",
-            "reference": "0ac0d3e569781f1895670b0c8d0dc7f25b8a3182"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/0ac0d3e569781f1895670b0c8d0dc7f25b8a3182",
-            "reference": "0ac0d3e569781f1895670b0c8d0dc7f25b8a3182",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.5 || ^7.0",
-            "zendframework/zend-stdlib": "^3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.5",
-            "squizlabs/php_codesniffer": "^2.3.1",
-            "zendframework/zend-eventmanager": "^3.0",
-            "zendframework/zend-filter": "^2.6",
-            "zendframework/zend-inputfilter": "^2.6",
-            "zendframework/zend-serializer": "^2.6.1",
-            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
-        },
-        "suggest": {
-            "zendframework/zend-eventmanager": "^2.6.2 || ^3.0, to support aggregate hydrator usage",
-            "zendframework/zend-filter": "^2.6, to support naming strategy hydrator usage",
-            "zendframework/zend-serializer": "^2.6.1, to use the SerializableStrategy",
-            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3, to support hydrator plugin manager usage"
-        },
-        "time": "2016-04-18T17:59:29+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-release-1.0": "1.0-dev",
-                "dev-release-1.1": "1.1-dev",
-                "dev-master": "2.2-dev",
-                "dev-develop": "2.3-dev"
-            },
-            "zf": {
-                "component": "Zend\\Hydrator",
-                "config-provider": "Zend\\Hydrator\\ConfigProvider"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Zend\\Hydrator\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "homepage": "https://github.com/zendframework/zend-hydrator",
-        "keywords": [
-            "hydrator",
-            "zf2"
-        ]
-    },
-    {
         "name": "zendframework/zend-form",
         "version": "2.10.0",
         "version_normalized": "2.10.0.0",
@@ -654,6 +654,232 @@
             "service-manager",
             "servicemanager",
             "zf"
+        ]
+    },
+    {
+        "name": "paragonie/random_compat",
+        "version": "v2.0.10",
+        "version_normalized": "2.0.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paragonie/random_compat.git",
+            "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paragonie/random_compat/zipball/634bae8e911eefa89c1abfbf1b66da679ac8f54d",
+            "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*|5.*"
+        },
+        "suggest": {
+            "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+        },
+        "time": "2017-03-13T16:27:32+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "lib/random.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Paragon Initiative Enterprises",
+                "email": "security@paragonie.com",
+                "homepage": "https://paragonie.com"
+            }
+        ],
+        "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+        "keywords": [
+            "csprng",
+            "pseudorandom",
+            "random"
+        ]
+    },
+    {
+        "name": "zendframework/zend-math",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-math.git",
+            "reference": "fda3b4e6c3bb15c35adc6db38b2eacabaa243e65"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-math/zipball/fda3b4e6c3bb15c35adc6db38b2eacabaa243e65",
+            "reference": "fda3b4e6c3bb15c35adc6db38b2eacabaa243e65",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*",
+            "paragonie/random_compat": "^2.0.2",
+            "php": "^5.5 || ^7.0"
+        },
+        "require-dev": {
+            "fabpot/php-cs-fixer": "1.7.*",
+            "phpunit/phpunit": "~4.0"
+        },
+        "suggest": {
+            "ext-bcmath": "If using the bcmath functionality",
+            "ext-gmp": "If using the gmp functionality"
+        },
+        "time": "2016-04-28T17:37:42+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev",
+                "dev-develop": "3.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\Math\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "homepage": "https://github.com/zendframework/zend-math",
+        "keywords": [
+            "math",
+            "zf2"
+        ]
+    },
+    {
+        "name": "zendframework/zend-eventmanager",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-eventmanager.git",
+            "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/c3bce7b7d47c54040b9ae51bc55491c72513b75d",
+            "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0"
+        },
+        "require-dev": {
+            "athletic/athletic": "^0.1",
+            "container-interop/container-interop": "^1.1.0",
+            "phpunit/phpunit": "^5.6",
+            "zendframework/zend-coding-standard": "~1.0.0",
+            "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
+        },
+        "suggest": {
+            "container-interop/container-interop": "^1.1.0, to use the lazy listeners feature",
+            "zendframework/zend-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature"
+        },
+        "time": "2016-12-19T21:47:12+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev",
+                "dev-develop": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\EventManager\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Trigger and listen to events within a PHP application",
+        "homepage": "https://github.com/zendframework/zend-eventmanager",
+        "keywords": [
+            "event",
+            "eventmanager",
+            "events",
+            "zf2"
+        ]
+    },
+    {
+        "name": "zendframework/zend-session",
+        "version": "2.7.3",
+        "version_normalized": "2.7.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-session.git",
+            "reference": "346e9709657b81a5d53d70ce754730a26d1f02f2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-session/zipball/346e9709657b81a5d53d70ce754730a26d1f02f2",
+            "reference": "346e9709657b81a5d53d70ce754730a26d1f02f2",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5 || ^7.0",
+            "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+            "zendframework/zend-stdlib": "^2.7 || ^3.0"
+        },
+        "require-dev": {
+            "container-interop/container-interop": "^1.1",
+            "fabpot/php-cs-fixer": "1.7.*",
+            "mongodb/mongodb": "^1.0.1",
+            "phpunit/phpunit": "~4.0",
+            "zendframework/zend-cache": "^2.6.1",
+            "zendframework/zend-db": "^2.7",
+            "zendframework/zend-http": "^2.5.4",
+            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+            "zendframework/zend-validator": "^2.6"
+        },
+        "suggest": {
+            "mongodb/mongodb": "If you want to use the MongoDB session save handler",
+            "zendframework/zend-cache": "Zend\\Cache component",
+            "zendframework/zend-db": "Zend\\Db component",
+            "zendframework/zend-http": "Zend\\Http component",
+            "zendframework/zend-servicemanager": "Zend\\ServiceManager component",
+            "zendframework/zend-validator": "Zend\\Validator component"
+        },
+        "time": "2016-07-05T18:32:50+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.7-dev",
+                "dev-develop": "2.8-dev"
+            },
+            "zf": {
+                "component": "Zend\\Session",
+                "config-provider": "Zend\\Session\\ConfigProvider"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\Session\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "manage and preserve session data, a logical complement of cookie data, across multiple page requests by the same client",
+        "homepage": "https://github.com/zendframework/zend-session",
+        "keywords": [
+            "session",
+            "zf2"
         ]
     }
 ]

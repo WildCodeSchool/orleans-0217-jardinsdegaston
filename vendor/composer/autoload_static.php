@@ -4,9 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8
+class ComposerStaticInitf31bc2cfa9b9978e1740ed26b9a4eada
 {
     public static $files = array (
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '34901568a1e26d13dd475cb2c85e0284' => __DIR__ . '/..' . '/zendframework/zend-form/autoload/formElementManagerPolyfill.php',
     );
@@ -20,11 +21,14 @@ class ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8
         array (
             'Zend\\Validator\\' => 15,
             'Zend\\Stdlib\\' => 12,
+            'Zend\\Session\\' => 13,
             'Zend\\ServiceManager\\' => 20,
+            'Zend\\Math\\' => 10,
             'Zend\\InputFilter\\' => 17,
             'Zend\\Hydrator\\' => 14,
             'Zend\\Form\\' => 10,
             'Zend\\Filter\\' => 12,
+            'Zend\\EventManager\\' => 18,
         ),
         'S' => 
         array (
@@ -53,9 +57,17 @@ class ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
         ),
+        'Zend\\Session\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-session/src',
+        ),
         'Zend\\ServiceManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-servicemanager/src',
+        ),
+        'Zend\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-math/src',
         ),
         'Zend\\InputFilter\\' => 
         array (
@@ -72,6 +84,10 @@ class ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8
         'Zend\\Filter\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-filter/src',
+        ),
+        'Zend\\EventManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-eventmanager/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -100,9 +116,9 @@ class ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc43be2ae0ded4a49d29292c3c3689af8::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf31bc2cfa9b9978e1740ed26b9a4eada::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf31bc2cfa9b9978e1740ed26b9a4eada::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf31bc2cfa9b9978e1740ed26b9a4eada::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

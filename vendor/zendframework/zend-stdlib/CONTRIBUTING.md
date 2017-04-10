@@ -99,7 +99,7 @@ they pass, and make sure you add and commit the changes after verification.
 
 ## Benchmarks
 
-We provide benchmark tests for zend-stdlib under the directory [benchmark/](benchmark/),
+We provide benchmark tests for zend-stdlib under the directory [benchmark/](benchmark),
 using.  [athletic](https://github.com/polyfractal/athletic).  You can execute
 the benchmarks running the following command:
 

@@ -13,7 +13,7 @@ use Zend\Validator\Hostname;
 require __DIR__ . '/../vendor/autoload.php';
 
 define('IANA_URL', 'https://data.iana.org/TLD/tlds-alpha-by-domain.txt');
-define('ZF2_HOSTNAME_VALIDATOR_FILE', __DIR__.'/../src/Hostname.php');
+define('ZF2_HOSTNAME_VALIDATOR_FILE', __DIR__ . '/../src/Hostname.php');
 
 
 if (! file_exists(ZF2_HOSTNAME_VALIDATOR_FILE) || ! is_readable(ZF2_HOSTNAME_VALIDATOR_FILE)) {
