@@ -39,7 +39,7 @@ class PrestationManager extends DbManager
         }
         $pre->execute();
         if ( $id == 0 ) {
-            $id = $this->findOne($this->bdd->lastInsertId());
+            $id = $this->getBdd()->lastInsertId();
         }
         return $id;
     }
