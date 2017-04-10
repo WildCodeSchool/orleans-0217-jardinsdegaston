@@ -18,13 +18,10 @@ class PrestationManager extends DbManager
 
     public function writePrestation(Prestation $enr) : int
     {
-
-        var_dump($enr);
-
         $id = $enr->getId();
         if ( $id == 0 ) {
             // --- creation d'un nouvel enregistrement
-            $sql = "INSERT into prestation (titre, contenu, ordreaff) VALUES (:titre, :contenu, :ordreaff)";
+            $sql = "INSERT into prestation (titre, contenu, ordreAff) VALUES (:titre, :contenu, :ordreaff)";
             $pre = $this->getbdd()->prepare($sql);
             $pre->bindValue(':titre', $enr->getTitre(), \PDO::PARAM_STR);
             $pre->bindValue(':contenu', $enr->getContenu(), \PDO::PARAM_STR);
@@ -32,10 +29,11 @@ class PrestationManager extends DbManager
         }
         else {
             // --- il s'agit d'une mise a jour
-            $sql = "UPDATE prestation SET titre=:titre, contenu=:contenu WHERE id=$id";
+            $sql = "UPDATE prestation SET titre=:titre, contenu=:contenu, ordreAff=:ordreaff WHERE id=$id";
             $pre = $this->getbdd()->prepare($sql);
             $pre->bindValue(':titre', $enr->getTitre(), \PDO::PARAM_STR);
             $pre->bindValue(':contenu', $enr->getContenu(), \PDO::PARAM_STR);
+            $pre->bindValue(':ordreaff', $enr->getOrdreAff(), \PDO::PARAM_INT);
         }
         $pre->execute();
         if ( $id == 0 ) {
@@ -49,4 +47,39 @@ class PrestationManager extends DbManager
         $sql = "UPDATE prestation SET ordreaff=ordreaff-1 WHERE ordreaff>$ordreaff";
         return $this->getBdd()->exec($sql);
     }
+
+    public function up(int $id, int $ordreaff)
+    {
+        // --- on recupere l'enregistrement ordreaff-1
+        $pr = $this->findAll(' WHERE ordreaff='.($ordreaff-1));
+        $pr = $pr[0];
+        // --- on lui reaffecte ordreaff
+        $pr->setOrdreAff($ordreaff);
+        // --- on le reecrit
+        $this->writePrestation($pr);
+        // --- on recupere l'enregistrement a remonter
+        $pr = $this->findOne($id);
+        // --- on affecte ordreaff-1
+        $pr->setOrdreAff($ordreaff-1);
+        // --- on le reecrit
+        $this->writePrestation($pr);
+    }
+
+    public function dn(int $id, int $ordreaff)
+    {
+        // --- on recupere l'enregistrement ordreaff+1
+        $pr = $this->findAll(' WHERE ordreaff='.($ordreaff+1));
+        $pr = $pr[0];
+        // --- on lui reaffecte ordreaff
+        $pr->setOrdreAff($ordreaff);
+        // --- on le reecrit
+        $this->writePrestation($pr);
+        // --- on recupere l'enregistrement a remonter
+        $pr = $this->findOne($id);
+        // --- on affecte ordreaff+1
+        $pr->setOrdreAff($ordreaff+1);
+        // --- on le reecrit
+        $this->writePrestation($pr);
+    }
+
 }
