@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class Realisation extends Presentation
+class Realisation
 {
 
     /* --- Proprietes ----------------------------- */
@@ -30,7 +30,7 @@ class Realisation extends Presentation
     /**
      * @return int
      */
-    public function getIdImgAv() : int
+    public function getIdImgAv()
     {
         return $this->idImgAv;
     }

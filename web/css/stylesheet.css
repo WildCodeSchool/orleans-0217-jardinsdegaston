@@ -131,11 +131,11 @@ h4#accroche{
     z-index: -1;
 }
 .bg-img1-lg, .bg-img1-md, .bg-img1-sm, .bg-img1-xs {
-    background-image: url("../img/bg1.jpg");
+    background-image: url("../../img/bg1.jpg");
     background-size: cover;
 }
 .bg-img2-lg, .bg-img2-md, .bg-img2-sm, .bg-img2-xs {
-    background-image: url("../img/garden2.jpg");
+    background-image: url("../../img/garden2.jpg");
     background-size: cover;
 }
 
@@ -262,7 +262,7 @@ div#comparison {
     max-height: 400px;
     overflow: hidden; }
 div#comparison figure {
-    background-image: url(../img/test2_apres.jpg);
+    background-image: url(../../img/test2_apres.jpg);
     background-size: cover;
     position: relative;
     font-size: 0;
@@ -275,7 +275,7 @@ div#comparison figure > img {
     width: 100%;
 }
 div#comparison figure div {
-    background-image: url(../img/test2_avant.jpg);
+    background-image: url(../../img/test2_avant.jpg);
     background-size: cover;
     position: absolute;
     width: 50%;
@@ -335,7 +335,7 @@ input[type=range]:focus::-moz-range-thumb {
 
 /*-------   Section Blog  ------*/
 .Blog {
-    background-image: url('../img/imgConseil.jpg');
+    background-image: url('../../img/imgConseil.jpg');
     background-size: cover;
     padding: 15px 0 20px 0;
     height: 185px;
@@ -412,14 +412,14 @@ input[type=range]:focus::-moz-range-thumb {
 
 .Conseilbackground-lg {
     margin-bottom: 1%;
-    background-image: url('../img/imgConseil.jpg');
+    background-image: url('../../img/imgConseil.jpg');
     background-size: cover;
     max-height: 600px;
 }
 
 .Conseilbackground-xs {
     margin-bottom: 1%;
-    background-image: url('../img/imgConseil.jpg');
+    background-image: url('../../img/imgConseil.jpg');
     background-size: cover;
     max-height: 600px;
 }
