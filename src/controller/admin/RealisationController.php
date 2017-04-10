@@ -8,6 +8,10 @@
 
 namespace wcs\controller\admin;
 use \wcs\controller\Controller;
+use wcs\Form\RealisationForm;
+use wcs\model\Realisation;
+use wcs\model\RealisationManager;
+
 
 
 class RealisationController extends Controller
@@ -16,16 +20,22 @@ class RealisationController extends Controller
 
     public function index()
     {
-        /* --- provisoire --- */
-        $realisations = [
-            ['id' => 1, 'titre' => 'Titre réalisation 1', 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', 'id_img_ap' => 7, 'id_img_av' => 8],
-            ['id' => 2, 'titre' => 'Titre réalisation 1', 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', 'id_img_ap' => 9, 'id_img_av' => 10],
-        ];
+        $manager = new RealisationManager($this->bdd, Realisation::class);
+        $form = new RealisationForm();
 
-        return $this->twig->render('Realisation.twig',['realisations' => $realisations]);
+        $param = ["content" => $manager->getReal(),
+            'form' => $form];
+
+        return $this->twig->render('Realisation.twig', $param);
     }
 
+    public function updateReal()
+    {
+        $manager = new RealisationManager($this->bdd, Realisation::class);
+        $manager->update();
+        return $this->index();
 
+    }
 
 
 }

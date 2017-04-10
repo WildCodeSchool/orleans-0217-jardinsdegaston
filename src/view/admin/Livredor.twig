@@ -36,6 +36,7 @@
                 <input class="btn btn-success" type="submit" name="addLdor" value="Envoyer">
                 <input type="hidden" name="method" value="addLdor">
                 <input type="hidden" name="id" value="{{ value.id }}">
+                <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
             </form>
         </div>
 

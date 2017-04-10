@@ -3,3 +3,7 @@
 
 
 /vendor/
+/src/model/DB.php
+/.gitignore
+/web/admin/test.php
+/src/model/connect.php
