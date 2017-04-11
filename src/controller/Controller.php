@@ -19,7 +19,7 @@ class Controller
 
     /**
      * objet twig initialise
-     * @var
+     * @var \Twig_Environment
      */
     protected $twig;
 

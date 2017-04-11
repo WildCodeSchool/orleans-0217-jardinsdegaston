@@ -24,30 +24,44 @@ if ( isset($_GET['p']) ) {
 
 if (!empty($route)) {
 
-    // --- initialisation twig ---
-    $loader = new Twig_Loader_Filesystem(__DIR__ . '/../src/view/');
-    $twig = new Twig_Environment($loader, [
-        'cache' => false, //__DIR__ . '/../../tmp',
-        'debug' => true,
-    ]);
-    $twig->addExtension(new Twig_Extension_Debug());
+// --- initialisation de la methode pour le controleur defini ci-dessus
+    $method = 'index'; // methode par defaut
+    if (isset($_POST['method'])) {
+        $method = $_POST['method']; // methode explicitement definie
+    }
 
-    // --- initialisation des acces a la base de donnees
-    require '../config/connect.php';
-    $bdd = new \PDO(DSN, USER, PASS);
-    $bdd->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
-    $bdd->exec("set names utf8");
+    $page = 'accueil';
+    $routes = ['accueil' => 'Accueil',
+        'journal' => 'Journal'];
 
-    // --- appel du controleur concerne
-    $ctrlName = 'wcs\\controller\\'.ucfirst($route).'Controller';
-    $controller = new $ctrlName($twig, $bdd);
-    echo $controller->$method();
+    if (array_key_exists($page, $routes)) {
 
-} else {
+        // --- initialisation twig ---
+        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../src/view/');
+        $twig = new Twig_Environment($loader, [
+            'cache' => false, //__DIR__ . '/../../tmp',
+            'debug' => true,
+        ]);
+        $twig->addExtension(new Twig_Extension_Debug());
 
-    // --- il faudra mettre ici une erreur 404 - not found !!! ---
-    echo '<br /><br /><br /><h1>La page demandée n\'existe pas.</h1>';
+        // --- initialisation des acces a la base de donnees
 
+        require '../config/connect.php';
+        $bdd = new \PDO(DSN, USER, PASS);
+        $bdd->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $bdd->exec("set names utf8");
+
+        // --- appel du controleur concerne
+        $ctrlName = 'wcs\\controller\\' . ucfirst($route) . 'Controller';
+        $controller = new $ctrlName($twig, $bdd);
+        echo $controller->$method();
+
+    } else {
+
+        // --- il faudra mettre ici une erreur 404 - not found !!! ---
+        echo '<br /><br /><br /><h1>La page demandée n\'existe pas.</h1>';
+
+    }
 }
 
 ?>

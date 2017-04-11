@@ -45,18 +45,18 @@ class Image
         chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
     }
 
-
-    private function ctrlTmp()
-    {
-        if ( !file_exists(self::TMPDIR) ) {
-            // --- si repertoire tmp n'existe pas, on le cree
-            mkdir(self::TMPDIR);
-        }
-        else {
-            // --- s'il existe, on lui (re)affecte tous les droits
-            chmod(self::TMPDIR, 0777);
-        }
-    }
+//
+//    private function ctrlTmp()
+//    {
+//        if ( !file_exists(self::TMPDIR) ) {
+//            // --- si repertoire tmp n'existe pas, on le cree
+//            mkdir(self::TMPDIR);
+//        }
+//        else {
+//            // --- s'il existe, on lui (re)affecte tous les droits
+//            chmod(self::TMPDIR, 0777);
+//        }
+//    }
 
     /**
      * **************************************************************
@@ -142,7 +142,7 @@ class Image
      * **************************************************************
      * Deplace l'image temporaire vers son emplacement de production (et la renomme)
      * @param $codetype
-     * @param $codesaison
+     * @param $identif
      */
     public function deplace($codetype, $identif)
     {
@@ -174,5 +174,21 @@ class Image
             }
         }
     }
+
+    /**
+     * **************************************************************
+     * Efface l'image de son emplacement de production
+     * @param $codetype
+     * @param $identif
+     */
+    public function delImg($codetype, $identif)
+    {
+        $urldest = self::IMGDIR.'img'.$codetype.'-'.$identif.'.jpg';
+        if ( file_exists($urldest) ) {
+            // --- on supprime l'image
+            unlink($urldest);
+        }
+    }
+
 
 }

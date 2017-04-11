@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class Livredor extends DB
+class Livredor
 {
     /* --- Proprietes --------------------------------- */
     /**
@@ -25,7 +25,7 @@ class Livredor extends DB
     /**
      * @var string
      */
-    private $nom;
+    private $auteur;
 
 
     /* --- Geters et setters -------------------------- */
@@ -68,29 +68,21 @@ class Livredor extends DB
     /**
      * @return string
      */
-    public function getNom(): string
+    public function getAuteur(): string
     {
-        return $this->nom;
+        return $this->auteur;
     }
 
     /**
      * @param string $nom
      * @return Livredor
      */
-    public function setNom(string $nom): Livredor
+    public function setAuteur(string $auteur): Livredor
     {
-        $this->nom = $nom;
+        $this->auteur = $auteur;
         return $this;
     }
 
-    public function getLdor()
-    {
-        return $this->findAll('livredor');
-    }
 
-//    public function addLdorQuery($query)
-//    {
-//        $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
-//        return $this->addLdorQuery();
-//    }
+
 }

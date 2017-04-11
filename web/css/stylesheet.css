@@ -346,7 +346,7 @@ input[type=range]::-moz-range-track {
     position: relative;
     outline: none;
 }
-input[type=range]::active {
+input[type=range]:active {
     border: none;
     outline: none;
 }
@@ -415,35 +415,32 @@ input[type=range]:focus::-moz-range-thumb {
     margin-bottom: 2%;
 }
 
-.row-presta {
-    padding-bottom: 100px;
-}
-
 .blocPresta {
     position: relative;
+    margin-bottom: 100px;
 }
 
 .etiquette {
-    position: absolute;
-    bottom: -50px;
-    right: -40px;
-    background-color: white;
-    border : solid lightgrey 1px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 8px rgb(170, 170, 170);
-    width: 400px;
-    height: auto;
-    padding-left : 10px;
+position: absolute;
+bottom: -50px;
+right: -40px;
+background-color: white;
+border : solid lightgrey 1px;
+border-radius: 4px;
+box-shadow: 2px 2px 8px rgb(170, 170, 170);
+width: 400px;
+height: auto;
+padding-left : 10px;
 }
 
 .thumbnail
 {
-    border: none;
+border: none;
 }
 
 .thumbnail>img
 {
-    border-radius: 6px;
+border-radius: 6px;
 }
 
 /*-------    Section Conseil du mois    ------*/
