@@ -88,7 +88,7 @@ class DbManager
         return count($this->findAll($opt));
     }
 
-    public function findOne(int $id) : Prestation
+    public function findOne(int $id)
     {
         $req = "SELECT * FROM " . $this->getTableName()." WHERE id=$id";
         $res = $this->getBdd()->query($req);

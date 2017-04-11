@@ -23,7 +23,7 @@ class LivredorForm extends Form
             'type'  => Text::class,
             'name' => 'NomLDor',
             'options' => [
-                'label' => 'Nom',
+                'label' => 'Auteur',
             ],
         ]);
 

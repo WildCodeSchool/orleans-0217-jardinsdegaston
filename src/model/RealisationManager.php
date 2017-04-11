@@ -24,13 +24,16 @@ class RealisationManager extends DbManager
             }
         }
 
-        $query = "UPDATE realisation SET titre=:titre, contenu=:contenu, id_img_av=:id_img_av, id_img_ap=:id_img_ap WHERE id=:id";
+        $query = "UPDATE realisation SET titre=:titre, contenu=:contenu, activation=:activation WHERE id=:id";
         $prep = $this->getBdd()->prepare($query);
         $prep->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
         $prep->bindValue(':titre', $postClean['titre'], \PDO::PARAM_STR);
         $prep->bindValue(':contenu', $postClean['contenu'], \PDO::PARAM_STR);
-        $prep->bindValue(':id_img_av', $postClean['id_img_av'], \PDO::PARAM_STR);
-        $prep->bindValue(':id_img_ap', $postClean['id_img_ap'], \PDO::PARAM_STR);
+        if (isset($_POST['activation'])) {
+            $prep->bindValue(':activation', 1, \PDO::PARAM_INT);
+        } else {
+            $prep->bindValue(':activation', 0, \PDO::PARAM_INT);
+        }
         $prep->execute();
     }
 }

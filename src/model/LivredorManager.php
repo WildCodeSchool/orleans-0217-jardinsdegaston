@@ -36,7 +36,7 @@ class LivredorManager extends DbManager
 
 
         if (!empty($_POST['id'])) {
-            $query = "UPDATE livredor SET nom=:NomLDor, contenu=:TexteLDor WHERE id=:id";
+            $query = "UPDATE livredor SET auteur=:NomLDor, contenu=:TexteLDor WHERE id=:id";
             $prep = $this->getBdd()->prepare($query);
             $prep->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
             $prep->bindValue(':NomLDor', $postClean['NomLDor'], \PDO::PARAM_STR);
@@ -45,7 +45,7 @@ class LivredorManager extends DbManager
             return $this;
         }
 
-        $query = "INSERT INTO livredor (nom, contenu) VALUES (:NomLDor, :TexteLDor)";
+        $query = "INSERT INTO livredor (auteur, contenu) VALUES (:NomLDor, :TexteLDor)";
 
         $prep = $this->getBdd()->prepare($query);
         $prep->bindValue(':NomLDor', $postClean['NomLDor'], \PDO::PARAM_STR);
