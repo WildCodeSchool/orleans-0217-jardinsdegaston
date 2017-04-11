@@ -4,44 +4,43 @@
 // --- autoloader de composer ---
 require_once __DIR__ . '/../vendor/autoload.php';
 
-// --- recup des parametres POST d'entree
-$method = 'index';
-$post = [];
-if (isset($_POST)) {
-    foreach ( $_POST as $key => $value ) {
-        $post[$key] = $value;
-    }
-    if ( isset($_POST['method']) ) {
-        $method = $_POST['method'];
-    }
+
+// --- initialisation de la methode pour le controleur defini ci-dessus
+$method = 'index'; // methode par defaut
+if ( isset($_POST['method']) ) {
+    $method = $_POST['method']; // methode explicitement definie
 }
 
-// --- on recupere le nom de la page demandee passee en parametre get
-$route = 'accueil'; // si get n'est pas defini
-if ( isset($_GET['p']) ) {
-    $route = $_GET['p'];
-}
+$page = 'accueil';
+$routes = ['accueil' => 'Accueil',
+            'journal' => 'Journal'];
 
-if (!empty($route)) {
+if ( array_key_exists($page, $routes) ) {
 
     // --- initialisation twig ---
     $loader = new Twig_Loader_Filesystem(__DIR__ . '/../src/view/');
     $twig = new Twig_Environment($loader, [
-        'cache' => false, //__DIR__ . '/../../tmp',
+        'cache' => false, //__DIR__ . '/../tmp',
         'debug' => true,
     ]);
     $twig->addExtension(new Twig_Extension_Debug());
 
-// --- appel du controleur concerne
-    $ctrlName = 'wcs\\controller\\'.ucfirst($route).'Controller';
-    $controller = new $ctrlName($twig, $post);
+    // --- initialisation des acces a la base de donnees
+    require '../src/model/connect.php'; // ??? a passer dans environnement ???
+    $bdd = new \PDO(DSN, USER, PASS);
+    $bdd->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    $bdd->exec("set names utf8");
+
+    // --- appel du controleur/methode defini plus haut
+    $ctrlName = 'wcs\\controller\\' . $routes[$page] . 'Controller';
+    $controller = new $ctrlName($twig, $bdd);
     echo $controller->$method();
 
-} else {
+}
 
-    // --- il faudra mettre ici une erreur 404 - not found !!! ---
-    echo '<br /><br /><br /><h1>La page demandée n\'existe pas.</h1>';
-
+else {
+    $controller = new \wcs\controller\ErrorController($twig, $bdd);
+    echo $controller->notFound();
 }
 
 ?>
