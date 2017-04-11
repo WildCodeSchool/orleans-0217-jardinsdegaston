@@ -16,7 +16,7 @@ $routes = [
     'conseil' => 'Conseil',
     'livredor' => 'Livredor',
     'contact' => 'Message',
-    'chezgaston' => 'ChezGaston',
+    'chezgaston' => 'JournalAdmin',
 ];
 // --- initialisation de la methode pour le controleur defini ci-dessus
 $method = 'index'; // methode par defaut

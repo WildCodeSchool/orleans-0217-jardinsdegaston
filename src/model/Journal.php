@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class Journal extends DB
+class Journal
 {
 
     /**

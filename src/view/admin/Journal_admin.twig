@@ -1,0 +1,122 @@
+{# --- src/view/admin/Prestation.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Chez Gaston - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+
+    <h1>Gestion du journal - Et pendant ce temps-là chez Gaston...</h1>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+    {# -- Formulaire ajout d'un nouvel article -- #}
+    <div class="row FormBlog">
+
+        <div class="col-lg-4 text-center">
+            <img class="img-fluid pimg bloc-right" src="{{ tmpimage }}?{{ random(9999) }}" alt="" />
+            <form id="loadimg" method="post" action="index.php?p=chezgaston" enctype="multipart/form-data">
+                <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+                <input type="hidden" name="method" value="imgupload" />
+                <input type="hidden" name="id" value="{{ article.id }}">
+                <input type="hidden" name="titre" id="titreimg" value="" />
+                <input type="hidden" name="date" id="dateimg" value="" />
+                <input type="hidden" name="contenu" id="contenuimg" value="" />
+                <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
+                <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+            </form>
+        </div>
+
+        <div class="col-lg-7 form">
+            <form name="ajout-blog" method="POST" action="../../../web/admin/index.php?p=chezgaston">
+
+                <div class="form-group">
+                    <label for="Nom">Titre de l'article</label>
+                    <input required ="required" class="form-control" type="text" id="titre" name="titre" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Nom">Date de publication</label>
+                    <input required ="required" class="form-control" type="date" id="date" name="date" value="{{ article.date|date('d-m-Y') }}"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="Texte">Contenu de l'article</label>
+                    <textarea required ="required" class="form-control" type="text" id="contenu" name="contenu"></textarea>
+                </div>
+
+                <input type="hidden" name="method" value="ajoutArticle" />
+                <input class="btn btn-success" type="submit" name="ajoute" value="Ajouter un article" />
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+    {# -- Liste des articles ------------------------------------ -- #}
+    <div class="row padd-top">
+        <div class="col-xs-12">
+
+            <table>
+                <div class="row">
+
+                    <tr class="listeArticle">
+                        <div class="col-sm-2 col-lg-2"><td>Date de parution</td></div>
+                        <div class="col-sm-4 col-lg-2"><td>Titre de l'article</td></div>
+                        <div class=".hidden-sm-down col-lg-4"><td>Contenu de l'article</td></div>
+                        <div class="col-sm-6 col-lg-4"><td>Modification/Suppression</td></div>
+                    </tr>
+
+                </div>
+
+                <div class="row">
+                {% for article in articles %}
+
+                    <tr>
+                        <td class="col-sm-2 col-lg-2">{{ article.date|date('d-m-Y') }}</td>
+                        <td class="col-sm-4 col-lg-2">{{ article.titre }}</td>
+                        <td class=".hidden-sm-down col-lg-4">{{ article.contenu }}</td>
+                        <td class="col-sm-6 col-lg-4">
+                            <form method="post" action="../../web/admin/index.php?p=chezgaston">
+                                <input type="hidden" name="method" value="modif">
+                                <input type="hidden" name="id" value="{{ article.id }}">
+                                <input class="btn btn-default" type="submit" name="valide" value="Modifier l'article" />
+                                &nbsp;&nbsp;
+                                <input class="btn btn-default" type="submit" name="supprime" value="Supprimer l'article" />
+                            </form>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+                </div>
+
+            </table>
+
+        </div>
+    </div>
+
+    <script>
+        function valide() {
+            document.getElementById('titreimg').value = document.getElementById('titre').value;
+            document.getElementById('dateimg').value = document.getElementById('date').value;
+            document.getElementById('contenuimg').value = document.getElementById('contenu').value;
+            document.getElementById('loadimg').submit();
+        }
+    </script>
+
+{% endblock %}
+
+
+
+
+

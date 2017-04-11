@@ -2,6 +2,18 @@
 body {
     font-size: 16px;
 }
+
+tr {
+    border-top: 1px solid #2b542c;
+    border-bottom: 1px solid #2b542c;
+    padding: 5px 0 5px 0;
+}
+
+td {
+/*    border: 1px solid #2b542c;*/
+    width: 25%;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -16,6 +28,7 @@ body {
     border-color: #2b542c;
     color: #2b542c;
 }
+
 .btn-xs {
     padding: 0;
     width: 100px;
@@ -26,9 +39,13 @@ body {
     border-radius: 6px;
 }
 
+.padd-top {
+    margin-top: 60px;
+}
+
 
 /* --- navbar ---------------------------------------------------- */
-@grid-float-breakpoint: 1200;
+
 .navbar-inverse
 {
     background-color: #2b542c;
@@ -79,8 +96,7 @@ input.btn, label.btn {
     width: 230px;
     margin: 2px;
 }
-<<<<<<< HEAD
-=======
+
 .normal-text {
     font-weight: normal;
 }
@@ -92,7 +108,7 @@ input.btn, label.btn {
     height: auto;
     min-height: 34px;
 }
->>>>>>> 175307bedd1fd0f899cea6684e646b001fd4e385
+
 /* --- grandes images -------------------------------------------- */
 .gimg {
     max-height: 200px;
@@ -131,9 +147,6 @@ input.btn, label.btn {
     margin-top: 2%;
 }
 
-<<<<<<< HEAD
-/* --- Conseils ------------------------------------ */
-=======
 /* --- Conseils -------------------------------------------------- */
 .bloc-conseil {
     margin-top: 5px;
@@ -141,9 +154,18 @@ input.btn, label.btn {
     border-top: 1px solid #2b542c;
     /*background-color: #eef6ef;*/
 }
->>>>>>> 175307bedd1fd0f899cea6684e646b001fd4e385
+
 #TexteConseil {
     margin-bottom: 10px;
+}
+
+/* --- Chez Gastoon ---------------------------------------------- */
+
+.listeArticle {
+    height: 30px;
+    background-color: #2b542c;
+    color: white;
+    font-size: 20px;
 }
 
 /* --- footer ---------------------------------------------------- */

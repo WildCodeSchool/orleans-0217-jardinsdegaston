@@ -83,6 +83,15 @@ class DbManager
         return $res->fetchAll(\PDO::FETCH_CLASS, $this->getEntity());
     }
 
+    public function findAllReverse($table, $opt=null) {
+        $req = "SELECT * FROM $table ORDER BY date DESC";
+        if ( null !== $opt ) {
+            $req .= " ".$opt;
+        }
+        $res = $this->getBdd()->query($req);
+        return $res->fetchAll(\PDO::FETCH_CLASS, '\wcs\model\\'.ucfirst($table));
+    }
+
     public function countAll(string $opt=null)
     {
         return count($this->findAll($opt));

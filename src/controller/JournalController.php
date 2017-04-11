@@ -8,7 +8,7 @@
 
 namespace wcs\controller;
 
-use wcs\model\DB;
+use wcs\model\DbManager;
 use wcs\form\ArticleForm;
 use wcs\model\Journal;
 
