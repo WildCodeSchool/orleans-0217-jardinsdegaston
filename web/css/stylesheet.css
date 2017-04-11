@@ -380,7 +380,7 @@ input[type=range]:focus::-moz-range-thumb {
 }
 
 .BlogThumb {
-    margin-top: 18%;
+    margin-top: 15%;
     padding: 25% 7% 28% 7%;
     background-color: rgba(255, 255, 255, 0.7);
     text-align: center;
