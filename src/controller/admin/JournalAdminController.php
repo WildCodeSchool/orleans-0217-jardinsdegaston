@@ -7,8 +7,8 @@ use \wcs\model\Journal;
 use \wcs\model\JournalManager;
 
 /**
- * Class PrestationController
- * page d'admin des prestations (visu, ajout, modif supp)
+ * Class JournalAdminController
+ * page d'admin du journal (visu, ajout, modif supp)
  * @package wcs\controller\admin
  */
 class JournalAdminController extends Controller
@@ -33,7 +33,7 @@ class JournalAdminController extends Controller
 
     /**
      * **********************************************************
-     * Affiche la page ajout
+     * Fait fonctionner l'ajout d'article
      * @return mixed
      */
     public function ajoutArticle()
