@@ -279,7 +279,7 @@
 
                     <div class="carousel-inner" role="listbox">
                         {% for message in livredor %}
-                        <div class="item col-xs-8 col-xs-offset-2 {% if message.id == 1 %}active{% endif %}">
+                        <div class="item col-xs-8 col-xs-offset-2 {% if loop.index == 1 %}active{% endif %}">
                             <div class="caption">
                                 <h3>{{ message.contenu }}</h3>
                                 <p>{{ message.auteur }}</p>
