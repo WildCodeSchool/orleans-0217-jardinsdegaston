@@ -2,8 +2,9 @@
 
 // --- src/controller/Controller.php ---
 
-namespace wcs\controller;
+namespace wcs\controller\site;
 
+use wcs\controller\Controller;
 use wcs\model\Conseil;
 use wcs\model\ConseilManager;
 use wcs\model\Livredor;
@@ -39,7 +40,7 @@ class AccueilController extends Controller
         $livredorManager = new LivredorManager($this->bdd, Livredor::class);
         $livredor = $livredorManager->findAll();
 
-        return $this->twig->render('Accueil.twig', array('presentationH1'=>$presentationH1,
+        return $this->twig->render('site/Accueil.twig', array('presentationH1'=>$presentationH1,
                                                         'presentationH3'=>$presentationH3,
                                                         'prestation'=>$prestation,
                                                         'conseil'=>$conseil,
