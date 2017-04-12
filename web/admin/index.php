@@ -1,7 +1,6 @@
 <?php
 // --- web/admin/index.$php ---
 
-
 // --- on recupere l'eventuel nom de page demandee, passe en parametre get
 $page = 'imgfond'; // page par defaut si get pas defini
 if ( isset($_GET['p']) ) {
@@ -23,9 +22,6 @@ $method = 'index'; // methode par defaut
 if ( isset($_POST['method']) ) {
     $method = $_POST['method']; // methode explicitement definie
 }
-
-//var_dump($_POST);
-//die('GLOP');
 
 // --- autoloader de composer ---
 require_once __DIR__ . '/../../vendor/autoload.php';
@@ -50,7 +46,7 @@ if ( array_key_exists($page, $routes) ) {
     // --- appel du controleur/methode defini plus haut
     $ctrlName = 'wcs\\controller\\admin\\'.$routes[$page].'Controller';
     $controller = new $ctrlName($twig, $bdd);
-    echo $controller->$method();
+    echo $controller->$method(); // echo car la methode retourne le rendu twig
 }
 else {
     $controller = new \wcs\controller\ErrorController($twig, $bdd);

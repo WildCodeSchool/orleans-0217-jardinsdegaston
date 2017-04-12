@@ -24,7 +24,7 @@
         </div>
         {% for saison in saisons %}
             <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
-                <img class="gimg" src="../../web/img/imgB-{{ loop.index }}.jpg?{{ random(9999) }}"><br />
+                <img class="gimg" src="../img/imgB-{{ loop.index }}.jpg?{{ random(9999) }}"><br />
                 {{ saison }}
             </div>
         {% endfor %}
@@ -48,7 +48,7 @@
                     </form>
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-4">
-                    <form method="post" action="../../web/index.php?p=imgfond">
+                    <form method="post" action="index.php?p=imgfond">
                         <input type="hidden" name="method" value="imgswitch" />
                         <p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>
                         <p>

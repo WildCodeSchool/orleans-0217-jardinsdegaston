@@ -6,10 +6,10 @@ namespace wcs\model;
 
 class Image
 {
-    // --- repertoire temporaire pour twig et images uploadees
-    const TMPDIR = '../../tmp/';
+    // --- repertoire temporaire pour les images uploadees
+    const TMPDIR = '../tmp/';
     // --- repertoire de stockage des images
-    const IMGDIR = '../../web/img/';
+    const IMGDIR = '../img/';
 
     /* --- Proprietes ------------------------------------------- */
     /**
@@ -92,7 +92,7 @@ class Image
             return self::TMPDIR.'img'.$codetype.'-tmp.jpg';
         }
         else {
-            return self::IMGDIR.'img'.$codetype.'-ref.jpg';
+            return self::IMGDIR . 'img' . $codetype . '-ref.jpg';
         }
     }
 

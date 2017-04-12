@@ -2,8 +2,4 @@
 
 /src/model/connect.php
 /vendor/
-/.gitignore
-/web/admin/test.php
-/web/admin/.htaccess
-/web/admin/.htpasswd
 

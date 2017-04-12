@@ -32,7 +32,7 @@ class Controller
      * Libelle des saisons
      * @var array
      */
-    protected $saisons = [
+    private $saisons = [
         'P' => ['nom' => 'Printemps', 'numsaison' => 1],
         'E' => ['nom' => 'Eté', 'numsaison' => 2],
         'A' => ['nom' => 'Automne', 'numsaison' => 3],
@@ -49,16 +49,16 @@ class Controller
         }
     }
 
-    public function render ($path, $param)
-    {
-        // transforme un tableau de clé / valeur en variable
-        // ex ['eleve'=>'toto', 'ecole'=>'orléans'] sera transformé en $eleve='toto' et $ecole='orleans'
-        // du coup, dans le fichier $path appelé ensuite, on peut utiliser directement les variables $eleve et $ecole
-        extract($param);
-
-        require '../src/view/'.$path;
-
-    }
+//    public function render ($path, $param)
+//    {
+//        // transforme un tableau de clé / valeur en variable
+//        // ex ['eleve'=>'toto', 'ecole'=>'orléans'] sera transformé en $eleve='toto' et $ecole='orleans'
+//        // du coup, dans le fichier $path appelé ensuite, on peut utiliser directement les variables $eleve et $ecole
+//        extract($param);
+//
+//        require '../src/view/'.$path;
+//
+//    }
 
     /**
      * @return PDO

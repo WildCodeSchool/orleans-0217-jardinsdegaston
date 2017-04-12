@@ -45,6 +45,9 @@ class BgImageController extends Controller
             'formimage' => $this->img->getTmpName('B'),
             'erreur' => $erreur,
         ];
+
+        var_dump($params);
+
         return $this->twig->render('BgImage.twig', $params);
     }
 
@@ -57,7 +60,7 @@ class BgImageController extends Controller
     {
         if ( isset($_POST['annule']) ) {
             // --- on recharge la page initiale (qui reinitialise le formulaire)
-            header('location:index.php.old?p=imgfond');
+            header('location:index.php?p=imgfond');
         }
         $erreur = '';
         $ok = true;
@@ -75,7 +78,7 @@ class BgImageController extends Controller
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('B', $this->getNumSaison($_POST['saison']));
             // --- recharger page index
-            header('location:index.php.old?p=imgfond');
+            header('location:index.php?p=imgfond');
         }
         else {
             // --- recharger la page en affichant l'erreur
