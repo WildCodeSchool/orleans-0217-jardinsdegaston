@@ -188,7 +188,7 @@ class Form extends Fieldset implements FormInterface
     /**
      * Ensures state is ready for use
      *
-     * Marshalls the input filter, to ensure validation error messages are
+     * Marshalls the input filter, to ensure validation error message are
      * available, and prepares any elements and/or fieldsets that require
      * preparation.
      *

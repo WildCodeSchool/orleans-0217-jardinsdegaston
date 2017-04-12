@@ -6,7 +6,7 @@ pages:
     - Reference:
         - "Validator Chains": validator-chains.md
         - "Writing Validators": writing-validators.md
-        - "Validation Messages": messages.md
+        - "Validation Messages": message.md
         - "Standard Validation Classes": set.md
         - Validators:
             - Barcode: validators/barcode.md

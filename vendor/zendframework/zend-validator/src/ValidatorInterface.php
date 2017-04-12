@@ -15,7 +15,7 @@ interface ValidatorInterface
      * Returns true if and only if $value meets the validation requirements
      *
      * If $value fails validation, then this method returns false, and
-     * getMessages() will return an array of messages that explain why the
+     * getMessages() will return an array of message that explain why the
      * validation failed.
      *
      * @param  mixed $value
@@ -25,7 +25,7 @@ interface ValidatorInterface
     public function isValid($value);
 
     /**
-     * Returns an array of messages that explain why the most recent isValid()
+     * Returns an array of message that explain why the most recent isValid()
      * call returned false. The array keys are validation failure message identifiers,
      * and the array values are the corresponding human-readable message strings.
      *

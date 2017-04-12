@@ -68,7 +68,7 @@ class Size extends AbstractValidator
      * As Array is accepts the following keys:
      * 'min': Minimum file size
      * 'max': Maximum file size
-     * 'useByteString': Use bytestring or real size for messages
+     * 'useByteString': Use bytestring or real size for message
      *
      * @param  int|array|\Traversable $options Options for the adapter
      */
@@ -91,7 +91,7 @@ class Size extends AbstractValidator
     }
 
     /**
-     * Should messages return bytes as integer or as string in SI notation
+     * Should message return bytes as integer or as string in SI notation
      *
      * @param  bool $byteString Use bytestring ?
      * @return int

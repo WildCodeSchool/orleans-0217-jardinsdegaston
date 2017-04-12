@@ -285,7 +285,7 @@ class Fieldset extends Element implements FieldsetInterface
     }
 
     /**
-     * Set a hash of element names/messages to use when validation fails
+     * Set a hash of element names/message to use when validation fails
      *
      * @param  array|Traversable $messages
      * @return Element|ElementInterface|FieldsetInterface
@@ -295,7 +295,7 @@ class Fieldset extends Element implements FieldsetInterface
     {
         if (! is_array($messages) && ! $messages instanceof Traversable) {
             throw new Exception\InvalidArgumentException(sprintf(
-                '%s expects an array or Traversable object of messages; received "%s"',
+                '%s expects an array or Traversable object of message; received "%s"',
                 __METHOD__,
                 (is_object($messages) ? get_class($messages) : gettype($messages))
             ));
@@ -313,10 +313,10 @@ class Fieldset extends Element implements FieldsetInterface
     }
 
     /**
-     * Get validation error messages, if any
+     * Get validation error message, if any
      *
-     * Returns a hash of element names/messages for all elements failing
-     * validation, or, if $elementName is provided, messages for that element
+     * Returns a hash of element names/message for all elements failing
+     * validation, or, if $elementName is provided, message for that element
      * only.
      *
      * @param  null|string $elementName

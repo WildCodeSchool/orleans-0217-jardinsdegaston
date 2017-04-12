@@ -28,7 +28,7 @@ class LessThan extends AbstractValidator
     ];
 
     /**
-     * Additional variables available for validation failure messages
+     * Additional variables available for validation failure message
      *
      * @var array
      */

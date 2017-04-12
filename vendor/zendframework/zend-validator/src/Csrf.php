@@ -23,7 +23,7 @@ class Csrf extends AbstractValidator
     const NOT_SAME = 'notSame';
 
     /**
-     * Error messages
+     * Error message
      * @var array
      */
     protected $messageTemplates = [

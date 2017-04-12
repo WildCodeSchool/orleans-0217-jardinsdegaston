@@ -43,14 +43,14 @@ abstract class AbstractValidator implements
     protected static $messageLength = -1;
 
     protected $abstractOptions = [
-        'messages'             => [], // Array of validation failure messages
+        'message'             => [], // Array of validation failure message
         'messageTemplates'     => [], // Array of validation failure message templates
-        'messageVariables'     => [], // Array of additional variables available for validation failure messages
+        'messageVariables'     => [], // Array of additional variables available for validation failure message
         'translator'           => null,    // Translation object to used -> Translator\TranslatorInterface
         'translatorTextDomain' => null,    // Translation text domain
         'translatorEnabled'    => true,    // Is translation enabled?
         'valueObscured'        => false,   // Flag indicating whether or not value should be obfuscated
-                                           // in error messages
+                                           // in error message
     ];
 
     /**
@@ -150,13 +150,13 @@ abstract class AbstractValidator implements
     }
 
     /**
-     * Returns array of validation failure messages
+     * Returns array of validation failure message
      *
      * @return array
      */
     public function getMessages()
     {
-        return array_unique($this->abstractOptions['messages'], SORT_REGULAR);
+        return array_unique($this->abstractOptions['message'], SORT_REGULAR);
     }
 
     /**
@@ -171,7 +171,7 @@ abstract class AbstractValidator implements
     }
 
     /**
-     * Returns an array of the names of variables that are used in constructing validation failure messages
+     * Returns an array of the names of variables that are used in constructing validation failure message
      *
      * @return array
      */
@@ -337,7 +337,7 @@ abstract class AbstractValidator implements
             $value = $this->value;
         }
 
-        $this->abstractOptions['messages'][$messageKey] = $this->createMessage($messageKey, $value);
+        $this->abstractOptions['message'][$messageKey] = $this->createMessage($messageKey, $value);
     }
 
     /**
@@ -351,7 +351,7 @@ abstract class AbstractValidator implements
     }
 
     /**
-     * Sets the value to be validated and clears the messages and errors arrays
+     * Sets the value to be validated and clears the message and errors arrays
      *
      * @param  mixed $value
      * @return void
@@ -359,11 +359,11 @@ abstract class AbstractValidator implements
     protected function setValue($value)
     {
         $this->value               = $value;
-        $this->abstractOptions['messages'] = [];
+        $this->abstractOptions['message'] = [];
     }
 
     /**
-     * Set flag indicating whether or not value should be obfuscated in messages
+     * Set flag indicating whether or not value should be obfuscated in message
      *
      * @param  bool $flag
      * @return AbstractValidator
@@ -376,7 +376,7 @@ abstract class AbstractValidator implements
 
     /**
      * Retrieve flag indicating whether or not value should be obfuscated in
-     * messages
+     * message
      *
      * @return bool
      */

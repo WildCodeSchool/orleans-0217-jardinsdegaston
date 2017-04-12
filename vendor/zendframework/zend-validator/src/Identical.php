@@ -23,7 +23,7 @@ class Identical extends AbstractValidator
     const MISSING_TOKEN = 'missingToken';
 
     /**
-     * Error messages
+     * Error message
      * @var array
      */
     protected $messageTemplates = [

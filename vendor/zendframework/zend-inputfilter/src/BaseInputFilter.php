@@ -454,7 +454,7 @@ class BaseInputFilter implements
     }
 
     /**
-     * Return a list of validation failure messages
+     * Return a list of validation failure message
      *
      * Should return an associative array of named input/message list pairs.
      * Pairs should only be returned for inputs that failed validation.

@@ -108,7 +108,7 @@ class EmailAddress extends AbstractValidator
 
     /**
      * Sets the validation failure message template for a particular key
-     * Adds the ability to set messages to the attached hostname validator
+     * Adds the ability to set message to the attached hostname validator
      *
      * @param  string $messageString
      * @param  string $messageKey     OPTIONAL
@@ -443,9 +443,9 @@ class EmailAddress extends AbstractValidator
                          ->isValid($this->hostname);
         if (! $hostname) {
             $this->error(self::INVALID_HOSTNAME);
-            // Get messages and errors from hostnameValidator
+            // Get message and errors from hostnameValidator
             foreach ($this->getHostnameValidator()->getMessages() as $code => $message) {
-                $this->abstractOptions['messages'][$code] = $message;
+                $this->abstractOptions['message'][$code] = $message;
             }
         } elseif ($this->options['useMxCheck']) {
             // MX check on hostname

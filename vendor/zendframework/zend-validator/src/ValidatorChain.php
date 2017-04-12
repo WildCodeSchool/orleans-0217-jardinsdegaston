@@ -35,7 +35,7 @@ class ValidatorChain implements
     protected $validators;
 
     /**
-     * Array of validation failure messages
+     * Array of validation failure message
      *
      * @var array
      */
@@ -272,7 +272,7 @@ class ValidatorChain implements
     }
 
     /**
-     * Returns array of validation failure messages
+     * Returns array of validation failure message
      *
      * @return array
      */
@@ -322,6 +322,6 @@ class ValidatorChain implements
      */
     public function __sleep()
     {
-        return ['validators', 'messages'];
+        return ['validators', 'message'];
     }
 }

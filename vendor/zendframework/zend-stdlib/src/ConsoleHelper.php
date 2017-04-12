@@ -22,7 +22,7 @@ namespace Zend\Stdlib;
  * Colorization will only occur when expected sequences are discovered, and
  * then, only if the console terminal allows it.
  *
- * Essentially, provides the bare minimum to allow you to provide messages to
+ * Essentially, provides the bare minimum to allow you to provide message to
  * the current console.
  */
 class ConsoleHelper

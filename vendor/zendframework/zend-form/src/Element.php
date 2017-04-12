@@ -42,7 +42,7 @@ class Element implements
     protected $labelOptions = [];
 
     /**
-     * @var array Validation error messages
+     * @var array Validation error message
      */
     protected $messages = [];
 
@@ -476,7 +476,7 @@ class Element implements
     }
 
     /**
-     * Set a list of messages to report when validation fails
+     * Set a list of message to report when validation fails
      *
      * @param  array|Traversable $messages
      * @return Element|ElementInterface
@@ -486,7 +486,7 @@ class Element implements
     {
         if (! is_array($messages) && ! $messages instanceof Traversable) {
             throw new Exception\InvalidArgumentException(sprintf(
-                '%s expects an array or Traversable object of validation error messages; received "%s"',
+                '%s expects an array or Traversable object of validation error message; received "%s"',
                 __METHOD__,
                 (is_object($messages) ? get_class($messages) : gettype($messages))
             ));
@@ -497,9 +497,9 @@ class Element implements
     }
 
     /**
-     * Get validation error messages, if any.
+     * Get validation error message, if any.
      *
-     * Returns a list of validation failure messages, if any.
+     * Returns a list of validation failure message, if any.
      *
      * @return array|Traversable
      */

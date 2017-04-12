@@ -198,7 +198,7 @@ class Explode extends AbstractValidator implements ValidatorPluginManagerAwareIn
 
         foreach ($values as $value) {
             if (! $validator->isValid($value, $context)) {
-                $this->abstractOptions['messages'][] = $validator->getMessages();
+                $this->abstractOptions['message'][] = $validator->getMessages();
 
                 if ($this->isBreakOnFirstFailure()) {
                     return false;
@@ -206,6 +206,6 @@ class Explode extends AbstractValidator implements ValidatorPluginManagerAwareIn
             }
         }
 
-        return count($this->abstractOptions['messages']) == 0;
+        return count($this->abstractOptions['message']) == 0;
     }
 }

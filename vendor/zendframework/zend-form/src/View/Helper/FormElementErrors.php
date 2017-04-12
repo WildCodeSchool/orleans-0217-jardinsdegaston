@@ -161,7 +161,7 @@ class FormElementErrors extends AbstractHelper
     }
 
     /**
-     * Set the string used to separate messages
+     * Set the string used to separate message
      *
      * @param  string $messageSeparatorString
      * @return FormElementErrors
@@ -173,7 +173,7 @@ class FormElementErrors extends AbstractHelper
     }
 
     /**
-     * Get the string used to separate messages
+     * Get the string used to separate message
      *
      * @return string
      */

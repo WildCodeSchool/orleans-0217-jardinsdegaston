@@ -2,13 +2,6 @@
 ../.idea
 
 
-<<<<<<< HEAD
-/projet MVC/vendor/
-connect.php
-=======
 /vendor/
-/src/model/DB.php
-/.gitignore
-/web/admin/test.php
-/src/model/connect.php
->>>>>>> fa4a6df0e40d15ed93aaed8dc196f9c22884c39b
+connect.php
+

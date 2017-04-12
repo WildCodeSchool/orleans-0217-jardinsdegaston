@@ -142,9 +142,9 @@ interface ElementInterface
     public function setMessages($messages);
 
     /**
-     * Get validation error messages, if any
+     * Get validation error message, if any
      *
-     * Returns a list of validation failure messages, if any.
+     * Returns a list of validation failure message, if any.
      *
      * @return array|\Traversable
      */
