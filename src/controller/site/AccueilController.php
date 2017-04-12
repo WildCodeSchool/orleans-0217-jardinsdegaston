@@ -13,6 +13,8 @@ use wcs\model\Presentation;
 use wcs\model\PresentationManager;
 use wcs\model\Prestation;
 use wcs\model\PrestationManager;
+use wcs\model\Realisation;
+use wcs\model\RealisationManager;
 
 /*
  * class pour l'accueil
@@ -31,6 +33,9 @@ class AccueilController extends Controller
         $presentationH3Manager = new PresentationManager($this->bdd, Presentation::class);
         $presentationH3 = $presentationH1Manager->findAll('WHERE id >= 2');
 
+        $realisationManager = new RealisationManager($this->bdd, Realisation::class);
+        $realisation = $realisationManager->findAll('WHERE activation > 0');
+
         $prestationManager = new PrestationManager($this->bdd, Prestation::class);
         $prestation = $prestationManager->findAll();
 
@@ -43,6 +48,7 @@ class AccueilController extends Controller
         return $this->twig->render('site/Accueil.twig', array('presentationH1'=>$presentationH1,
                                                         'presentationH3'=>$presentationH3,
                                                         'prestation'=>$prestation,
+                                                        'realisation'=>$realisation,
                                                         'conseil'=>$conseil,
                                                         'livredor'=>$livredor));
 
