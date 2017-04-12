@@ -10,7 +10,7 @@ if ( isset($_GET['p']) ) {
 // --- routes permettant de choisir le controleur qui sera sollicite
 // --- key = parametre recupere en get ci-dessus (p=...), value = prefixe du nom du controleur
 $routes = [
-    'imgfond' => 'BgImage',
+    'imgfond' => 'ImageFond',
     'realisation' => 'Realisation',
     'prestation' => 'Prestation',
     'conseil' => 'Conseil',
@@ -31,18 +31,9 @@ if ( isset($_POST['method']) ) {
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 // --- initialisation twig ---
-$loader = new Twig_Loader_Filesystem(__DIR__.'/../../src/view/admin/');
-$twig = new Twig_Environment($loader, [
-    'cache' => false, // dev uniquement, sinon : 'cache' => Environnement::TMPDIR,
-    'debug' => true, // pour le dev uniquement (a virer pour la prod)
-]);
-$twig->addExtension(new Twig_Extension_Debug());
-
+require '../inittwig.php';
 // --- initialisation des acces a la base de donnees
-require '../../src/model/connect.php'; // ??? a passer dans environnement ???
-$bdd = new \PDO(DSN, USER, PASS);
-$bdd->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
-$bdd->exec("set names utf8");
+require '../initbdd.php';
 
 // --- si la page demandee existe, on l'affiche
 if ( array_key_exists($page, $routes) ) {

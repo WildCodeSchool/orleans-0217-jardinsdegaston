@@ -191,7 +191,7 @@ class PrestationController extends Controller
                 'tmpimage' => $this->img->getTmpName('P'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('AjoutePrestation.twig', $params);
+            return $this->twig->render('prestation/AjoutePrestation.twig', $params);
         }
     }
 

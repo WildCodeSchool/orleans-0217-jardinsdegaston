@@ -1,5 +1,5 @@
 <?php
-// --- src/controller/admin/BgImageController.php ---
+// --- src/controller/admin/ImageFondController.php ---
 
 namespace wcs\controller\admin;
 use \wcs\controller\Controller;
@@ -9,7 +9,7 @@ use \wcs\controller\Controller;
  * Controlleur permettant la gestion des images de fond
  * @package wcs\controller\admin
  */
-class BgImageController extends Controller
+class ImageFondController extends Controller
 {
 
     /**
@@ -25,7 +25,7 @@ class BgImageController extends Controller
             // --- recuperation de l'image a afficher dans le formulaire (a priori image vide)
             'formimage' => $this->img->getTmpName('B'),
         ];
-        return $this->twig->render('imageFond/imageFond.twig', $params);
+        return $this->twig->render('imageFond/ImageFond.twig', $params);
     }
 
     /**
@@ -45,7 +45,7 @@ class BgImageController extends Controller
             'formimage' => $this->img->getTmpName('B'),
             'erreur' => $erreur,
         ];
-        return $this->twig->render('imageFond/imageFond.twig', $params);
+        return $this->twig->render('imageFond/ImageFond.twig', $params);
     }
 
     /**
@@ -57,7 +57,7 @@ class BgImageController extends Controller
     {
         if ( isset($_POST['annule']) ) {
             // --- on recharge la page initiale (qui reinitialise le formulaire)
-            header('location:index.php.old?p=imgfond');
+            header('location:index.php?p=imgfond');
         }
         $erreur = '';
         $ok = true;
@@ -75,7 +75,7 @@ class BgImageController extends Controller
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('B', $this->getNumSaison($_POST['saison']));
             // --- recharger page index
-            header('location:index.php.old?p=imgfond');
+            header('location:index.php?p=imgfond');
         }
         else {
             // --- recharger la page en affichant l'erreur
@@ -84,7 +84,7 @@ class BgImageController extends Controller
                 'formimage' => $this->img->getTmpName('B'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('imageFond/imageFond.twig', $params);
+            return $this->twig->render('imageFond/ImageFond.twig', $params);
         }
     }
 }
