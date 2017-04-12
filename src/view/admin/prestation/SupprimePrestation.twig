@@ -1,0 +1,53 @@
+{# --- src/view/admin/SupprimePrestation.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Prestations - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Suppression d'une prestation</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Supprimer une prestation ----------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Supprimer une prestation
+        </div>
+        <div class="col-xs-12">
+            <div class="row contenu">
+                <div class="col-xs-12 col-md-4 col-lg-3 col-lg-offset-2 text-center">
+                    <p class="center-block"><img class="img-fluid pimg" src="../img/imgP-{{ prestation.id }}.jpg" alt="Image prestation {{ prestation.titre }}" /></p>
+                </div>
+                <div class="col-xs-12 col-md-8 col-lg-5">
+                    <p class="label-like">Titre de la prestation</p>
+                    <p class="input-like form-control">{{ prestation.titre }}</p>
+                    <p class="label-like">Détails de la prestation</p>
+                    <p class="textarea-like form-control">{{ prestation.contenu }}</p>
+                    <br />
+                    <p>
+                        <form method="post" action="index.php?p=prestation">
+                            <input type="hidden" name="method" value="delpresta">
+                            <input type="hidden" name="id" value="{{ prestation.id }}">
+                            <input type="hidden" name="ordreaff" value="{{ prestation.ordreaff }}">
+                            <input class="btn btn-default" type="submit" name="supprime" value="Confirmer la suppression" />
+                            &nbsp;&nbsp;
+                            <input class="btn btn-default" type="submit" name="annule" value="Ne pas supprimer" />
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}
+
