@@ -2,71 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90b75dc3-e631-4f26-a05e-a8f787f387a1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/arrosoir2_xsmall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/automne.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1_transp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1h.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1p.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2p.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/entretien_exterieurrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/entretien_massifrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ete.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/evacuationrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden1_small.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/glyph_mouse.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/haiersz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/header.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/header_blog.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/herbes_picto_xtraSmall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/imgConseil.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo-gaston.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo-wcs-vn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_blanc_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logonoir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/plant2_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/plante_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/potagerrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/bgimg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgJ-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgRap-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgRav-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/jardinier.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/logo-wcs-vo-alter-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/logo_blanc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/service.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tondeusersz.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/hiver.jpg" afterPath="$PROJECT_DIR$/web/img/hiver.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/printemps.jpg" afterPath="$PROJECT_DIR$/web/img/printemps.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/site/Accueil.twig" afterPath="$PROJECT_DIR$/src/view/site/Accueil.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -127,7 +64,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Accueil.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Accueil.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/site/Accueil.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-6025">
@@ -174,11 +121,11 @@
         <option value="$PROJECT_DIR$/src/model/MessageManager.php" />
         <option value="$PROJECT_DIR$/src/controller/AccueilController.php" />
         <option value="$PROJECT_DIR$/src/view/Accueil.twig" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/src/controller/site/AccueilController.php" />
         <option value="$PROJECT_DIR$/src/model/connect.php" />
         <option value="$PROJECT_DIR$/src/view/site/Accueil.twig" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -414,12 +361,12 @@
       <workItem from="1491841344930" duration="22930000" />
       <workItem from="1491898570927" duration="18437000" />
       <workItem from="1491983340028" duration="1843000" />
-      <workItem from="1491985831836" duration="8986000" />
+      <workItem from="1491985831836" duration="9149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142112000" />
+    <option name="totallyTimeSpent" value="142275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
@@ -710,14 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/bandeau.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -822,6 +761,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6025">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
