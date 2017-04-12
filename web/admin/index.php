@@ -39,7 +39,7 @@ $twig = new Twig_Environment($loader, [
 $twig->addExtension(new Twig_Extension_Debug());
 
 // --- initialisation des acces a la base de donnees
-require '../../config/connect.php'; // ??? a passer dans environnement ???
+require '../../src/model/connect.php'; // ??? a passer dans environnement ???
 $bdd = new \PDO(DSN, USER, PASS);
 $bdd->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
 $bdd->exec("set names utf8");

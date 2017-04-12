@@ -29,7 +29,7 @@ class ConseilController extends Controller
             ['id' => 8, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => '  a '],
         ];
 
-        return $this->twig->render('Conseil.twig', ['post' => $this->post, 'affsaisons' => $affsaisons, 'saisons' => $saisons, 'conseils' => $conseils]);
+        return $this->twig->render('conseil/Conseil.twig', ['post' => $this->post, 'affsaisons' => $affsaisons, 'saisons' => $saisons, 'conseils' => $conseils]);
 
     }
 

@@ -28,7 +28,7 @@ class JournalAdminController extends Controller
             'articles' => $manager->findAllReverse('journal'),
             'tmpinfos' => $tmpinfos,
         ];
-        return $this->twig->render('Journal_admin.twig', $params);
+        return $this->twig->render('journal/Journal_admin.twig', $params);
     }
 
     /**
@@ -70,7 +70,7 @@ class JournalAdminController extends Controller
                 'tmpimage' => $this->img->getTmpName('J'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('Journal_admin.twig', $params);
+            return $this->twig->render('journal/Journal_admin.twig', $params);
         }
     }
 
@@ -91,10 +91,10 @@ class JournalAdminController extends Controller
                 'erreur' => $erreur,
             ];
             if ( isset($_POST['supprime']) ) {
-                return $this->twig->render('SupprimeArticle.twig', $params);
+                return $this->twig->render('journal/SupprimeArticle.twig', $params);
             }
             else {
-                return $this->twig->render('ModifieArticle.twig', $params);
+                return $this->twig->render('journal/ModifieArticle.twig', $params);
             }
         }
         else {
@@ -125,10 +125,10 @@ class JournalAdminController extends Controller
             'erreur' => $erreur,
         ];
         if ( $id == 0 ) {
-            return $this->twig->render('AjouteArticle.twig', $params);
+            return $this->twig->render('journal/AjouteArticle.twig', $params);
         }
         else {
-            return $this->twig->render('ModifieArticle.twig', $params);
+            return $this->twig->render('journal/ModifieArticle.twig', $params);
         }
     }
 
@@ -170,7 +170,7 @@ class JournalAdminController extends Controller
                 'tmpimage' => $this->img->getTmpName('P'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('ModifieArticle.twig', $params);
+            return $this->twig->render('journal/ModifieArticle.twig', $params);
         }
     }
 
@@ -216,7 +216,7 @@ class JournalAdminController extends Controller
                 'tmpimage' => $this->img->getTmpName('P'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('AjouteArticle.twig', $params);
+            return $this->twig->render('journal/AjouteArticle.twig', $params);
         }
     }
 

@@ -6,9 +6,11 @@
  * Time: 19:15
  */
 
-namespace wcs\controller;
+namespace wcs\controller\site;
 
+use wcs\controller\Controller;
 use wcs\model\DbManager;
+use wcs\model\JournalManager;
 use wcs\form\ArticleForm;
 use wcs\model\Journal;
 
@@ -17,9 +19,9 @@ class JournalController extends Controller
 
     public function index()
     {
-        $journal = new Journal();
+        $journal = new JournalManager($this->bdd, Journal::class);
         $article = $journal->findAllReverse('journal');
-        return $this->twig->render('journal.twig', ['article'=>$article]);
+        return $this->twig->render('site/journal.twig', ['article'=>$article]);
     }
 
     public function add()

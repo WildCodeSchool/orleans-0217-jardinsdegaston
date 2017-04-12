@@ -8,7 +8,7 @@
 
 namespace wcs\controller\admin;
 use \wcs\controller\Controller;
-use wcs\Form\RealisationForm;
+use wcs\form\RealisationForm;
 use wcs\model\Realisation;
 use wcs\model\RealisationManager;
 
@@ -26,7 +26,7 @@ class RealisationController extends Controller
         $param = ["content" => $manager->getReal(),
             'form' => $form];
 
-        return $this->twig->render('Realisation.twig', $param);
+        return $this->twig->render('realisation/Realisation.twig', $param);
     }
 
     public function updateReal()

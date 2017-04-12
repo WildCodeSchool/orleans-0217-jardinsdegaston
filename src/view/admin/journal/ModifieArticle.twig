@@ -1,6 +1,6 @@
 {# --- src/view/admin/ModifiePrestation.twig --- #}
 
-{% extends '../layout.twig' %}
+{% extends 'layout.twig' %}
 
 
 {% block headtitle %}
@@ -31,7 +31,7 @@
                 <div class="col-xs-6 col-md-3 col-lg-3 text-center">
                     <p class="center-block"><img class="img-fluid pimg" src="{{ tmpimage }}?{{ random(9999) }}" alt="" /></p>
                     <p>
-                        <form id="loadimg" method="post" action="../../../../web/admin/index.php?p=chezgaston" enctype="multipart/form-data">
+                        <form id="loadimg" method="post" action="index.php?p=chezgaston" enctype="multipart/form-data">
                             <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
                             <input type="hidden" name="method" value="imgupload" />
                             <input type="hidden" name="id" value="{{ article.id }}" />
@@ -45,7 +45,7 @@
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <p class="erreur">{%  if erreur=='' %}&nbsp{% else %}ERREUR : {{ erreur }}{% endif %}</p>
                     <P>
-                        <form method="post" action="../../../../web/admin/index.php?p=chezgaston">
+                        <form method="post" action="admin/index.php?p=chezgaston">
                             <input type="hidden" name="method" value="majarticle" />
                             <input type="hidden" name="id" value="{{ article.id }}" />
                             <label for="titre">Date de parution de l'article</label><br />

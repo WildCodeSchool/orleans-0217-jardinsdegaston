@@ -26,7 +26,7 @@ class LivredorController extends Controller
         $param = ["content" => $manager->getLdor(),
             'form' => $form];
 
-        return $this->twig->render('Livredor.twig', $param);
+        return $this->twig->render('livredor/Livredor.twig', $param);
     }
 
     public function addLdor()
@@ -56,7 +56,7 @@ class LivredorController extends Controller
                 'form' => $form,
                 'value' => $manager->findOne($_POST['id'])];
 
-            return $this->twig->render('Livredor.twig', $param);
+            return $this->twig->render('livredor/Livredor.twig', $param);
         }
     }
 }

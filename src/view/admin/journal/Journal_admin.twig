@@ -1,6 +1,6 @@
 {# --- src/view/admin/Prestation.twig --- #}
 
-{% extends '../layout.twig' %}
+{% extends 'layout.twig' %}
 
 
 {% block headtitle %}
@@ -36,7 +36,7 @@
         </div>
 
         <div class="col-lg-7 form">
-            <form name="ajout-blog" method="POST" action="../../../../web/admin/index.php?p=chezgaston">
+            <form name="ajout-blog" method="POST" action="index.php?p=chezgaston">
 
                 <div class="form-group">
                     <label for="Nom">Titre de l'article</label>
@@ -87,7 +87,7 @@
                         <td class="col-sm-4 col-lg-2">{{ article.titre }}</td>
                         <td class=".hidden-sm-down col-lg-4">{{ article.contenu }}</td>
                         <td class="col-sm-6 col-lg-4">
-                            <form method="post" action="../../web/admin/index.php?p=chezgaston">
+                            <form method="post" action="index.php?p=chezgaston">
                                 <input type="hidden" name="method" value="modif">
                                 <input type="hidden" name="id" value="{{ article.id }}">
                                 <input class="btn btn-default" type="submit" name="valide" value="Modifier l'article" />

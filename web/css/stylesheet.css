@@ -463,7 +463,7 @@ border-radius: 6px;
     margin-top: 4.5%;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
-    padding: 3% 0 3% 1%;
+    padding: 2% 0 2% 1%;
 }
 
 .Conseil-xs {
@@ -489,19 +489,17 @@ border-radius: 6px;
 
 }
 
-.ConseilTitre h2 {
+.ConseilTitre h4 {
     color: white;
-    font-size: 26px;
+    font-size: 30px;
     opacity: 1;
-    font-weight: bold;
-    padding: 10%;
+    padding: 5%;
 }
 
-.ConseilTitre-xs h2 {
+.ConseilTitre-xs h4 {
     color: white;
     font-size: 26px;
     opacity: 1;
-    font-weight: bold;
     padding: 0 2% 2% 2%;
 }
 
@@ -824,7 +822,7 @@ border-radius: 6px;
     }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
 
     .Conseilbackground-xs {
         display: none;

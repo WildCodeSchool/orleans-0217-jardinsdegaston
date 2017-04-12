@@ -14,7 +14,7 @@ if ( isset($_POST['method']) ) {
 // --- on recupere le nom de la page demandee passee en parametre get
 $page = 'accueil'; // si get n'est pas defini
 if ( isset($_GET['p']) ) {
-    $route = $_GET['p'];
+    $page = $_GET['p'];
 }
 
 $routes = ['accueil' => 'Accueil',

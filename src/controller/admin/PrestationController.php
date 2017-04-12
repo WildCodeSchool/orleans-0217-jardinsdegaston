@@ -28,7 +28,7 @@ class PrestationController extends Controller
             'prestations' => $manager->findAll('ORDER BY ordreaff'),
             'tmpinfos' => $tmpinfos,
         ];
-        return $this->twig->render('Prestation.twig', $params);
+        return $this->twig->render('prestation/Prestation.twig', $params);
     }
 
     /**
@@ -46,7 +46,7 @@ class PrestationController extends Controller
             'tmpimage' => $this->img->getTmpName('P'),
             'erreur' => $erreur,
         ];
-        return $this->twig->render('AjoutePrestation.twig', $params);
+        return $this->twig->render('prestation/AjoutePrestation.twig', $params);
     }
 
     /**
@@ -66,10 +66,10 @@ class PrestationController extends Controller
                 'erreur' => $erreur,
             ];
             if ( isset($_POST['supprime']) ) {
-                return $this->twig->render('SupprimePrestation.twig', $params);
+                return $this->twig->render('prestation/SupprimePrestation.twig', $params);
             }
             else {
-                return $this->twig->render('ModifiePrestation.twig', $params);
+                return $this->twig->render('prestation/ModifiePrestation.twig', $params);
             }
         }
         else {
@@ -100,10 +100,10 @@ class PrestationController extends Controller
             'erreur' => $erreur,
         ];
         if ( $id == 0 ) {
-            return $this->twig->render('AjoutePrestation.twig', $params);
+            return $this->twig->render('prestation/AjoutePrestation.twig', $params);
         }
         else {
-            return $this->twig->render('ModifiePrestation.twig', $params);
+            return $this->twig->render('prestation/ModifiePrestation.twig', $params);
         }
     }
 
@@ -145,7 +145,7 @@ class PrestationController extends Controller
                 'tmpimage' => $this->img->getTmpName('P'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('ModifiePrestation.twig', $params);
+            return $this->twig->render('prestation/ModifiePrestation.twig', $params);
         }
     }
 
