@@ -11,7 +11,7 @@ use wcs\controller\Controller;
 
 
 
-class MessageController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
@@ -43,6 +43,6 @@ class MessageController extends Controller
                     'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor']
         ];
 
-        return $this->twig->render('message/Message.twig', ['post' => $this->post, 'test' => $test]);
+        return $this->twig->render('contact/Contact.twig', ['post' => $this->post, 'test' => $test]);
     }
 }

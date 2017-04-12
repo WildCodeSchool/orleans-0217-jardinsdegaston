@@ -14,7 +14,7 @@ use Zend\Form\Element\Text;
 use Zend\Form\Element\Textarea;
 use Zend\Form\Form;
 
-class MessageForm extends Form
+class ContactForm extends Form
 {
     public function __construct($name = null, array $options = [])
     {
@@ -22,7 +22,7 @@ class MessageForm extends Form
 
         $this->add([
             'type'  => Text::class,
-            'name' => 'NomMessage',
+            'name' => 'NomContact',
             'options' => [
                 'label' => 'Nom',
             ],
@@ -30,7 +30,7 @@ class MessageForm extends Form
 
         $this->add([
             'type'  => Text::class,
-            'name' => 'PrenomMessage',
+            'name' => 'PrenomContact',
             'options' => [
                 'label' => 'Prenom',
             ],

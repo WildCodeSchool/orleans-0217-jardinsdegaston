@@ -31,7 +31,7 @@ class AccueilController extends Controller
         $presentationH1 = $presentationH1Manager->findOne(1);
 
         $presentationH3Manager = new PresentationManager($this->bdd, Presentation::class);
-        $presentationH3 = $presentationH1Manager->findAll('WHERE id >= 2');
+        $presentationH3 = $presentationH3Manager->findAll('WHERE id >= 2');
 
         $realisationManager = new RealisationManager($this->bdd, Realisation::class);
         $realisation = $realisationManager->findAll('WHERE activation > 0');
@@ -54,7 +54,7 @@ class AccueilController extends Controller
 
     }
 
-    public function creerMessage()
+    public function envoiContact()
     {
 
     }
