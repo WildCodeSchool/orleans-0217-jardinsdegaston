@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90b75dc3-e631-4f26-a05e-a8f787f387a1" name="Default" comment="" />
+    <list default="true" id="90b75dc3-e631-4f26-a05e-a8f787f387a1" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/arrosoir2_xsmall.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/automne.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1_transp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1h.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1p.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2e.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2p.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/entretien_exterieurrsz.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/entretien_massifrsz.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ete.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/evacuationrsz.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden1_small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/glyph_mouse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/haiersz.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/header.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/header_blog.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/herbes_picto_xtraSmall.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/imgConseil.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo-gaston.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo-wcs-vn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_blanc_test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_original.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logonoir.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/plant2_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/plante_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/potagerrsz.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/bgimg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-ref.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgJ-ref.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-ref.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgRap-ref.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgRav-ref.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/jardinier.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/logo-wcs-vo-alter-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/logo_blanc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/service.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tondeusersz.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/hiver.jpg" afterPath="$PROJECT_DIR$/web/img/hiver.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/printemps.jpg" afterPath="$PROJECT_DIR$/web/img/printemps.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/site/Accueil.twig" afterPath="$PROJECT_DIR$/src/view/site/Accueil.twig" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,104 +127,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5940">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="starter-template.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/starter-template.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Accueil.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Accueil.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/site/Accueil.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4946">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1491996786034" expanded="true" signature="1769:1828" ph="/*...*/" />
-                <marker date="1491996786034" expanded="true" signature="1842:2122" ph="{...}" />
-                <marker date="1491996786034" expanded="true" signature="1885:2010" ph="//..." />
-                <marker date="1491996786034" expanded="true" signature="2077:2118" ph="{...}" />
-                <marker date="1491996786034" expanded="true" signature="2126:2161" ph="/*...*/" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccueilController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/site/AccueilController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#81#111#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-              <folding>
-                <marker date="1491996785962" expanded="true" signature="1356:1381" ph=" @return PDO ..." />
-                <marker date="1491996785962" expanded="true" signature="1417:1456" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="1465:1494" ph=" @param PDO $bdd ..." />
-                <marker date="1491996785962" expanded="true" signature="1534:1573" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="1582:1609" ph=" @return mixed ..." />
-                <marker date="1491996785962" expanded="true" signature="1641:1681" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="1690:1722" ph=" @param mixed $twig ..." />
-                <marker date="1491996785962" expanded="true" signature="1759:1800" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="1809:1836" ph=" @return mixed ..." />
-                <marker date="1491996785962" expanded="true" signature="1867:1906" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="1962:2024" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="2065:2221" ph="{...}" />
-                <marker date="1491996785962" expanded="true" signature="2146:2192" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-theme.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/bootstrap-theme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-6025">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -195,7 +168,6 @@
         <option value="$PROJECT_DIR$/web/admin/index.php" />
         <option value="$PROJECT_DIR$/src/model/PresentationManager.php" />
         <option value="$PROJECT_DIR$/src/controller/Controller.php" />
-        <option value="$PROJECT_DIR$/src/model/connect.php" />
         <option value="$PROJECT_DIR$/src/model/DbManager.php" />
         <option value="$PROJECT_DIR$/web/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/src/model/ConseilManager.php" />
@@ -205,6 +177,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/src/controller/site/AccueilController.php" />
+        <option value="$PROJECT_DIR$/src/model/connect.php" />
+        <option value="$PROJECT_DIR$/src/view/site/Accueil.twig" />
       </list>
     </option>
   </component>
@@ -259,6 +233,64 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,18 +414,18 @@
       <workItem from="1491841344930" duration="22930000" />
       <workItem from="1491898570927" duration="18437000" />
       <workItem from="1491983340028" duration="1843000" />
-      <workItem from="1491985831836" duration="5640000" />
+      <workItem from="1491985831836" duration="8986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138766000" />
+    <option name="totallyTimeSpent" value="142112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21222296" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21222296" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19476159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -444,7 +476,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/connect.php" />
     <entry file="file://$PROJECT_DIR$/src/model/DB.php" />
     <entry file="file://$PROJECT_DIR$/src/view/accueil.twig" />
     <entry file="file://$PROJECT_DIR$/index.php.old">
@@ -571,9 +602,9 @@
           <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="false" />
-            <marker date="1491996785962" expanded="true" signature="212:249" ph="DELETE FROM " />
-            <marker date="1491996785962" expanded="true" signature="661:752" ph="UPDATE prese... " />
-            <marker date="1491996785962" expanded="true" signature="1170:1261" ph="INSERT INTO presentation... " />
+            <marker date="1491998662579" expanded="true" signature="212:249" ph="DELETE FROM " />
+            <marker date="1491998662579" expanded="true" signature="661:752" ph="UPDATE prese... " />
+            <marker date="1491998662579" expanded="true" signature="1170:1261" ph="INSERT INTO presentation... " />
           </folding>
         </state>
       </provider>
@@ -583,9 +614,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491996785962" expanded="true" signature="417:503" ph="INSERT into prestation... " />
-            <marker date="1491996785962" expanded="true" signature="885:967" ph="UPDATE prest... " />
-            <marker date="1491996785962" expanded="true" signature="1474:1531" ph="UPDATE prest... " />
+            <marker date="1491998662579" expanded="true" signature="417:503" ph="INSERT into prestation... " />
+            <marker date="1491998662579" expanded="true" signature="885:967" ph="UPDATE prest... " />
+            <marker date="1491998662579" expanded="true" signature="1474:1531" ph="UPDATE prest... " />
           </folding>
         </state>
       </provider>
@@ -603,9 +634,9 @@
         <state relative-caret-position="960">
           <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
           <folding>
-            <marker date="1491996785962" expanded="true" signature="1305:1319" ph="SELECT * FRO... ${$this-&gt;getTableName()}" />
-            <marker date="1491996785962" expanded="true" signature="2022:2073" ph="SELECT * FRO... ${$this-&gt;getTableName()}" />
-            <marker date="1491996785962" expanded="true" signature="2316:2365" ph="DELETE FROM " />
+            <marker date="1491998662579" expanded="true" signature="1305:1319" ph="SELECT * FRO... ${$this-&gt;getTableName()}" />
+            <marker date="1491998662579" expanded="true" signature="2022:2073" ph="SELECT * FRO... ${$this-&gt;getTableName()}" />
+            <marker date="1491998662579" expanded="true" signature="2316:2365" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -624,6 +655,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Accueil.twig" />
     <entry file="file://$PROJECT_DIR$/src/controller/AccueilController.php" />
     <entry file="file://$PROJECT_DIR$/src/model/LivredorManager.php">
@@ -659,11 +686,11 @@
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="false" />
-            <marker date="1491996785962" expanded="true" signature="295:328" ph="DELETE FROM " />
-            <marker date="1491996785962" expanded="true" signature="740:760" ph="UPDATE livre... " />
-            <marker date="1491996785962" expanded="true" signature="740:808" ph="UPDATE livre... " />
-            <marker date="1491996785962" expanded="true" signature="1186:1254" ph="INSERT INTO livredor... " />
-            <marker date="1491996785962" expanded="true" signature="1214:1254" ph="INSERT INTO livredor... " />
+            <marker date="1491998662579" expanded="true" signature="295:328" ph="DELETE FROM " />
+            <marker date="1491998662579" expanded="true" signature="740:760" ph="UPDATE livre... " />
+            <marker date="1491998662579" expanded="true" signature="740:808" ph="UPDATE livre... " />
+            <marker date="1491998662579" expanded="true" signature="1186:1254" ph="INSERT INTO livredor... " />
+            <marker date="1491998662579" expanded="true" signature="1214:1254" ph="INSERT INTO livredor... " />
           </folding>
         </state>
       </provider>
@@ -672,6 +699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -727,20 +755,53 @@
         <state relative-caret-position="262">
           <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
           <folding>
-            <marker date="1491996785962" expanded="true" signature="1356:1381" ph=" @return PDO ..." />
-            <marker date="1491996785962" expanded="true" signature="1417:1456" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="1465:1494" ph=" @param PDO $bdd ..." />
-            <marker date="1491996785962" expanded="true" signature="1534:1573" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="1582:1609" ph=" @return mixed ..." />
-            <marker date="1491996785962" expanded="true" signature="1641:1681" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="1690:1722" ph=" @param mixed $twig ..." />
-            <marker date="1491996785962" expanded="true" signature="1759:1800" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="1809:1836" ph=" @return mixed ..." />
-            <marker date="1491996785962" expanded="true" signature="1867:1906" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="1962:2024" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="2065:2221" ph="{...}" />
-            <marker date="1491996785962" expanded="true" signature="2146:2192" ph="..." />
+            <marker date="1491998662579" expanded="true" signature="1356:1381" ph=" @return PDO ..." />
+            <marker date="1491998662579" expanded="true" signature="1417:1456" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="1465:1494" ph=" @param PDO $bdd ..." />
+            <marker date="1491998662579" expanded="true" signature="1534:1573" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="1582:1609" ph=" @return mixed ..." />
+            <marker date="1491998662579" expanded="true" signature="1641:1681" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="1690:1722" ph=" @param mixed $twig ..." />
+            <marker date="1491998662579" expanded="true" signature="1759:1800" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="1809:1836" ph=" @return mixed ..." />
+            <marker date="1491998662579" expanded="true" signature="1867:1906" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="1962:2024" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="2065:2221" ph="{...}" />
+            <marker date="1491998662579" expanded="true" signature="2146:2192" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <marker date="1491998662707" expanded="true" signature="1769:1828" ph="/*...*/" />
+            <marker date="1491998662707" expanded="true" signature="1842:2122" ph="{...}" />
+            <marker date="1491998662707" expanded="true" signature="1885:2010" ph="//..." />
+            <marker date="1491998662707" expanded="true" signature="2077:2118" ph="{...}" />
+            <marker date="1491998662707" expanded="true" signature="2126:2161" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/site/AccueilController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#81#111#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,36 +813,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1491996786034" expanded="true" signature="1769:1828" ph="/*...*/" />
-            <marker date="1491996786034" expanded="true" signature="1842:2122" ph="{...}" />
-            <marker date="1491996786034" expanded="true" signature="1885:2010" ph="//..." />
-            <marker date="1491996786034" expanded="true" signature="2077:2118" ph="{...}" />
-            <marker date="1491996786034" expanded="true" signature="2126:2161" ph="/*...*/" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/web/img/ref/jardinier.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/site/Accueil.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4946">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-6025">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/site/AccueilController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#81#111#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
