@@ -38,35 +38,38 @@ class JournalAdminController extends Controller
      */
     public function ajoutArticle()
     {
+        if ( isset($_POST['annule']) ) {
+            header('location:index.php?p=chezgaston');
+        }
         $erreur = '';
+        $article = new Journal;
+        $date = new \Datetime($_POST['date']);
+        $article->hydrate(0, $_POST['titre'], $_POST['contenu'], $date);
         $ok = true;
-
         if ( !$this->img->tmpImgExists('J') ) {
             // --- controle si image chargee
             $erreur = 'Charger d\'abord une image.';
             $ok = false;
-
-        } elseif ( !isset($_POST['titre'])) {
+        }
+        elseif ( !isset($_POST['titre']) || trim($_POST['titre']) == '') {
             // --- controler si titre saisi
             $erreur = 'La saisie d\'un titre est obligatoire.';
             $ok = false;
         }
 
-        if ( $ok ) {
-
+        if ( $ok === true ) {
             $manager = new JournalManager($this->bdd, Journal::class);
-            $article = new Journal;
-            $id = $manager->writeArticle($article);
-
+            // --- enregistrer la nouvelle presta et recuperer son id
+            $id = $manager->addOrUpdateArticle($article);
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('J', $id);
-
             // --- recharger page index
             header('location:index.php?p=chezgaston');
-
-        } else {
+        }
+        else {
+            // --- recharger la page en affichant l'erreur
             $params = [
-                'prestation' => $prestation,
+                'articles' => $article,
                 'tmpimage' => $this->img->getTmpName('J'),
                 'erreur' => $erreur,
             ];

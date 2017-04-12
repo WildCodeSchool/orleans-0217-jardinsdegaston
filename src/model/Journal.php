@@ -96,7 +96,7 @@ class Journal
     /**
      * @param mixed $date
      */
-    public function setDate($date)
+    public function setDate(\DateTime $date)
     {
         $this->date = $date;
     }
