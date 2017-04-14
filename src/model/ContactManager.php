@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class MessageManager extends DbManager
+class ContactManager extends DbManager
 {
 
 }
