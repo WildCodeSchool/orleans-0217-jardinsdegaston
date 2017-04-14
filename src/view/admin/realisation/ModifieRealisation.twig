@@ -1,0 +1,101 @@
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Réalisations - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des plus belles réalisations</h1>
+{% endblock %}
+
+
+{% block content %}
+    {% do form.prepare() %}
+    {{ dump () }}
+
+    <div class="row">
+
+        {# -- Bloc 2 images avec titre et contenu ----------------------- -- #}
+
+            {# --- barre de titre --- #}
+            <div class="col-xs-12 bandeau text-center">
+                Réalisation {{ realisation.id }}
+            </div>
+            {# --- bloc infos --- #}
+            <div class="col-xs-12">
+                <div class="row contenu">
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Après</h3>
+                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg">
+                        <p>Image actuelle</p>
+                        <img class="gimg" src="{{ tmpRap }}?{{ random(9999) }}">
+                        <form id="loadimg" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+                            <input type="hidden" name="method" value="imgupload" />
+                            <input type="hidden" name="id" value="{{ realisation.id }}">
+                            <input type="hidden" name="titre" id="titreimg" value="" />
+                            <input type="hidden" name="contenu" id="detailimg" value="" />
+                            <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
+                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Avant</h3>
+                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg">
+                        <p>Image actuelle</p>
+                        <img class="gimg" src="{{ tmpRav }}?{{ random(9999) }}">
+                        <form id="loadimg" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+                            <input type="hidden" name="method" value="imgupload" />
+                            <input type="hidden" name="id" value="{{ realisation.id }}">
+                            <input type="hidden" name="titre" id="titreimg" value="" />
+                            <input type="hidden" name="contenu" id="detailimg" value="" />
+                            <input type="hidden" name="activation" value="{{ realisation.activation }}" />
+                            <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
+                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                        </form>
+                    </div>
+                    <div class="col-sm-12 col-md-4 ">
+                        <div class="hidden-xs hidden-sm"><br /></div>
+                        <form method="post" action="index.php?p=realisation">
+                            <input type="hidden" name="method" value="majReal" />
+                            <input type="checkbox" id="activation" name="activation" {% if realisation.activation == 1 %}checked{% endif %}><label for="actif">
+                                Activer sur le Site
+                            </label><br />
+                            <label for="titre">Titre de la rubrique </label><br />
+                            <input class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
+                            <label for="detail">Commentaires</label><br />
+                            <textarea class="form-control" row="3" name="contenu" id="contenu">{{ realisation.contenu }}</textarea><br />
+                            <input type="hidden" name="method" value="updateReal" />
+                            <input type="hidden" name="id" value="{{ realisation.id }}" />
+                            <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
+                            <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </div> {# -- fermeture de la row principale -- #}
+
+    <script>
+        function valide() {
+            document.getElementById('titreimg').value = document.getElementById('titre').value;
+            document.getElementById('detailimg').value = document.getElementById('detail').value;
+            document.getElementById('loadimg').submit();
+        }
+    </script>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
