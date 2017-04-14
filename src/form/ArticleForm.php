@@ -23,7 +23,7 @@ class ArticleForm extends Form
             'type'  => Text::class,
             'name' => 'titre',
             'options' => [
-                'label' => 'Le nom de l\'article',
+                'label' => 'Titre de l\'article',
             ],
         ]);
 
@@ -31,7 +31,7 @@ class ArticleForm extends Form
             'type'  => DateTime::class,
             'name' => 'date',
             'options' => [
-                'label' => 'Date de parution',
+                'label' => 'Date de publication',
             ],
         ]);
 
@@ -39,16 +39,13 @@ class ArticleForm extends Form
             'type'  => Text::class,
             'name' => 'contenu',
             'options' => [
-                'label' => 'Le contenu de l\'article',
+                'label' => 'Contenu de l\'article',
             ],
         ]);
 
         $this->add([
-            'type'  => Text::class,
-            'name' => 'image',
-            'options' => [
-                'label' => 'Choisir une image',
-            ],
+            'type' => Csrf::class,
+            'name' => 'csrf',
         ]);
     }
 }

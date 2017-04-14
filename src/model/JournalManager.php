@@ -27,7 +27,7 @@ class JournalManager extends DbManager
             $pre = $this->getbdd()->prepare($query);
             $pre->bindValue(':titre', $article->getTitre(), \PDO::PARAM_STR);
             $pre->bindValue(':contenu', $article->getContenu(), \PDO::PARAM_STR);
-            $pre->bindValue(':date', $article->getDate()->format('Y-m-d'));
+            $pre->bindValue(':date', $article->getDate()->format('Y-m-d H:m'));
         }
         else {
             // --- il s'agit d'une mise a jour

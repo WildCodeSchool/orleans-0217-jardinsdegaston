@@ -133,7 +133,7 @@ section{
     }
 
 .logo-lg {
-    padding: 20px 10px 0 10px;
+    padding: 20px 10px 10px 10px;
 }
 
 /*--- main --- */
@@ -144,6 +144,22 @@ body {
     background-image: url(../img/bgimg1_transp.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.separe {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+    border: 0 none;
+    color: rgb(255, 255, 255);
+    height: 1px;
+    margin-bottom: 10px;
 }
 
 /*--- Timeline   ---*/
@@ -215,7 +231,7 @@ img { border: 0; max-width: 100%; }
     float: left;
     background: #fff;
     border: 1px solid #d4d4d4;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     position: relative;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
