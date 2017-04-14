@@ -12,57 +12,107 @@ namespace wcs\model;
 class Realisation
 {
 
-    /* --- Proprietes ----------------------------- */
+    /* --- Proprietes ------------------------------------------- */
 
     /**
      * @var int
      */
-    private $idImgAv;
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $titre;
+
+    /**
+     * @var string
+     */
+    private $contenu;
 
     /**
      * @var int
      */
-    private $idImgAp;
+    private $activation;
 
-
-    /* --- Geters et setters ---------------------- */
+    /* --- Geters et setters ------------------------------------- */
 
     /**
      * @return int
      */
-    public function getIdImgAv()
+    public function getId() : int
     {
-        return $this->idImgAv;
+        return $this->id;
     }
 
     /**
-     * @param int $idImgAv
+     * @param int $id
      * @return Realisation
      */
-    public function setIdImgAv(int $idImgAv) : Realisation
+    public function setId(int $id) : Realisation
     {
-        $this->idImgAv = $idImgAv;
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param string $titre
+     */
+    public function setTitre($titre) : Realisation
+    {
+        $this->titre = $titre;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * @param string $contenu
+     */
+    public function setContenu($contenu) : Realisation
+    {
+        $this->contenu = $contenu;
         return $this;
     }
 
     /**
      * @return int
      */
-    public function getIdImgAp() : int
+    public function getActivation() : int
     {
-        return $this->idImg_ap;
+        return $this->activation;
     }
 
     /**
-     * @param int $idImgAp
+     * @param int $activation
      * @return Realisation
      */
-    public function setIdImgAp(int $idImgAp) : Realisation
+    public function setActivation(int $activation) : Realisation
     {
-        $this->idImgAp = $idImgAp;
+        $this->activation = $activation;
         return $this;
     }
 
+    public function hydrate(int $id, string $titre, string $contenu='', int $activation)
+    {
+        $this->setId($id);
+        $this->setTitre($titre);
+        $this->setContenu($contenu);
+        $this->setActivation($activation);
+    }
 
 
 }
