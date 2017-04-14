@@ -184,7 +184,7 @@
     {% for presta in prestation %}
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
         <div class="thumbnail blocPresta">
-            <img src="img/imgP-{{ loop.index }}.jpg" />
+            <img src="img/imgP-{{ presta.id }}.jpg" />
             <div class="etiquette">
                 <h3>{{ presta.titre }}</h3>
                 <p>{{ presta.contenu }}</p>

@@ -37,7 +37,7 @@ class AccueilController extends Controller
         $realisation = $realisationManager->findAll('WHERE activation > 0');
 
         $prestationManager = new PrestationManager($this->bdd, Prestation::class);
-        $prestation = $prestationManager->findAll();
+        $prestation = $prestationManager->findAll('ORDER by ordreaff');
 
         $conseilManager = new ConseilManager($this->bdd, Conseil::class);
         $conseil = $conseilManager->findOne(1);
