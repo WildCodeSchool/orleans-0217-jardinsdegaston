@@ -25,7 +25,7 @@ class ImageFondController extends Controller
             // --- recuperation de l'image a afficher dans le formulaire (a priori image vide)
             'formimage' => $this->img->getTmpName('B'),
         ];
-        return $this->twig->render('imageFond/imageFond.twig', $params);
+        return $this->twig->render('imageFond/ImageFond.twig', $params);
     }
 
     /**
@@ -45,7 +45,7 @@ class ImageFondController extends Controller
             'formimage' => $this->img->getTmpName('B'),
             'erreur' => $erreur,
         ];
-        return $this->twig->render('imageFond/imageFond.twig', $params);
+        return $this->twig->render('imageFond/ImageFond.twig', $params);
     }
 
     /**
@@ -84,7 +84,7 @@ class ImageFondController extends Controller
                 'formimage' => $this->img->getTmpName('B'),
                 'erreur' => $erreur,
             ];
-            return $this->twig->render('imageFond/imageFond.twig', $params);
+            return $this->twig->render('imageFond/ImageFond.twig', $params);
         }
     }
 }

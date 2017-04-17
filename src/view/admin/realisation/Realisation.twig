@@ -12,8 +12,7 @@
 
 
 {% block content %}
-    {% do form.prepare() %}
-    {#{{ dump () }}#}
+
 
     <div class="row">
 
@@ -28,40 +27,30 @@
                 <div class="row contenu">
                     <div class="col-xs-12 col-md-4 text-center">
                         <h3>Après</h3>
-                        <img class="gimg" src="../img/imgR-{{ realisation.id_img_ap }}.jpg">
-                        <form method="post" action="majimg.php" enctype="multipart/form-data">
-                            <input type="hidden" name="rubrique" value="R" />
-                            <input type="hidden" name="id" value="{{ realisation.id }}" />
-                            <input type="hidden" name="id_img_ap" value="{{ realisation.id_img_ap }}" />
-                            <input class="cache" type="file" name="fichier" id="fichier" />
-                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
-                        </form>
+                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg">
                     </div>
                     <div class="col-xs-12 col-md-4 text-center">
                         <h3>Avant</h3>
-                        <img class="gimg" src="../img/imgR-{{ realisation.id_img_av }}.jpg">
-                        <form method="post" action="majimg.php" enctype="multipart/form-data">
-                            <input type="hidden" name="rubrique" value="R" />
-                            <input type="hidden" name="id" value="{{ realisation.id }}" />
-                            <input type="hidden" name="id_img_av" value="{{ realisation.id_img_av }}" />
-                            <input class="cache" type="file" name="fichier" id="fichier" />
-                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
-                        </form>
+                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg">
                     </div>
                     <div class="col-sm-12 col-md-4 ">
                         <div class="hidden-xs hidden-sm"><br /></div>
+                        {% if realisation.activation == 1 %}<h4><em>La réalisation est visible sur le site</em></h4>{% endif %}
+                        {% if realisation.activation == 0 %}<h4><em>La réalisation n'est pas visible sur le site</em></h4>{% endif %}
+                        <p class="label-like">Titre de la rubrique</p>
+                        <p class="input-like form-control">{{ realisation.titre }}</p>
+                        <p class="label-like">Commentaires</p>
+                        <p class="textarea-like form-control">{{ realisation.contenu | nl2br }}</p>
+                        <p>
                         <form method="post" action="index.php?p=realisation">
-                            <input type="checkbox" id="activation" name="activation" {% if realisation.activation == 1 %}checked{% endif %}><label for="actif">
-                                Activer sur le Site
-                            </label><br />
-                            <label for="titre">Titre de la rubrique </label><br />
-                            <input class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
-                            <label for="detail">Commentaires</label><br />
-                            <textarea class="form-control" row="3" name="contenu" id="contenu">{{ realisation.contenu }}</textarea><br />
-                            <input type="hidden" name="method" value="updateReal" />
-                            <input type="hidden" name="id" value="{{ realisation.id }}" />
-                            <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
+                            <input type="hidden" name="method" value="modif">
+                            <input type="hidden" name="id" value="{{ realisation.id }}">
+                            <input class="btn btn-default" type="submit" name="valide" value="Modifier la prestation" />
+                            &nbsp;&nbsp;
+                            <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
                         </form>
+                        </p>
+
                     </div>
                 </div>
             </div>

@@ -191,13 +191,16 @@ h4#accroche{
 
 .value1 {
     position: absolute;
-    bottom: -250px;
+    bottom: -280px;
     left: 6%;
     width: 45%;
+    height: 280px;
     background-color:  #ffffff;
     box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
-    padding: 10px 20px 15px 20px;
+    padding-top: 2%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
@@ -205,14 +208,16 @@ h4#accroche{
 
 .value2 {
     position: absolute;
-    bottom: -290px;
+    bottom: -320px;
     right: 5%;
     width: 45%;
+    height: 280px;
     background-color: #ffffff;
     box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
-    padding: 10px 20px 15px 20px;
-
+    padding-top: 2%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*------  Section Best Realisations  ------*/
@@ -681,33 +686,33 @@ border-radius: 6px;
 
 }
 
+@media screen and (max-width: 1400px) {
+
+    .presentation {
+        height: 760px;
+    }
+
+    .value1 {
+        bottom: -230px;
+        left: 4%;
+        width: 700px;
+        height: 230px;
+    }
+
+    .value2 {
+        bottom: -440px;
+        right: 5%;
+        width: 700px;
+        height: 230px;
+    }
+
+}
+
 @media screen and (max-width: 1380px) {
     div#comparison1, div#comparison2, div#comparison3 {
         max-width: 500px;
         max-height: 339px;
     }
-}
-
-@media screen and (max-width: 1340px) {
-
-    .presentation {
-        height: 630px;
-    }
-
-    .value1 {
-        bottom: -180px;
-        left: 4%;
-        width: 80%;
-        padding: 0 20px 0 20px;
-    }
-
-    .value2 {
-        bottom: -315px;
-        right: 5%;
-        width: 80%;
-        padding: 0 20px 0 20px;
-    }
-
 }
 
 @media screen and (max-width: 1300px) {
@@ -717,19 +722,6 @@ border-radius: 6px;
     }
 
 }
-
-@media screen and (max-width: 1280px) and (min-width: 1199px) {
-    .presentation {
-        height: 680px;
-    }
-}
-
-@media screen and (max-width: 1199px) and (min-width: 852px) {
-    .presentation {
-        height: 600px;
-    }
-}
-
 
 @media screen and (max-width: 1200px) {
 
@@ -749,18 +741,6 @@ border-radius: 6px;
 
     .blocPresta {
         margin-bottom: 80px;
-    }
-
-    .value1 {
-        bottom: -170px;
-        left: 4%;
-        width: 80%;
-    }
-
-    .value2 {
-        bottom: -305px;
-        right: 5%;
-        width: 80%;
     }
 
     .ImgForm {
@@ -804,21 +784,25 @@ border-radius: 6px;
     }
 }
 
-@media screen and (max-width: 852px) and (min-width: 760px) {
+
+@media screen and (max-width: 800px) {
+
     .presentation {
-        height: 720px;
+        height: 890px;
     }
 
     .value1 {
-        bottom: -180px;
+        bottom: -300px;
         left: 4%;
-        width: 80%;
+        width: 500px;
+        height: 280px;
     }
 
     .value2 {
-        bottom: -330px;
+        bottom: -550px;
         right: 5%;
-        width: 80%;
+        width: 500px;
+        height: 280px;
     }
 }
 
@@ -876,20 +860,23 @@ border-radius: 6px;
     }
 
     .presentation {
-        height: 650px;
+        height: 810px;
     }
 
     .value1 {
-        bottom: -190px;
+        bottom: -280px;
         left: 4%;
-        width: 80%;
+        width: 500px;
+        height: 250px;
     }
 
     .value2 {
-        bottom: -350px;
+        bottom: -510px;
         right: 5%;
-        width: 80%;
+        width: 500px;
+        height: 250px;
     }
+
 
 }
 
@@ -907,31 +894,56 @@ border-radius: 6px;
         margin-top: 15%;
     }
 
-}
-
-@media screen and (max-width: 455px) {
     .presentation {
-        height: 850px;
+        height: 840px;
     }
 
     .value1 {
-        bottom: -220px;
+        bottom: -290px;
         left: 4%;
-        width: 80%;
+        width: 400px;
+        height: 280px;
     }
 
     .value2 {
-        bottom: -440px;
+        bottom: -550px;
         right: 5%;
-        width: 80%;
+        width: 400px;
+        height: 280px;
     }
 
-    .BlogThumb {
-        margin-top: 40%;
+}
+
+@media screen and (max-width: 500px) {
+
+    .presentation {
+        height: 1000px;
+    }
+
+    .value1 {
+        bottom: -340px;
+        left: 4%;
+        width: 300px;
+        height: 330px;
+    }
+
+    .value2 {
+        bottom: -650px;
+        right: 5%;
+        width: 300px;
+        height: 330px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .presentation {
+        height: 1100px;
     }
 }
 
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 360px) {
 
     h2 {
         font-size: 26px;
