@@ -53,15 +53,15 @@
 
         <ul class="timeline">
 
+            {% set dateref = date('+1month')|date('Y m') %}
+
             {% for article in article %}
 
-                {% if article.date|date('M') > article[i-1].date|date('M') %}
+                {% if dateref > article.date|date('Y m') %}
+
+                {% set dateref = article.date|date('Y m') %}
 
                 <li><div class="tldate">{{ article.date|date('F Y') }}</div></li>
-
-                {% elseif article.date|date('M') == article[i-1].date|date('M') %}
-
-                <li><div> </div></li>
 
                 {% endif %}
 
