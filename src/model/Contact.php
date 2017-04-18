@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class Message extends Livredor
+class Contact extends Livredor
 {
 
     /* --- Proprietes --------------------------------- */
@@ -46,9 +46,9 @@ class Message extends Livredor
 
     /**
      * @param string $prenom
-     * @return Message
+     * @return Contact
      */
-    public function setPrenom(string $prenom) : Message
+    public function setPrenom(string $prenom) : Contact
     {
         $this->prenom = $prenom;
         return $this;
@@ -64,9 +64,9 @@ class Message extends Livredor
 
     /**
      * @param $email
-     * @return Message
+     * @return Contact
      */
-    public function setEmail($email) : Message
+    public function setEmail($email) : Contact
     {
         $this->email = $email;
         return $this;
@@ -84,7 +84,7 @@ class Message extends Livredor
      * @param $date
      * @return Message
      */
-    public function setDate($date) : Message
+    public function setDate($date) : Contact
     {
         $this->date = $date;
         return $this;
@@ -102,7 +102,7 @@ class Message extends Livredor
      * @param $statut
      * @return Message
      */
-    public function setStatut($statut) : Message
+    public function setStatut($statut) : Contact
     {
         $this->statut = $statut;
         return $this;
