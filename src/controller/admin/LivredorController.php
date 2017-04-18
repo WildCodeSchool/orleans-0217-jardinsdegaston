@@ -56,7 +56,7 @@ class LivredorController extends Controller
                 'form' => $form,
                 'value' => $manager->findOne($_POST['id'])];
 
-            return $this->twig->render('livredor/Livredor.twig', $param);
+            return $this->twig->render('livredor/ModifieLivredor.twig', $param);
         }
     }
 }

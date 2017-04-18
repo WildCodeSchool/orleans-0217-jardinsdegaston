@@ -121,8 +121,12 @@ class Image
     public function recupImg($codetype)
     {
         $this->resetTmp($codetype);
-        if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
-            $this->reset($codetype);
+        $fileName='fichier';
+        if (strlen($codetype)>1){
+            $fileName.=substr($codetype,1);
+        }
+        if ( false === move_uploaded_file($_FILES[$fileName]['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+            $this->resetTmp($codetype);
 
             //voir aussi $_FILES['fichier']['error'] > 0 (il y a eu une erreur)
             //           $_FILES['fichier']['size'] > maxsize (fichier trop gros)
@@ -150,6 +154,8 @@ class Image
             switch ( $codetype ) {
                 case 'B' :
                 case 'P' :
+                case 'Rap':
+                case 'Rav':
                     $urldest = self::IMGDIR.'img'.$codetype.'-'.$identif.'.jpg';
                     if ( file_exists($urldest) ) {
                         // --- on supprime l'ancienne image

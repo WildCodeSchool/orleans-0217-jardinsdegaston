@@ -13,7 +13,7 @@
 
 {% block content %}
     {% do form.prepare() %}
-    {{ dump () }}
+    {#{{ dump () }}#}
 
     <div class="row">
 
@@ -28,33 +28,36 @@
                 <div class="row contenu">
                     <div class="col-xs-12 col-md-4 text-center">
                         <h3>Après</h3>
-                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg">
+                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg?{{ random(9999) }}">
                         <p>Image actuelle</p>
                         <img class="gimg" src="{{ tmpRap }}?{{ random(9999) }}">
-                        <form id="loadimg" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                        <form id="loadimgap" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
                             <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
                             <input type="hidden" name="method" value="imgupload" />
                             <input type="hidden" name="id" value="{{ realisation.id }}">
-                            <input type="hidden" name="titre" id="titreimg" value="" />
-                            <input type="hidden" name="contenu" id="detailimg" value="" />
-                            <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
-                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                            <input type="hidden" name="titre" id="titreimgap" value="" />
+                            <input type="hidden" name="contenu" id="contenuimgap" value="" />
+                            <input type="hidden" name="activation" id="activationimgap" value="" />
+                            <input type="hidden" name="typeImg" value="Rap" />
+                            <input class="cache" type="file" accept=".jpg" name="fichierap" id="fichierap" onchange="valide('ap');"/>
+                            <label for="fichierap" class="btn btn-default">Nouvelle image</label><br />
                         </form>
                     </div>
                     <div class="col-xs-12 col-md-4 text-center">
                         <h3>Avant</h3>
-                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg">
+                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg?{{ random(9999) }}">
                         <p>Image actuelle</p>
                         <img class="gimg" src="{{ tmpRav }}?{{ random(9999) }}">
-                        <form id="loadimg" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                        <form id="loadimgav" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
                             <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
                             <input type="hidden" name="method" value="imgupload" />
                             <input type="hidden" name="id" value="{{ realisation.id }}">
-                            <input type="hidden" name="titre" id="titreimg" value="" />
-                            <input type="hidden" name="contenu" id="detailimg" value="" />
-                            <input type="hidden" name="activation" value="{{ realisation.activation }}" />
-                            <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
-                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                            <input type="hidden" name="titre" id="titreimgav" value="" />
+                            <input type="hidden" name="contenu" id="contenuimgav" value="" />
+                            <input type="hidden" name="activation" id="activationimgav" value="" />
+                            <input type="hidden" name="typeImg" value="Rav" />
+                            <input class="cache" type="file" accept=".jpg" name="fichierav" id="fichierav" onchange="valide('av');"/>
+                            <label for="fichierav" class="btn btn-default">Nouvelle image</label><br />
                         </form>
                     </div>
                     <div class="col-sm-12 col-md-4 ">
@@ -66,9 +69,9 @@
                             </label><br />
                             <label for="titre">Titre de la rubrique </label><br />
                             <input class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
-                            <label for="detail">Commentaires</label><br />
+                            <label for="contenu">Commentaires</label><br />
                             <textarea class="form-control" row="3" name="contenu" id="contenu">{{ realisation.contenu }}</textarea><br />
-                            <input type="hidden" name="method" value="updateReal" />
+                            {#<input type="hidden" name="method" value="updateReal" />#}
                             <input type="hidden" name="id" value="{{ realisation.id }}" />
                             <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
                             <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
@@ -82,10 +85,11 @@
     </div> {# -- fermeture de la row principale -- #}
 
     <script>
-        function valide() {
-            document.getElementById('titreimg').value = document.getElementById('titre').value;
-            document.getElementById('detailimg').value = document.getElementById('detail').value;
-            document.getElementById('loadimg').submit();
+        function valide(cas) {
+            document.getElementById('titreimg'+cas).value = document.getElementById('titre').value;
+            document.getElementById('contenuimg'+cas).value = document.getElementById('contenu').value;
+            document.getElementById('activationimg'+cas).value = document.getElementById('activation').value;
+            document.getElementById('loadimg'+cas).submit();
         }
     </script>
 

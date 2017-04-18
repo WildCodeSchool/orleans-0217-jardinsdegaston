@@ -33,7 +33,7 @@
                     <textarea required ="required" class="form-control" id="{{ form.get('TexteLDor').name }}" name="{{ form.get('TexteLDor').name }}">{{ value.contenu }}</textarea>
                 </div>
 
-                <input class="btn btn-success" type="submit" name="addLdor" value="Envoyer">
+                <input class="btn btn-default" type="submit" name="addLdor" value="Envoyer">
                 <input type="hidden" name="method" value="addLdor">
                 <input type="hidden" name="id" value="{{ value.id }}">
                 <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
@@ -48,28 +48,57 @@
         </div>
     </div>
 
-    <div class="row ThumbLdor">
-        <div class="col-lg-10 col-lg-offset-2">
 
-            {% for Livredor in content %}
-                    <div class="col-lg-4 thumbnail text-center">
-                    <h3>{{ Livredor.contenu }}</h3>
-                    <p>{{ Livredor.auteur }}</p>
-                        <form action="index.php?p=livredor" method="post">
-                        <input type="hidden" name="id" value="{{ Livredor.id }}">
-                        <input type="hidden" name="method" value="updateLdor">
-                        <input class="btn btn-warning" type="submit" name="updateLdor" value="Modifier">
-                        </form>
-                        <form action="index.php?p=livredor" method="post">
-                            <input type="hidden" name="id" value="{{ Livredor.id }}">
-                            <input type="hidden" name="method" value="deleteLdor">
-                            <input class="btn btn-danger" type="submit" name="deleteLdor" value="Supprimer">
-                        </form>
-                    </div>
-            {% endfor %}
-        </div>
-
+    {% for Livredor in content %}
+    <div class="col-md-8 col-md-offset-2 bandeau text-center">
+        Commentaire Livre d'Or {{ loop.index }}
     </div>
+    <div class="col-md-12 col-md-offset-4">
+        <div class="row contenu">
+
+                <div class="col-xs-12 col-md-8 col-lg-5">
+                    <p class="label-like">Nom</p>
+                    <p class="input-like form-control">{{ Livredor.auteur }}</p>
+                    <p class="label-like">Texte</p>
+                    <p class="textarea-like form-control">{{ Livredor.contenu | nl2br }}</p>
+
+                    <form method="post" action="index.php?p=livredor">
+                        <input type="hidden" name="method" value="updateLdor">
+                        <input type="hidden" name="id" value="{{ Livredor.id }}">
+                        <input class="btn btn-default" type="submit" name="updateLdor" value="Modifier">
+                    </form>
+                    <form method="post" action="index.php?p=livredor">
+                        <input type="hidden" name="method" value="deleteLdor">
+                        <input type="hidden" name="id" value="{{ Livredor.id }}">
+                        <input class="btn btn-default" type="submit" name="deleteLdor" value="Supprimer">
+                    </form>
+                </div>
+
+        </div>
+    </div>
+    {% endfor %}
+    {#<div class="row ThumbLdor">#}
+        {#<div class="col-lg-10 col-lg-offset-2">#}
+
+            {#{% for Livredor in content %}#}
+                    {#<div class="col-lg-4 thumbnail text-center">#}
+                    {#<h3>{{ Livredor.contenu }}</h3>#}
+                    {#<p>{{ Livredor.auteur }}</p>#}
+                        {#<form action="index.php?p=livredor" method="post">#}
+                        {#<input type="hidden" name="id" value="{{ Livredor.id }}">#}
+                        {#<input type="hidden" name="method" value="updateLdor">#}
+                        {#<input class="btn btn-warning" type="submit" name="updateLdor" value="Modifier">#}
+                        {#</form>#}
+                        {#<form action="index.php?p=livredor" method="post">#}
+                            {#<input type="hidden" name="id" value="{{ Livredor.id }}">#}
+                            {#<input type="hidden" name="method" value="deleteLdor">#}
+                            {#<input class="btn btn-danger" type="submit" name="deleteLdor" value="Supprimer">#}
+                        {#</form>#}
+                    {#</div>#}
+            {#{% endfor %}#}
+        {#</div>#}
+
+    {#</div>#}
 
 
 {% endblock %}

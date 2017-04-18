@@ -24,7 +24,11 @@ class RealisationController extends Controller
         $this->img->resetTmp('Rap');
         $manager = new RealisationManager($this->bdd, Realisation::class);
         $form = new RealisationForm();
-        $tmpinfos = ['id' => 0, 'titre' => '', 'contenu' => '', 'tmpRav' => $this->img->getTmpName('Rav'), 'tmpRap' => $this->img->getTmpName('Rap'),];
+        $tmpinfos = ['id' => 0,
+                     'titre' => '',
+                     'contenu' => '',
+                     'tmpRav' => $this->img->getTmpName('Rav'),
+                     'tmpRap' => $this->img->getTmpName('Rap'),];
 
         $param = ["content" => $manager->getReal(),
             'form' => $form,
@@ -34,13 +38,13 @@ class RealisationController extends Controller
         return $this->twig->render('realisation/Realisation.twig', $param);
     }
 
-    public function updateReal()
-    {
-        $manager = new RealisationManager($this->bdd, Realisation::class);
-        $manager->update();
-        return $this->index();
-
-    }
+//    public function updateReal()
+//    {
+//        $manager = new RealisationManager($this->bdd, Realisation::class);
+//        $manager->update();
+//        return $this->index();
+//
+//    }
 
     public function modif()
     {
@@ -63,19 +67,27 @@ class RealisationController extends Controller
 
     public function imgupload()
     {
+
         $erreur = '';
-        if ( false === $this->img->recupImg('Rav') ) {
-            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
-            $this->img->resetTmp('Rav');
+        if (isset($_POST['typeImg']))
+        {
+            if ( false === $this->img->recupImg($_POST['typeImg']) ) {
+                $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
+                $this->img->resetTmp($_POST['typeImg']);
+            }
         }
-        if ( false === $this->img->recupImg('Rap') ) {
-            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
-            $this->img->resetTmp('Rap');
-        }
+//        if ( false === $this->img->recupImg('Rav') ) {
+//            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
+//            $this->img->resetTmp('Rav');
+//        }
+//        if ( false === $this->img->recupImg('Rap') ) {
+//            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
+//            $this->img->resetTmp('Rap');
+//        }
         // --- recuperation des infos $_POST
         $id = $_POST['id'];
         $realisation = new Realisation();
-        $realisation->hydrate($id, $_POST['titre'], $_POST['contenu'], $_POST['activation']);
+        $realisation->hydrate($id, $_POST['titre'], $_POST['contenu'], intval($_POST['activation']));
         $params = [
             'realisation' => $realisation,
             'tmpRav' => $this->img->getTmpName('Rav'),
@@ -94,7 +106,7 @@ class RealisationController extends Controller
         }
         $erreur = '';
         $realisation = new Realisation();
-        $realisation->hydrate($_POST['id'], $_POST['titre'], $_POST['contenu'], $_POST['activation']);
+        $realisation->hydrate($_POST['id'], trim($_POST['titre']), trim($_POST['contenu']), intval($_POST['activation']));
         $ok = true;
         if ( !isset($_POST['titre'])) {
             // --- controler si titre saisi
@@ -112,7 +124,7 @@ class RealisationController extends Controller
             }
             // --- mise a jour de l'enregistrement
             $manager = new RealisationManager($this->bdd, Realisation::class);
-            $manager->update();
+            $manager->update($_POST['id']);
             // --- recharger page index
             header('location:index.php?p=realisation');
         }
