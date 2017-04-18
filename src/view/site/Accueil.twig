@@ -70,12 +70,12 @@
         <div class="col-xs-12 col-lg-offset-2 col-lg-8 text-center">
             <div class="presentation-header">
             <h1>{{ presentationH1.titre }}</h1>
-            <p>{{ presentationH1.contenu }}</p>
+            <p>{{ presentationH1.contenu | nl2br }}</p>
             </div>
             {% for pres in presentationH3 %}
             <div class="value{{ loop.index }}">
                 <h3>{{ pres.titre }}</h3>
-                <p>{{ pres.contenu }}</p>
+                <p>{{ pres.contenu | nl2br}}</p>
             </div>
             {% endfor %}
         </div>
