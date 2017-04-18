@@ -26,23 +26,7 @@
             {# --- bloc infos --- #}
             <div class="col-xs-12">
                 <div class="row contenu">
-                    <div class="col-xs-12 col-md-4 text-center">
-                        <h3>Après</h3>
-                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg?{{ random(9999) }}">
-                        <p>Image actuelle</p>
-                        <img class="gimg" src="{{ tmpRap }}?{{ random(9999) }}">
-                        <form id="loadimgap" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
-                            <input type="hidden" name="method" value="imgupload" />
-                            <input type="hidden" name="id" value="{{ realisation.id }}">
-                            <input type="hidden" name="titre" id="titreimgap" value="" />
-                            <input type="hidden" name="contenu" id="contenuimgap" value="" />
-                            <input type="hidden" name="activation" id="activationimgap" value="" />
-                            <input type="hidden" name="typeImg" value="Rap" />
-                            <input class="cache" type="file" accept=".jpg" name="fichierap" id="fichierap" onchange="valide('ap');"/>
-                            <label for="fichierap" class="btn btn-default">Nouvelle image</label><br />
-                        </form>
-                    </div>
+                    
                     <div class="col-xs-12 col-md-4 text-center">
                         <h3>Avant</h3>
                         <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg?{{ random(9999) }}">
@@ -60,6 +44,25 @@
                             <label for="fichierav" class="btn btn-default">Nouvelle image</label><br />
                         </form>
                     </div>
+
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Après</h3>
+                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg?{{ random(9999) }}">
+                        <p>Image actuelle</p>
+                        <img class="gimg" src="{{ tmpRap }}?{{ random(9999) }}">
+                        <form id="loadimgap" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+                            <input type="hidden" name="method" value="imgupload" />
+                            <input type="hidden" name="id" value="{{ realisation.id }}">
+                            <input type="hidden" name="titre" id="titreimgap" value="" />
+                            <input type="hidden" name="contenu" id="contenuimgap" value="" />
+                            <input type="hidden" name="activation" id="activationimgap" value="" />
+                            <input type="hidden" name="typeImg" value="Rap" />
+                            <input class="cache" type="file" accept=".jpg" name="fichierap" id="fichierap" onchange="valide('ap');"/>
+                            <label for="fichierap" class="btn btn-default">Nouvelle image</label><br />
+                        </form>
+                    </div>
+
                     <div class="col-sm-12 col-md-4 ">
                         <div class="hidden-xs hidden-sm"><br /></div>
                         <form method="post" action="index.php?p=realisation">

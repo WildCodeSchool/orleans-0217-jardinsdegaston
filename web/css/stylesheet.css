@@ -262,7 +262,7 @@ div#comparison1, div#comparison2, div#comparison3 {
     overflow: hidden; }
 
 div#comparison1 figure {
-    background-image: url(../img/test_img_1_rsz.jpg);
+    background-image: url(../img/imgRav-1.jpg);
     background-size: cover;
     position: relative;
     font-size: 0;
@@ -272,7 +272,7 @@ div#comparison1 figure {
 }
 
 div#comparison2 figure {
-    background-image: url(../img/test2_avant.jpg);
+    background-image: url(../img/imgRav-2.jpg);
     background-size: cover;
     position: relative;
     font-size: 0;
@@ -282,7 +282,7 @@ div#comparison2 figure {
 }
 
 div#comparison3 figure {
-    background-image: url(../img/test3_avant.jpg);
+    background-image: url(../img/imgRav-3.jpg);
     background-size: cover;
     position: relative;
     font-size: 0;
@@ -296,7 +296,7 @@ div#comparison1 figure > img, div#comparison2 figure > img, div#comparison3 figu
     width: 100%;
 }
 div#comparison1 figure div {
-    background-image: url(../img/test_img_2.jpg);
+    background-image: url(../img/imgRap-1.jpg);
     background-size: cover;
     position: absolute;
     width: 40%;
@@ -307,7 +307,7 @@ div#comparison1 figure div {
 }
 
 div#comparison2 figure div {
-    background-image: url(../img/test2_apres.jpg);
+    background-image: url(../img/imgRap-2.jpg);
     background-size: cover;
     position: absolute;
     width: 40%;
@@ -318,7 +318,7 @@ div#comparison2 figure div {
 }
 
 div#comparison3 figure div {
-    background-image: url(../img/test3_apres.jpg);
+    background-image: url(../img/imgRap-3.jpg);
     background-size: cover;
     position: absolute;
     width: 40%;
