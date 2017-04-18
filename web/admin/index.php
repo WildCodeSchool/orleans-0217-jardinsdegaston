@@ -3,20 +3,21 @@
 
 
 // --- on recupere l'eventuel nom de page demandee, passe en parametre get
-$page = 'imgfond'; // page par defaut si get pas defini
+$page = 'presentation'; // page par defaut si get pas defini
 if ( isset($_GET['p']) ) {
     $page = $_GET['p'];
 }
 // --- routes permettant de choisir le controleur qui sera sollicite
 // --- key = parametre recupere en get ci-dessus (p=...), value = prefixe du nom du controleur
 $routes = [
-    'imgfond' => 'ImageFond',
-    'realisation' => 'Realisation',
-    'prestation' => 'Prestation',
-    'conseil' => 'Conseil',
-    'livredor' => 'Livredor',
-    'contact' => 'Message',
-    'chezgaston' => 'JournalAdmin',
+    'presentation' =>   'Presentation',
+    'imgfond' =>        'ImageFond',
+    'realisation' =>    'Realisation',
+    'prestation' =>     'Prestation',
+    'conseil' =>        'Conseil',
+    'livredor' =>       'Livredor',
+    'contact' =>        'Message',
+    'chezgaston' =>     'JournalAdmin',
 ];
 // --- initialisation de la methode pour le controleur defini ci-dessus
 $method = 'index'; // methode par defaut
