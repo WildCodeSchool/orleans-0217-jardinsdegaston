@@ -25,14 +25,17 @@
             {# --- bloc infos --- #}
             <div class="col-xs-12">
                 <div class="row contenu">
-                    <div class="col-xs-12 col-md-4 text-center">
-                        <h3>Après</h3>
-                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg">
-                    </div>
+
                     <div class="col-xs-12 col-md-4 text-center">
                         <h3>Avant</h3>
-                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg">
+                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg?{{ random(9999) }}">
                     </div>
+
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Après</h3>
+                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg?{{ random(9999) }}">
+                    </div>
+
                     <div class="col-sm-12 col-md-4 ">
                         <div class="hidden-xs hidden-sm"><br /></div>
                         {% if realisation.activation == 1 %}<h4><em>La réalisation est visible sur le site</em></h4>{% endif %}
@@ -45,9 +48,7 @@
                         <form method="post" action="index.php?p=realisation">
                             <input type="hidden" name="method" value="modif">
                             <input type="hidden" name="id" value="{{ realisation.id }}">
-                            <input class="btn btn-default" type="submit" name="valide" value="Modifier la prestation" />
-                            &nbsp;&nbsp;
-                            <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
+                            <input class="btn btn-default" type="submit" name="valide" value="Modifier la réalisation" />
                         </form>
                         </p>
 

@@ -43,7 +43,11 @@ td {
     margin-top: 60px;
 }
 
-
+.erreur {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
 /* --- navbar ---------------------------------------------------- */
 
 .navbar-inverse
