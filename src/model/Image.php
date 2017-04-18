@@ -3,6 +3,7 @@
 
 namespace wcs\model;
 
+use PHPThumb;
 
 class Image
 {
@@ -108,10 +109,31 @@ class Image
     }
 
 
-//    public function resize($codetype)
-//    {
-//
-//    }
+    /**
+     * utilise la bibliotheque masterexploder/PHPThumb (installee via composer)
+     * @param $codetype
+     */
+    public function resize($codetype)
+    {
+        // --- recuperation du nom de l'image temporaire
+        $tmpName = $this->getTmpName($codetype);
+        // --- creation de l'objet a manipuler
+        $imgrsz = new PHPThumb\GD($tmpName);
+
+var_dump($imgrsz);
+
+        // --- resize de l'objet
+//        $imgrsz->adaptiveResize($this->getLargImg($codetype), $this->getHautImg($codetype));
+        $imgrsz->resize($this->getLargImg($codetype), $this->getHautImg($codetype));
+
+        var_dump($imgrsz);
+
+        // --- effacement du fichier temporaire initial
+        $this->resetTmp($codetype);
+        // --- ecriture du fichier temporaire redimensionne
+        $imgrsz->save($tmpName);
+        $this->rwx($codetype);
+    }
 
     /**
      * **************************************************************
@@ -135,7 +157,7 @@ class Image
         }
         $this->rwx($codetype);
         // **** PENSER A ACTIVER LA LIGNE CI-DESSOUS (et implementer la fonction) ***********
-        // $this->resize($codetype);
+        $this->resize($codetype);
     }
 
     /**

@@ -2,99 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90b75dc3-e631-4f26-a05e-a8f787f387a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/automne.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/ete.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgRap-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgRav-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgRav-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgRav-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/admin/realisation/ModifieRealisation.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/arrosoir2_xsmall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/automne.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1_transp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1h.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg1p.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg2p.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/bgimg4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/entretien_exterieurrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/entretien_massifrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ete.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/evacuationrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden1_small.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/garden5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/glyph_mouse.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/haiersz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/header.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/header_blog.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/herbes_picto_xtraSmall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/imgConseil.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo-gaston.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo-wcs-vn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_blanc_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_original.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logo_vert_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/logonoir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/plant2_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/plante_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/potagerrsz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/bgimg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgB-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgJ-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgP-ref.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/imgR-9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/jardinier.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/logo-wcs-vo-alter-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/ref/logo_blanc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/service.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tondeusersz.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controller/admin/MessageController.php" afterPath="$PROJECT_DIR$/src/controller/admin/ContactController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/form/MessageForm.php" afterPath="$PROJECT_DIR$/src/form/ContactForm.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/Message.php" afterPath="$PROJECT_DIR$/src/model/Contact.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/MessageManager.php" afterPath="$PROJECT_DIR$/src/model/ContactManager.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/admin/imageFond/imageFond.twig" afterPath="$PROJECT_DIR$/src/view/admin/imageFond/ImageFond.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/admin/message/Message.twig" afterPath="$PROJECT_DIR$/src/view/admin/contact/Contact.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/img/ref/imgRap-ref.jpg" afterPath="$PROJECT_DIR$/web/img/imgRap-2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/img/ref/imgRav-ref.jpg" afterPath="$PROJECT_DIR$/web/img/imgRap-1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/hiver.jpg" afterPath="$PROJECT_DIR$/web/img/hiver.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/printemps.jpg" afterPath="$PROJECT_DIR$/web/img/printemps.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/ImageFondController.php" afterPath="$PROJECT_DIR$/src/controller/admin/ImageFondController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/JournalAdminController.php" afterPath="$PROJECT_DIR$/src/controller/admin/JournalAdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/PrestationController.php" afterPath="$PROJECT_DIR$/src/controller/admin/PrestationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/RealisationController.php" afterPath="$PROJECT_DIR$/src/controller/admin/RealisationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/site/AccueilController.php" afterPath="$PROJECT_DIR$/src/controller/site/AccueilController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Realisation.php" afterPath="$PROJECT_DIR$/src/model/Realisation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/AjoutePrestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/AjoutePrestation.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/ModifiePrestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/ModifiePrestation.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/Prestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/Prestation.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/SupprimePrestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/SupprimePrestation.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/realisation/Realisation.twig" afterPath="$PROJECT_DIR$/src/view/admin/realisation/Realisation.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/site/Accueil.twig" afterPath="$PROJECT_DIR$/src/view/site/Accueil.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/site/journal.twig" afterPath="$PROJECT_DIR$/src/view/site/journal.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/index.php" afterPath="$PROJECT_DIR$/web/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/stylesheet.css" afterPath="$PROJECT_DIR$/web/css/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/imgB-2.jpg" afterPath="$PROJECT_DIR$/web/img/imgB-2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/imgB-ref.jpg" afterPath="$PROJECT_DIR$/web/img/imgB-ref.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/imgP-ref.jpg" afterPath="$PROJECT_DIR$/web/img/imgP-ref.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Image.php" afterPath="$PROJECT_DIR$/src/model/Image.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -117,28 +31,18 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Accueil.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/site/Accueil.twig">
+      <file leaf-file-name="Image.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2370">
-              <caret line="158" column="40" lean-forward="false" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
+            <state relative-caret-position="853">
+              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="journal.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/site/journal.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="crop_basic.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -147,31 +51,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccueilController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/site/AccueilController.php">
+      <file leaf-file-name="resize_adaptive.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_adaptive.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Controller.php">
+      <file leaf-file-name="crop_basic_fromstring.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic_fromstring.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/form/ContactForm.php">
+      <file leaf-file-name="crop_fromcenter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_fromcenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,7 +87,12 @@
     <findStrings>
       <find>hover</find>
       <find>die</find>
+      <find>PhpThumbFactory</find>
+      <find>tmpName</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/vendor/masterexploder</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -222,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/view/site/Accueil.twig" />
         <option value="$PROJECT_DIR$/src/view/site/journal.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/model/Image.php" />
       </list>
     </option>
   </component>
@@ -252,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,7 +185,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,11 +199,71 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="masterexploder" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpthumb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="masterexploder" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpthumb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHPThumb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orleans-0217-jardinsdegaston" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="masterexploder" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpthumb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,7 +438,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -476,6 +446,8 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -575,21 +547,23 @@
       <workItem from="1492159598298" duration="1317000" />
       <workItem from="1492179015575" duration="1177000" />
       <workItem from="1492180796969" duration="194000" />
-      <workItem from="1492423634838" duration="48000" />
+      <workItem from="1492423634838" duration="5276000" />
+      <workItem from="1492505423099" duration="39000" />
+      <workItem from="1492513952479" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151750000" />
+    <option name="totallyTimeSpent" value="157019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22395833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15110813" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31491002" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -637,66 +611,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/img/imgP-3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/imgP-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/imgP-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/imgP-0.jpg" />
-    <entry file="file://$PROJECT_DIR$/web/img/bgimg1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/imgB-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/imgP-.jpg" />
-    <entry file="file://$PROJECT_DIR$/web/img/jardinier.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/imgP-ref.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Prestation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Livredor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/LivredorForm.php" />
     <entry file="file://$PROJECT_DIR$/src/Form/LivredorFilter.php" />
-    <entry file="file://$PROJECT_DIR$/src/controller/admin/LivredorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Presentation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -882,7 +798,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="false" />
+            <element signature="e#111#139#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -896,11 +815,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/admin/LivredorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#121#151#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/form/LivredorFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#111#138#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/site/Accueil.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
+        <state relative-caret-position="240">
           <caret line="158" column="40" lean-forward="false" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/save_differentformat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_basic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="28" column="25" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -908,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,6 +874,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/src/PHPThumb/GD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/src/PHPThumb/PHPThumb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic_fromstring.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_fromcenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_adaptive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding />
         </state>
       </provider>
