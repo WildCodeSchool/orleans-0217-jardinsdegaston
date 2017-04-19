@@ -1,0 +1,4 @@
+.bg-img1-lg, .bg-img1-md, .bg-img1-sm, .bg-img1-xs {
+    background-image: url("../img/imgB-4.jpg");
+    background-size: cover;
+}

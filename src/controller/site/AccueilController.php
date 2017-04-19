@@ -51,15 +51,20 @@ class AccueilController extends Controller
 
         $livredorManager = new LivredorManager($this->bdd, Livredor::class);
         $livredor = $livredorManager->findAll();
+        $params = [
+            'presentationH1' => $presentationH1,
+            'presentationH3' => $presentationH3,
+            'prestation' => $prestation,
+            'realisation' => $realisation,
+            'conseil' => $conseil,
+            'livredor' => $livredor,
+            'bgcss' => 'bg'.strtoupper($saison[0]).'.css',
+        ];
 
-        return $this->twig->render('site/Accueil.twig', array('presentationH1'=>$presentationH1,
-                                                        'presentationH3'=>$presentationH3,
-                                                        'prestation'=>$prestation,
-                                                        'realisation'=>$realisation,
-                                                        'conseil'=>$conseil,
-                                                        'livredor'=>$livredor));
+        return $this->twig->render('site/Accueil.twig', $params);
 
     }
+
 
     public function envoiContact()
     {
