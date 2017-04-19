@@ -40,10 +40,10 @@ class ConseilController extends Controller
             $form->setInputFilter($filter);
             $form->setData($_POST);
 
-
             $contenuErr = [];
 
             if ($form->isValid()) {
+
                 $manager = new ConseilManager($this->bdd, Conseil::class);
                 $conseil = new Conseil();
                 $data = $form->getData();

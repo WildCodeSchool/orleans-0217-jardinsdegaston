@@ -29,7 +29,7 @@
 
                 <div class="form-group">
                     <label for="{{ form.get('contenu').name }}">{{ form.get('contenu').label }}</label>
-                    <textarea required ="required" class="form-control" id="{{ form.get('contenu').name }}" name="{{ form.get('contenu').name }}">{{ value.contenu }}</textarea>
+                    <textarea required ="required" class="form-control" id="{{ form.get('contenu').name }}" name="{{ form.get('contenu').name }}"></textarea>
 
                     {% for message in contenuErr %}
                         <p>{{ message }}</p>
