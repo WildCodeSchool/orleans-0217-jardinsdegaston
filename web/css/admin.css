@@ -11,7 +11,7 @@ tr {
 
 td {
 /*    border: 1px solid #2b542c;*/
-    width: 25%;
+    width: 30%;
 }
 
 .pointer {
@@ -150,7 +150,7 @@ input.btn, label.btn {
 /* --- Conseils -------------------------------------------------- */
 .bloc-conseil {
     margin-top: 5px;
-    padding: 10px 0px;
+    padding: 10px 2px;
     border-top: 1px solid #2b542c;
     /*background-color: #eef6ef;*/
 }

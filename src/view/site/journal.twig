@@ -55,13 +55,13 @@
 
             {% set dateref = date('+1month')|date('Y m') %}
 
-            {% for article in article %}
+            {% for article in articles %}
 
                 {% if dateref > article.date|date('Y m') %}
 
                 {% set dateref = article.date|date('Y m') %}
 
-                <li><div class="tldate">{{ article.date|date('F Y') }}</div></li>
+                <li><div class="tldate"><h3>{{ article.date|date('F Y') }}</h3></div></li>
 
                 {% endif %}
 

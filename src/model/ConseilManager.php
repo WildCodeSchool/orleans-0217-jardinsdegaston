@@ -11,5 +11,8 @@ namespace wcs\model;
 
 class ConseilManager extends DbManager
 {
-
+    public function findBySeason()
+    {
+        //recup conseils en fonction de la saison
+    }
 }

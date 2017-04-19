@@ -141,13 +141,21 @@ section{
 /*---   Background   ---*/
 
 body {
-    background-image: url(../img/bgimg1_transp.png);
+    background-image: url(img/bgimg1_transp.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 h2 {
     font-size: 26px;
+}
+
+h3 {
+    font-size: 20px;
+    color: rgb(85, 126, 2);
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
 p {
@@ -202,7 +210,7 @@ img { border: 0; max-width: 100%; }
     background: white;
     color: rgb(85, 126, 2);
     margin: 0 auto;
-    padding: 3px 0;
+    padding: 2px 0;
     font-weight: bold;
     text-align: center;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.35);

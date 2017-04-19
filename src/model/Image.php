@@ -122,7 +122,7 @@ class Image
     {
         $this->resetTmp($codetype);
         if ( false === move_uploaded_file($_FILES['fichier']['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
-            $this->reset($codetype);
+            $this->resetTmp($codetype);
 
             //voir aussi $_FILES['fichier']['error'] > 0 (il y a eu une erreur)
             //           $_FILES['fichier']['size'] > maxsize (fichier trop gros)
