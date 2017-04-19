@@ -15,6 +15,8 @@ use wcs\model\Prestation;
 use wcs\model\PrestationManager;
 use wcs\model\Realisation;
 use wcs\model\RealisationManager;
+use wcs\model\Parametre;
+use wcs\model\ParametreManager;
 
 /*
  * class pour l'accueil
@@ -42,23 +44,21 @@ class AccueilController extends Controller
 
         $conseilManager = new ConseilManager($this->bdd, Conseil::class);
         $conseilSaison = $conseilManager->findAll("WHERE  $saison  > 0");
-//        var_dump($conseilSaison);
         $conseilRand = mt_rand(0,count($conseilSaison)-1);
-//        var_dump($conseilRand);
         $conseil = $conseilSaison[$conseilRand];
-//        var_dump($conseil);
-
-
         $livredorManager = new LivredorManager($this->bdd, Livredor::class);
         $livredor = $livredorManager->findAll();
+        $parametreManager = new ParametreManager($this->bdd, Parametre::class);
+        $parametresGeneraux = $parametreManager->read();
         $params = [
-            'presentationH1' => $presentationH1,
-            'presentationH3' => $presentationH3,
-            'prestation' => $prestation,
-            'realisation' => $realisation,
-            'conseil' => $conseil,
-            'livredor' => $livredor,
-            'bgcss' => 'bg'.strtoupper($saison[0]).'.css',
+            'presentationH1' => $presentationH1,                    // presentation generale
+            'presentationH3' => $presentationH3,                    // valeurs 1 et valeurs 2
+            'prestation' => $prestation,                            // liste des prestations
+            'realisation' => $realisation,                          // liste des realisations (avant/apres)
+            'conseil' => $conseil,                                  // le conseil du moment
+            'livredor' => $livredor,                                // livre d'or
+            'bgcss' => 'bg'.strtoupper($saison[0]).'.css',          // css pour image d'accueil (fonction de la saison)
+            'chezgaston' => $parametresGeneraux->getChezGaston(),   // affichage (=1) ou non (=0) du journal de Gaston
         ];
 
         return $this->twig->render('site/Accueil.twig', $params);

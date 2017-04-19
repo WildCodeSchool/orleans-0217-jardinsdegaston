@@ -93,7 +93,6 @@ class DbManager
     }
 
     public function countAll(string $opt=null)
-
     {
         return count($this->findAll($opt));
     }
