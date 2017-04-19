@@ -30,7 +30,7 @@ class LivredorManager extends DbManager
     {
         if (isset($_POST)) {
             foreach ($_POST as $key => $val) {
-                $postClean[$key] = htmlentities(trim($val));
+                $postClean[$key] = trim($val);
             }
         }
 
