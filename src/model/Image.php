@@ -102,7 +102,8 @@ class Image
      */
     public function resize($codetype)
     {
-/*         --- creation de l'objet a manipuler*/
+        $tmpName = $this->getTmpName($codetype);
+        // --- creation de l'objet a manipuler
         $imgrsz = new PHPThumb\GD($tmpName);
         // --- resize de l'objet
         $imgrsz->adaptiveResize($this->getLargImg($codetype), $this->getHautImg($codetype));
