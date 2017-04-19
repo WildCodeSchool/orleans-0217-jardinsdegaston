@@ -46,19 +46,6 @@ class Image
         chmod(self::TMPDIR.'img'.$codetype.'-tmp.jpg', 0777);
     }
 
-//
-//    private function ctrlTmp()
-//    {
-//        if ( !file_exists(self::TMPDIR) ) {
-//            // --- si repertoire tmp n'existe pas, on le cree
-//            mkdir(self::TMPDIR);
-//        }
-//        else {
-//            // --- s'il existe, on lui (re)affecte tous les droits
-//            chmod(self::TMPDIR, 0777);
-//        }
-//    }
-
     /**
      * **************************************************************
      * Controle si fichier image temporaire existe (dans tmp)
@@ -115,13 +102,11 @@ class Image
      */
     public function resize($codetype)
     {
-        // --- recuperation du nom de l'image temporaire
-        $tmpName = $this->getTmpName($codetype);
-        // --- creation de l'objet a manipuler
+/*         --- creation de l'objet a manipuler*/
         $imgrsz = new PHPThumb\GD($tmpName);
         // --- resize de l'objet
-//        $imgrsz->adaptiveResize($this->getLargImg($codetype), $this->getHautImg($codetype));
-        $imgrsz->resize($this->getLargImg($codetype), $this->getHautImg($codetype));
+        $imgrsz->adaptiveResize($this->getLargImg($codetype), $this->getHautImg($codetype));
+//        $imgrsz->resize($this->getLargImg($codetype), $this->getHautImg($codetype));
         // --- effacement du fichier temporaire initial
         $this->resetTmp($codetype);
         // --- ecriture du fichier temporaire redimensionne
@@ -136,11 +121,14 @@ class Image
      */
     public function recupImg($codetype)
     {
+        // --- suppression eventuel fichier temporaire residuel
         $this->resetTmp($codetype);
+        // --- ajout suffixe 'av' ou 'ap' au nom de fichier pour les images realisation
         $fileName='fichier';
         if (strlen($codetype)>1){
             $fileName.=substr($codetype,1);
         }
+        // --- deplacement fichier de la zone d'upload vers tmp
         if ( false === move_uploaded_file($_FILES[$fileName]['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
 
             $this->resetTmp($codetype);
@@ -154,8 +142,9 @@ class Image
             return false;
 
         }
+        // --- A VIRER SUR SITE FINAL : reaffecte droits sur fichier image déplacé.
         $this->rwx($codetype);
-        // **** PENSER A ACTIVER LA LIGNE CI-DESSOUS (et implementer la fonction) ***********
+        // resize image en fonction des besoins
         $this->resize($codetype);
     }
 
