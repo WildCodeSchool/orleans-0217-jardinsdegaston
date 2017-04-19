@@ -30,12 +30,9 @@ class JournalAdminController extends Controller
         $filter = new ArticleFilter();
         $form->setInputFilter($filter);
 
-        //$tmpinfos = ['id' => 0, 'titre' => '', 'contenu' => '', 'date' =>'', 'tmpimage' => $this->img->getTmpName('J')];
-
         $params = [
                 'articles' => $manager->findAllReverse('journal'),
                 'form' => $form,
-                //'tmpinfos' => $tmpinfos,
                 ];
 
         return $this->twig->render('journal/Journal_admin.twig', $params);
@@ -57,7 +54,7 @@ class JournalAdminController extends Controller
 
             $filter = new ArticleFilter();
             $form->setInputFilter($filter);
-            $form->setData($_POST+$_FILES);
+            $form->setData($_POST + $_FILES);
 
 
             $imgErr = [];
@@ -75,8 +72,8 @@ class JournalAdminController extends Controller
                 $article->hydrate(0, $titre, $contenu, $date);
                 $id = $manager->addArticle($article);
                 $image = $data['imgArticle'];
-                $imgName = 'imgJ-'.$id.'.jpg';
-                move_uploaded_file($image['tmp_name'], PUBLIC_IMG.$imgName);
+                $imgName = 'imgJ-' . $id . '.jpg';
+                move_uploaded_file($image['tmp_name'], PUBLIC_IMG . $imgName);
 
             } else {
                 $imgErr = $form->get('imgArticle')->getMessages();
@@ -86,7 +83,7 @@ class JournalAdminController extends Controller
             }
 
             $articles = $articlesManager->findAllReverse('journal');
-            
+
             /* definition des paramètres à envoyer à twig */
             $params = [
                 'articles' => $articles,
@@ -95,16 +92,6 @@ class JournalAdminController extends Controller
                 'titreErr' => $titreErr,
                 'dateErr' => $dateErr,
                 'contenuErr' => $contenuErr
-            ];
-
-            return $this->twig->render('journal/Journal_admin.twig', $params);
-
-        } else {
-
-            // --- recharger la page en affichant l'erreur($_POST)
-            $params = [
-                'articles' => $articles,
-                'tmpimage' => $this->img->getTmpName('J'),
             ];
 
             return $this->twig->render('journal/Journal_admin.twig', $params);
@@ -125,7 +112,7 @@ class JournalAdminController extends Controller
             $erreur = '';
             $params = [
                 'article' => $manager->findOne($id),
-                'tmpimage' => $this->img->getTmpName('J'),
+                'image' => 'imgJ-' . $id . '.jpg',
                 'erreur' => $erreur,
             ];
 
@@ -150,7 +137,7 @@ class JournalAdminController extends Controller
             $erreur = '';
             $params = [
                 'article' => $manager->findOne($id),
-                'tmpimage' => $this->img->getTmpName('J'),
+                'image' => 'imgJ-' . $id . '.jpg',
                 'erreur' => $erreur,
             ];
 
@@ -217,12 +204,12 @@ class JournalAdminController extends Controller
             $article = new Journal;
             $date = new \DateTime($_POST['date']);
             $article->hydrate(intval($_POST['id']), $_POST['titre'], $_POST['contenu'], $date);
-            var_dump($article);
 
-            if ($this->img->tmpImgExists('J')) {
-                // --- deplacer image temporaire vers emplacement définitif
-                $this->img->deplace('J', $_POST['id']);
-            }
+            $id = $_POST['id'];
+            $image = $_POST['imgArticle'];
+            $imgName = 'imgJ-' . $id . '.jpg';
+            move_uploaded_file($image['tmp_name'], PUBLIC_IMG . $imgName);
+
             // --- mise a jour de l'enregistrement
             $manager = new JournalManager($this->bdd, Journal::class);
             $manager->updateArticle($article);
@@ -241,8 +228,7 @@ class JournalAdminController extends Controller
             $manager = new JournalManager($this->bdd, Journal::class);
             // --- suppression de la prestation
             $manager->delOne($_POST['id']);
-            // --- reorganisation de l'ordre d'affichage
-            //$manager->delOrdreAff($_POST['ordreaff']);
+
             // --- suppression de l'image attachee
             $this->img->delImg('J', $_POST['id']);
         }

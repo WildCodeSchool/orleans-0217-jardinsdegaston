@@ -30,29 +30,5 @@ class ConseilFilter extends InputFilter
                     'name' => StripTags::class
                 ]]
         ]);
-
-        $this->add([
-            'name' => 'printemps',
-            'allow_empty' => true,
-            'required' => false,
-        ]);
-
-        $this->add([
-            'name' => 'ete',
-            'allow_empty' => true,
-            'required' => false,
-        ]);
-
-        $this->add([
-            'name' => 'automne',
-            'allow_empty' => true,
-            'required' => false,
-        ]);
-
-        $this->add([
-            'name' => 'hiver',
-            'allow_empty' => true,
-            'required' => false,
-        ]);
     }
 }
