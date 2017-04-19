@@ -24,6 +24,7 @@ class ImageFondController extends Controller
             'saisons' => $this->getSaisons(),
             // --- recuperation de l'image a afficher dans le formulaire (a priori image vide)
             'formimage' => $this->img->getTmpName('B'),
+            'selected' => '',
         ];
         return $this->twig->render('imageFond/ImageFond.twig', $params);
     }
@@ -40,10 +41,17 @@ class ImageFondController extends Controller
             $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
             $this->img->resetTmp('B');
         }
+        if ( isset($_POST['saison']) ) {
+            $selected = $_POST['saison'];
+        }
+        else {
+            $selected = '';
+        }
         $params = [
             'saisons' => $this->getSaisons(),
             'formimage' => $this->img->getTmpName('B'),
             'erreur' => $erreur,
+            'selected' => $selected,
         ];
         return $this->twig->render('imageFond/ImageFond.twig', $params);
     }
@@ -59,6 +67,12 @@ class ImageFondController extends Controller
             // --- on recharge la page initiale (qui reinitialise le formulaire)
             header('location:index.php?p=imgfond');
         }
+        if ( isset($_POST['saison']) ) {
+            $selected = $_POST['saison'];
+        }
+        else {
+            $selected = '';
+        }
         $erreur = '';
         $ok = true;
         if (!$this->img->tmpImgExists('B')) {
@@ -66,7 +80,7 @@ class ImageFondController extends Controller
             $erreur = 'Choisir d\'abbord une nouvelle image.';
             $ok = false;
         }
-        elseif ( !isset($_POST['saison'])) {
+        elseif ( $selected == '' ) {
             // --- controler si selection saison effectuee
             $erreur = 'Sélectionner d\'abord une saison.';
             $ok = false;
@@ -83,6 +97,7 @@ class ImageFondController extends Controller
                 'saisons' => $this->getSaisons(),
                 'formimage' => $this->img->getTmpName('B'),
                 'erreur' => $erreur,
+                'selected' => $selected,
             ];
             return $this->twig->render('imageFond/ImageFond.twig', $params);
         }

@@ -119,15 +119,9 @@ class Image
         $tmpName = $this->getTmpName($codetype);
         // --- creation de l'objet a manipuler
         $imgrsz = new PHPThumb\GD($tmpName);
-
-var_dump($imgrsz);
-
         // --- resize de l'objet
 //        $imgrsz->adaptiveResize($this->getLargImg($codetype), $this->getHautImg($codetype));
         $imgrsz->resize($this->getLargImg($codetype), $this->getHautImg($codetype));
-
-        var_dump($imgrsz);
-
         // --- effacement du fichier temporaire initial
         $this->resetTmp($codetype);
         // --- ecriture du fichier temporaire redimensionne

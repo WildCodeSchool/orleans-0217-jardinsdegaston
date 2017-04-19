@@ -43,6 +43,7 @@
                     <form id="loadimg" method="post" action="index.php?p=imgfond" enctype="multipart/form-data">
                         <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
                         <input type="hidden" name="method" value="imgupload" />
+                        <input type="hidden" name="saison" id="saisonimg" value="" />
                         <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
                         <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
                     </form>
@@ -55,7 +56,7 @@
                             <span class="label-like">Saison associée :</span><br />
                             {% for saison in saisons %}
                                 {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp;&nbsp; {% endif %}
-                                <input type="radio" name="saison" id="saison{{ saison | first }}" value="{{ saison | first }}" />
+                                <input type="radio" name="saison" id="saison{{ saison | first }}" value="{{ saison | first }}" {% if saison | first == selected %} checked {% endif %} />
                                 <label class="normal-text" for="saison{{ saison | first }}">{{ saison }}</label>
                             {% endfor %}
                         </p>
@@ -70,6 +71,16 @@
 
     </div> {# -- fermeture de la row principale -- #}
 
-    <script>function valide() {document.getElementById('loadimg').submit();}</script>
+    <script>
+        function valide() {
+            var saison = '';
+            if ( document.getElementById('saisonP').checked ) saison = 'P';
+            else if ( document.getElementById('saisonE').checked ) saison = 'E';
+            else if ( document.getElementById('saisonA').checked ) saison = 'A';
+            else if ( document.getElementById('saisonH').checked ) saison = 'H';
+            document.getElementById('saisonimg').value = saison;
+            document.getElementById('loadimg').submit();
+        }
+    </script>
 
 {% endblock %}
