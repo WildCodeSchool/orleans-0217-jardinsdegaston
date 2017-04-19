@@ -16,50 +16,74 @@
 
 
 {% block content %}
+    {% do form.prepare() %}
 
 
     {# -- Formulaire ajout d'un nouvel article -- #}
     <div class="row FormBlog">
 
-        <div class="col-lg-4 text-center">
-            <img class="img-fluid pimg bloc-right" src="{{ tmpimage }}?{{ random(9999) }}" alt="" />
-            <form id="loadimg" method="post" action="index.php?p=chezgaston" enctype="multipart/form-data">
-                <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
-                <input type="hidden" name="method" value="imgupload" />
-                <input type="hidden" name="id" value="{{ article.id }}">
-                <input type="hidden" name="titre" id="titreimg" value="" />
-                <input type="hidden" name="date" id="dateimg" value="" />
-                <input type="hidden" name="contenu" id="contenuimg" value="" />
-                <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
-                <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
-            </form>
-        </div>
+        <div class="col-xs-offset-1 col-xs-10">
 
-        <div class="col-lg-7 form">
-            <form name="ajout-blog" method="POST" action="index.php?p=chezgaston">
+            <form name="ajout-blog" method="POST" action="index.php?p=chezgaston" enctype="multipart/form-data">
 
-                <div class="form-group">
-                    <label for="Nom">Titre de l'article</label>
-                    <input required ="required" class="form-control" type="text" id="titre" name="titre" />
+                <div class="row">
+
+                    <div class="col-xs-4">
+
+                        <div class="form-group">
+                            {#
+                            <img class="img-fluid pimg bloc-right" name="image" src="{{ tmpimage }}?{{ random(9999) }}" alt="" />
+                            #}
+                            <input class="cache" type="file" accept="image/jpeg" name="imgArticle" id="imgArticle"  />
+                            <label for="imgArticle" class="btn btn-default">Nouvelle image</label><br />
+
+                            {% for message in imgErr %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-8">
+
+                        <div class="form-group">
+                            <label for="titre">{{ form.get('titre').label }}</label>
+                            <input required ="required" class="form-control" value="{{ form.get('titre').value }}" type="text" id="titre" name="titre" />
+
+                            {% for message in titreErr %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">{{ form.get('date').label }}</label>
+                            <input required ="required" class="form-control" value="{{ form.date|date('Y-m-d H:i:s') }}" type="text" id="date" name="date"/>
+
+                            {% for message in dateErr %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contenu">{{ form.get('contenu').label }}</label>
+                            <textarea required ="required" class="form-control" id="contenu" name="contenu">{{ form.get('contenu').value }}</textarea>
+
+                            {% for message in contenuErr %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <input class="btn btn-success" type="submit" name="ajoutArticle" value="Ajouter un article" />
+                        <input type="hidden" name="method" value="ajoutArticle" />
+                        <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
+                    </div>
+
                 </div>
 
-                <div class="form-group">
-                    <label for="Nom">Date de publication</label>
-                    <input required ="required" class="form-control" type="date" id="date" name="date" value="{{ article.date|date('d-m-Y') }}"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="Texte">Contenu de l'article</label>
-                    <textarea required ="required" class="form-control" type="text" id="contenu" name="contenu"></textarea>
-                </div>
-
-                <input type="hidden" name="method" value="ajoutArticle" />
-                <input class="btn btn-success" type="submit" name="ajoute" value="Ajouter un article" />
             </form>
         </div>
 
     </div>
-
 
 
 
@@ -83,15 +107,18 @@
                 {% for article in articles %}
 
                     <tr>
-                        <td class="col-sm-2 col-lg-2">{{ article.date|date('d-m-Y') }}</td>
+                        <td class="col-sm-2 col-lg-2">{{ article.date|date('d-m-Y H:m') }}</td>
                         <td class="col-sm-4 col-lg-2">{{ article.titre }}</td>
                         <td class=".hidden-sm-down col-lg-4">{{ article.contenu }}</td>
                         <td class="col-sm-6 col-lg-4">
                             <form method="post" action="index.php?p=chezgaston">
-                                <input type="hidden" name="method" value="modif">
-                                <input type="hidden" name="id" value="{{ article.id }}">
+                                <input type="hidden" name="method" value="modif" />
+                                <input type="hidden" name="id" value="{{ article.id }}" />
                                 <input class="btn btn-default" type="submit" name="valide" value="Modifier l'article" />
-                                &nbsp;&nbsp;
+                            </form>
+                            <form method="post" action="index.php?p=chezgaston">
+                                <input type="hidden" name="method" value="supprime" />
+                                <input type="hidden" name="id" value="{{ article.id }}" />
                                 <input class="btn btn-default" type="submit" name="supprime" value="Supprimer l'article" />
                             </form>
                         </td>
@@ -104,15 +131,6 @@
 
         </div>
     </div>
-
-    <script>
-        function valide() {
-            document.getElementById('titreimg').value = document.getElementById('titre').value;
-            document.getElementById('dateimg').value = document.getElementById('date').value;
-            document.getElementById('contenuimg').value = document.getElementById('contenu').value;
-            document.getElementById('loadimg').submit();
-        }
-    </script>
 
 {% endblock %}
 

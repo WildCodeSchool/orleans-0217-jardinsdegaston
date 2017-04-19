@@ -13,6 +13,52 @@
 
 {% block content %}
 
+    {# -- Créer un nouveau conseil ---------------------------------- -- #}
+
+    <div class="row">
+
+        <div class="col-xs-12 bandeau text-center">
+            Ajouter un conseil
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-xs-offset-2 col-xs-8 form">
+            <form name="ajout-conseil" method="POST" action="index.php?p=conseil">
+
+                <div class="form-group">
+                    <label for="{{ form.get('contenu').name }}">{{ form.get('contenu').label }}</label>
+                    <textarea required ="required" class="form-control" id="{{ form.get('contenu').name }}" name="{{ form.get('contenu').name }}">{{ value.contenu }}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <span class="like-label">Sélectionnez une saison : </span>
+
+                    <input type="checkbox" name="saison" id="printemps" value="printemps" />
+                    <label class="normal-text" for="printemps"> Printemps  </label>
+
+                    <input type="checkbox" name="saison" id="ete" value="ete" />
+                    <label class="normal-text" for="ete"> Eté  </label>
+
+                    <input type="checkbox" name="saison" id="automne" value="automne" />
+                    <label class="normal-text" for="automne"> Automne  </label>
+
+                    <input type="checkbox" name="saison" id="hiver" value="hiver" />
+                    <label class="normal-text" for="hiver"> Hiver  </label>
+
+                </div>
+
+                <input class="btn btn-success" type="submit" name="ajoutConseil" value="Ajouter un conseil" />
+                <input type="hidden" name="method" value="ajoutConseil" />
+                <input type="hidden" name="id" value="{{ value.id }}">
+                <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
+            </form>
+        </div>
+
+    </div>
+
+
     <div class="row">
 
         {# -- Liste des  conseils --------------------------------------- -- #}
@@ -23,53 +69,60 @@
         <div class="col-xs-12 contenu text-center">
             <form action="index.php?p=conseil" method="post">
                 <span class="like-label">Sélection de l'affichage :</span>
-                {% for affsaison in affsaisons %}
-                    {% set refaff = affsaison | first %}
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="checkbox" name="{{ refaff }}" id="saison{{ refaff }}" value="{{ refaff }}"
-                    {% if refaff in post %} checked {% endif %}
-                    />
-                    <label class="normal-text" for="saison{{ refaff }}">{{ affsaison }}</label>
-                {% endfor %}
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-default" type="submit">Actualiser l'affichage</button>
+
+                    <input type="checkbox" name="saison[]" id="printemps" value="printemps" />
+                    <label class="normal-text" for="printemps">{{ conseil.printemps }}</label>
+
+                    <input type="checkbox" name="saison[]" id="ete" value="ete" />
+                    <label class="normal-text" for="ete">{{ conseil.ete }}</label>
+
+                    <input type="checkbox" name="saison[]" id="automne" value="automne" />
+                    <label class="normal-text" for="automne">{{ conseil.automne }}</label>
+
+                    <input type="checkbox" name="saison[]" id="hiver" value="hiver" />
+                    <label class="normal-text" for="hiver">{{ conseil.hiver }}</label>
+
+                <button class="btn btn-default" type="submit" name="actualiserAffichage">Actualiser l'affichage</button>
+                <input type="hidden" name="method" value="affichageConditionnelConseil" />
             </form>
         </div>
 
         {% for conseil in conseils %}
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center {{ conseil.visible }}">
-                <div class="blocimg">
-                    <form method="post" action="#">
-                        {#<input class="form-control" type="text" name="conseil" value="{{ conseil.contenu }}" /><br />#}
-                        <textarea class="form-control" name="conseil" rows="4">{{ conseil.contenu }}</textarea><br />
-                        {% for saison in saisons %}
-                            {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp; {% endif %}
-                            {% set refsaison = saison | first %}
-                            <input type="checkbox" name="saison{{ refsaison }}" id="saison{{ refsaison }}{{ conseil.id }}" value="{{ refsaison }}"
-                            {% if refsaison|lower in conseil.saison %} checked {% endif %}
-                            />
-                            <label class="normal-text" for="saison{{ refsaison }}{{ conseil.id }}">{{ saison }}</label>
-                        {% endfor %}
-                        <br />
-                        <input type="hidden" name="id" value="{{ conseil.id }}" />
-                        <input class="btn btn-default" type="submit" name="enregistre" value="Enregistrer les modifications" /><br />
-                        <input class="btn btn-default" type="submit" name="supprime" value="Supprimer de la galerie" />
-                    </form>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                <div class="thumbnail ">
+                    <div class="caption">
+                        <form method="post" action="#">
+                            {#<input class="form-control" type="text" name="conseil" value="{{ conseil.contenu }}" /><br />#}
+                            <textarea class="form-control" name="conseil" rows="4">{{ conseil.contenu }}</textarea><br />
+
+                            <input type="checkbox" name="saison" id="printemps" value="printemps"
+                                    {% if conseil.printemps == 1 %} checked {% endif %} />
+                            <label class="normal-text" for="printemps">Printemps</label>
+
+                            <input type="checkbox" name="saison" id="ete" value="ete"
+                                    {% if conseil.ete == 1 %} checked {% endif %} />
+                            <label class="normal-text" for="ete">Eté</label>
+
+                            <input type="checkbox" name="saison" id="automne" value="automne"
+                                    {% if conseil.automne == 1 %} checked {% endif %} />
+                            <label class="normal-text" for="automne">Automne</label>
+
+                            <input type="checkbox" name="saison" id="hiver" value="hiver"
+                                    {% if conseil.hiver == 1 %} checked {% endif %} />
+                            <label class="normal-text" for="hiver">Hiver</label>
+
+                            <br />
+                            <input type="hidden" name="id" value="{{ conseil.id }}" />
+                            <input class="btn btn-default" type="submit" name="enregistre" value="Enregistrer les modifications" /><br />
+                            <input class="btn btn-default" type="submit" name="supprime" value="Supprimer de la galerie" />
+                        </form>
+                    </div>
                 </div>
             </div>
         {% endfor %}
 
                             {#<a href = "" class="btn btn-warning btn-sm" role = "button" >Modifier</a >#}
                             {#<a href = "" class="btn btn-danger btn-sm" role = "button" >Supprimer</a>#}
-
-
-
-
-        {# -- Créer un nouveau conseil ---------------------------------- -- #}
-
-        <div class="col-xs-12 bandeau text-center">
-            Ajouter un conseil
-        </div>
 
     </div> {# -- fermeture de la row principale -- #}
 

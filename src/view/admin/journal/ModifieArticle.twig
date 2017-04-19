@@ -45,11 +45,11 @@
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <p class="erreur">{%  if erreur=='' %}&nbsp{% else %}ERREUR : {{ erreur }}{% endif %}</p>
                     <P>
-                        <form method="post" action="admin/index.php?p=chezgaston">
+                        <form method="post" action="index.php?p=chezgaston">
                             <input type="hidden" name="method" value="majarticle" />
                             <input type="hidden" name="id" value="{{ article.id }}" />
                             <label for="titre">Date de parution de l'article</label><br />
-                            <input class="form-control" type="text" name="titre" id="titre" value="{{ article.date|date('d-m-Y') }}" /><br />
+                            <input class="form-control" type="text" name="date" id="date" value="{{ article.date|date('Y-m-d H:i:s') }}" /><br />
                             <label for="titre">Titre de l'article</label><br />
                             <input class="form-control" type="text" name="titre" id="titre" value="{{ article.titre }}" /><br />
                             <label for="detail">Contenu de l'article</label><br />

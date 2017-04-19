@@ -1,6 +1,7 @@
 <?php
 // --- web/admin/index.$php ---
 
+DEFINE('PUBLIC_IMG', dirname(dirname(__FILE__)).'/img/');
 
 // --- on recupere l'eventuel nom de page demandee, passe en parametre get
 $page = 'presentation'; // page par defaut si get pas defini

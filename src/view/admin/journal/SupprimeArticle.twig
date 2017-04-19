@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-5">
                     <p class="label-like">Date de parution de l'article</p>
-                    <p class="input-like form-control">{{ article.date|date('d-m-Y') }}</p>
+                    <p class="input-like form-control">{{ article.date|date('Y-m-d H:i:s') }}</p>
                     <p class="label-like">Titre de l'article</p>
                     <p class="input-like form-control">{{ article.titre }}</p>
                     <p class="label-like">Contenu de l'article</p>
@@ -37,7 +37,7 @@
                     <br />
                     <p>
                         <form method="post" action="index.php?p=chezgaston">
-                            <input type="hidden" name="method" value="delarticle">
+                            <input type="hidden" name="method" value="delArticle">
                             <input type="hidden" name="id" value="{{ article.id }}">
                             <input class="btn btn-default" type="submit" name="supprime" value="Confirmer la suppression" />
                             &nbsp;&nbsp;

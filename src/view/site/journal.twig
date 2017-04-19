@@ -24,12 +24,8 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><span class="icone-nav showopacity glyphicon glyphicon-home"></span></li>
-                <a href="index.php"><img class="logo-xs" src="img/logo_blanc.png"></a>
-                <li><form class="search-form" role="search">
-                        <div class="form-group waves-light">
-                            <input type="text" class="form-control" placeholder="Recherche">
-                        </div>
-                    </form></li>
+                <a href="#"><img class="logo-xs" src="img/logo_blanc.png"></a>
+                <hr class="separe">
                 <li><a href="index.php">Revenir au site</a></li>
             </ul>
 
@@ -37,12 +33,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <a href="index.php"><img class="logo-lg" src="img/logo_blanc.png"></a>
-                <li><form class="search-form" role="search">
-                        <div class="form-group waves-light">
-                            <input type="text" class="form-control" placeholder="Recherche">
-                        </div>
-                    </form></li>
+                <a href="#"><img class="logo-lg" src="img/logo_blanc.png"></a>
+                <hr class="separe">
                 <li><a href="index.php">Revenir au site</a></li>
             </ul>
         </div>
@@ -61,15 +53,15 @@
 
         <ul class="timeline">
 
-            {% for article in article %}
+            {% set dateref = date('+1month')|date('Y m') %}
 
-                {% if article.date|date('M') > article[i-1].date|date('M') %}
+            {% for article in articles %}
 
-                <li><div class="tldate">{{ article.date|date('F Y') }}</div></li>
+                {% if dateref > article.date|date('Y m') %}
 
-                {% elseif article.date|date('M') == article[i-1].date|date('M') %}
+                {% set dateref = article.date|date('Y m') %}
 
-                <li><div> </div></li>
+                <li><div class="tldate"><h3>{{ article.date|date('F Y') }}</h3></div></li>
 
                 {% endif %}
 
@@ -79,12 +71,12 @@
                     <div class="tl-circ"></div>
                     <div class="timeline-panel">
                         <div class="tl-heading">
-                            <h4>{{ article.titre }}</h4>
+                            <h2>{{ article.titre }}</h2>
                             <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j F Y') }}</small></p>
                         </div>
                         <div class="tl-body">
                             <p>{{ article.contenu }}.</p>
-                            <p><img src="{{ article.image }}" alt="post 1" class="imgPost img-responsive"/></p>
+                            <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
                         </div>
                     </div>
                 </li>
@@ -95,12 +87,12 @@
                     <div class="tl-circ"></div>
                     <div class="timeline-panel">
                         <div class="tl-heading">
-                            <h4>{{ article.titre }}</h4>
+                            <h2>{{ article.titre }}</h2>
                             <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j F Y') }}</small></p>
                         </div>
                         <div class="tl-body">
                             <p>{{ article.contenu }}</p>
-                            <p><img src="{{ article.image }}" alt="post 2" class="imgPost img-responsive"/></p>
+                            <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
                         </div>
                     </div>
                 </li>

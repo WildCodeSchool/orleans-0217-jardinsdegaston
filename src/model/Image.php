@@ -142,6 +142,7 @@ class Image
             $fileName.=substr($codetype,1);
         }
         if ( false === move_uploaded_file($_FILES[$fileName]['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+
             $this->resetTmp($codetype);
 
             //voir aussi $_FILES['fichier']['error'] > 0 (il y a eu une erreur)

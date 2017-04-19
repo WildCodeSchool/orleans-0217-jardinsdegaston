@@ -2,10 +2,113 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90b75dc3-e631-4f26-a05e-a8f787f387a1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgJ-22.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgJ-23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgJ-24.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgJ-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgJ-26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/imgJ-27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/tmp/imgB-tmp.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/tmp/imgP-tmp.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/form/ArticleFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/form/ConseilFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/form/ConseilForm.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/imgP-6.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fonts/ARTISTIK.TTF" afterPath="$PROJECT_DIR$/web/fonts/ARTISTIK.TTF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/Logosap.png" afterPath="$PROJECT_DIR$/web/img/Logosap.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/automne.jpg" afterPath="$PROJECT_DIR$/web/img/automne.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/bg1.jpg" afterPath="$PROJECT_DIR$/web/img/bg1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/bg1_transp.jpg" afterPath="$PROJECT_DIR$/web/img/bg1_transp.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/bgimg1e.jpg" afterPath="$PROJECT_DIR$/web/img/bgimg1e.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/bgimg2.jpg~fa4a6df0e40d15ed93aaed8dc196f9c22884c39b" afterPath="$PROJECT_DIR$/web/img/bgimg2.jpg~fa4a6df0e40d15ed93aaed8dc196f9c22884c39b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/bgimg2a.jpg" afterPath="$PROJECT_DIR$/web/img/bgimg2a.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/bgimg2h.jpg" afterPath="$PROJECT_DIR$/web/img/bgimg2h.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/contact.jpg" afterPath="$PROJECT_DIR$/web/img/contact.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/ete.jpg" afterPath="$PROJECT_DIR$/web/img/ete.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/garden2.jpg" afterPath="$PROJECT_DIR$/web/img/garden2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/garden3.jpg" afterPath="$PROJECT_DIR$/web/img/garden3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/garden4.jpg" afterPath="$PROJECT_DIR$/web/img/garden4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/herbes_picto_xtraSmallvert.png" afterPath="$PROJECT_DIR$/web/img/herbes_picto_xtraSmallvert.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/hiver.jpg" afterPath="$PROJECT_DIR$/web/img/hiver.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/img2.jpg" afterPath="$PROJECT_DIR$/web/img/img2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/imgbg5.jpg" afterPath="$PROJECT_DIR$/web/img/imgbg5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/jardinage.jpg" afterPath="$PROJECT_DIR$/web/img/jardinage.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/jardinier.png" afterPath="$PROJECT_DIR$/web/img/jardinier.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/logo-wcs-ho.png" afterPath="$PROJECT_DIR$/web/img/logo-wcs-ho.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/logo-wcs-vo-alter-small.png" afterPath="$PROJECT_DIR$/web/img/logo-wcs-vo-alter-small.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/logo-wcs-vo-alter-small.png~175307bedd1fd0f899cea6684e646b001fd4e385" afterPath="$PROJECT_DIR$/web/img/logo-wcs-vo-alter-small.png~175307bedd1fd0f899cea6684e646b001fd4e385" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/logo-wcs-vo.png" afterPath="$PROJECT_DIR$/web/img/logo-wcs-vo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/logo_blanc.png" afterPath="$PROJECT_DIR$/web/img/logo_blanc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/noimg.jpg" afterPath="$PROJECT_DIR$/web/img/noimg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/noimg.png" afterPath="$PROJECT_DIR$/web/img/noimg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/printemps.jpg" afterPath="$PROJECT_DIR$/web/img/printemps.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/test2_apres.jpg" afterPath="$PROJECT_DIR$/web/img/test2_apres.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/test2_avant.jpg" afterPath="$PROJECT_DIR$/web/img/test2_avant.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/test3_apres.jpg" afterPath="$PROJECT_DIR$/web/img/test3_apres.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/test3_avant.jpg" afterPath="$PROJECT_DIR$/web/img/test3_avant.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/test_img_1_rsz.jpg" afterPath="$PROJECT_DIR$/web/img/test_img_1_rsz.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/test_img_2.jpg" afterPath="$PROJECT_DIR$/web/img/test_img_2.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/ImageFondController.php" afterPath="$PROJECT_DIR$/src/controller/admin/ImageFondController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ErrorController.php" afterPath="$PROJECT_DIR$/src/controller/ErrorController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/ConseilController.php" afterPath="$PROJECT_DIR$/src/controller/admin/ConseilController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/ContactController.php" afterPath="$PROJECT_DIR$/src/controller/admin/ContactController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/JournalAdminController.php" afterPath="$PROJECT_DIR$/src/controller/admin/JournalAdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/admin/LivredorController.php" afterPath="$PROJECT_DIR$/src/controller/admin/LivredorController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/site/AccueilController.php" afterPath="$PROJECT_DIR$/src/controller/site/AccueilController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/site/JournalController.php" afterPath="$PROJECT_DIR$/src/controller/site/JournalController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/form/ArticleForm.php" afterPath="$PROJECT_DIR$/src/form/ArticleForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/form/ContactForm.php" afterPath="$PROJECT_DIR$/src/form/ContactForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/form/LivredorFilter.php" afterPath="$PROJECT_DIR$/src/form/LivredorFilter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/form/LivredorForm.php" afterPath="$PROJECT_DIR$/src/form/LivredorForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/form/RealisationFilter.php" afterPath="$PROJECT_DIR$/src/form/RealisationFilter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/form/RealisationForm.php" afterPath="$PROJECT_DIR$/src/form/RealisationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/ConseilManager.php" afterPath="$PROJECT_DIR$/src/model/ConseilManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/ContactManager.php" afterPath="$PROJECT_DIR$/src/model/ContactManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/DbManager.php" afterPath="$PROJECT_DIR$/src/model/DbManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Image.php" afterPath="$PROJECT_DIR$/src/model/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/imageFond/ImageFond.twig" afterPath="$PROJECT_DIR$/src/view/admin/imageFond/ImageFond.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Journal.php" afterPath="$PROJECT_DIR$/src/model/Journal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/JournalManager.php" afterPath="$PROJECT_DIR$/src/model/JournalManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/LivredorManager.php" afterPath="$PROJECT_DIR$/src/model/LivredorManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/PresentationManager.php" afterPath="$PROJECT_DIR$/src/model/PresentationManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/PrestationManager.php" afterPath="$PROJECT_DIR$/src/model/PrestationManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/RealisationManager.php" afterPath="$PROJECT_DIR$/src/model/RealisationManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/Erreur.twig" afterPath="$PROJECT_DIR$/src/view/admin/Erreur.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/conseil/Conseil.twig" afterPath="$PROJECT_DIR$/src/view/admin/conseil/Conseil.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/contact/Contact.twig" afterPath="$PROJECT_DIR$/src/view/admin/contact/Contact.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/journal/Journal_admin.twig" afterPath="$PROJECT_DIR$/src/view/admin/journal/Journal_admin.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/journal/ModifieArticle.twig" afterPath="$PROJECT_DIR$/src/view/admin/journal/ModifieArticle.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/journal/SupprimeArticle.twig" afterPath="$PROJECT_DIR$/src/view/admin/journal/SupprimeArticle.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/livredor/Livredor.twig" afterPath="$PROJECT_DIR$/src/view/admin/livredor/Livredor.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/AjoutePrestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/AjoutePrestation.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/ModifiePrestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/ModifiePrestation.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/admin/prestation/SupprimePrestation.twig" afterPath="$PROJECT_DIR$/src/view/admin/prestation/SupprimePrestation.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/site/Accueil.twig" afterPath="$PROJECT_DIR$/src/view/site/Accueil.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/site/journal.twig" afterPath="$PROJECT_DIR$/src/view/site/journal.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/index.php" afterPath="$PROJECT_DIR$/web/admin/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/admin.css" afterPath="$PROJECT_DIR$/web/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/blog_stylesheet.css" afterPath="$PROJECT_DIR$/web/css/blog_stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/starter-template.css" afterPath="$PROJECT_DIR$/web/css/starter-template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/stylesheet.css" afterPath="$PROJECT_DIR$/web/css/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/jquery-3.1.1.min.js" afterPath="$PROJECT_DIR$/web/js/jquery-3.1.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/npm.js" afterPath="$PROJECT_DIR$/web/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/script.js" afterPath="$PROJECT_DIR$/web/js/script.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +131,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Image.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/Image.php">
+      <file leaf-file-name="ImageFondController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/admin/ImageFondController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2480">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageFondController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/admin/ImageFondController.php">
+      <file leaf-file-name="PrestationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/admin/PrestationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="90" lean-forward="false" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+            <state relative-caret-position="315">
+              <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -67,6 +170,7 @@
       <find>PhpThumbFactory</find>
       <find>tmpName</find>
       <find>var_dump</find>
+      <find>reset</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/vendor/masterexploder</dir>
@@ -107,11 +211,13 @@
         <option value="$PROJECT_DIR$/src/form/MessageForm.php" />
         <option value="$PROJECT_DIR$/src/controller/site/AccueilController.php" />
         <option value="$PROJECT_DIR$/src/view/site/Accueil.twig" />
-        <option value="$PROJECT_DIR$/src/view/site/journal.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/view/admin/imageFond/ImageFond.twig" />
         <option value="$PROJECT_DIR$/src/controller/admin/ImageFondController.php" />
+        <option value="$PROJECT_DIR$/src/view/site/journal.twig" />
         <option value="$PROJECT_DIR$/src/model/Image.php" />
+        <option value="$PROJECT_DIR$/composer.lock" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -123,9 +229,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="348" />
+    <option name="y" value="66" />
+    <option name="width" value="1538" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -466,20 +573,22 @@
       <workItem from="1492513952479" duration="2000" />
       <workItem from="1492530196030" duration="3183000" />
       <workItem from="1492583985029" duration="68000" />
+      <workItem from="1492593927965" duration="1668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160270000" />
+    <option name="totallyTimeSpent" value="161938000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <frame x="348" y="66" width="1538" height="938" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22395833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.046979867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14228188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15110813" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31491002" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -490,7 +599,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -508,25 +616,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/Presentation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/Logosap.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/admin/PrestationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/PrestationManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -737,34 +826,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/save_differentformat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_basic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="28" column="25" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/site/journal.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/README" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/save_differentformat.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_basic.php" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -773,49 +837,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/src/PHPThumb/GD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/src/PHPThumb/PHPThumb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_adaptive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic_fromstring.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_fromcenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/src/PHPThumb/GD.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/src/PHPThumb/PHPThumb.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/resize_adaptive.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_basic_fromstring.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/masterexploder/phpthumb/examples/crop_fromcenter.php" />
     <entry file="file://$PROJECT_DIR$/src/view/admin/imageFond/ImageFond.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
@@ -824,18 +851,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/admin/ImageFondController.php">
+    <entry file="file://$PROJECT_DIR$/src/view/site/journal.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="90" lean-forward="false" selection-start-line="24" selection-start-column="90" selection-end-line="24" selection-end-column="90" />
+        <state relative-caret-position="555">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/admin/PrestationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2480">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="235">
+          <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/admin/ImageFondController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding />
         </state>
       </provider>

@@ -9,7 +9,10 @@
 namespace wcs\form;
 
 use Zend\Form\Element\Csrf;
+use Zend\Form\Element\Date;
 use Zend\Form\Element\DateTime;
+use Zend\Form\Element\File;
+use Zend\Form\Element\Image;
 use Zend\Form\Element\Text;
 use Zend\Form\Form;
 
@@ -23,15 +26,15 @@ class ArticleForm extends Form
             'type'  => Text::class,
             'name' => 'titre',
             'options' => [
-                'label' => 'Le nom de l\'article',
+                'label' => 'Titre de l\'article',
             ],
         ]);
 
         $this->add([
-            'type'  => DateTime::class,
+            'type'  => Text::class,
             'name' => 'date',
             'options' => [
-                'label' => 'Date de parution',
+                'label' => 'Date de publication',
             ],
         ]);
 
@@ -39,16 +42,21 @@ class ArticleForm extends Form
             'type'  => Text::class,
             'name' => 'contenu',
             'options' => [
-                'label' => 'Le contenu de l\'article',
+                'label' => 'Contenu de l\'article',
             ],
         ]);
 
         $this->add([
-            'type'  => Text::class,
-            'name' => 'image',
+            'type' => File::class,
+            'name' => 'imgArticle',
             'options' => [
-                'label' => 'Choisir une image',
-            ],
+                'label' => 'Image de l\'article',
+            ]
+        ]);
+
+        $this->add([
+            'type' => Csrf::class,
+            'name' => 'csrf',
         ]);
     }
 }

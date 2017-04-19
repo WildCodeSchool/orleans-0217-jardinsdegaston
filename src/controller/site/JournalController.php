@@ -20,21 +20,8 @@ class JournalController extends Controller
     public function index()
     {
         $journal = new JournalManager($this->bdd, Journal::class);
-        $article = $journal->findAllReverse('journal');
-        return $this->twig->render('site/journal.twig', ['article'=>$article]);
-    }
-
-    public function add()
-    {
-        $form = new ArticleForm();
-
-        if (isset($_POST['Envoyer'])) {
-            $form->setData($_POST);
-
-            if ($form->isValid()) {
-                echo 'L\'article a bien été ajouté.';
-            }
-        }
+        $articles = $journal->findAllReverse('journal');
+        return $this->twig->render('site/journal.twig', ['articles'=>$articles]);
     }
 
 }

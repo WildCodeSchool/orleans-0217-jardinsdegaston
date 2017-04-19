@@ -8,6 +8,10 @@
 
 namespace wcs\controller\admin;
 use \wcs\controller\Controller;
+use wcs\model\Conseil;
+use wcs\model\ConseilManager;
+use wcs\form\ConseilForm;
+use wcs\form\ConseilFilter;
 
 
 class ConseilController extends Controller
@@ -15,23 +19,35 @@ class ConseilController extends Controller
 
     public function index()
     {
-        /* --- provisoire --- */
-        $affsaisons = ['Printemps', 'Eté', 'Automne', 'Hiver'];
-        $saisons = ['Prin.', 'Eté', 'Aut.', 'Hiv.'];
-        $conseils = [
-            ['id' => 1, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => 'peah'],
-            ['id' => 2, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => 'p   '],
-            ['id' => 3, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => 'pe  '],
-            ['id' => 4, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => '  ah'],
-            ['id' => 5, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => '   h'],
-            ['id' => 6, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => 'p  h'],
-            ['id' => 7, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => '  a '],
-            ['id' => 8, 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'saison' => '  a '],
-        ];
+        $manager = new ConseilManager($this->bdd, Conseil::class);
+        $form = new ConseilForm();
+        $filter = new ConseilFilter();
+        $form->setInputFilter($filter);
+        $params = ["conseils" => $manager->findAll('conseil'),
+                    'form' => $form];
 
-        return $this->twig->render('conseil/Conseil.twig', ['post' => $this->post, 'affsaisons' => $affsaisons, 'saisons' => $saisons, 'conseils' => $conseils]);
-
+        return $this->twig->render('conseil/Conseil.twig', $params);
     }
 
+    public function affichageConditionnelConseil()
+    {
+        $manager = new ConseilManager($this->bdd, Conseil::class);
+
+        if (isset($_POST['actualiserAffichage'])) {
+            foreach ($_POST['saison'] as $value)
+            {
+                $conseils = $manager->findBySeason($value);
+            }
+        }
+
+        $form = new ConseilForm();
+        $filter = new ConseilFilter();
+        $form->setInputFilter($filter);
+        $params = ["conseils" => $conseils,
+                    'form' => $form];
+
+        return $this->twig->render('conseil/Conseil.twig', $params);
+
+    }
 
 }

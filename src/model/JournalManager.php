@@ -16,43 +16,31 @@ class JournalManager extends DbManager
 
     }
 
-    public function writeArticle(Journal $article)
+    public function addArticle(Journal $article)
     {
-        foreach ($_POST as $key => $val) {
-            $postClean[$key] = htmlentities(trim($val));
-        }
-
-        $query = 'INSERT into journal (titre, contenu, date) VALUES (:titre, :contenu, :date)';
+        $query = "INSERT into journal (titre, contenu, date) VALUES (:titre, :contenu, :date)";
         $pre = $this->getbdd()->prepare($query);
-
-        $pre->bindValue(':titre', $article->getTitre(), \PDO::PARAM_STR);
-        $pre->bindValue(':contenu', $article->getContenu(), \PDO::PARAM_STR);
-        $pre->bindValue(':date', $article->getDate(), \DateTime::ATOM);
+        $pre->bindValue(':titre', $article->getTitre());
+        $pre->bindValue(':contenu', $article->getContenu());
+        $pre->bindValue(':date', $article->getDate()->format('Y-m-d H:i:s'));
 
         $pre->execute();
 
         $id = $this->getBdd()->lastInsertId();
 
         return $id;
+    }
 
-        }
-
-    public function modifyArticle(Journal $enr)
+    public function updateArticle(Journal $article)
     {
-        foreach ($_POST as $key => $val) {
-            $postClean[$key] = htmlentities(trim($val));
-        }
+        $id = $article->getId();
 
-        $id = $enr->getId();
-
-        $sql = 'UPDATE prestation SET titre=:titre, contenu=:contenu, date=:date WHERE id=$id';
-        $pre = $this->getbdd()->prepare($sql);
-        $pre->bindValue(':titre', $enr->getTitre(), \PDO::PARAM_STR);
-        $pre->bindValue(':contenu', $enr->getContenu(), \PDO::PARAM_STR);
-        $pre->bindValue(':date', $enr->getDate(), \PDO::PARAM_STR);
+        $query = "UPDATE journal SET titre=:titre, contenu=:contenu, date=:date WHERE id=$id";
+        $pre = $this->getbdd()->prepare($query);
+        $pre->bindValue(':titre', $article->getTitre());
+        $pre->bindValue(':contenu', $article->getContenu());
+        $pre->bindValue(':date', $article->getDate()->format('Y-m-d H:i:s'));
 
         $pre->execute();
-
-        return $id;
     }
 }
