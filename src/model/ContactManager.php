@@ -13,16 +13,26 @@ class ContactManager extends DbManager
 {
     public function addContact()
     {
+        $nom = $_POST['NomContact'];
+        $prenom = $_POST['PrenomContact'];
+        $email = $_POST['EmailContact'];
+        $texte = $_POST['TexteContact'];
+        $tel = $_POST['TelContact'];
+        $date = date('Y-m-d H-i-s');
+        $statut = '0';
+
+
         $query = "INSERT INTO contact (nom, prenom, email, contenu, telephone, date, statut) VALUES (:Nom, :Prenom, :Email, :Contenu, :Telephone, :Date, :Statut)";
 
         $prep = $this->getBdd()->prepare($query);
-        $prep->bindValue(':Nom', $_POST['NomContact'], \PDO::PARAM_STR);
-        $prep->bindValue(':Prenom', $_POST['PrenomContact'], \PDO::PARAM_STR);
-        $prep->bindValue(':Email', $_POST['EmailContact'], \PDO::PARAM_STR);
-        $prep->bindValue(':Contenu', $_POST['TexteContact'], \PDO::PARAM_STR);
-        $prep->bindValue(':Telephone', $_POST['TelContact'], \PDO::PARAM_STR);
-        $prep->bindValue(':Date', date('Y-m-d H-i-s'));
-        $prep->bindValue(':Statut', 0);
-        $prep->execute();
+        $prep->bindValue(':Nom', $nom);
+        $prep->bindValue(':Prenom', $prenom);
+        $prep->bindValue(':Email', $email);
+        $prep->bindValue(':Contenu', $texte);
+        $prep->bindValue(':Telephone', $tel);
+        $prep->bindValue(':Date', $date);
+        $prep->bindValue(':Statut', $statut);
+        $res = $prep->execute();
+        return $res;
     }
 }

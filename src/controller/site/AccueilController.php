@@ -18,10 +18,12 @@ use wcs\model\Prestation;
 use wcs\model\PrestationManager;
 use wcs\model\Realisation;
 use wcs\model\RealisationManager;
+use wcs\form\ContactFilter;
 
 /*
  * class pour l'accueil
  */
+
 class AccueilController extends Controller
 {
     /**
@@ -48,18 +50,57 @@ class AccueilController extends Controller
         $livredorManager = new LivredorManager($this->bdd, Livredor::class);
         $livredor = $livredorManager->findAll();
 
-        $contact = new ContactForm();
+        $contactForm = new ContactForm();
+
+        if (isset($_POST['add'])) {
+            $filter = new ContactFilter();
+            $contactForm->setInputFilter($filter);
+            $contactForm->setData($_POST);
 
 
+            $nomErr = [];
+            $prenomErr = [];
+            $emailErr = [];
+            $telErr = [];
+            $contenuErr = [];
 
+            $ok= '';
 
-        return $this->twig->render('site/Accueil.twig', array('presentationH1'=>$presentationH1,
-                                                        'presentationH3'=>$presentationH3,
-                                                        'prestation'=>$prestation,
-                                                        'realisation'=>$realisation,
-                                                        'conseil'=>$conseil,
-                                                        'livredor'=>$livredor,
-                                                        'contact'=>$contact));
+            if ($contactForm->isValid()) {
+                $contactManager = new ContactManager($this->bdd, Contact::class);
+                if ($contactManager->addContact()) {
+                    $ok = 'message envoyé';
+                };
+            } else {
+                $nomErr = $contactForm->get('NomContact')->getMessages();
+                $prenomErr = $contactForm->get('PrenomContact')->getMessages();
+                $emailErr = $contactForm->get('EmailContact')->getMessages();
+                $telErr = $contactForm->get('TelContact')->getMessages();
+                $contenuErr = $contactForm->get('TexteContact')->getMessages();
+            }
+            return $this->twig->render('site/Accueil.twig', array('nomErr' => $nomErr,
+                                                                    'prenomErr' => $prenomErr,
+                                                                    'emailErr' => $emailErr,
+                                                                    'telErr' => $telErr,
+                                                                    'contenuErr' => $contenuErr,
+                                                                    'presentationH1' => $presentationH1,
+                                                                    'presentationH3' => $presentationH3,
+                                                                    'prestation' => $prestation,
+                                                                    'realisation' => $realisation,
+                                                                    'conseil' => $conseil,
+                                                                    'livredor' => $livredor,
+                                                                    'contact' => $contactForm,
+                                                                    'ok' => $ok));
+
+        }
+
+        return $this->twig->render('site/Accueil.twig', array('presentationH1' => $presentationH1,
+                                                                'presentationH3' => $presentationH3,
+                                                                'prestation' => $prestation,
+                                                                'realisation' => $realisation,
+                                                                'conseil' => $conseil,
+                                                                'livredor' => $livredor,
+                                                                'contact' => $contactForm));
 
     }
 

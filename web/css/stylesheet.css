@@ -1,4 +1,13 @@
 /*------        Général      ------*/
+.erreur {
+    color: red;
+}
+
+.ok {
+    color: #557e02;
+    font-weight: bold;
+    margin-top: -30px;
+}
 
 h1 {
     padding : 15px 0 20px 0;
@@ -563,7 +572,7 @@ border-radius: 6px;
 
 /*-------    Section Formulaire   ------*/
 .ImgForm {
-    margin-top: 2%;
+    margin-top: 5%;
     max-height: 495px;
 }
 
