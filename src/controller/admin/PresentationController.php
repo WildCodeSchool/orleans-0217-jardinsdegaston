@@ -56,14 +56,17 @@ class PresentationController extends Controller
             // --- mise a jour des enregistrements
 
             $presentation = new Presentation();
+            // --- presentation generale
             $presentation->setId(1);
             $presentation->setTitre($titre1);
             $presentation->setContenu($contenu1);
             $manager->update($presentation);
+            // --- valeurs 1
             $presentation->setId(2);
             $presentation->setTitre($titre2);
-            $presentation->setContenu($contenu3);
+            $presentation->setContenu($contenu2);
             $manager->update($presentation);
+            // --- valeurs 2
             $presentation->setId(3);
             $presentation->setTitre($titre3);
             $presentation->setContenu($contenu3);
