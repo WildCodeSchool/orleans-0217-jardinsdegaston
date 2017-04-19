@@ -5,8 +5,11 @@
 namespace wcs\controller\site;
 
 use wcs\controller\Controller;
+use wcs\form\ContactForm;
 use wcs\model\Conseil;
 use wcs\model\ConseilManager;
+use wcs\model\Contact;
+use wcs\model\ContactManager;
 use wcs\model\Livredor;
 use wcs\model\LivredorManager;
 use wcs\model\Presentation;
@@ -45,17 +48,20 @@ class AccueilController extends Controller
         $livredorManager = new LivredorManager($this->bdd, Livredor::class);
         $livredor = $livredorManager->findAll();
 
+        $contact = new ContactForm();
+
+
+
+
         return $this->twig->render('site/Accueil.twig', array('presentationH1'=>$presentationH1,
                                                         'presentationH3'=>$presentationH3,
                                                         'prestation'=>$prestation,
                                                         'realisation'=>$realisation,
                                                         'conseil'=>$conseil,
-                                                        'livredor'=>$livredor));
+                                                        'livredor'=>$livredor,
+                                                        'contact'=>$contact));
 
     }
 
-    public function envoiContact()
-    {
 
-    }
 }

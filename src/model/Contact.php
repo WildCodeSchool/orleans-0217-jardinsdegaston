@@ -9,7 +9,7 @@
 namespace wcs\model;
 
 
-class Contact extends Livredor
+class Contact
 {
 
     /* --- Proprietes --------------------------------- */
@@ -82,7 +82,7 @@ class Contact extends Livredor
 
     /**
      * @param $date
-     * @return Message
+     * @return Contact
      */
     public function setDate($date) : Contact
     {
@@ -100,14 +100,13 @@ class Contact extends Livredor
 
     /**
      * @param $statut
-     * @return Message
+     * @return Contact
      */
     public function setStatut($statut) : Contact
     {
         $this->statut = $statut;
         return $this;
     }
-
 
 
 }

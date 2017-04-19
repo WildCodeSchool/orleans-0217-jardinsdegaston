@@ -8,7 +8,7 @@
 
 namespace wcs\Form;
 
-
+use Zend\Form\Element\Tel;
 use Zend\Form\Element\Email;
 use Zend\Form\Element\Text;
 use Zend\Form\Element\Textarea;
@@ -38,7 +38,7 @@ class ContactForm extends Form
 
         $this->add([
             'type'  => Email::class,
-            'name' => 'EmailMessage',
+            'name' => 'EmailContact',
             'options' => [
                 'label' => 'Email',
             ],
@@ -46,9 +46,17 @@ class ContactForm extends Form
 
         $this->add([
             'type'  => Textarea::class,
-            'name' => 'TexteLDor',
+            'name' => 'TexteContact',
             'options' => [
                 'label' => 'Texte',
+            ],
+        ]);
+
+        $this->add([
+            'type'  => Tel::class,
+            'name' => 'TelContact',
+            'options' => [
+                'label' => 'Téléphone',
             ],
         ]);
     }

@@ -269,34 +269,42 @@
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 formulaire">
 
             <span id="formulaireAnchor" class="ancre"></span>
-
+{% do contact.prepare() %}
+            {#{{ dump(contact.prepare()) }}#}
             <h2>CONTACTEZ-NOUS</h2>
             <hr class="separe">
             <p>Tel: 06 00 00 00 00</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-            <form name="ajout-citation" method="POST" action="ajout.php">
+            <form name="ajout-contact" method="POST" action="admin/index.php?p=contact">
 
 
                 <div class="form-group">
-                    <label for="Nom">Nom</label>
-                    <input required ="required" class="form-control" type="text" id="Nom" name="Nom" />
+                    <label for="{{ contact.get('NomContact').name }}">{{ contact.get('NomContact').label }}</label>
+                    <input required ="required" class="form-control" type="text" id="{{ contact.get('NomContact').name }}" name="{{ contact.get('NomContact').name }}" />
                 </div>
 
                 <div class="form-group">
-                    <label for="Prenom">Prenom</label>
-                    <input required ="required" class="form-control" type="text" id="Prenom" name="Prenom"/>
+                    <label for="{{ contact.get('PrenomContact').name }}">{{ contact.get('PrenomContact').label }}</label>
+                    <input required ="required" class="form-control" type="text" id="{{ contact.get('PrenomContact').name }}" name="{{ contact.get('PrenomContact').name }}"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input required ="required" class="form-control" type="text" id="Email" name="Email" />
+                    <label for="{{ contact.get('EmailContact').name }}">{{ contact.get('EmailContact').label }}</label>
+                    <input required ="required" class="form-control" type="text" id="{{ contact.get('EmailContact').name }}" name="{{ contact.get('EmailContact').name }}" />
                 </div>
 
                 <div class="form-group">
-                    <label for="Texte">Texte</label>
-                    <textarea required ="required" class="form-control" id="Texte" name="Texte"></textarea>
+                    <label for="{{ contact.get('TelContact').name }}">{{ contact.get('TelContact').label }}</label>
+                    <input required ="required" class="form-control" type="text" id="{{ contact.get('TelContact').name }}" name="{{ contact.get('TelContact').name }}" />
                 </div>
 
+                <div class="form-group">
+                    <label for="{{ contact.get('TexteContact').name }}">{{ contact.get('TexteContact').label }}</label>
+                    <textarea required ="required" class="form-control" id="{{ contact.get('TexteContact').name }}" name="{{ contact.get('TexteContact').name }}"></textarea>
+                </div>
+                {#<input type="hidden" name="statut" value="0">#}
+                <input type="hidden" name="method" value="ajoutContact">
+                {#<input type="hidden" name="id">#}
                 <input class="btn btn-default hover" type="submit" name="add" value="Envoyer">
 
             </form>
