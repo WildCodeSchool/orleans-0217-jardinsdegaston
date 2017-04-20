@@ -93,22 +93,26 @@ nav.sidebar, .main{
 
 /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 
     .navbar-header {
         display: none;
     }
 
-        /*Show all nav*/
-        nav.sidebar{
-            margin-left: 0px;
-            float: left;
-        }
-        /*Show hidden items on nav*/
-        nav.sidebar .forAnimate{
-            opacity: 1;
-        }
+    /*Show all nav*/
+    nav.sidebar{
+        margin-left: 0px;
+        float: left;
     }
+    /*Show hidden items on nav*/
+    nav.sidebar .forAnimate{
+        opacity: 1;
+    }
+
+    .logo-lg {
+        padding: 20px 10px 10px 10px;
+    }
+}
 
 nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
     color: #CCC;
@@ -126,22 +130,12 @@ section{
     padding-left: 200px;
 }
 
-.search-form {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30px;
-    }
-
-.logo-lg {
-    padding: 20px 10px 10px 10px;
-}
-
 /*--- main --- */
 
 /*---   Background   ---*/
 
 body {
-    background-image: url(img/bgimg1_transp.png);
+    background-image: url(../img/bg1_transp.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -168,6 +162,10 @@ p {
     color: rgb(255, 255, 255);
     height: 1px;
     margin-bottom: 10px;
+}
+
+.modal {
+    z-index: 99999;
 }
 
 /*--- Timeline   ---*/
@@ -339,17 +337,6 @@ img { border: 0; max-width: 100%; }
     margin-right: auto;
 }
 
-/** media queries **/
-/*
-@media (max-width: 991px) {
-    .timeline li .timeline-panel {
-        width: 44%;
-    }
-
-
-
-}
-*/
 
 /* ----- bouton Retour en haut ------- */
 

@@ -22,53 +22,46 @@
         <div class="col-xs-12 bandeau text-center">
             Modifier un article
         </div>
-        <div class="col-xs-12">
+
+        <form method="post" action="index.php?p=chezgaston" enctype="multipart/form-data">
+
             <div class="row contenu">
-                <div class="col-xs-6 col-md-3 col-lg-3 col-lg-offset-1 text-center">
+                <div class="col-xs-12 col-md-6 col-lg-2 col-lg-offset-1 text-center">
                     <p class="center-block"><img class="img-fluid pimg" src="../img/imgJ-{{ article.id }}.jpg" alt="" /></p>
                     <p>Image actuelle</p>
                 </div>
-                <div class="col-xs-6 col-md-3 col-lg-3 text-center">
-                    <p class="center-block"><img class="img-fluid pimg" src="{{ tmpimage }}?{{ random(9999) }}" alt="" /></p>
-                    <p>
-                        <form id="loadimg" method="post" action="index.php?p=chezgaston" enctype="multipart/form-data">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
-                            <input type="hidden" name="method" value="imgupload" />
-                            <input type="hidden" name="id" value="{{ article.id }}" />
-                            <input type="hidden" name="titre" id="titreimg" value="" />
-                            <input type="hidden" name="contenu" id="detailimg" value="" />
-                            <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
-                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
-                        </form>
-                    </p>
+
+                <div class="col-xs-12 col-md-6 col-lg-2 text-center">
+
+                    <input class="cache" type="file" accept="image/jpeg" name="imgModif" id="imgModif"  />
+                    <label for="imgModif" class="btn btn-default">Nouvelle image</label><br />
+
                 </div>
-                <div class="col-xs-12 col-md-6 col-lg-4">
-                    <p class="erreur">{%  if erreur=='' %}&nbsp{% else %}ERREUR : {{ erreur }}{% endif %}</p>
-                    <P>
-                        <form method="post" action="index.php?p=chezgaston">
-                            <input type="hidden" name="method" value="majarticle" />
-                            <input type="hidden" name="id" value="{{ article.id }}" />
+                <div class="col-xs-12 col-lg-6">
+                        <div class="form-group">
                             <label for="titre">Date de parution de l'article</label><br />
-                            <input class="form-control" type="text" name="date" id="date" value="{{ article.date|date('Y-m-d H:i:s') }}" /><br />
+                            <input class="form-control" type="text" name="date" id="date" value="{{ article.date|date('Y-m-d H:i:s') }}" />
+                        </div>
+
+                        <div class="form-group">
                             <label for="titre">Titre de l'article</label><br />
-                            <input class="form-control" type="text" name="titre" id="titre" value="{{ article.titre }}" /><br />
+                            <input class="form-control" type="text" name="titre" id="titre" value="{{ article.titre }}" />
+                        </div>
+
+                        <div class="form-group">
                             <label for="detail">Contenu de l'article</label><br />
-                            <textarea class="form-control" row="3" name="contenu" id="detail">{{ article.contenu }}</textarea><br />
-                            <input class="btn btn-default" type="submit" name="valide" value="Enregistrer la modification" />
-                            <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
-                        </form>
-                    </p>
+                            <textarea class="form-control" row="3" name="contenu" id="contenu">{{ article.contenu }}</textarea>
+                        </div>
+
+                        <input type="hidden" name="method" value="majarticle" />
+                        <input type="hidden" name="id" value="{{ article.id }}" />
+                        <input class="btn btn-default" type="submit" name="valide" value="Enregistrer la modification" />
+                        <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
                 </div>
             </div>
-        </div>
+        </form>
 
-        <script>
-            function valide() {
-                document.getElementById('titreimg').value = document.getElementById('titre').value;
-                document.getElementById('detailimg').value = document.getElementById('detail').value;
-                document.getElementById('loadimg').submit();
-            }
-        </script>
+    </div>
 
     </div> {# -- fermeture de la row principale -- #}
 
