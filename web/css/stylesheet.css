@@ -1,4 +1,11 @@
 /*------        Général      ------*/
+.sousTitre{
+    font-family: 'Open Sans', sans-serif;
+    color: #557e02;
+    font-size: 30px;
+
+}
+
 .erreur {
     color: red;
 }
@@ -17,7 +24,7 @@
 
 h1 {
     padding : 15px 0 20px 0;
-    font-size: 44px;
+    font-size: 40px;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
@@ -179,7 +186,7 @@ h4#accroche{
 .presentation {
     background: #fbfff3;
     position: relative;
-    height: 580px;
+    height: 650px;
 }
 
 .presentation p {

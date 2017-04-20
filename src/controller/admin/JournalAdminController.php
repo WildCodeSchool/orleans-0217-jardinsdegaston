@@ -83,11 +83,12 @@ class JournalAdminController extends Controller
             }
 
             $articles = $articlesManager->findAllReverse('journal');
+            $newForm = new ArticleForm();
 
             /* definition des paramètres à envoyer à twig */
             $params = [
                 'articles' => $articles,
-                'form' => $form,
+                'newform' => $newForm,
                 'imgErr' => $imgErr,
                 'titreErr' => $titreErr,
                 'dateErr' => $dateErr,
