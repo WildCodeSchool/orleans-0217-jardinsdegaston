@@ -71,7 +71,7 @@
             Liste des conseils déjà enregistrés
         </div>
         {# -- selecteur d'affichage -- #}
-        <div class="col-xs-12 contenu text-center">
+        {#<div class="col-xs-12 contenu text-center">
             <form action="index.php?p=conseil" method="post">
                 <span class="like-label">Sélection de l'affichage :</span>
 
@@ -90,7 +90,7 @@
                 <button class="btn btn-default" type="submit" name="actualiserAffichage">Actualiser l'affichage</button>
                 <input type="hidden" name="method" value="affichageConditionnelConseil" />
             </form>
-        </div>
+        </div>#}
 
         {% for conseil in conseils %}
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
