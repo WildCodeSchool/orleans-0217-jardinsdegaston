@@ -1,6 +1,7 @@
 /.idea
 /vendor/
 /src/model/connect.php
+composer.json
 
 
 
