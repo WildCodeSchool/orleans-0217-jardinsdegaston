@@ -69,9 +69,10 @@
     <!-------    Paragraphe presentation  -------->
     <span id="presentationAnchor" class="ancre"></span>
     <div class="row presentation">
-        <div class="col-xs-12 col-lg-offset-2 col-lg-8 text-center">
+        <div class="col-xs-12 col-lg-offset-1 col-lg-10 text-center">
             <div class="presentation-header">
-            <h1>{{ presentationH1.titre }}</h1>
+                <h1>Les Jardins de Gaston<br/>entretien des parcs et jardins dans la région Orléannaise</h1>
+            <h2 class="sousTitre">{{ presentationH1.titre }}</h2>
             <p>{{ presentationH1.contenu | nl2br }}</p>
             </div>
             {% for pres in presentationH3 %}
