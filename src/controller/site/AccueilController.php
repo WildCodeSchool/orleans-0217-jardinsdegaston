@@ -26,10 +26,7 @@ use wcs\form\ContactFilter;
 
 class AccueilController extends Controller
 {
-    /**
-     * Methode pour instancier le titre et le contenu de la presentation
-     * et le renvoyer vers twig
-     **/
+
     public function index()
     {
         $presentationH1Manager = new PresentationManager($this->bdd, Presentation::class);

@@ -35,4 +35,18 @@ class ContactManager extends DbManager
         $res = $prep->execute();
         return $res;
     }
+
+    public function updateLus($data)
+    {
+        $id = $data['id'];
+        $statut = $data['StatutContact'];
+
+        $query = "UPDATE contact SET statut=:Statut WHERE id=:id";
+
+        $prep = $this->getBdd()->prepare($query);
+        $prep->bindValue('id', $id);
+        $prep->bindValue('Statut', $statut);
+        $prep->execute();
+
+    }
 }

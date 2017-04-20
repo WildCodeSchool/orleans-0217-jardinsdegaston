@@ -12,5 +12,65 @@
 
 
 {% block content %}
+    <h2>Messages non lus</h2>
+    <div class="row">
+        {% for contact in contacts if contact.statut == 0 %}
+            <div class="col-xs-6 col-md-3">
+                <div class="thumbnail">
+                    <form action="index.php?p=contact" method="post">
+                        <h3>{{ contact.nom }} {{ contact.prenom }}</h3>
+                        <p>Le {{ contact.date }}</p>
+                        <p>Message :<br/>{{ contact.contenu }}</p>
+                        <p>Tel : {{ contact.telephone }}</p>
+                        <p>Email : {{ contact.email }}</p>
+                        <p>statut : {{ contact.statut }}</p>
+                        <input type="hidden" name="id" value="{{ contact.id }}">
+                        <input type="hidden" name="StatutContact" value="{{ contact.statut }}" >
+                        <input class="btn btn-success" name="contactUpdate" value="Ok" type="submit">
+                        <input class="btn btn-danger" name="contactUpdate" value="Supprimer" type="submit">
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
+    <h2>Messages lus</h2>
+    <div class="row">
+        {% for contact in contacts if contact.statut == 1 %}
+            <div class="col-xs-6 col-md-3">
+                <div class="thumbnail">
+                    <form action="admin.php?p=contact" method="post">
+                        <h3>{{ contact.nom }} {{ contact.prenom }}</h3>
+                        <p>Le {{ contact.date }}</p>
+                        <p>Message :<br/>{{ contact.contenu }}</p>
+                        <p>Tel : {{ contact.telephone }}</p>
+                        <p>Email : {{ contact.email }}</p>
+                        <p>statut : {{ contact.statut }}</p>
+                        <input class="btn btn-default" name="contactUpdate" value="Archiver" type="submit">
+                        <input class="btn btn-danger" name="contactUpdate" value="Supprimer" type="submit">
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Messages archivés</h2>
+    <div class="row">
+        {% for contact in contacts if contact.statut == 2 %}
+            <div class="col-xs-6 col-md-3">
+                <div class="thumbnail">
+                    <form action="admin.php?p=contact" method="post">
+                        <h3>{{ contact.nom }} {{ contact.prenom }}</h3>
+                        <p>Le {{ contact.date }}</p>
+                        <p>Message :<br/>{{ contact.contenu }}</p>
+                        <p>Tel : {{ contact.telephone }}</p>
+                        <p>Email : {{ contact.email }}</p>
+                        <p>statut : {{ contact.statut }}</p>
+                        <input class="btn btn-danger" name="contactUpdate" value="Supprimer" type="submit">
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
+
