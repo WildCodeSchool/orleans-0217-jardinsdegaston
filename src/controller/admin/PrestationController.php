@@ -86,8 +86,9 @@ class PrestationController extends Controller
     public function imgupload()
     {
         $erreur = '';
-        if ( false === $this->img->recupImg('P') ) {
-            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
+        if ( false === $this->img->recupImg('P') )
+        {
+            $erreur = $this->img->getErreur();
             $this->img->resetTmp('P');
         }
         // --- recuperation des infos $_POST

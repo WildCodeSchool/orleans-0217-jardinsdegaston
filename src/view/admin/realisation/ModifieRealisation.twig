@@ -58,13 +58,16 @@
                             <input type="hidden" name="contenu" id="contenuimgap" value="" />
                             <input type="hidden" name="activation" id="activationimgap" value="" />
                             <input type="hidden" name="typeImg" value="Rap" />
-                            <input class="cache" type="file" accept=".jpg, jpeg" name="fichierap" id="fichierap" onchange="valide('ap');"/>
+                            <input class="cache" type="file" accept=".jpg, .jpeg" name="fichierap" id="fichierap" onchange="valide('ap');"/>
                             <label for="fichierap" class="btn btn-default">Nouvelle image</label><br />
                         </form>
                     </div>
 
                     <div class="col-sm-12 col-md-4 ">
                         <div class="hidden-xs hidden-sm"><br /></div>
+                        {% if erreur !='' %}
+                            <p class="erreur">{{ erreur }}</p>
+                        {% endif %}
                         <form method="post" action="index.php?p=realisation">
                             <input type="hidden" name="method" value="majReal" />
                             <input type="checkbox" id="activation" name="activation" {% if realisation.activation == 1 %}checked{% endif %}><label for="actif">
