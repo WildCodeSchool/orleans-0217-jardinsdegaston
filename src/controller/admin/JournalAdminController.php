@@ -205,14 +205,14 @@ class JournalAdminController extends Controller
             $date = new \DateTime($_POST['date']);
             $article->hydrate(intval($_POST['id']), $_POST['titre'], $_POST['contenu'], $date);
 
-            $id = $_POST['id'];
-            $image = $_POST['imgArticle'];
-            $imgName = 'imgJ-' . $id . '.jpg';
-            move_uploaded_file($image['tmp_name'], PUBLIC_IMG . $imgName);
-
             // --- mise a jour de l'enregistrement
             $manager = new JournalManager($this->bdd, Journal::class);
             $manager->updateArticle($article);
+
+            $id = $_POST['id'];
+            $image = $_FILES['imgModif'];
+            $imgName = 'imgJ-' . $id . '.jpg';
+            move_uploaded_file($image['tmp_name'], PUBLIC_IMG . $imgName);
 
             header('location:index.php?p=chezgaston');
         }
