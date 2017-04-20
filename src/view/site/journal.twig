@@ -24,7 +24,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li><span class="icone-nav showopacity glyphicon glyphicon-home"></span></li>
-                <a href="#"><img class="logo-xs" src="img/logo_blanc.png"></a>
+                <a href="index.php"><img class="logo-xs" src="img/logo_blanc.png"></a>
                 <hr class="separe">
                 <li><a href="index.php">Revenir au site</a></li>
             </ul>
@@ -33,7 +33,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <a href="#"><img class="logo-lg" src="img/logo_blanc.png"></a>
+                <a href="index.php"><img class="logo-lg" src="img/logo_blanc.png"></a>
                 <hr class="separe">
                 <li><a href="index.php">Revenir au site</a></li>
             </ul>
@@ -76,8 +76,32 @@
                         </div>
                         <div class="tl-body">
                             <p>{{ article.contenu }}.</p>
-                            <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
+                            <a class="row ModalImage" href="#" data-toggle="modal" data-target="#imageZoom{{ loop.index }}">
+                                <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}"
+                                alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
+                            </a>
                         </div>
+
+                        <!-- modale image -->
+                        <div class="modal modal-wide fade" id="imageZoom{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h3 class="modal-title" id="myModalLabel">{{ article.titre }}</h3>
+                                    </div>
+                                    <div class="modal-body imageZoom">
+
+                                        <img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin modale infos legales -->
+
                     </div>
                 </li>
 
@@ -92,8 +116,32 @@
                         </div>
                         <div class="tl-body">
                             <p>{{ article.contenu }}</p>
-                            <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
+                            <a class="row ModalImage" href="#" data-toggle="modal" data-target="#imageZoomInverted{{ loop.index }}">
+                                <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}"
+                                alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
+                            </a>
                         </div>
+
+                        <!-- modale image -->
+                        <div class="modal modal-wide fade" id="imageZoomInverted{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h3 class="modal-title" id="myModalLabel">{{ article.titre }}</h3>
+                                    </div>
+                                    <div class="modal-body imageZoom">
+
+                                        <img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin modale infos legales -->
+
                     </div>
                 </li>
 
@@ -116,9 +164,9 @@
 </main>
 
 
-<script type="text/javascript" src="../../../web/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="../../../web/js/bootstrap.js"></script>
-<script type="text/javascript" src="../../../web/js/script.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 
