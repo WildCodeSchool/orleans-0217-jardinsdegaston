@@ -93,41 +93,44 @@ nav.sidebar, .main{
 
 /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
 
     .navbar-header {
         display: none;
     }
 
     /*Show all nav*/
-    nav.sidebar{
-        margin-left: 0px;
+    nav.sidebar {
+        margin-left: 0;
         float: left;
     }
+
     /*Show hidden items on nav*/
-    nav.sidebar .forAnimate{
+    nav.sidebar .forAnimate {
         opacity: 1;
     }
 
     .logo-lg {
         padding: 20px 10px 10px 10px;
     }
-}
 
-nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
-    color: #CCC;
-    background-color: transparent;
-}
+    nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #CCC;
+        background-color: transparent;
+    }
 
-nav:hover .forAnimate{
-    opacity: 1;
-}
-section{
-    padding-left: 15px;
-}
+    nav:hover .forAnimate {
+        opacity: 1;
+    }
 
-.container {
-    padding-left: 200px;
+    section {
+        padding-left: 15px;
+    }
+
+    .container {
+        padding-left: 200px;
+    }
+
 }
 
 /*--- main --- */
@@ -363,7 +366,7 @@ img { border: 0; max-width: 100%; }
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .page-header h1 { font-size: 1.8em; }
 
     ul.timeline:before {
