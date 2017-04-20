@@ -9,10 +9,11 @@
 namespace wcs\Form;
 
 
-use Zend\Filter\Digits;
+
 use Zend\Filter\StringTrim;
 use Zend\Filter\StripTags;
 use Zend\InputFilter\InputFilter;
+use Zend\Validator\Digits;
 use Zend\Validator\EmailAddress;
 use Zend\Validator\NotEmpty;
 
@@ -83,10 +84,10 @@ class ContactFilter extends InputFilter
                 [
                     'name' => StripTags::class
                 ]],
-//            'validators' => [
-//                [
-//                    'name' => Digits::class
-//                ]]
+            'validators' => [
+                [
+                    'name' => Digits::class
+                ]]
         ]);
 
         $this->add([
