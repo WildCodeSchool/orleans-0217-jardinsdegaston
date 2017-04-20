@@ -476,7 +476,7 @@ border-radius: 6px;
 }
 
 .Conseil {
-    margin-top: 4.5%;
+    margin-top: 10%;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     padding: 2% 0 2% 1%;
@@ -698,7 +698,7 @@ border-radius: 6px;
     }
 
     .Conseil {
-        margin-top: 6%;
+        margin-top: 12%;
     }
 
 }
@@ -730,14 +730,6 @@ border-radius: 6px;
         max-width: 500px;
         max-height: 339px;
     }
-}
-
-@media screen and (max-width: 1300px) {
-
-    .Conseil {
-        margin-top: 8%;
-    }
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -778,6 +770,10 @@ border-radius: 6px;
         margin-left: 23%;
         margin-top: 3%;
     }
+
+    .Conseil {
+        margin-top: 12%;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -798,6 +794,14 @@ border-radius: 6px;
     .BlogThumb {
         margin-top: 20%;
         padding: 10% 7% 10% 7%;
+    }
+
+    .Conseil {
+        margin-top: 15%;
+    }
+
+    .ConseilTitre h4 {
+        font-size: 22px;
     }
 }
 
