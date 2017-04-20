@@ -172,6 +172,13 @@ input.btn, label.btn {
     font-size: 20px;
 }
 
+.rowAffichageJournal {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
 /* --- footer ---------------------------------------------------- */
 .footer {
     margin-top:20px;

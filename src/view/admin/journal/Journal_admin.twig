@@ -16,8 +16,28 @@
 
 
 {% block content %}
-    {% do form.prepare() %}
 
+
+    {# -- row afficher/masquer l'accès au journal sur le site -- #}
+
+    <div class="row bandeau">
+        <div class="col-xs-12">
+            <p>Activation des liens vers le journal</p>
+        </div>
+    </div>
+    <div class="row rowAffichageJournal">
+        <div class="col-xs-offset-5 col-xs-2">
+            <button class="btn btn-success">Afficher le journal de Gaston</button>
+        </div>
+    </div>
+
+    <div class="row bandeau">
+        <div class="col-xs-12">
+            <p>Ajout d'un article</p>
+        </div>
+    </div>
+
+    {% do form.prepare() %}
 
     {# -- Formulaire ajout d'un nouvel article -- #}
     <div class="row FormBlog">
