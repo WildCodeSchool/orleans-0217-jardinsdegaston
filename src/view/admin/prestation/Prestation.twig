@@ -66,41 +66,6 @@
             </div>
         {% endfor %}
 
-        {# -- Créer une nouvelle prestation ----------------------------- -- #}
-
-        {#<div class="col-xs-12 bandeau text-center">#}
-            {#Ajouter une prestation#}
-        {#</div>#}
-        {#<div class="col-xs-12">#}
-            {#<div class="row contenu">#}
-                {#<div class="col-xs-12 col-md-4 col-lg-3 col-lg-offset-2 text-center">#}
-                    {#<img class="img-fluid pimg bloc-right" src="{{ tmpinfos.tmpimage }}?{{ random(9999) }}" alt="" />#}
-                    {#<br />#}
-                    {#<form id="loadimg" method="post" action="index.php?p=prestation" enctype="multipart/form-data">#}
-                        {#<input type="hidden" name="MAX_FILE_SIZE" value="20000000" />#}
-                        {#<input type="hidden" name="method" value="imgupload" />#}
-                        {#<input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="submit();" />#}
-                        {#<label for="fichier" class="btn btn-default">Nouvelle image</label><br />#}
-                    {#</form>#}
-                {#</div>#}
-                {#<div class="col-xs-12 col-md-8 col-lg-5">#}
-                    {#<p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>#}
-                    {#<form method="post" action="index.php?p=prestation">#}
-                        {#<input type="hidden" name="method" value="pluspresta" />#}
-                        {#<label for="titre">Titre de la prestation </label><br />#}
-                        {#<input class="form-control" type="text" name="titre" id="titre" value="{{ tmpinfos.titre }}" /><br />#}
-                        {#<label for="detail">Détails de la prestation</label><br />#}
-                        {#<textarea class="form-control" row="3" name="detail">{{ tmpinfos.contenu }}</textarea><br />#}
-                        {#<input class="btn btn-default" type="submit" name="valide" value="Ajouter la prestation" />#}
-                        {#&nbsp;&nbsp;&nbsp;&nbsp;#}
-                        {#<input class="btn btn-default" type="submit" name="annule" value="Annuler l'opération" />#}
-                    {#</form>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-
-        {#<script>function submit() {document.getElementById('loadimg').submit;}</script>#}
-
     </div> {# -- fermeture de la row principale -- #}
 
 {% endblock %}
