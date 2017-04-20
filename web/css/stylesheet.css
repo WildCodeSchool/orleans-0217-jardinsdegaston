@@ -1,4 +1,10 @@
 /*------        Général      ------*/
+@font-face
+{
+    font-family: "Artistik";
+    src: url("../fonts/ARTISTIK.TTF");
+}
+
 
 h1 {
     padding : 15px 0 20px 0;
