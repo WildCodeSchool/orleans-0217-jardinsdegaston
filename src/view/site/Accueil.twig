@@ -69,18 +69,22 @@
     <!-------    Paragraphe presentation  -------->
     <span id="presentationAnchor" class="ancre"></span>
     <div class="row presentation">
-        <div class="col-xs-12 col-lg-offset-1 col-lg-10 text-center">
+        <div class="col-xs-offset-1 col-xs-10 text-center">
+
             <div class="presentation-header">
-                <h1>Les Jardins de Gaston<br/>entretien des parcs et jardins dans la région Orléannaise</h1>
-            <h2 class="sousTitre">{{ presentationH1.titre }}</h2>
-            <p>{{ presentationH1.contenu | nl2br }}</p>
+                <h1>Les Jardins de Gaston<br/><span class="sous-titre">Entretien des parcs et jardins dans la région Orléannaise</span></h1>
+                <h2>{{ presentationH1.titre }}</h2>
+                <p>{{ presentationH1.contenu | nl2br }}</p>
             </div>
+
             {% for pres in presentationH3 %}
             <div class="value{{ loop.index }}">
                 <h3>{{ pres.titre }}</h3>
                 <p>{{ pres.contenu | nl2br}}</p>
             </div>
+
             {% endfor %}
+
         </div>
     </div>
 

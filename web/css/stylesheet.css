@@ -1,10 +1,4 @@
 /*------        Général      ------*/
-.sousTitre{
-    font-family: 'Open Sans', sans-serif;
-    color: #557e02;
-    font-size: 30px;
-
-}
 
 .erreur {
     color: red;
@@ -23,7 +17,7 @@
 }
 
 h1 {
-    padding : 15px 0 20px 0;
+    padding : 15px 0 30px 0;
     font-size: 40px;
     font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -133,9 +127,7 @@ button, input, select, textarea {
 }
 
 /*------     Image header     ------*/
-.parallax {
-    z-index: -1;
-}
+
 h4#accroche{
     display: block;
     position: fixed;
@@ -178,6 +170,7 @@ h4#accroche{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: -1;
 }
 
 
@@ -186,12 +179,23 @@ h4#accroche{
 .presentation {
     background: #fbfff3;
     position: relative;
-    height: 650px;
+    height: 800px;
+}
+
+.sous-titre {
+    color: #557e02;
+}
+
+.presentation h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 28px;
+    padding-bottom: 20px;
 }
 
 .presentation p {
     text-align: left;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .img-header-prez {
@@ -209,7 +213,7 @@ h4#accroche{
 
 .value1 {
     position: absolute;
-    bottom: -280px;
+    bottom: -300px;
     left: 6%;
     width: 45%;
     height: 280px;
@@ -226,7 +230,7 @@ h4#accroche{
 
 .value2 {
     position: absolute;
-    bottom: -320px;
+    bottom: -340px;
     right: 5%;
     width: 45%;
     height: 280px;
@@ -713,7 +717,7 @@ border-radius: 6px;
 @media screen and (max-width: 1400px) {
 
     .presentation {
-        height: 760px;
+        height: 900px;
     }
 
     .value1 {
@@ -813,10 +817,10 @@ border-radius: 6px;
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
 
     .presentation {
-        height: 890px;
+        height: 1050px;
     }
 
     .value1 {
@@ -888,7 +892,11 @@ border-radius: 6px;
     }
 
     .presentation {
-        height: 810px;
+        height: 950px;
+    }
+
+    .presentation h2 {
+        font-size: 24px;
     }
 
     .value1 {
@@ -908,22 +916,10 @@ border-radius: 6px;
 
 }
 
-@media screen and (max-width: 600px) {
-
-    .Blog {
-        height: 600px;
-    }
-
-    .BlogThumb {
-        margin-top: 35%;
-    }
-
-    .Conseil-xs {
-        margin-top: 15%;
-    }
+@media screen and (max-width: 650px) {
 
     .presentation {
-        height: 840px;
+        height: 1050px;
     }
 
     .value1 {
@@ -939,13 +935,29 @@ border-radius: 6px;
         width: 400px;
         height: 280px;
     }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .Blog {
+        height: 600px;
+    }
+
+    .BlogThumb {
+        margin-top: 35%;
+    }
+
+    .Conseil-xs {
+        margin-top: 15%;
+    }
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
 
     .presentation {
-        height: 1000px;
+        height: 1200px;
     }
 
     .value1 {
@@ -961,13 +973,26 @@ border-radius: 6px;
         width: 300px;
         height: 330px;
     }
-
 }
 
 @media screen and (max-width: 400px) {
 
     .presentation {
-        height: 1100px;
+        height: 1400px;
+    }
+
+    .value1 {
+        bottom: -380px;
+        left: 4%;
+        width: 260px;
+        height: 390px;
+    }
+
+    .value2 {
+        bottom: -740px;
+        right: 5%;
+        width: 260px;
+        height: 390px;
     }
 }
 
@@ -994,3 +1019,5 @@ border-radius: 6px;
     }
 
 }
+
+
