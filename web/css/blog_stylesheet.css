@@ -93,47 +93,44 @@ nav.sidebar, .main{
 
 /* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
 
     .navbar-header {
         display: none;
     }
 
-        /*Show all nav*/
-        nav.sidebar{
-            margin-left: 0px;
-            float: left;
-        }
-        /*Show hidden items on nav*/
-        nav.sidebar .forAnimate{
-            opacity: 1;
-        }
+    /*Show all nav*/
+    nav.sidebar {
+        margin-left: 0;
+        float: left;
     }
 
-nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
-    color: #CCC;
-    background-color: transparent;
-}
-
-nav:hover .forAnimate{
-    opacity: 1;
-}
-section{
-    padding-left: 15px;
-}
-
-.container {
-    padding-left: 200px;
-}
-
-.search-form {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30px;
+    /*Show hidden items on nav*/
+    nav.sidebar .forAnimate {
+        opacity: 1;
     }
 
-.logo-lg {
-    padding: 20px 10px 10px 10px;
+    .logo-lg {
+        padding: 20px 10px 10px 10px;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #CCC;
+        background-color: transparent;
+    }
+
+    nav:hover .forAnimate {
+        opacity: 1;
+    }
+
+    section {
+        padding-left: 15px;
+    }
+
+    .container {
+        padding-left: 200px;
+    }
+
 }
 
 /*--- main --- */
@@ -141,7 +138,7 @@ section{
 /*---   Background   ---*/
 
 body {
-    background-image: url(img/bgimg1_transp.png);
+    background-image: url(../img/bg1_transp.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -168,6 +165,10 @@ p {
     color: rgb(255, 255, 255);
     height: 1px;
     margin-bottom: 10px;
+}
+
+.modal {
+    z-index: 99999;
 }
 
 /*--- Timeline   ---*/
@@ -339,17 +340,6 @@ img { border: 0; max-width: 100%; }
     margin-right: auto;
 }
 
-/** media queries **/
-/*
-@media (max-width: 991px) {
-    .timeline li .timeline-panel {
-        width: 44%;
-    }
-
-
-
-}
-*/
 
 /* ----- bouton Retour en haut ------- */
 
@@ -359,6 +349,9 @@ img { border: 0; max-width: 100%; }
     right: 2%;
     text-align:center;
     z-index: 999999999;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 3px 10px 0 10px;
 }
 
 .returnBtn .glyphicon-chevron-up {
@@ -373,7 +366,7 @@ img { border: 0; max-width: 100%; }
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .page-header h1 { font-size: 1.8em; }
 
     ul.timeline:before {

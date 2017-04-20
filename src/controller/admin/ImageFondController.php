@@ -37,8 +37,9 @@ class ImageFondController extends Controller
     public function imgupload()
     {
         $erreur = '';
-        if ( false === $this->img->recupImg('B') ) {
-            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
+        if ( false === $this->img->recupImg('P') )
+        {
+            $erreur = $this->img->getErreur();
             $this->img->resetTmp('B');
         }
         if ( isset($_POST['saison']) ) {

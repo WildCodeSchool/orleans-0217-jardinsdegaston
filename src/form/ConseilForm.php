@@ -33,7 +33,6 @@ class ConseilForm extends Form
             'type'  => Checkbox::class,
             'name' => 'printemps',
             'options' => array(
-                'use_hidden_element' => true,
                 'checked_value' => 1,
                 'unchecked_value' => 0,
             )
@@ -43,7 +42,6 @@ class ConseilForm extends Form
             'type'  => Checkbox::class,
             'name' => 'ete',
             'options' => array(
-                'use_hidden_element' => true,
                 'checked_value' => 1,
                 'unchecked_value' => 0,
             )
@@ -53,7 +51,6 @@ class ConseilForm extends Form
             'type'  => Checkbox::class,
             'name' => 'automne',
             'options' => array(
-                'use_hidden_element' => true,
                 'checked_value' => 1,
                 'unchecked_value' => 0,
             )
@@ -63,7 +60,6 @@ class ConseilForm extends Form
             'type'  => Checkbox::class,
             'name' => 'hiver',
             'options' => array(
-                'use_hidden_element' => true,
                 'checked_value' => 1,
                 'unchecked_value' => 0,
             )

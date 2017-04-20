@@ -71,8 +71,9 @@ class RealisationController extends Controller
         $erreur = '';
         if (isset($_POST['typeImg']))
         {
-            if ( false === $this->img->recupImg($_POST['typeImg']) ) {
-                $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
+            if ( false === $this->img->recupImg($_POST['typeImg']) )
+            {
+                $erreur = $this->img->getErreur();
                 $this->img->resetTmp($_POST['typeImg']);
             }
         }

@@ -11,6 +11,8 @@ class Image
     const TMPDIR = '../tmp/';
     // --- repertoire de stockage des images
     const IMGDIR = '../img/';
+    // --- taille max upload (20M)
+    const MAXSIZE = 20000000;
 
     /* --- Proprietes ------------------------------------------- */
     /**
@@ -25,6 +27,7 @@ class Image
         'J' => ['type' => 'Journal', 'larg' => 600, 'haut' => 400],
     ];
 
+    private $erreur = '';
 
     /* --- Geters et setters ------------------------------------- */
     private function getLargImg($codetype) : int
@@ -34,6 +37,22 @@ class Image
     private function getHautImg($codetype) : int
     {
         return $this->imgTypes[$codetype]['haut'];
+    }
+
+    /**
+     * @return string
+     */
+    public function getErreur(): string
+    {
+        return $this->erreur;
+    }
+
+    /**
+     * @param string $erreur
+     */
+    private function setErreur(string $erreur)
+    {
+        $this->erreur = $erreur;
     }
 
     /**
@@ -122,6 +141,8 @@ class Image
      */
     public function recupImg($codetype)
     {
+        // --- pour l'instant, tout va bien
+        $this->setErreur('');
         // --- suppression eventuel fichier temporaire residuel
         $this->resetTmp($codetype);
         // --- ajout suffixe 'av' ou 'ap' au nom de fichier pour les images realisation
@@ -129,24 +150,41 @@ class Image
         if (strlen($codetype)>1){
             $fileName.=substr($codetype,1);
         }
-        // --- deplacement fichier de la zone d'upload vers tmp
-        if ( false === move_uploaded_file($_FILES[$fileName]['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
-
-            $this->resetTmp($codetype);
-
-            //voir aussi $_FILES['fichier']['error'] > 0 (il y a eu une erreur)
-            //           $_FILES['fichier']['size'] > maxsize (fichier trop gros)
-
-
-            // --- erreur upload foireux ---
-
+        // --- controle format image (doit etre du jpeg)
+        $infos = getimagesize($_FILES[$fileName]['tmp_name']);
+        if ( false === $infos ) {
+            // --- format inconnu
+            $this->setErreur('Mauvais format de fichier (format jpeg attendu). Upload abandonné.');
             return false;
-
         }
-        // --- A VIRER SUR SITE FINAL : reaffecte droits sur fichier image déplacé.
-        $this->rwx($codetype);
-        // resize image en fonction des besoins
-        $this->resize($codetype);
+        elseif ( !array_key_exists('mime', $infos) || $infos['mime'] != 'image/jpeg' ) {
+            // --- C'est pas du jpeg
+            $this->setErreur('Mauvais format de fichier (format jpeg attendu). Upload abandonné.');
+            return false;
+        }
+        else {
+            // --- deplacement fichier de la zone d'upload vers tmp
+            if ( false === move_uploaded_file($_FILES[$fileName]['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
+                // --- l'operation n'a pas abouti
+                $this->resetTmp($codetype);
+                if ( $_FILES[$fileName]['size'] > self::MAXSIZE ) {
+                    $this->setErreur('Fichier trop gros (taille max. 20Mo). Upload abandonné.');
+                    return false;
+                }
+                else {
+                    // --- erreur autre
+                    if ( $_FILES[$fileName]['error'] > 0 ) {
+                        $this->setErreur('Erreur inconnue lors de l\'upload. Opération abandonnée.');
+                        return false;
+                    }
+                }
+            }
+            // --- A VIRER SUR SITE FINAL : reaffecte droits sur fichier image déplacé.
+            $this->rwx($codetype);
+            // resize image en fonction des besoins
+            $this->resize($codetype);
+            return true;
+        }
     }
 
     /**
