@@ -7,42 +7,29 @@
  */
 
 namespace wcs\controller\admin;
+
 use wcs\controller\Controller;
-
-
+use wcs\model\Contact;
+use wcs\model\ContactManager;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        $test = [
-            '0' =>
-                [   'Nom' => 'pouet',
-                'Prenom' => 'Pouet',
-                'Email' => 'pouet@pouet.com',
-                'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-            '1' =>
-                [   'Nom' => 'pouet',
-                    'Prenom' => 'Pouet',
-                    'Email' => 'pouet@pouet.com',
-                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-            '2' =>
-                [   'Nom' => 'pouet',
-                    'Prenom' => 'Pouet',
-                    'Email' => 'pouet@pouet.com',
-                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-            '3' =>
-                [   'Nom' => 'pouet',
-                    'Prenom' => 'Pouet',
-                    'Email' => 'pouet@pouet.com',
-                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'],
-            '4' =>
-                [   'Nom' => 'pouet',
-                    'Prenom' => 'Pouet',
-                    'Email' => 'pouet@pouet.com',
-                    'Texte' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor']
-        ];
 
-        return $this->twig->render('contact/Contact.twig', ['post' => $this->post, 'test' => $test]);
+        $contactManager = new ContactManager($this->bdd, Contact::class);
+
+        $contact = $contactManager->findAll();
+
+
+        if (isset($_POST['contactLus'])) {
+            $contactLus = $contactManager->updateLus($_POST);
+
+
+
+            return $this->twig->render('contact/Contact.twig', array('contacts' => $contact,
+                                                                     'contactLus' => $contactLus));
+        }
+        return $this->twig->render('contact/Contact.twig', array('contacts' => $contact,));
     }
 }

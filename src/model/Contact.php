@@ -9,105 +9,127 @@
 namespace wcs\model;
 
 
-class Contact extends Livredor
+class Contact
 {
-
-    /* --- Proprietes --------------------------------- */
-
-    /**
-     * @var string
-     */
+    private $nom;
     private $prenom;
-
-    /**
-     * @var string
-     */
     private $email;
-
-    /**
-     * @var DateTime
-     */
+    private $contenu;
+    private $telephone;
     private $date;
 
     /**
-     * @var int
+     * @return mixed
      */
-    private $statut;
+    public function getNom()
+    {
+        return $this->nom;
+    }
 
-
-    /* --- Geters et setters -------------------------- */
     /**
-     * @return string
+     * @param mixed $nom
      */
-    public function getPrenom() : string
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
     {
         return $this->prenom;
     }
 
     /**
-     * @param string $prenom
-     * @return Contact
+     * @param mixed $prenom
      */
-    public function setPrenom(string $prenom) : Contact
+    public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
-        return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getEmail() : string
+    public function getEmail()
     {
         return $this->email;
     }
 
     /**
-     * @param $email
-     * @return Contact
+     * @param mixed $email
      */
-    public function setEmail($email) : Contact
+    public function setEmail($email)
     {
         $this->email = $email;
-        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return mixed
      */
-    public function getDate() : DateTime
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * @param mixed $contenu
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * @param mixed $telephone
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
     {
         return $this->date;
     }
 
     /**
-     * @param $date
-     * @return Message
+     * @param mixed $date
      */
-    public function setDate($date) : Contact
+    public function setDate($date)
     {
         $this->date = $date;
-        return $this;
     }
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getStatut() : int
+    public function getStatut()
     {
         return $this->statut;
     }
 
     /**
-     * @param $statut
-     * @return Message
+     * @param mixed $statut
      */
-    public function setStatut($statut) : Contact
+    public function setStatut($statut)
     {
         $this->statut = $statut;
-        return $this;
     }
-
+    private $statut;
 
 
 }
