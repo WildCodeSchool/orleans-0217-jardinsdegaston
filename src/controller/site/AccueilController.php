@@ -74,6 +74,11 @@ class AccueilController extends Controller
 
         $contactForm = new ContactForm();
 
+        $ok = '';
+        if (isset($_GET['message']))
+        {
+            $ok='Message envoyé';
+        }
         if (isset($_POST['add'])) {
             $filter = new ContactFilter();
             $contactForm->setInputFilter($filter);
@@ -85,12 +90,12 @@ class AccueilController extends Controller
             $telErr = [];
             $contenuErr = [];
 
-            $ok = '';
 
             if ($contactForm->isValid()) {
                 $contactManager = new ContactManager($this->bdd, Contact::class);
                 if ($contactManager->addContact()) {
-                    $ok = 'message envoyé';
+                   // $ok = 'message envoyé';
+                    header('Location:index.php?message=1');
                 };
             } else {
                 $nomErr = $contactForm->get('NomContact')->getMessages();
@@ -130,6 +135,7 @@ class AccueilController extends Controller
             'livredor' => $livredor,
             'contact' => $contactForm,
             'bgcss' => 'bg' . strtoupper($saison[0]) . '.css',
+            'ok'=>$ok,
             'chezgaston' => $parametresGeneraux->getChezGaston()));
 
     }
