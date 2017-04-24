@@ -606,6 +606,10 @@ border-radius: 6px;
     text-align: center;
 }
 
+.formulaire .btn-default {
+    font-weight: bold;
+}
+
 
 /*-------       Footer      ------*/
 
