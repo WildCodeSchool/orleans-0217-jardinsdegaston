@@ -61,7 +61,8 @@
 
                 {% set dateref = article.date|date('Y m') %}
 
-                <li><div class="tldate"><h3>{{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</h3></div></li>
+                {#<li><div class="tldate"><h3>{{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</h3></div></li>#}
+                <li><div class="tldate"><h3>{{ article.date | localizeddate('medium','none', 'fr', 'Europe/Paris', 'MMMM Y') }}</h3></div></li>
 
                 {% endif %}
 

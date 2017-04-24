@@ -27,7 +27,7 @@
         <div class="col-xs-offset-2 col-xs-8 form">
             <form name="ajout-conseil" method="POST" action="index.php?p=conseil">
 
-                <div class="form-group">
+                <div class="form-group text-center">
                     <label for="{{ form.get('contenu').name }}">{{ form.get('contenu').label }}</label>
                     <textarea required ="required" class="form-control" id="{{ form.get('contenu').name }}" name="{{ form.get('contenu').name }}"></textarea>
 
@@ -37,27 +37,28 @@
 
                 </div>
 
-                <div class="form-group">
-                    <span class="like-label">Sélectionnez une saison : </span>
-
+                <div class="form-group text-center">
+                    <span class="label-like">Saison(s) associée(s) : </span>
+                    &nbsp;&nbsp;
                     <input type="checkbox" name="printemps" id="printemps" value="1" />
                     <label class="normal-text" for="printemps"> Printemps  </label>
-
+                    &nbsp;&nbsp;
                     <input type="checkbox" name="ete" id="ete" value="1" />
                     <label class="normal-text" for="ete"> Eté  </label>
-
+                    &nbsp;&nbsp;
                     <input type="checkbox" name="automne" id="automne" value="1" />
                     <label class="normal-text" for="automne"> Automne  </label>
-
+                    &nbsp;&nbsp;
                     <input type="checkbox" name="hiver" id="hiver" value="1" />
                     <label class="normal-text" for="hiver"> Hiver  </label>
-
                 </div>
 
-                <input class="btn btn-success" type="submit" name="ajout" value="Ajouter un conseil" />
-                <input type="hidden" name="method" value="ajoutConseil" />
-                <input type="hidden" name="id" value="{{ value.id }}">
-                <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
+                <div class="form-group text-center">
+                    <input class="btn btn-success" type="submit" name="ajout" value="Ajouter le conseil" />
+                    <input type="hidden" name="method" value="ajoutConseil" />
+                    <input type="hidden" name="id" value="{{ value.id }}">
+                    <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
+                </div>
             </form>
         </div>
 
@@ -71,26 +72,26 @@
             Liste des conseils déjà enregistrés
         </div>
         {# -- selecteur d'affichage -- #}
-        {#<div class="col-xs-12 contenu text-center">
+        <div class="col-xs-12 contenu text-center">
             <form action="index.php?p=conseil" method="post">
-                <span class="like-label">Sélection de l'affichage :</span>
-
-                    <input type="checkbox" name="printemps" id="printemps" value="0" />
-                    <label class="normal-text" for="printemps">{{ form.get('printemps').name }}</label>
-
-                    <input type="checkbox" name="ete" id="ete" value="0" />
-                    <label class="normal-text" for="ete">{{ form.get('ete').name }}</label>
-
-                    <input type="checkbox" name="automne" id="automne" value="0" />
-                    <label class="normal-text" for="automne">{{ form.get('automne').name}}</label>
-
-                    <input type="checkbox" name="hiver" id="hiver" value="0" />
-                    <label class="normal-text" for="hiver">{{ form.get('hiver').name }}</label>
-
-                <button class="btn btn-default" type="submit" name="actualiserAffichage">Actualiser l'affichage</button>
-                <input type="hidden" name="method" value="affichageConditionnelConseil" />
+                <span class="label-like">Sélection de l'affichage :</span>
+                &nbsp;&nbsp;
+                <input type="checkbox" name="selprintemps" id="selprintemps" {% if affsaison.P == 1 %}checked{% endif %} />
+                <label class="normal-text" for="selprintemps">Printemps</label>
+                &nbsp;&nbsp;
+                <input type="checkbox" name="selete" id="selete" {% if affsaison.E == 1 %}checked{% endif %} />
+                <label class="normal-text" for="selete">Ete</label>
+                &nbsp;&nbsp;
+                <input type="checkbox" name="selautomne" id="selautomne" {% if affsaison.A == 1 %}checked{% endif %} />
+                <label class="normal-text" for="selautomne">Automne</label>
+                &nbsp;&nbsp;
+                <input type="checkbox" name="selhiver" id="selhiver" {% if affsaison.H == 1 %}checked{% endif %} />
+                <label class="normal-text" for="selhiver">Hiver</label>
+                &nbsp;&nbsp;
+                <button class="btn btn-default" type="submit" name="actualiserAffichage">Actualiser la liste</button>
+                <input type="hidden" name="method" value="index" />
             </form>
-        </div>#}
+        </div>
 
         {% for conseil in conseils %}
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
@@ -100,21 +101,21 @@
                             {#<input class="form-control" type="text" name="conseil" value="{{ conseil.contenu }}" /><br />#}
                             <textarea class="form-control" name="contenu" rows="4">{{ conseil.contenu }}</textarea><br />
 
-                            <input type="checkbox" name="printemps" id="printemps" value="1"
+                            <input type="checkbox" name="printemps" id="printemps{{ loop.index }}" value="1"
                                     {% if conseil.printemps == 1 %} checked {% endif %} />
-                            <label class="normal-text" for="printemps">Printemps</label>
+                            <label class="normal-text" for="printemps{{ loop.index }}">Printemps</label>
 
-                            <input type="checkbox" name="ete" id="ete" value="1"
+                            <input type="checkbox" name="ete" id="ete{{ loop.index }}" value="1"
                                     {% if conseil.ete == 1 %} checked {% endif %} />
-                            <label class="normal-text" for="ete">Eté</label>
+                            <label class="normal-text" for="ete{{ loop.index }}">Eté</label>
 
-                            <input type="checkbox" name="automne" id="automne" value="1"
+                            <input type="checkbox" name="automne" id="automne{{ loop.index }}" value="1"
                                     {% if conseil.automne == 1 %} checked {% endif %} />
-                            <label class="normal-text" for="automne">Automne</label>
+                            <label class="normal-text" for="automne{{ loop.index }}">Automne</label>
 
-                            <input type="checkbox" name="hiver" id="hiver" value="1"
+                            <input type="checkbox" name="hiver" id="hiver{{ loop.index }}" value="1"
                                     {% if conseil.hiver == 1 %} checked {% endif %} />
-                            <label class="normal-text" for="hiver">Hiver</label>
+                            <label class="normal-text" for="hiver{{ loop.index }}">Hiver</label>
 
                             <br />
                             <input type="hidden" name="id" value="{{ conseil.id }}" />

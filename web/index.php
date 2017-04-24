@@ -25,19 +25,11 @@ $routes = ['accueil' => 'Accueil',
 if (array_key_exists($page, $routes)) {
 
     // --- initialisation twig ---
-    $loader = new Twig_Loader_Filesystem(__DIR__ . '/../src/view/');
-    $twig = new Twig_Environment($loader, [
-        'cache' => false, //__DIR__ . '/../../tmp',
-        'debug' => true,
-    ]);
-    $twig->addExtension(new Twig_Extension_Debug());
-
-    // --- initialisation des acces a la base de donnees
-
-    require '../src/model/connect.php';
-    $bdd = new \PDO(DSN, USER, PASS);
-    $bdd->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-    $bdd->exec("set names utf8");
+    $fileRoot = '../';
+    $twigRoot = 'site/';
+    require 'inittwig.php';
+// --- initialisation des acces a la base de donnees
+    require 'initbdd.php';
 
     // --- appel du controleur concerne
     $ctrlName = 'wcs\\controller\\site\\' . ucfirst($routes[$page]) . 'Controller';

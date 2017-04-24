@@ -13,7 +13,6 @@
 
 {% block content %}
     {% do form.prepare() %}
-    {#{{ dump () }}#}
 
     <div class="row">
 
@@ -74,9 +73,9 @@
                                 Activer sur le Site
                             </label><br />
                             <label for="titre">Titre de la rubrique </label><br />
-                            <input class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
+                            <input required ="required" class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
                             <label for="contenu">Commentaires</label><br />
-                            <textarea class="form-control" row="3" name="contenu" id="contenu">{{ realisation.contenu }}</textarea><br />
+                            <textarea required ="required" class="form-control" row="3" name="contenu" id="contenu">{{ realisation.contenu }}</textarea><br />
                             {#<input type="hidden" name="method" value="updateReal" />#}
                             <input type="hidden" name="id" value="{{ realisation.id }}" />
                             <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />

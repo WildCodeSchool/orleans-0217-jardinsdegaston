@@ -33,9 +33,12 @@ if ( isset($_POST['method']) ) {
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 // --- initialisation twig ---
+$fileRoot = '../../';
+$twigRoot = 'admin/';
 require '../inittwig.php';
 // --- initialisation des acces a la base de donnees
-require '../initbdd.php';
+$connectRoot = '../';
+require $connectRoot.'initbdd.php';
 
 // --- si la page demandee existe, on l'affiche
 if ( array_key_exists($page, $routes) ) {

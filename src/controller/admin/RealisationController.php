@@ -38,14 +38,6 @@ class RealisationController extends Controller
         return $this->twig->render('realisation/Realisation.twig', $param);
     }
 
-//    public function updateReal()
-//    {
-//        $manager = new RealisationManager($this->bdd, Realisation::class);
-//        $manager->update();
-//        return $this->index();
-//
-//    }
-
     public function modif()
     {
         if (isset($_POST['id']) ) {
@@ -77,14 +69,7 @@ class RealisationController extends Controller
                 $this->img->resetTmp($_POST['typeImg']);
             }
         }
-//        if ( false === $this->img->recupImg('Rav') ) {
-//            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
-//            $this->img->resetTmp('Rav');
-//        }
-//        if ( false === $this->img->recupImg('Rap') ) {
-//            $erreur = 'Problème de transfert d\'image. Chargement abandonné.';
-//            $this->img->resetTmp('Rap');
-//        }
+
         // --- recuperation des infos $_POST
         $id = $_POST['id'];
         $realisation = new Realisation();
