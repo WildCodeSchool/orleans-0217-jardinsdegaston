@@ -29,6 +29,10 @@ nav.sidebar, .main{
     color: white;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 
