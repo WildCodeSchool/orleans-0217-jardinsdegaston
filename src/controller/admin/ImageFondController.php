@@ -37,7 +37,7 @@ class ImageFondController extends Controller
     public function imgupload()
     {
         $erreur = '';
-        if ( false === $this->img->recupImg('P') )
+        if ( false === $this->img->recupImg('B') )
         {
             $erreur = $this->img->getErreur();
             $this->img->resetTmp('B');
