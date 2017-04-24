@@ -25,7 +25,7 @@ class ConseilForm extends Form
             'type'  => Text::class,
             'name' => 'contenu',
             'options' => [
-                'label' => 'Contenu du conseil',
+                'label' => 'Contenu',
             ],
         ]);
 

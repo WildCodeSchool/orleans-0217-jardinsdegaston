@@ -19,13 +19,57 @@ class ConseilController extends Controller
 
     public function index()
     {
+        // --- parametres pour affichage conseils siovant saison(s) selectionnee(s)
+        $affSaison = ['P' => 0, 'E' => 0, 'A' => 0, 'H' => 0]; // aucune saison selectionnee par defaut = tout afficher
+        $sqlOptions = '';
+        if ( isset($_POST['actualiserAffichage'])) {
+            // --- on revient ici apres avoir modifie la selection d'affichage des saisons
+            // --- relecture des saisons selectionnees
+            if ( isset($_POST['selprintemps']) ) $affSaison['P'] = 1;
+            if ( isset($_POST['selete']) ) $affSaison['E'] = 1;
+            if ( isset($_POST['selautomne']) ) $affSaison['A'] = 1;
+            if ( isset($_POST['selhiver']) ) $affSaison['H'] = 1;
+            // --- preparation de la requete SQL
+            if ( $affSaison['P'] + $affSaison['E'] + $affSaison['A'] + $affSaison['H'] > 0 ) {
+                // --- au moins une saison est selectionnee, il faut initialiser $sqlOptions
+                $prems = true;
+                $sqlOptions = ' WHERE';
+                if ( $affSaison['P'] == 1 ) {
+                    $sqlOptions .= ' printemps=1';
+                    $prems = false;
+                }
+                if ( $affSaison['E'] == 1 ) {
+                    if ( !$prems ) {
+                        $sqlOptions .= ' AND';
+                    }
+                    $sqlOptions .= ' ete=1';
+                    $prems = false;
+                }
+                if ( $affSaison['A'] == 1 ) {
+                    if ( !$prems ) {
+                        $sqlOptions .= ' AND';
+                    }
+                    $sqlOptions .= ' automne=1';
+                    $prems = false;
+                }
+                if ( $affSaison['H'] == 1 ) {
+                    if ( !$prems ) {
+                        $sqlOptions .= ' AND';
+                    }
+                    $sqlOptions .= ' hiver=1';
+                }
+
+            }
+        }
         $manager = new ConseilManager($this->bdd, Conseil::class);
         $form = new ConseilForm();
         $filter = new ConseilFilter();
         $form->setInputFilter($filter);
-        $params = ["conseils" => $manager->findAll('conseil'),
-                    'form' => $form];
-
+        $params = [
+            "affsaison" => $affSaison,
+            "conseils" => $manager->findAll($sqlOptions),
+            'form' => $form,
+        ];
         return $this->twig->render('conseil/Conseil.twig', $params);
     }
 
@@ -145,29 +189,5 @@ class ConseilController extends Controller
         }
         header('location:index.php?p=conseil');
     }
-
-
-
-    // A FINIR SI TEMPS OK
-    /*public function affichageConditionnelConseil()
-    {
-        $manager = new ConseilManager($this->bdd, Conseil::class);
-
-        if (isset($_POST['actualiserAffichage'])) {
-            $saison = $_POST['saison'] ;
-            $conseils = $manager->findBySeason($saison);
-            return $conseils;
-
-        }
-
-        $form = new ConseilForm();
-        $filter = new ConseilFilter();
-        $form->setInputFilter($filter);
-        $params = ["conseils" => $conseils,
-                    'form' => $form];
-
-        return $this->twig->render('conseil/Conseil.twig', $params);
-
-    }*/
 
 }
