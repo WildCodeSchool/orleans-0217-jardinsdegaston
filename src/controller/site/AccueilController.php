@@ -109,7 +109,7 @@ class AccueilController extends Controller
                 $contenuErr = $contactForm->get('TexteContact')->getMessages();
                 $this->translator->translate($contenuErr);
             }
-            return $this->twig->render('site/Accueil.twig', array('nomErr' => $nomErr,
+            return $this->twig->render('Accueil.twig', array('nomErr' => $nomErr,
                                                                     'prenomErr' => $prenomErr,
                                                                     'emailErr' => $emailErr,
                                                                     'telErr' => $telErr,
@@ -127,7 +127,7 @@ class AccueilController extends Controller
 
         }
 
-        return $this->twig->render('site/Accueil.twig', array('presentationH1' => $presentationH1,
+        return $this->twig->render('Accueil.twig', array('presentationH1' => $presentationH1,
             'presentationH3' => $presentationH3,
             'prestation' => $prestation,
             'realisation' => $realisation,
