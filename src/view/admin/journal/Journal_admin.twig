@@ -27,7 +27,14 @@
     </div>
     <div class="row rowAffichageJournal">
         <div class="col-xs-offset-5 col-xs-2">
-            <button class="btn btn-success">Afficher le journal de Gaston</button>
+            <form method="post" action="index.php?p=chezgaston">
+                {% if status == 0 %}
+                <input class="btn btn-success" type="submit" name="afficheMasque" value="Afficher le journal de Gaston" />
+                {% elseif status == 1 %}
+                <input class="btn btn-danger" type="submit" name="afficheMasque" value="Masquer le journal de Gaston" />
+                {% endif %}
+                <input type="hidden" name="method" value="index" />
+            </form>
         </div>
     </div>
 

@@ -8,6 +8,8 @@ use \wcs\model\JournalManager;
 use \wcs\form\ArticleForm;
 use \wcs\form\ArticleFilter;
 use Zend\Form\Element\DateTime;
+use wcs\model\Parametre;
+use wcs\model\ParametreManager;
 
 /**
  * Class JournalAdminController
@@ -30,7 +32,30 @@ class JournalAdminController extends Controller
         $filter = new ArticleFilter();
         $form->setInputFilter($filter);
 
+        // --- initialisation de l'acces aux parametres
+        $parametreManager = new ParametreManager($this->bdd, Parametre::class);
+        $parametresGeneraux = $parametreManager->read();
+
+        // --- lecture du parametre chezgaston
+        $param = $parametresGeneraux->getChezGaston();
+
+        if ( isset($_POST['afficheMasque']) ) {
+
+            // --- ecriture et mise a jour parametres : ($valeur = 0 ou 1)
+            if ($param == '0') {
+                // --- on ecrit la modif du parametre dans la table
+                $parametreManager->writeOne('chezgaston', 1);
+
+            } elseif ($param == '1') {
+                // --- on ecrit la modif du parametre dans la table
+                $parametreManager->writeOne('chezgaston', 0);
+            }
+            header('location:index.php?p=chezgaston');
+
+        }
+
         $params = [
+                'status' => $parametresGeneraux->getChezGaston(),
                 'articles' => $manager->findAllReverse('journal'),
                 'form' => $form,
                 ];

@@ -43,4 +43,5 @@ class JournalManager extends DbManager
 
         $pre->execute();
     }
+
 }
