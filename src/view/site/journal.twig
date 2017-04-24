@@ -76,7 +76,7 @@
                             <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j') }} {{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</small></p>
                         </div>
                         <div class="tl-body">
-                            <p>{{ article.contenu }}.</p>
+                            <p>{{ article.contenu|truncate(20, true, '... (voir plus)') }}</p>
                             <a class="row ModalImage" href="#" data-toggle="modal" data-target="#imageZoom{{ loop.index }}">
                                 <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}"
                                 alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
@@ -84,14 +84,15 @@
                         </div>
 
                         <!-- modale image -->
-                        <div class="modal modal-wide fade" id="imageZoom{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                        <div class="modal modal-lg fade" id="imageZoom{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                         <h3 class="modal-title" id="myModalLabel">{{ article.titre }}</h3>
                                     </div>
                                     <div class="modal-body imageZoom text-center">
+                                        <p class="text-left">{{ article.contenu }}</p>
                                         <img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" />
                                     </div>
                                     <div class="modal-footer">
@@ -115,7 +116,7 @@
                             <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j') }} {{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</small></p>
                         </div>
                         <div class="tl-body">
-                            <p>{{ article.contenu }}</p>
+                            <p>{{ article.contenu|truncate(20, true, '... (voir plus)') }}</p>
                             <a class="row ModalImage" href="#" data-toggle="modal" data-target="#imageZoomInverted{{ loop.index }}">
                                 <p><img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}"
                                 alt="Image journal {{ article.titre }}" class="imgPost img-responsive"/></p>
@@ -123,14 +124,15 @@
                         </div>
 
                         <!-- modale image -->
-                        <div class="modal modal-wide fade" id="imageZoomInverted{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                        <div class="modal modal-lg fade" id="imageZoomInverted{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                         <h3 class="modal-title" id="myModalLabel">{{ article.titre }}</h3>
                                     </div>
                                     <div class="modal-body imageZoom text-center">
+                                        <p class="text-left">{{ article.contenu }}</p>
                                         <img src="img/imgJ-{{ article.id }}.jpg?{{ random(9999) }}" />
                                     </div>
                                     <div class="modal-footer">

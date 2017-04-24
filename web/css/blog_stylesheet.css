@@ -173,6 +173,8 @@ p {
 
 .modal {
     z-index: 99999;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*--- Timeline   ---*/
