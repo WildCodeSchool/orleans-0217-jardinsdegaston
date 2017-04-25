@@ -37,7 +37,7 @@ class JournalController extends Controller
 
         $journal = new JournalManager($this->bdd, Journal::class);
         $articles = $journal->findAllReverse('journal');
-        return $this->twig->render('site/journal.twig', ['articles'=> $articles,
+        return $this->twig->render('journal.twig', ['articles'=> $articles,
                                                         'mois' => $mois]);
     }
 

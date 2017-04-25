@@ -1,0 +1,13 @@
+{
+    "name": "wilder10/orleans-0217-jardinsdegaston",
+    "authors": [
+        {
+            "name": "orl-patrick",
+            "email": "patrickfaucheux@alicepro.fr"
+        }
+    ],
+    "require": {
+        "twig/extensions": "^1.4"
+    },
+    "autoload": {"psr-4": {"wcs\\": "src/"}}
+}

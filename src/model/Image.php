@@ -126,7 +126,6 @@ class Image
         $imgrsz = new PHPThumb\GD($tmpName);
         // --- resize de l'objet
         $imgrsz->adaptiveResize($this->getLargImg($codetype), $this->getHautImg($codetype));
-//        $imgrsz->resize($this->getLargImg($codetype), $this->getHautImg($codetype));
         // --- effacement du fichier temporaire initial
         $this->resetTmp($codetype);
         // --- ecriture du fichier temporaire redimensionne
@@ -137,6 +136,8 @@ class Image
     /**
      * **************************************************************
      * rapatrie l'image uploadee vers le tmp et la renomme en xxx-tmp.jpg
+     * C'est ici que le format de l'image est controle (jpeg uniquement)
+     * retourne false si une erreur est generee (vrai sinon)
      * @param $codetype
      */
     public function recupImg($codetype)
@@ -163,7 +164,7 @@ class Image
             return false;
         }
         else {
-            // --- deplacement fichier de la zone d'upload vers tmp
+            // --- C'est bien le format attendu, deplacement fichier de la zone d'upload vers tmp
             if ( false === move_uploaded_file($_FILES[$fileName]['tmp_name'], self::TMPDIR.'img'.$codetype.'-tmp.jpg') ) {
                 // --- l'operation n'a pas abouti
                 $this->resetTmp($codetype);
@@ -207,22 +208,16 @@ class Image
                         unlink($urldest);
                     }
                     if ( false === rename(self::TMPDIR . 'img'.$codetype.'-tmp.jpg', $urldest) ) {
-
-                        die('PAS GLOP');
-                        // --- erreur deplacement infructueux
-
+                        $this->setErreur('Impossible de déplacer l\'image dans son emplacement définitif . Opération abandonnée .');
+                        return false;
                     }
+                    return true;
                     break;
-// ********* A VALIDER *************************
-//                default :
-//                    if ( false === rename(self::TMPDIR . 'img'.$codetype.'-tmp.jpg', self::IMGDIR.'img'.$codetype.'-'.$this->numsaisons[$codesaison].'.jpg') ) {
-//
-//                        die('PAS GLOP');
-//                        // --- erreur deplacement infructueux
-//
-//                    }
-// **********************************************
             }
+        }
+        else {
+            $this->setErreur('L\'image n\'a pas été importée correctement. Opération abandonnée.');
+            return false;
         }
     }
 

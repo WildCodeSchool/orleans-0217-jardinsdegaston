@@ -74,6 +74,11 @@ class AccueilController extends Controller
 
         $contactForm = new ContactForm();
 
+        $ok = '';
+        if (isset($_GET['message']))
+        {
+            $ok='Message envoyé';
+        }
         if (isset($_POST['add'])) {
             $filter = new ContactFilter();
             $contactForm->setInputFilter($filter);
@@ -85,12 +90,12 @@ class AccueilController extends Controller
             $telErr = [];
             $contenuErr = [];
 
-            $ok = '';
 
             if ($contactForm->isValid()) {
                 $contactManager = new ContactManager($this->bdd, Contact::class);
                 if ($contactManager->addContact()) {
-                    $ok = 'message envoyé';
+                   // $ok = 'message envoyé';
+                    header('Location:index.php?message=1');
                 };
             } else {
                 $nomErr = $contactForm->get('NomContact')->getMessages();
@@ -104,7 +109,7 @@ class AccueilController extends Controller
                 $contenuErr = $contactForm->get('TexteContact')->getMessages();
                 $this->translator->translate($contenuErr);
             }
-            return $this->twig->render('site/Accueil.twig', array('nomErr' => $nomErr,
+            return $this->twig->render('Accueil.twig', array('nomErr' => $nomErr,
                                                                     'prenomErr' => $prenomErr,
                                                                     'emailErr' => $emailErr,
                                                                     'telErr' => $telErr,
@@ -122,7 +127,7 @@ class AccueilController extends Controller
 
         }
 
-        return $this->twig->render('site/Accueil.twig', array('presentationH1' => $presentationH1,
+        return $this->twig->render('Accueil.twig', array('presentationH1' => $presentationH1,
             'presentationH3' => $presentationH3,
             'prestation' => $prestation,
             'realisation' => $realisation,
@@ -130,6 +135,7 @@ class AccueilController extends Controller
             'livredor' => $livredor,
             'contact' => $contactForm,
             'bgcss' => 'bg' . strtoupper($saison[0]) . '.css',
+            'ok'=>$ok,
             'chezgaston' => $parametresGeneraux->getChezGaston()));
 
     }

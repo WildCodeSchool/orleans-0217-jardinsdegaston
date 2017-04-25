@@ -17,7 +17,7 @@ class ParametreManager extends DbManager
 
     public Function writeOne($champ, $valeur)
     {
-        $sql = "UPDATE parametre SET :champ=:valeur WHERE id=1";
+        $sql = "UPDATE parametre SET $champ=$valeur WHERE id=1";
         $pre = $this->getbdd()->prepare($sql);
         $pre->bindValue(':champ', $champ, \PDO::PARAM_STR);
         $pre->bindValue(':valeur', $valeur);
@@ -26,3 +26,4 @@ class ParametreManager extends DbManager
     }
 
 }
+
