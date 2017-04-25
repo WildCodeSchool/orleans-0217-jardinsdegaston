@@ -307,7 +307,7 @@
 
                     <div class="form-group">
                         <label for="{{ contact.get('EmailContact').name }}">{{ contact.get('EmailContact').label }}</label>
-                        <input class="form-control" type="text" name="{{ contact.get('EmailContact').name }}"/>
+                        <input class="form-control" type="email" name="{{ contact.get('EmailContact').name }}"/>
                         {% for message in emailErr %}
                             <p class="erreur">{{ message }}</p>
                         {% endfor %}

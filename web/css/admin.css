@@ -1,3 +1,31 @@
+.tdDate{
+    width: 15%;
+}
+
+.tdAuteur{
+    width: 15%;
+
+}
+
+.tdMessage{
+    width: 30%;
+
+}
+
+.tdEmail{
+    width: 15%;
+
+}
+
+.tdTelephone{
+    width: 10%;
+
+}
+
+.tdAction{
+    width: 15%;
+
+}
 
 body {
     font-size: 16px;

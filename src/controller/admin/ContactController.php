@@ -23,13 +23,19 @@ class ContactController extends Controller
 
 
         if (isset($_POST['contactLus'])) {
-            $contactLus = $contactManager->updateLus($_POST);
+            $contactLus = $contactManager->contactLus($_POST);
+            header('location:index.php?p=contact');
 
+        }elseif (isset($_POST['contactArchive'])) {
+            $contactArchive = $contactManager->contactArchive($_POST);
+            header('location:index.php?p=contact');
 
+        }elseif (isset($_POST['contactDelete'])) {
+            $contactDelete = $contactManager->contactDelete($_POST);
+            header('location:index.php?p=contact');
 
-            return $this->twig->render('contact/Contact.twig', array('contacts' => $contact,
-                                                                     'contactLus' => $contactLus));
         }
+
         return $this->twig->render('contact/Contact.twig', array('contacts' => $contact,));
     }
 }
