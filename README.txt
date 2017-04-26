@@ -14,7 +14,8 @@ Mise en service du site web jardinsdegaston.fr
 
 1°) - Les Jardins de Gaston : objet du site web
 ===============================================
-Il s’agit d’un site web développé en PHP, permettant de présenter le savoir-faire du responsable des Jardins de Gaston, dans le domaine de l’entretien de parcs et jardins.
+Il s’agit d’un site web développé en PHP, permettant de présenter le savoir-faire de l'entreprise "Les Jardins de
+Gaston", dans le domaine de l’entretien de parcs et jardins.
 
 
 2°) - Prequis sur le serveur :
@@ -27,7 +28,8 @@ Il s’agit d’un site web développé en PHP, permettant de présenter le savo
 
 3°) - Installation initiale :
 =============================
-L’ensemble des scripts du site est disponible ici (dépôt github) : https://github.com/WildCodeSchool/orleans-0217-jardinsdegaston
+L’ensemble des scripts du site est disponible ici (dépôt github) :
+https://github.com/WildCodeSchool/orleans-0217-jardinsdegaston
 a) – cloner le dépôt (git clone)
 b) – Utiliser composer pour installer les modules nécessaires (composer install)
 c) – Changer le propriétaire de l’arborescence (chmod -R <userApache>:<groupApache>  <arborescence>)
@@ -93,10 +95,14 @@ Nommage des images :
 ====================
 Toutes les images modifiables 
 - sont au format .jpg (ou .jpeg),
-- sont préfixées ‘img’, et identifiés par une lettre (B = background, Rav ou Rap = réalisation, P = prestation, J = journal), puis par un tiret, puis un nombre correspodant à l'id de l'objet correspondant en base de données, puis l'extension .jpg (ex : imgP-4.jpg = l'image correspondant à pa prestation enregistrement 4 de la table prestation).
+- sont préfixées ‘img’, et identifiés par une lettre (B = background, Rav ou Rap = réalisation, P = prestation,
+J = journal), puis par un tiret, puis un nombre correspodant à l'id de l'objet correspondant en base de données,
+puis l'extension .jpg (ex : imgP-4.jpg = l'image correspondant à pa prestation enregistrement 4 de la table prestation).
 Formats : B = 1920x1200, R = 750x400, P = 400x400, J = 600x400
-Cas particulier des réalisations : les images "avant" et "après" sont identifiées par Rav et Rap (ex : imgRav-3.jpg et imgRap-3.jpg sont les 2 images associées à l'enregistrement 3 de la table realisation)
-Les images modifiables sont automatiquement adaptées en taille et résolution, en fonction de leur destination, lors de l'upload.
+Cas particulier des réalisations : les images "avant" et "après" sont identifiées par Rav et Rap (ex : imgRav-3.jpg
+et imgRap-3.jpg sont les 2 images associées à l'enregistrement 3 de la table realisation)
+Les images modifiables sont automatiquement adaptées en taille et résolution, en fonction de leur destination, lors
+de l'upload.
 
 *-----------------------*---------------*-----------------------------------------------------------------------*
 * Nom des images	* Modifiable	* Commentaire								*
