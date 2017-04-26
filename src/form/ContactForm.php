@@ -8,6 +8,7 @@
 
 namespace wcs\Form;
 
+use Zend\Form\Element\Csrf;
 use Zend\Form\Element\Tel;
 use Zend\Form\Element\Email;
 use Zend\Form\Element\Text;
@@ -58,6 +59,11 @@ class ContactForm extends Form
             'options' => [
                 'label' => 'Téléphone',
             ],
+        ]);
+
+        $this->add([
+            'type' => Csrf::class,
+            'name' => 'csrf',
         ]);
     }
 }

@@ -38,8 +38,10 @@
                     <li><a href="#presentationAnchor">A propos de Gaston</a></li>
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du moment</a></li>
-                    {% if chezgaston == 1 %}<li><a href="index.php?p=journal">Le journal de Gaston</a></li>{% endif %}
-                    <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
+                    {% if chezgaston == 1 %}
+                        <li><a href="index.php?p=journal">Le journal de Gaston</a></li>{% endif %}
+                    <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous
+                            contacter</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -72,16 +74,17 @@
         <div class="col-xs-offset-1 col-xs-10 text-center">
 
             <div class="presentation-header">
-                <h1>Les Jardins de Gaston<br/><span class="sous-titre">Entretien des parcs et jardins dans la région Orléannaise</span></h1>
+                <h1>Les Jardins de Gaston<br/><span class="sous-titre">Entretien des parcs et jardins dans la région Orléannaise</span>
+                </h1>
                 <h2>{{ presentationH1.titre }}</h2>
                 <p>{{ presentationH1.contenu | nl2br }}</p>
             </div>
 
             {% for pres in presentationH3 %}
-            <div class="value{{ loop.index }}">
-                <h3>{{ pres.titre }}</h3>
-                <p>{{ pres.contenu | nl2br}}</p>
-            </div>
+                <div class="value{{ loop.index }}">
+                    <h3>{{ pres.titre }}</h3>
+                    <p>{{ pres.contenu | nl2br }}</p>
+                </div>
 
             {% endfor %}
 
@@ -162,15 +165,16 @@
 
     <div class="row Blog">
 
-    {% if chezgaston == 1 %}
-    <div class="col-xs-offset-1 col-xs-10 col-md-offset-7 col-md-5">
-        <div class="BlogThumb">
-            <a href="index.php?p=journal"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
-            <p>Découvrez le journal de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
-            <a type="button" class="btn btn-default hover" href="index.php?p=journal">J'y vais</a>
-        </div>
-    </div>
-    {% endif %}
+        {% if chezgaston == 1 %}
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-7 col-md-5">
+                <div class="BlogThumb">
+                    <a href="index.php?p=journal"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
+                    <p>Découvrez le journal de Gaston : des photos, des conseils et des astuces pour l'entretien de
+                        votre jardin</p>
+                    <a type="button" class="btn btn-default hover" href="index.php?p=journal">J'y vais</a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 
 
@@ -206,7 +210,7 @@
     <!-------     Section Conseil du moment     -------->
     <span id="conseilAnchor" class="ancre"></span>
     <div class="row Conseilbackground-lg">
-        <div class="col-sm-8 col-sm-offset-2" >
+        <div class="col-sm-8 col-sm-offset-2">
             <div class=" row Conseil">
                 <div class="col-sm-3 col-sm-offset-1 ConseilTitre">
                     <h4>CONSEIL DU MOMENT</h4>
@@ -283,7 +287,8 @@
                 <h2>CONTACTEZ-NOUS</h2>
                 <hr class="separe">
                 <p>Tel: 06 76 27 40 31</p>
-                <p>Pour toute demande de devis, de conseil ou autre, vous pouvez nous joindre par téléphone ou via le formulaire ci-joint</p>
+                <p>Pour toute demande de devis, de conseil ou autre, vous pouvez nous joindre par téléphone ou via le
+                    formulaire ci-joint</p>
                 <form name="ajout-contact" method="POST" action="index.php#formulaireAnchor">
 
 
@@ -330,8 +335,9 @@
                         {% endfor %}
                     </div>
 
-                        <input class="btn btn-default hover" type="submit" name="add" value="Envoyer">
-                        <div>{% if ok is not empty %}<p class="ok">Message envoyé !</p>{% endif %}</div>
+                    <input class="btn btn-default hover" type="submit" name="add" value="Envoyer">
+                    <input type="hidden" name="csrf" value="{{ contact.get('csrf').value }}">
+                    <div>{% if ok is not empty %}<p class="ok">Message envoyé !</p>{% endif %}</div>
 
                 </form>
 
@@ -388,14 +394,18 @@
 
                             <h4>Protection des données personnelles sur le site</h4>
                             <p>
-                                Ce site respecte les règles suivantes, concernant les données personnelles :<br />
-                                - 1. Pas d’information collectée à l’insu de l’internaute,<br />
+                                Ce site respecte les règles suivantes, concernant les données personnelles :<br/>
+                                - 1. Pas d’information collectée à l’insu de l’internaute,<br/>
                                 - 2. Pas de cession à des tiers.
-                                Les informations renseignées par les internautes dans le formulaire de contact ne sont utilisées que pour le
-                                traitement des messages laissés par ces derniers.<br />
-                                En conformité avec la loi informatique et libertés, l'internaute peut faire valoir son droit de modification
-                                et/ou de suppression des données personnelles qui le concerne. Pour ce faire, il formulera sa demande par
-                                courrier simple, à l'attention du responsable de publication et à l'adresse du siège social, précisés plus haut.
+                                Les informations renseignées par les internautes dans le formulaire de contact ne sont
+                                utilisées que pour le
+                                traitement des messages laissés par ces derniers.<br/>
+                                En conformité avec la loi informatique et libertés, l'internaute peut faire valoir son
+                                droit de modification
+                                et/ou de suppression des données personnelles qui le concerne. Pour ce faire, il
+                                formulera sa demande par
+                                courrier simple, à l'attention du responsable de publication et à l'adresse du siège
+                                social, précisés plus haut.
                             </p>
 
 
@@ -424,30 +434,54 @@
                             <h5>Images</h5>
 
                             <p>
-                                Toutes les photographies et images présentes sur ce site - hormis les photographies de la section "Nos réalisations" - sont libre de droits.<br/>
+                                Toutes les photographies et images présentes sur ce site - hormis les photographies de
+                                la section "Nos réalisations" - sont libre de droits.<br/>
                                 Liste des photos :
-                                <ul class="text-left">
-                                    <li>Photographie de présentation Printemps : www.mercatus.com, public domain images archives.</li>
-                                    <li>Photographie de présentation Eté : www.pexels.com, ref:289327, CCO License.</li>
-                                    <li>Photographie de présentation Automne : www.pexels.com, ref:266967, CCO License.</li>
-                                    <li>Photographie de présentation Hiver : www.mercatus.com, public domain images archives.</li>
-                                    <li>Photographie de transition : wwww.pixabay.com, ref:1507550, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Journal de Gaston : wwww.pixabay.com, ref:1857350, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Prestation - entretien des pelouses : wwww.pixabay.com, ref:384589, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Prestation - taille des haies : wwww.pixabay.com, ref:972972, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Prestation - entretien des massifs : wwww.pixabay.com, ref:1412503, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Prestation - potager : wwww.pixabay.com, ref:672930, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Prestation - évacuation des déchets végétaux : wwww.pixabay.com, ref:1483523, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Prestation - entretien des extérieurs : wwww.pixabay.com, ref:1744953, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Conseil du moment : wwww.pixabay.com, ref:1656357, CCO Public Domain.</li>
-                                    <li>Photographie d'illustration Contactez-nous : </li>
-                                    <li>Photographie de fond de la page le Journal de Gaston : wwww.pixabay.com, ref:2157324, CCO Public Domain.</li>
-                                </ul>
+                            <ul class="text-left">
+                                <li>Photographie de présentation Printemps : www.mercatus.com, public domain images
+                                    archives.
+                                </li>
+                                <li>Photographie de présentation Eté : www.pexels.com, ref:289327, CCO License.</li>
+                                <li>Photographie de présentation Automne : www.pexels.com, ref:266967, CCO License.</li>
+                                <li>Photographie de présentation Hiver : www.mercatus.com, public domain images
+                                    archives.
+                                </li>
+                                <li>Photographie de transition : wwww.pixabay.com, ref:1507550, CCO Public Domain.</li>
+                                <li>Photographie d'illustration Journal de Gaston : wwww.pixabay.com, ref:1857350, CCO
+                                    Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Prestation - entretien des pelouses : wwww.pixabay.com,
+                                    ref:384589, CCO Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Prestation - taille des haies : wwww.pixabay.com,
+                                    ref:972972, CCO Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Prestation - entretien des massifs : wwww.pixabay.com,
+                                    ref:1412503, CCO Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Prestation - potager : wwww.pixabay.com, ref:672930, CCO
+                                    Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Prestation - évacuation des déchets végétaux :
+                                    wwww.pixabay.com, ref:1483523, CCO Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Prestation - entretien des extérieurs :
+                                    wwww.pixabay.com, ref:1744953, CCO Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Conseil du moment : wwww.pixabay.com, ref:1656357, CCO
+                                    Public Domain.
+                                </li>
+                                <li>Photographie d'illustration Contactez-nous :</li>
+                                <li>Photographie de fond de la page le Journal de Gaston : wwww.pixabay.com,
+                                    ref:2157324, CCO Public Domain.
+                                </li>
+                            </ul>
                             </p>
 
                             <h4>Fonctionnement</h4>
                             <p>
-                                Pour toute remarque ou suggestion sur le fonctionnement du site, veuillez adresser un message via le <a href="index.php#formulaireAnchor">formulaire de contact.</a>
+                                Pour toute remarque ou suggestion sur le fonctionnement du site, veuillez adresser un
+                                message via le <a href="index.php#formulaireAnchor">formulaire de contact.</a>
                             </p>
 
                             <h4>Conception et réalisation</h4>

@@ -42,6 +42,9 @@ class AccueilController extends Controller
         $this->translator = $translator;
     }
 
+    /*
+     * Instanciation des méthodes pour afficher dynamiquement les contenus
+     */
     public function index()
     {
         $saison = $this->whatSeason();
@@ -71,16 +74,25 @@ class AccueilController extends Controller
         $parametreManager = new ParametreManager($this->bdd, Parametre::class);
         $parametresGeneraux = $parametreManager->read();
 
-
+        /*
+         * Instanciation du formulaire de contact
+         */
         $contactForm = new ContactForm();
 
+        /*
+         * condition pour afficher 'Message envoyé"
+         */
         $ok = '';
         if (isset($_GET['message']))
         {
             $ok='Message envoyé';
         }
+
+        /*
+         * Instanciation des filtres et des validateurs ZendForm
+         */
         if (isset($_POST['add'])) {
-            $filter = new ContactFilter();
+             $filter = new ContactFilter();
             $contactForm->setInputFilter($filter);
             $contactForm->setData($_POST);
 
@@ -109,6 +121,10 @@ class AccueilController extends Controller
                 $contenuErr = $contactForm->get('TexteContact')->getMessages();
                 $this->translator->translate($contenuErr);
             }
+
+            /*
+             * Rendu en Twig avec les messages d'erreur
+             */
             return $this->twig->render('Accueil.twig', array('nomErr' => $nomErr,
                                                                     'prenomErr' => $prenomErr,
                                                                     'emailErr' => $emailErr,
@@ -127,6 +143,9 @@ class AccueilController extends Controller
 
         }
 
+        /*
+         * Rendu en Twig sans les messages d'erreur
+         */
         return $this->twig->render('Accueil.twig', array('presentationH1' => $presentationH1,
             'presentationH3' => $presentationH3,
             'prestation' => $prestation,
@@ -139,7 +158,9 @@ class AccueilController extends Controller
             'chezgaston' => $parametresGeneraux->getChezGaston()));
 
     }
-
+        /*
+         * Méthode pour changer l'image d'accueil à chaque saison
+         */
         public function whatSeason()
         {
             $today = new \DateTime();

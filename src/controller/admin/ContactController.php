@@ -14,6 +14,9 @@ use wcs\model\ContactManager;
 
 class ContactController extends Controller
 {
+    /*
+     * Méthodes pour instancier les changements de statut des contacts reçus
+     */
     public function index()
     {
 
