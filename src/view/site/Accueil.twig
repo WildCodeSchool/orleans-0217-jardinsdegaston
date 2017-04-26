@@ -38,7 +38,7 @@
                     <li><a href="#presentationAnchor">A propos de Gaston</a></li>
                     <li><a href="#prestationAnchor">Les prestations</a></li>
                     <li><a href="#conseilAnchor">Le conseil du moment</a></li>
-                    {% if chezgaston == 1 %}<li><a href="index.php?p=journal">Le journal de Gaston</a></li>{% endif %}
+                    {% if chezgaston == 1 %}<li><a href="journal">Le journal de Gaston</a></li>{% endif %}
                     <li class="hover"><a class="btn btn-default" href="#formulaireAnchor" role="button">Nous contacter</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -165,9 +165,9 @@
     {% if chezgaston == 1 %}
     <div class="col-xs-offset-1 col-xs-10 col-md-offset-7 col-md-5">
         <div class="BlogThumb">
-            <a href="index.php?p=journal"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
+            <a href="journal"><h3>Et pendant ce temps-là chez Gaston...</h3></a>
             <p>Découvrez le journal de Gaston : des photos, des conseils et des astuces pour l'entretien de votre jardin</p>
-            <a type="button" class="btn btn-default hover" href="index.php?p=journal">J'y vais</a>
+            <a type="button" class="btn btn-default hover" href="journal">J'y vais</a>
         </div>
     </div>
     {% endif %}
@@ -284,7 +284,7 @@
                 <hr class="separe">
                 <p>Tel: 06 76 27 40 31</p>
                 <p>Pour toute demande de devis, de conseil ou autre, vous pouvez nous joindre par téléphone ou via le formulaire ci-joint</p>
-                <form name="ajout-contact" method="POST" action="index.php#formulaireAnchor">
+                <form name="ajout-contact" method="POST" action="accueil#formulaireAnchor">
 
 
                     <div class="form-group">

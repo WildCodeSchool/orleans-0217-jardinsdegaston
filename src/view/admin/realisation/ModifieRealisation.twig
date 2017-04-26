@@ -31,7 +31,7 @@
                         <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg?{{ random(9999) }}">
                         <p>Image actuelle</p>
                         <img class="gimg" src="{{ tmpRav }}?{{ random(9999) }}">
-                        <form id="loadimgav" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                        <form id="loadimgav" method="post" action="realisation" enctype="multipart/form-data">
                             <input type="hidden" name="MAX_FILE_SIZE" value="200000000" />
                             <input type="hidden" name="method" value="imgupload" />
                             <input type="hidden" name="id" value="{{ realisation.id }}">
@@ -49,7 +49,7 @@
                         <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg?{{ random(9999) }}">
                         <p>Image actuelle</p>
                         <img class="gimg" src="{{ tmpRap }}?{{ random(9999) }}">
-                        <form id="loadimgap" method="post" action="index.php?p=realisation" enctype="multipart/form-data">
+                        <form id="loadimgap" method="post" action="realisation" enctype="multipart/form-data">
                             <input type="hidden" name="MAX_FILE_SIZE" value="200000000" />
                             <input type="hidden" name="method" value="imgupload" />
                             <input type="hidden" name="id" value="{{ realisation.id }}">
@@ -67,7 +67,7 @@
                         {% if erreur !='' %}
                             <p class="erreur">{{ erreur }}</p>
                         {% endif %}
-                        <form method="post" action="index.php?p=realisation">
+                        <form method="post" action="realisation">
                             <input type="hidden" name="method" value="majReal" />
                             <input type="checkbox" id="activation" name="activation" {% if realisation.activation == 1 %}checked{% endif %}><label for="actif">
                                 Activer sur le Site
@@ -76,11 +76,10 @@
                             <input required ="required" class="form-control" type="text" name="titre" id="titre" value="{{ realisation.titre }}" /><br />
                             <label for="contenu">Commentaires</label><br />
                             <textarea required ="required" class="form-control" row="3" name="contenu" id="contenu">{{ realisation.contenu }}</textarea><br />
-                            {#<input type="hidden" name="method" value="updateReal" />#}
                             <input type="hidden" name="id" value="{{ realisation.id }}" />
                             <input class="btn btn-default" type="submit" name="valide" value="Enregistrer les modifications" />
                         </form>
-                        <form method="post" action="index.php?p=realisation">
+                        <form method="post" action="realisation">
                             <input class="btn btn-default" type="submit" value="Abandonner la modification" />
                         </form>
                     </div>

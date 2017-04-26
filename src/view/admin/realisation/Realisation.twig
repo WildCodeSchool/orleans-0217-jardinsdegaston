@@ -45,7 +45,7 @@
                         <p class="label-like">Commentaires</p>
                         <p class="textarea-like form-control">{{ realisation.contenu | nl2br }}</p>
                         <p>
-                        <form method="post" action="index.php?p=realisation">
+                        <form method="post" action="realisation">
                             <input type="hidden" name="method" value="modif">
                             <input type="hidden" name="id" value="{{ realisation.id }}">
                             <input class="btn btn-default" type="submit" name="valide" value="Modifier la réalisation" />

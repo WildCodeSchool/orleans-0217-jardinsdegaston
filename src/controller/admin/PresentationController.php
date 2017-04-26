@@ -73,7 +73,7 @@ class PresentationController extends Controller
             $manager->update($presentation);
 
             // --- recharger page index
-            header('location:index.php?p=presentation');
+            header('location:presentation');
         }
         else {
             // --- recharger la page en affichant l'erreur

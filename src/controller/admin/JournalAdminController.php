@@ -50,7 +50,7 @@ class JournalAdminController extends Controller
                 // --- on ecrit la modif du parametre dans la table
                 $parametreManager->writeOne('chezgaston', 0);
             }
-            header('location:index.php?p=chezgaston');
+            header('location:chezGaston');
 
         }
 
@@ -223,7 +223,7 @@ class JournalAdminController extends Controller
     {
         if ( isset($_POST['abandon']) ) {
 
-            header('location:index.php?p=chezgaston');
+            header('location:chezGaston');
 
         } elseif (isset($_POST['valide'])) {
 
@@ -240,7 +240,7 @@ class JournalAdminController extends Controller
             $imgName = 'imgJ-' . $id . '.jpg';
             move_uploaded_file($image['tmp_name'], PUBLIC_IMG . $imgName);
 
-            header('location:index.php?p=chezgaston');
+            header('location:chezGaston');
         }
     }
 
@@ -258,7 +258,7 @@ class JournalAdminController extends Controller
             // --- suppression de l'image attachee
             $this->img->delImg('J', $_POST['id']);
         }
-        header('location:index.php?p=chezgaston');
+        header('location:chezGaston');
 
     }
 

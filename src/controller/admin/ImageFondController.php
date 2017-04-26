@@ -66,7 +66,7 @@ class ImageFondController extends Controller
     {
         if ( isset($_POST['annule']) ) {
             // --- on recharge la page initiale (qui reinitialise le formulaire)
-            header('location:index.php?p=imgfond');
+            header('location:imgFond');
         }
         if ( isset($_POST['saison']) ) {
             $selected = $_POST['saison'];
@@ -90,7 +90,7 @@ class ImageFondController extends Controller
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('B', $this->getNumSaison($_POST['saison']));
             // --- recharger page index
-            header('location:index.php?p=imgfond');
+            header('location:imgFond');
         }
         else {
             // --- recharger la page en affichant l'erreur
