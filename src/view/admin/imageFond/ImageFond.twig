@@ -40,7 +40,7 @@
                 <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
                     <img class="img-fluid pimg bloc-right" src="{{ formimage }}?{{ random(9999) }}" alt="" />
                     <br />
-                    <form id="loadimg" method="post" action="index.php?p=imgfond" enctype="multipart/form-data">
+                    <form id="loadimg" method="post" action="imgFond" enctype="multipart/form-data">
                         <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
                         <input type="hidden" name="method" value="imgupload" />
                         <input type="hidden" name="saison" id="saisonimg" value="" />
@@ -49,7 +49,7 @@
                     </form>
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-4">
-                    <form method="post" action="index.php?p=imgfond">
+                    <form method="post" action="imgFond">
                         <input type="hidden" name="method" value="imgswitch" />
                         <p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>
                         <p>

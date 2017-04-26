@@ -27,15 +27,15 @@ class ContactController extends Controller
 
         if (isset($_POST['contactLus'])) {
             $contactLus = $contactManager->contactLus($_POST);
-            header('location:index.php?p=contact');
+            header('location:contact');
 
         }elseif (isset($_POST['contactArchive'])) {
             $contactArchive = $contactManager->contactArchive($_POST);
-            header('location:index.php?p=contact');
+            header('location:contact');
 
         }elseif (isset($_POST['contactDelete'])) {
             $contactDelete = $contactManager->contactDelete($_POST);
-            header('location:index.php?p=contact');
+            header('location:contact');
 
         }
 

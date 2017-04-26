@@ -110,7 +110,7 @@ class AccueilController extends Controller
                 $contactManager = new ContactManager($this->bdd, Contact::class);
                 if ($contactManager->addContact()) {
                    // $ok = 'message envoyé';
-                    header('Location:index.php?message=1');
+                    header('Location:accueil?message=1');
                 };
             } else {
                 $nomErr = $contactForm->get('NomContact')->getMessages();

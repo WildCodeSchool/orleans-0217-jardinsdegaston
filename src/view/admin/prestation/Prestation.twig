@@ -11,7 +11,7 @@
 {% block pagetitle %}
     <h1>Gestion des prestations</h1>
     <p>
-        <form method="post" action="index.php?p=prestation">
+        <form method="post" action="prestation">
             <input type="hidden" name="method" value="ajout" />
             <input class="btn btn-default" type="submit" name="ajoute" value="Ajouter une prestation" />
         </form>
@@ -42,7 +42,7 @@
                         <p class="label-like">Détails de la prestation</p>
                         <p class="textarea-like form-control">{{ prestation.contenu | nl2br }}</p>
                         <p>
-                            <form method="post" action="index.php?p=prestation">
+                            <form method="post" action="prestation">
                                 <input type="hidden" name="method" value="modif">
                                 <input type="hidden" name="id" value="{{ prestation.id }}">
                                 <input class="btn btn-default" type="submit" name="valide" value="Modifier la prestation" />
@@ -50,7 +50,7 @@
                                 <input class="btn btn-default" type="submit" name="supprime" value="Supprimer la prestations" />
                             </form>
                         </p>
-                        <form action="index.php?p=prestation" method="post">
+                        <form action="prestation" method="post">
                             <p>
                                 Ordre d'affichage &nbsp;&nbsp;
                                 <button class="btn btn-default btn-xs{% if loop.index == 1 %}{{ ' cache' }}{% endif %}" type="submit" name="up">Monter</button>

@@ -88,7 +88,7 @@ class RealisationController extends Controller
     public function majReal()
     {
         if ( isset($_POST['abandon']) ) {
-            header('location:index.php?p=realisation');
+            header('location:realisation');
         }
         $erreur = '';
         $realisation = new Realisation();
@@ -112,7 +112,7 @@ class RealisationController extends Controller
             $manager = new RealisationManager($this->bdd, Realisation::class);
             $manager->update($_POST['id']);
             // --- recharger page index
-            header('location:index.php?p=realisation');
+            header('location:realisation');
         }
         else {
             // --- recharger la page en affichant l'erreur

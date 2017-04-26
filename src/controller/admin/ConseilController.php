@@ -175,10 +175,8 @@ class ConseilController extends Controller
 
             $manager = new ConseilManager($this->bdd, Conseil::class);
             $manager->update($conseil);
-        } else {
-            header('location:google.fr');
         }
-        header('location:index.php?p=conseil');
+        header('location:conseil');
     }
 
     public function deleteConseil()
@@ -187,7 +185,7 @@ class ConseilController extends Controller
             $manager = new ConseilManager($this->bdd, Conseil::class);
             $manager->delete();
         }
-        header('location:index.php?p=conseil');
+        header('location:conseil');
     }
 
 }
