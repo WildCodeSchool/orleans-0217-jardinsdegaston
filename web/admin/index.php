@@ -19,6 +19,7 @@ $routes = [
     'livredor' =>       'Livredor',
     'contact' =>        'Contact',
     'chezgaston' =>     'JournalAdmin',
+    'notfound' =>       'Error',
 ];
 // --- initialisation de la methode pour le controleur defini ci-dessus
 $method = 'index'; // methode par defaut
@@ -42,15 +43,16 @@ require $connectRoot.'initbdd.php';
 
 // --- si la page demandee existe, on l'affiche
 if ( array_key_exists($page, $routes) ) {
+    if ($page == 'notfound') {
+        $controller = new \wcs\controller\ErrorController($twig, $bdd);
+        echo $controller->notFound();
+    } else {
+        // --- appel du controleur/methode defini plus haut
+        $ctrlName = 'wcs\\controller\\admin\\'.$routes[$page].'Controller';
+        $controller = new $ctrlName($twig, $bdd);
+        echo $controller->$method();
+    }
 
-    // --- appel du controleur/methode defini plus haut
-    $ctrlName = 'wcs\\controller\\admin\\'.$routes[$page].'Controller';
-    $controller = new $ctrlName($twig, $bdd);
-    echo $controller->$method();
-}
-else {
-    $controller = new \wcs\controller\ErrorController($twig, $bdd);
-    echo $controller->notFound();
 }
 
 ?>

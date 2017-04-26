@@ -205,6 +205,11 @@ h4#accroche{
 
 /*------         Titre        ------*/
 
+.titre {
+    color: #2b542c;
+    font-size: 30px;
+    margin-top:120px;
+}
 
 /*------     Presentation     ------*/
 

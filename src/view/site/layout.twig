@@ -1,0 +1,243 @@
+{# --- src/view/site/Layout.twig --- #}
+
+<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    {% block headtitle %} {% endblock %}
+    <link rel="icon" type="image/png" href="img/arrosoir2_xsmallvert.png" sizes="32x32"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/{{ bgcss }}" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chicle|Montserrat Alternates" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Open+Sans|Open+Sans+Condensed:300|PT+Sans+Narrow|Roboto"
+          rel="stylesheet">
+</head>
+<body id="top">
+<!-----      Navigation   ------->
+
+
+<!-- navbar-collapse menu burger-->
+
+<header id="top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarColor">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/accueil#top"><img class="logo" src="img/logo_blanc.png"></a>
+
+            </div>
+
+            <!-- navbar-collapse navigation -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/accueil#presentationAnchor">A propos de Gaston</a></li>
+                    <li><a href="/accueil#prestationAnchor">Les prestations</a></li>
+                    <li><a href="/accueil#conseilAnchor">Le conseil du moment</a></li>
+
+                    {% if chezgaston == 1 %}<li><a href="/journal">Le journal de Gaston</a></li>{% endif %}
+                    <li class="hover"><a class="btn btn-default" href="/accueil#formulaireAnchor" role="button">Nous contacter</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+
+<div class="container-fluid">
+
+    {% block content %} {% endblock %}
+
+</div>
+
+
+<!-------           Footer           -------->
+<div class="row footer">
+    <div class="hidden-xs col-sm-2 text-center">
+        <div class="row logo-sap">
+            <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img
+                        src="img/Logosap.png" alt="Logo Service à la personne"/></a>
+        </div>
+    </div>
+    <div class="col-xs-12 push-xs-6 col-sm-8 text-center">
+        <div class="row logo-gaston-footer">
+            <img id="footer-logo-gaston" src="img/logo_blanc.png" alt="logo Les Jardins de Gaston">
+        </div>
+        <div class="row linkModal">
+            <a href="#" data-toggle="modal" data-target="#infolegale">mentions légales</a>
+        </div>
+
+        <!-- modale mentions legales -->
+        <div class="modal modal-wide fade" id="infolegale" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title" id="myModalLabel">Informations légales</h3>
+                    </div>
+                    <div class="modal-body infolegale">
+
+                        <h4>Editeur</h4>
+                        <p>
+                            Les Jardins de Gaston - Affaire personnelle commerçant.<br/>
+                            Code APE 9609Z.<br/>
+                            Siège social : 572 rue verte, 45640 SANDILLON.<br/>
+                            Siret : 53067183300016.<br/>
+                            Inscrit au registre de la Chambre de commerce du Loiret.<br/>
+                            n° TVA intracom: FR04530671833
+                        </p>
+
+
+                        <h4>Responsable de publication</h4>
+                        <p>M. Fabrice GUILBON.</p>
+
+
+                        <h4>Hébergement</h4>
+                        <p>Ce site est hébergé chez <a href="https://www.ovh.com/fr/" target="_blanc">OVH</a>.</p>
+
+
+                        <h4>Protection des données personnelles sur le site</h4>
+                        <p>
+                            Ce site respecte les règles suivantes, concernant les données personnelles :<br/>
+                            - 1. Pas d’information collectée à l’insu de l’internaute,<br/>
+                            - 2. Pas de cession à des tiers.
+                            Les informations renseignées par les internautes dans le formulaire de contact ne sont
+                            utilisées que pour le
+                            traitement des messages laissés par ces derniers.<br/>
+                            En conformité avec la loi informatique et libertés, l'internaute peut faire valoir son
+                            droit de modification
+                            et/ou de suppression des données personnelles qui le concerne. Pour ce faire, il
+                            formulera sa demande par
+                            courrier simple, à l'attention du responsable de publication et à l'adresse du siège
+                            social, précisés plus haut.
+                        </p>
+
+
+                        <h4>Droit d'auteur - Copyright</h4>
+                        <p>
+                            L'ensemble de ce site relève de la législation française et internationale sur le droit
+                            d'auteur et la propriété
+                            intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les
+                            documents téléchargeables et les
+                            représentations iconographiques et photographiques.<br/>
+                            La reproduction de tout ou partie de ce site sur un support quelconque, matériel ou
+                            immatériel, quel qu'il soit est
+                            formellement interdite sauf autorisation expresse du responsable de publication.
+                        </p>
+
+                        <h5>Polices de caractères</h5>
+
+                        <p>
+                            Police de caractères 'Montserrat Alternates' - Designer : Steve Matteson - Open Font
+                            License.
+                            <br/>
+                            Police de caractères 'Open Sans' - Designer : Julieta Ulanovsky - Apache License Version
+                            2.0.
+                        </p>
+
+                        <h5>Images</h5>
+
+                        <p>
+                            Toutes les photographies et images présentes sur ce site - hormis les photographies de
+                            la section "Nos réalisations" - sont libre de droits.<br/>
+                            Liste des photos :
+                        <ul class="text-left">
+                            <li>Photographie de présentation Printemps : www.mercatus.com, public domain images
+                                archives.
+                            </li>
+                            <li>Photographie de présentation Eté : www.pexels.com, ref:289327, CCO License.</li>
+                            <li>Photographie de présentation Automne : www.pexels.com, ref:266967, CCO License.</li>
+                            <li>Photographie de présentation Hiver : www.mercatus.com, public domain images
+                                archives.
+                            </li>
+                            <li>Photographie de transition : wwww.pixabay.com, ref:1507550, CCO Public Domain.</li>
+                            <li>Photographie d'illustration Journal de Gaston : wwww.pixabay.com, ref:1857350, CCO
+                                Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Prestation - entretien des pelouses : wwww.pixabay.com,
+                                ref:384589, CCO Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Prestation - taille des haies : wwww.pixabay.com,
+                                ref:972972, CCO Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Prestation - entretien des massifs : wwww.pixabay.com,
+                                ref:1412503, CCO Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Prestation - potager : wwww.pixabay.com, ref:672930, CCO
+                                Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Prestation - évacuation des déchets végétaux :
+                                wwww.pixabay.com, ref:1483523, CCO Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Prestation - entretien des extérieurs :
+                                wwww.pixabay.com, ref:1744953, CCO Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Conseil du moment : wwww.pixabay.com, ref:1656357, CCO
+                                Public Domain.
+                            </li>
+                            <li>Photographie d'illustration Contactez-nous :</li>
+                            <li>Photographie de fond de la page le Journal de Gaston : wwww.pixabay.com,
+                                ref:2157324, CCO Public Domain.
+                            </li>
+                        </ul>
+                        </p>
+
+                        <h4>Fonctionnement</h4>
+                        <p>
+                            Pour toute remarque ou suggestion sur le fonctionnement du site, veuillez adresser un
+                            message via le <a href="index.php#formulaireAnchor">formulaire de contact.</a>
+                        </p>
+
+                        <h4>Conception et réalisation</h4>
+                        <a href="https://wildcodeschool.fr/orleans/" target="_blanc">
+                            <img class="legal-logo-wcs" src="img/logo-wcs-ho.png" alt="logo Wild Code School"/>
+                        </a>
+                        <span>
+                                Isabelle MULIGO, Jérémie DAVIAUD, Sylvain JAN, Patrick FAUCHEUX
+                            </span>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin modale infos legales -->
+
+    </div>
+    <div class="col-xs-6 hidden-sm hidden-md hidden-lg text-center">
+        <div class="row logo-sap">
+            <a href="http://www.entreprises.gouv.fr/services-a-la-personne" target="_blanc"><img
+                        src="img/Logosap.png" alt="Logo Service à la personne"/></a>
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-2 text-center logoWCS">
+        <a href="http://wildcodeschool.fr/orleans" target="_blanc">
+            <div class="row">
+                Site créé par
+            </div>
+            <div class="row">
+                <img src="img/logo-wcs-vo-alter-small.png" alt="logo Wild Code School"/>
+            </div>
+        </a>
+    </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
