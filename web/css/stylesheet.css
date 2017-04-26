@@ -178,7 +178,6 @@ h4#accroche{
 
 .presentation {
     background: #fbfff3;
-    position: relative;
     height: 800px;
 }
 
@@ -202,6 +201,9 @@ h4#accroche{
     line-height: 20px;
 }
 
+.presentation-header {
+    position: relative;
+}
 
 /*------         Titre        ------*/
 
@@ -217,15 +219,15 @@ h4#accroche{
 /*------     Valeur Ecologie  ------*/
 
 .value1 {
-    position: absolute;
-    bottom: -300px;
+    position: relative;
+    bottom: -2%;
     left: 6%;
     width: 45%;
-    height: 280px;
     background-color:  #ffffff;
     box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
     padding-top: 2%;
+    padding-bottom: 2%;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -235,14 +237,14 @@ h4#accroche{
 
 .value2 {
     position: absolute;
-    bottom: -340px;
+    bottom: -5%;
     right: 5%;
     width: 45%;
-    height: 280px;
     background-color: #ffffff;
     box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
     border: solid #f9f9f9 1px;
     padding-top: 2%;
+    padding-bottom: 2%;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -726,21 +728,18 @@ border-radius: 6px;
 @media screen and (max-width: 1400px) {
 
     .presentation {
-        height: 900px;
+        height: 1000px;
     }
 
     .value1 {
-        bottom: -230px;
         left: 4%;
         width: 700px;
-        height: 230px;
     }
 
     .value2 {
-        bottom: -440px;
+        bottom: -32%;
         right: 5%;
         width: 700px;
-        height: 230px;
     }
 
 }
@@ -805,9 +804,6 @@ border-radius: 6px;
 
 @media (max-width: 992px) {
     h4#accroche{
-        /*
-        top: 35%;
-        */
         font-size:72px;
     }
 
@@ -829,21 +825,16 @@ border-radius: 6px;
 @media screen and (max-width: 950px) {
 
     .presentation {
-        height: 1050px;
+        height: 1150px;
     }
 
     .value1 {
-        bottom: -300px;
-        left: 4%;
         width: 500px;
-        height: 280px;
     }
 
     .value2 {
-        bottom: -550px;
-        right: 5%;
+        bottom: -32%;
         width: 500px;
-        height: 280px;
     }
 }
 
@@ -861,7 +852,6 @@ border-radius: 6px;
     }
 
     h4#accroche{
-/*        top: 15%;*/
         font-size: 60px;
     }
 
@@ -901,48 +891,28 @@ border-radius: 6px;
     }
 
     .presentation {
-        height: 950px;
+        height: 1000px;
     }
 
     .presentation h2 {
         font-size: 24px;
     }
 
-    .value1 {
-        bottom: -280px;
-        left: 4%;
-        width: 500px;
-        height: 250px;
-    }
-
-    .value2 {
-        bottom: -510px;
-        right: 5%;
-        width: 500px;
-        height: 250px;
-    }
-
-
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
 
     .presentation {
-        height: 1050px;
+        height: 1100px;
     }
 
     .value1 {
-        bottom: -290px;
-        left: 4%;
         width: 400px;
-        height: 280px;
     }
 
     .value2 {
-        bottom: -550px;
-        right: 5%;
+        bottom: -37%;
         width: 400px;
-        height: 280px;
     }
 }
 
@@ -963,45 +933,34 @@ border-radius: 6px;
 
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 560px) {
 
     .presentation {
-        height: 1200px;
+        height: 1350px;
     }
 
-    .value1 {
-        bottom: -340px;
-        left: 4%;
+    .value1 {;
         width: 300px;
-        height: 330px;
     }
 
     .value2 {
-        bottom: -650px;
-        right: 5%;
         width: 300px;
-        height: 330px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
 
     .presentation {
-        height: 1400px;
+        height: 1700px;
     }
 
     .value1 {
-        bottom: -380px;
-        left: 4%;
         width: 260px;
-        height: 390px;
     }
 
     .value2 {
-        bottom: -740px;
-        right: 5%;
+        bottom: -40%;
         width: 260px;
-        height: 390px;
     }
 }
 
