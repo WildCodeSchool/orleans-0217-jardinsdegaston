@@ -51,8 +51,11 @@ class AccueilController extends Controller
         $presentationH1Manager = new PresentationManager($this->bdd, Presentation::class);
         $presentationH1 = $presentationH1Manager->findOne(1);
 
-        $presentationH3Manager = new PresentationManager($this->bdd, Presentation::class);
-        $presentationH3 = $presentationH3Manager->findAll('WHERE id >= 2');
+        $presentationv1Manager = new PresentationManager($this->bdd, Presentation::class);
+        $presentationv1 = $presentationv1Manager->findOne(2);
+
+        $presentationv2Manager = new PresentationManager($this->bdd, Presentation::class);
+        $presentationv2 = $presentationv2Manager->findOne(3);
 
         $realisationManager = new RealisationManager($this->bdd, Realisation::class);
         $realisation = $realisationManager->findAll('WHERE activation > 0');
@@ -131,7 +134,8 @@ class AccueilController extends Controller
                                                                     'telErr' => $telErr,
                                                                     'contenuErr' => $contenuErr,
                                                                     'presentationH1' => $presentationH1,
-                                                                    'presentationH3' => $presentationH3,
+                                                                    'presentationv1' => $presentationv1,
+                                                                    'presentationv2' => $presentationv2,
                                                                     'prestation' => $prestation,
                                                                     'realisation' => $realisation,
                                                                     'conseil' => $conseil,
@@ -147,15 +151,16 @@ class AccueilController extends Controller
          * Rendu en Twig sans les messages d'erreur
          */
         return $this->twig->render('Accueil.twig', array('presentationH1' => $presentationH1,
-            'presentationH3' => $presentationH3,
-            'prestation' => $prestation,
-            'realisation' => $realisation,
-            'conseil' => $conseil,
-            'livredor' => $livredor,
-            'contact' => $contactForm,
-            'bgcss' => 'bg' . strtoupper($saison[0]) . '.css',
-            'ok'=>$ok,
-            'chezgaston' => $parametresGeneraux->getChezGaston()));
+                                                        'presentationv1' => $presentationv1,
+                                                        'presentationv2' => $presentationv2,
+                                                        'prestation' => $prestation,
+                                                        'realisation' => $realisation,
+                                                        'conseil' => $conseil,
+                                                        'livredor' => $livredor,
+                                                        'contact' => $contactForm,
+                                                        'bgcss' => 'bg' . strtoupper($saison[0]) . '.css',
+                                                        'ok'=>$ok,
+                                                        'chezgaston' => $parametresGeneraux->getChezGaston()));
 
     }
         /*

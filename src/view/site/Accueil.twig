@@ -80,13 +80,15 @@
                 <p>{{ presentationH1.contenu | nl2br }}</p>
             </div>
 
-            {% for pres in presentationH3 %}
-                <div class="value{{ loop.index }}">
-                    <h3>{{ pres.titre }}</h3>
-                    <p>{{ pres.contenu | nl2br }}</p>
-                </div>
+            <div class="value1">
+                <h3>{{ presentationv1.titre }}</h3>
+                <p>{{ presentationv1.contenu | nl2br }}</p>
+            </div>
 
-            {% endfor %}
+            <div class="value2">
+                <h3>{{ presentationv2.titre }}</h3>
+                <p>{{ presentationv2.contenu | nl2br }}</p>
+            </div>
 
         </div>
     </div>
