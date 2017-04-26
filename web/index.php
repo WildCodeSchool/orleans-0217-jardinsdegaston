@@ -37,10 +37,8 @@ if (array_key_exists($page, $routes)) {
     echo $controller->$method();
 
 } else {
-
-    // --- il faudra mettre ici une erreur 404 - not found !!! ---
-    echo '<br /><br /><br /><h1>La page demandée n\'existe pas.</h1>';
-
+    $controller = new \wcs\controller\ErrorController($twig, $bdd);
+    echo $controller->notFound();
 }
 
 
