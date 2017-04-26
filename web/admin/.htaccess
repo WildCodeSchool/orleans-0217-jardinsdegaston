@@ -1,7 +1,7 @@
 
 RewriteEngine On
 
-RewriteBase /JardinsdeGaston/orleans-0217-jardinsdegaston/web/admin/
+RewriteBase /admin/
 
 
 RewriteRule ^imgFond$ index\.php?p=imgfond [QSA,L]

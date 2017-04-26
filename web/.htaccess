@@ -1,7 +1,7 @@
 
 RewriteEngine On
 
-RewriteBase /JardinsdeGaston/orleans-0217-jardinsdegaston/web/
+RewriteBase /
 
 
 RewriteRule ^journal$ index\.php?p=journal [QSA,L]
