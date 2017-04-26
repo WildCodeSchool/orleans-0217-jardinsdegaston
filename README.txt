@@ -15,12 +15,13 @@ Mise en service du site web jardinsdegaston.fr
 1°) - Les Jardins de Gaston : objet du site web
 ===============================================
 
-Il s’agit d’un site web développé en PHP, permettant de présenter le savoir-faire du responsable des Jardins de Gaston, dans le domaine de l’entretien de parcs et jardins.
+Il s’agit d’un site web développé en PHP, permettant de présenter le savoir-faire de l'entreprise "Les Jardins de Gaston", dans le domaine de l’entretien de parcs et jardins.
 
 
 2°) - Prequis sur le serveur :
 ==============================
 - Serveur lamp,
+- url rewriting activé sur Apache (a2enmod rewrite),
 - PHP en version 7, plus les modules php-gd et php-intl
 - Composer
 
