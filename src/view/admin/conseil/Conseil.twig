@@ -25,7 +25,7 @@
     <div class="row">
 
         <div class="col-xs-offset-2 col-xs-8 form">
-            <form name="ajout-conseil" method="POST" action="index.php?p=conseil">
+            <form name="ajout-conseil" method="POST" action="conseil">
 
                 <div class="form-group text-center">
                     <label for="{{ form.get('contenu').name }}">{{ form.get('contenu').label }}</label>
@@ -73,7 +73,7 @@
         </div>
         {# -- selecteur d'affichage -- #}
         <div class="col-xs-12 contenu text-center">
-            <form action="index.php?p=conseil" method="post">
+            <form action="conseil" method="post">
                 <span class="label-like">Sélection de l'affichage :</span>
                 &nbsp;&nbsp;
                 <input type="checkbox" name="selprintemps" id="selprintemps" {% if affsaison.P == 1 %}checked{% endif %} />
@@ -97,7 +97,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
                 <div class="thumbnail ">
                     <div class="caption">
-                        <form method="post" action="index.php?p=conseil">
+                        <form method="post" action="conseil">
                             {#<input class="form-control" type="text" name="conseil" value="{{ conseil.contenu }}" /><br />#}
                             <textarea class="form-control" name="contenu" rows="4">{{ conseil.contenu }}</textarea><br />
 
@@ -122,7 +122,7 @@
                             <input type="hidden" name="method" value="updateConseil">
                             <input class="btn btn-default" type="submit" name="updateConseil" value="Enregistrer les modifications" /><br />
                         </form>
-                        <form method="post" action="index.php?p=conseil">
+                        <form method="post" action="conseil">
                             <input type="hidden" name="method" value="deleteConseil">
                             <input type="hidden" name="id" value="{{ conseil.id }}" />
                             <input class="btn btn-default" type="submit" name="deleteConseil" value="Supprimer le conseil" />
