@@ -27,7 +27,7 @@
     </div>
     <div class="row rowAffichageJournal">
         <div class="col-xs-offset-5 col-xs-2">
-            <form method="post" action="index.php?p=chezgaston">
+            <form method="post" action="chezGaston">
                 {% if status == 0 %}
                 <input class="btn btn-success" type="submit" name="afficheMasque" value="Afficher le journal de Gaston" />
                 {% elseif status == 1 %}
@@ -51,7 +51,7 @@
 
         <div class="col-xs-offset-1 col-xs-10">
 
-            <form name="ajout-blog" method="POST" action="index.php?p=chezgaston" enctype="multipart/form-data">
+            <form name="ajout-blog" method="POST" action="chezGaston" enctype="multipart/form-data">
 
                 <div class="row">
 
@@ -136,12 +136,12 @@
                         <td class="col-sm-4 col-lg-2">{{ article.titre }}</td>
                         <td class=".hidden-sm-down col-lg-4">{{ article.contenu }}</td>
                         <td class="col-sm-6 col-lg-4">
-                            <form method="post" action="index.php?p=chezgaston">
+                            <form method="post" action="chezGaston">
                                 <input type="hidden" name="method" value="modif" />
                                 <input type="hidden" name="id" value="{{ article.id }}" />
                                 <input class="btn btn-default" type="submit" name="valide" value="Modifier l'article" />
                             </form>
-                            <form method="post" action="index.php?p=chezgaston">
+                            <form method="post" action="chezGaston">
                                 <input type="hidden" name="method" value="supprime" />
                                 <input type="hidden" name="id" value="{{ article.id }}" />
                                 <input class="btn btn-default" type="submit" name="supprime" value="Supprimer l'article" />

@@ -113,7 +113,7 @@ class PrestationController extends Controller
     public function majpresta()
     {
         if ( isset($_POST['abandon']) ) {
-            header('location:index.php?p=prestation');
+            header('location:prestation');
         }
         $erreur = '';
         $prestation = new Prestation;
@@ -138,8 +138,11 @@ class PrestationController extends Controller
             $manager = new PrestationManager($this->bdd, Prestation::class);
             $manager->writePrestation($prestation);
             // --- recharger page index
-            header('location:index.php?p=prestation');
-        } else {
+
+            header('location:prestation');
+        }
+        else {
+
             // --- recharger la page en affichant l'erreur
             $params = [
                 'prestation' => $prestation,
@@ -158,7 +161,7 @@ class PrestationController extends Controller
     public function addpresta()
     {
         if ( isset($_POST['annule']) ) {
-            header('location:index.php?p=prestation');
+            header('location:prestation');
         }
         $erreur = '';
         $prestation = new Prestation;
@@ -182,8 +185,11 @@ class PrestationController extends Controller
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('P', $id);
             // --- recharger page index
-            header('location:index.php?p=prestation');
-        } else {
+
+            header('location:prestation');
+        }
+        else {
+
             // --- recharger la page en affichant l'erreur
             $params = [
                 'prestation' => $prestation,
@@ -209,7 +215,7 @@ class PrestationController extends Controller
             // --- suppression de l'image attachee
             $this->img->delImg('P', $_POST['id']);
         }
-        header('location:index.php?p=prestation');
+        header('location:prestation');
     }
 
     public function updown()
@@ -222,7 +228,7 @@ class PrestationController extends Controller
         } elseif ( isset($_POST['dn']) ) {
             $manager->dn($id, $ordreaff);
         }
-        header('location:index.php?p=prestation');
+        header('location:prestation');
     }
 
 

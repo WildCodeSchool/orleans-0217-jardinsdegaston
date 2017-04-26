@@ -68,7 +68,7 @@ class ImageFondController extends Controller
     {
         if ( isset($_POST['annule']) ) {
             // --- on recharge la page initiale (qui reinitialise le formulaire)
-            header('location:index.php?p=imgfond');
+            header('location:imgFond');
         }
         if ( isset($_POST['saison']) ) {
             // --- on recupere la saison selectionnee
@@ -96,8 +96,11 @@ class ImageFondController extends Controller
         }
         if ( $ok ) {
             // --- recharger page index
-            header('location:index.php?p=imgfond');
-        } else {
+
+            header('location:imgFond');
+        }
+        else {
+
             // --- recharger la page en affichant l'erreur
             $params = [
                 'saisons' => $this->getSaisons(),               // les libelles des saisons
