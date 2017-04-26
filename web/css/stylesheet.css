@@ -723,7 +723,7 @@ border-radius: 6px;
 @media screen and (max-width: 1400px) {
 
     .presentation {
-        height: 1060px;
+        height: 1000px;
     }
 
     .value1 {
@@ -828,7 +828,7 @@ border-radius: 6px;
     }
 
     .value2 {
-        bottom: -35%;
+        bottom: -32%;
         width: 500px;
     }
 }
@@ -906,7 +906,7 @@ border-radius: 6px;
     }
 
     .value2 {
-        bottom: -38%;
+        bottom: -37%;
         width: 400px;
     }
 }
@@ -939,7 +939,6 @@ border-radius: 6px;
     }
 
     .value2 {
-        bottom: -42%;
         width: 300px;
     }
 }
@@ -947,7 +946,7 @@ border-radius: 6px;
 @media screen and (max-width: 430px) {
 
     .presentation {
-        height: 1500px;
+        height: 1700px;
     }
 
     .value1 {
