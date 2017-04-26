@@ -1,0 +1,9 @@
+
+RewriteEngine On
+
+RewriteBase /
+
+
+RewriteRule ^journal$ index\.php?p=journal [QSA,L]
+
+RewriteRule ^accueil$ index\.php [QSA,L]

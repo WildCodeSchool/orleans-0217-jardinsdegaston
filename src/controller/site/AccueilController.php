@@ -42,14 +42,20 @@ class AccueilController extends Controller
         $this->translator = $translator;
     }
 
+    /*
+     * Instanciation des méthodes pour afficher dynamiquement les contenus
+     */
     public function index()
     {
         $saison = $this->whatSeason();
         $presentationH1Manager = new PresentationManager($this->bdd, Presentation::class);
         $presentationH1 = $presentationH1Manager->findOne(1);
 
-        $presentationH3Manager = new PresentationManager($this->bdd, Presentation::class);
-        $presentationH3 = $presentationH3Manager->findAll('WHERE id >= 2');
+        $presentationv1Manager = new PresentationManager($this->bdd, Presentation::class);
+        $presentationv1 = $presentationv1Manager->findOne(2);
+
+        $presentationv2Manager = new PresentationManager($this->bdd, Presentation::class);
+        $presentationv2 = $presentationv2Manager->findOne(3);
 
         $realisationManager = new RealisationManager($this->bdd, Realisation::class);
         $realisation = $realisationManager->findAll('WHERE activation > 0');
@@ -71,16 +77,25 @@ class AccueilController extends Controller
         $parametreManager = new ParametreManager($this->bdd, Parametre::class);
         $parametresGeneraux = $parametreManager->read();
 
-
+        /*
+         * Instanciation du formulaire de contact
+         */
         $contactForm = new ContactForm();
 
+        /*
+         * condition pour afficher 'Message envoyé"
+         */
         $ok = '';
         if (isset($_GET['message']))
         {
             $ok='Message envoyé';
         }
+
+        /*
+         * Instanciation des filtres et des validateurs ZendForm
+         */
         if (isset($_POST['add'])) {
-            $filter = new ContactFilter();
+             $filter = new ContactFilter();
             $contactForm->setInputFilter($filter);
             $contactForm->setData($_POST);
 
@@ -95,7 +110,7 @@ class AccueilController extends Controller
                 $contactManager = new ContactManager($this->bdd, Contact::class);
                 if ($contactManager->addContact()) {
                    // $ok = 'message envoyé';
-                    header('Location:index.php?message=1');
+                    header('Location:accueil?message=1');
                 };
             } else {
                 $nomErr = $contactForm->get('NomContact')->getMessages();
@@ -109,13 +124,18 @@ class AccueilController extends Controller
                 $contenuErr = $contactForm->get('TexteContact')->getMessages();
                 $this->translator->translate($contenuErr);
             }
+
+            /*
+             * Rendu en Twig avec les messages d'erreur
+             */
             return $this->twig->render('Accueil.twig', array('nomErr' => $nomErr,
                                                                     'prenomErr' => $prenomErr,
                                                                     'emailErr' => $emailErr,
                                                                     'telErr' => $telErr,
                                                                     'contenuErr' => $contenuErr,
                                                                     'presentationH1' => $presentationH1,
-                                                                    'presentationH3' => $presentationH3,
+                                                                    'presentationv1' => $presentationv1,
+                                                                    'presentationv2' => $presentationv2,
                                                                     'prestation' => $prestation,
                                                                     'realisation' => $realisation,
                                                                     'conseil' => $conseil,
@@ -127,19 +147,25 @@ class AccueilController extends Controller
 
         }
 
+        /*
+         * Rendu en Twig sans les messages d'erreur
+         */
         return $this->twig->render('Accueil.twig', array('presentationH1' => $presentationH1,
-            'presentationH3' => $presentationH3,
-            'prestation' => $prestation,
-            'realisation' => $realisation,
-            'conseil' => $conseil,
-            'livredor' => $livredor,
-            'contact' => $contactForm,
-            'bgcss' => 'bg' . strtoupper($saison[0]) . '.css',
-            'ok'=>$ok,
-            'chezgaston' => $parametresGeneraux->getChezGaston()));
+                                                        'presentationv1' => $presentationv1,
+                                                        'presentationv2' => $presentationv2,
+                                                        'prestation' => $prestation,
+                                                        'realisation' => $realisation,
+                                                        'conseil' => $conseil,
+                                                        'livredor' => $livredor,
+                                                        'contact' => $contactForm,
+                                                        'bgcss' => 'bg' . strtoupper($saison[0]) . '.css',
+                                                        'ok'=>$ok,
+                                                        'chezgaston' => $parametresGeneraux->getChezGaston()));
 
     }
-
+        /*
+         * Méthode pour changer l'image d'accueil à chaque saison
+         */
         public function whatSeason()
         {
             $today = new \DateTime();

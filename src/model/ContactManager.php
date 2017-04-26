@@ -11,6 +11,9 @@ namespace wcs\model;
 
 class ContactManager extends DbManager
 {
+    /*
+     * Méthode pour ajouter un nouveau contact dans la BDD
+     */
     public function addContact()
     {
         $nom = $_POST['NomContact'];
@@ -36,10 +39,47 @@ class ContactManager extends DbManager
         return $res;
     }
 
-    public function updateLus($data)
+    /*
+     * Méthode mettre à jour le contact en statut 1 "Lus"
+     */
+    public function contactLus($data)
     {
         $id = $data['id'];
-        $statut = $data['StatutContact'];
+        $statut = '1';
+
+        $query = "UPDATE contact SET statut=:Statut WHERE id=:id";
+
+        $prep = $this->getBdd()->prepare($query);
+        $prep->bindValue('id', $id);
+        $prep->bindValue('Statut', $statut);
+        $prep->execute();
+
+    }
+
+    /*
+     * Méthode mettre à jour le contact en statut 2 "Archiver"
+     */
+    public function contactArchive($data)
+    {
+        $id = $data['id'];
+        $statut = '2';
+
+        $query = "UPDATE contact SET statut=:Statut WHERE id=:id";
+
+        $prep = $this->getBdd()->prepare($query);
+        $prep->bindValue('id', $id);
+        $prep->bindValue('Statut', $statut);
+        $prep->execute();
+
+    }
+
+    /*
+     * Méthode mettre à jour le contact en statut 3 "Supprimer"
+     */
+    public function contactDelete($data)
+    {
+        $id = $data['id'];
+        $statut = '3';
 
         $query = "UPDATE contact SET statut=:Statut WHERE id=:id";
 

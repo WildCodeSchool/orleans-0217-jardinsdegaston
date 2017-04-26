@@ -67,12 +67,10 @@ class PrestationController extends Controller
             ];
             if ( isset($_POST['supprime']) ) {
                 return $this->twig->render('prestation/SupprimePrestation.twig', $params);
-            }
-            else {
+            } else {
                 return $this->twig->render('prestation/ModifiePrestation.twig', $params);
             }
-        }
-        else {
+        } else {
 
             // --- ERREUR l'id n'est pas défini ---
         }
@@ -102,8 +100,7 @@ class PrestationController extends Controller
         ];
         if ( $id == 0 ) {
             return $this->twig->render('prestation/AjoutePrestation.twig', $params);
-        }
-        else {
+        } else {
             return $this->twig->render('prestation/ModifiePrestation.twig', $params);
         }
     }
@@ -116,7 +113,7 @@ class PrestationController extends Controller
     public function majpresta()
     {
         if ( isset($_POST['abandon']) ) {
-            header('location:index.php?p=prestation');
+            header('location:prestation');
         }
         $erreur = '';
         $prestation = new Prestation;
@@ -130,16 +127,22 @@ class PrestationController extends Controller
         if ( $ok ) {
             if ($this->img->tmpImgExists('P')) {
                 // --- deplacer image temporaire vers emplacement définitif
-                $this->img->deplace('P', $_POST['id']);
+                if (false === $this->img->deplace('P', $_POST['id'])) {
+                    $erreur = $this->img->getErreur();
+                    $ok = false;
+                }
             }
+        }
+        if ( $ok ) {
             // --- mise a jour de l'enregistrement
             $manager = new PrestationManager($this->bdd, Prestation::class);
             $manager->writePrestation($prestation);
-
             // --- recharger page index
-            header('location:index.php?p=prestation');
+
+            header('location:prestation');
         }
         else {
+
             // --- recharger la page en affichant l'erreur
             $params = [
                 'prestation' => $prestation,
@@ -158,7 +161,7 @@ class PrestationController extends Controller
     public function addpresta()
     {
         if ( isset($_POST['annule']) ) {
-            header('location:index.php?p=prestation');
+            header('location:prestation');
         }
         $erreur = '';
         $prestation = new Prestation;
@@ -168,8 +171,7 @@ class PrestationController extends Controller
             // --- controle si image chargee
             $erreur = 'Charger d\'abord une image.';
             $ok = false;
-        }
-        elseif ( !isset($_POST['titre']) || trim($_POST['titre']) == '') {
+        } elseif ( !isset($_POST['titre']) || trim($_POST['titre']) == '') {
             // --- controler si titre saisi
             $erreur = 'La saisie d\'un titre est obligatoire.';
             $ok = false;
@@ -183,9 +185,11 @@ class PrestationController extends Controller
             // --- deplacer image temporaire vers emplacement définitif
             $this->img->deplace('P', $id);
             // --- recharger page index
-            header('location:index.php?p=prestation');
+
+            header('location:prestation');
         }
         else {
+
             // --- recharger la page en affichant l'erreur
             $params = [
                 'prestation' => $prestation,
@@ -211,7 +215,7 @@ class PrestationController extends Controller
             // --- suppression de l'image attachee
             $this->img->delImg('P', $_POST['id']);
         }
-        header('location:index.php?p=prestation');
+        header('location:prestation');
     }
 
     public function updown()
@@ -221,11 +225,10 @@ class PrestationController extends Controller
         $ordreaff = $_POST['ordreaff'];
         if ( isset($_POST['up']) ) {
             $manager->up($id, $ordreaff);
-        }
-        elseif ( isset($_POST['dn']) ) {
+        } elseif ( isset($_POST['dn']) ) {
             $manager->dn($id, $ordreaff);
         }
-        header('location:index.php?p=prestation');
+        header('location:prestation');
     }
 
 

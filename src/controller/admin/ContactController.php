@@ -14,6 +14,9 @@ use wcs\model\ContactManager;
 
 class ContactController extends Controller
 {
+    /*
+     * Méthodes pour instancier les changements de statut des contacts reçus
+     */
     public function index()
     {
 
@@ -23,13 +26,19 @@ class ContactController extends Controller
 
 
         if (isset($_POST['contactLus'])) {
-            $contactLus = $contactManager->updateLus($_POST);
+            $contactLus = $contactManager->contactLus($_POST);
+            header('location:contact');
 
+        }elseif (isset($_POST['contactArchive'])) {
+            $contactArchive = $contactManager->contactArchive($_POST);
+            header('location:contact');
 
+        }elseif (isset($_POST['contactDelete'])) {
+            $contactDelete = $contactManager->contactDelete($_POST);
+            header('location:contact');
 
-            return $this->twig->render('contact/Contact.twig', array('contacts' => $contact,
-                                                                     'contactLus' => $contactLus));
         }
+
         return $this->twig->render('contact/Contact.twig', array('contacts' => $contact,));
     }
 }
