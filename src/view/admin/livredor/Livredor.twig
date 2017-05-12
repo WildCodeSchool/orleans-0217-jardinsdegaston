@@ -13,11 +13,18 @@
 
 
 {% block content %}
+
+        {# -- Créer un nouveau commentaire ---------------------------------- -- #}
+
+    <div class="row">
+
+        <div class="col-xs-12 bandeau text-center">
+            Ajouter un commentaire
+        </div>
+
+    </div>
+
     {% do form.prepare() %}
-
-
-
-
     <div class="row FormLdor col-xs-12 text-center">
 
         <div class="col-lg-8 col-lg-offset-2 form">
@@ -33,7 +40,7 @@
                     <textarea required ="required" class="form-control" id="{{ form.get('TexteLDor').name }}" name="{{ form.get('TexteLDor').name }}">{{ value.contenu }}</textarea>
                 </div>
 
-                <input class="btn btn-default" type="submit" name="addLdor" value="Envoyer">
+                <input class="btn btn-default" type="submit" name="addLdor" value="Enregistrer">
                 <input type="hidden" name="method" value="addLdor">
                 <input type="hidden" name="id" value="{{ value.id }}">
                 <input type="hidden" name="csrf" value="{{ form.get('csrf').value }}">
@@ -42,40 +49,39 @@
 
     </div>
 
-    <div class="row titre">
-        <div class="col-xs-12 text-center">
-            <h1>Afficher les commentaires du Livre d'Or</h1>
-        </div>
-    </div>
-
+    {# -- Lister les commentaire ---------------------------------- -- #}
 
     {% for Livredor in content %}
-    <div class="col-md-8 col-md-offset-2 bandeau text-center">
-        Commentaire Livre d'Or {{ loop.index }}
-    </div>
-    <div class="col-md-8 col-md-offset-4">
-        <div class="row contenu">
-
-                <div class="col-xs-12 col-md-8 col-lg-6">
-                    <p class="label-like">Nom</p>
-                    <p class="input-like form-control">{{ Livredor.auteur }}</p>
-                    <p class="label-like">Texte</p>
-                    <p class="textarea-like form-control">{{ Livredor.contenu | nl2br }}</p>
-
-                    <form method="post" action="livredor">
-                        <input type="hidden" name="method" value="updateLdor">
-                        <input type="hidden" name="id" value="{{ Livredor.id }}">
-                        <input class="btn btn-default" type="submit" name="updateLdor" value="Modifier">
-                    </form>
-                    <form method="post" action="livredor">
-                        <input type="hidden" name="method" value="deleteLdor">
-                        <input type="hidden" name="id" value="{{ Livredor.id }}">
-                        <input class="btn btn-default" type="submit" name="deleteLdor" value="Supprimer">
-                    </form>
-                </div>
-
+        <div class="row">
+            <div class="col-xs-12 bandeau text-center">
+                Commentaire {{ loop.index }}
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div class="row contenu">
+
+                        <div class="col-xs-12 col-md-8 col-lg-6 text-center">
+                            <p class="label-like">Nom</p>
+                            <p class="input-like form-control">{{ Livredor.auteur }}</p>
+                            <p class="label-like">Texte</p>
+                            <p class="textarea-like form-control">{{ Livredor.contenu | nl2br }}</p>
+
+                            <form method="post" action="livredor">
+                                <input type="hidden" name="method" value="updateLdor">
+                                <input type="hidden" name="id" value="{{ Livredor.id }}">
+                                <input class="btn btn-default" type="submit" name="updateLdor" value="Modifier">
+                            </form>
+                            <form method="post" action="livredor">
+                                <input type="hidden" name="method" value="deleteLdor">
+                                <input type="hidden" name="id" value="{{ Livredor.id }}">
+                                <input class="btn btn-default" type="submit" name="deleteLdor" value="Supprimer">
+                            </form>
+                        </div>
+
+                </div>
+            </div>
+        </div>
     {% endfor %}
 
 
