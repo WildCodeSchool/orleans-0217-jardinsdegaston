@@ -128,7 +128,7 @@ button, input, select, textarea {
 
 /*------     Image header     ------*/
 
-h4#accroche{
+h4#accroche {
     display: block;
     position: fixed;
     top: 40%;
@@ -142,24 +142,26 @@ h4#accroche{
     text-shadow: 0 0 2px black;
     z-index: -1;
 }
-.bg-img2-lg, .bg-img2-md, .bg-img2-sm, .bg-img2-xs {
-    background-image: url("../img/garden2.jpg");
-    background-size: cover;
-}
 
 .bg-img1-lg, .bg-img1-md {
     height: 870px;
 }
 
+.bg-img1-xs {
+    height: 480px;
+}
+
+.bg-img2-lg, .bg-img2-md, .bg-img2-sm, .bg-img2-xs {
+    background-image: url("../img/garden2.jpg");
+    background-size: cover;
+}
+
 .bg-img2-lg{
     height: 400px;
 }
-.bg-img1-xs, .bg-img2-md {
+
+.bg-img2-md {
     height: 650px;
-}
-
-.bg-img2-xs {
-
 }
 
 .parallax {
@@ -172,8 +174,11 @@ h4#accroche{
 
 /*------ Section presentation ------*/
 
-.presentation {
+.presentation, .presentation-float{
     background: #fbfff3;
+}
+
+.presentation-float {
     height: 800px;
 }
 
@@ -181,23 +186,23 @@ h4#accroche{
     color: #557e02;
 }
 
-.presentation h2 {
+.presentation-float .presentation h2 {
     font-family: 'Open Sans', sans-serif;
     color: black;
     font-size: 28px;
     padding-bottom: 20px;
 }
 
-.presentation p {
+.presentation-float p {
     text-align: left;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .img-header-prez {
     line-height: 20px;
 }
 
-.presentation-header {
+.presentation-header-float {
     position: relative;
 }
 
@@ -214,7 +219,7 @@ h4#accroche{
 
 /*------     Valeur Ecologie  ------*/
 
-.value1 {
+.value1-float {
     position: relative;
     bottom: -2%;
     left: 6%;
@@ -228,10 +233,26 @@ h4#accroche{
     padding-right: 20px;
 }
 
+.value1, .value2 {
+    background-color:  #ffffff;
+    box-shadow: 2px 6px 26px 0 rgba(0, 0, 0, 0.1);
+    border: solid #f9f9f9 1px;
+    padding: 5px 20px;
+}
+
+.value1 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.value2 {
+    margin-bottom: 50px;
+}
+
 
 /*------    Valeur Client     ------*/
 
-.value2 {
+.value2-float {
     position: absolute;
     bottom: -5%;
     right: 5%;
@@ -600,9 +621,6 @@ border-radius: 6px;
 
 .formulaire h2 {
     text-align: center;
-    /*
-    border-bottom:1px solid black;
-    */
 }
 
 .formulaire p {
@@ -689,8 +707,9 @@ border-radius: 6px;
 
 
 
-
-/*-------       Media Queries     ------*/
+/*--------------------------------------*/
+/*--------     MEDIA QUERIES     -------*/
+/*--------------------------------------*/
 
 @media screen and (max-width: 1700px) {
 
@@ -721,24 +740,49 @@ border-radius: 6px;
 
 }
 
-@media screen and (max-width: 1400px) {
+/*- gestion bloc presentation version desktop -----*/
 
+@media screen and (min-width: 1401px) {
     .presentation {
-        height: 1000px;
+        display: none;
+    }
+
+    .presentation-header {
+        display: none;
     }
 
     .value1 {
-        left: 4%;
-        width: 700px;
+        display: none;
     }
 
     .value2 {
-        bottom: -32%;
-        right: 5%;
-        width: 700px;
+        display: none;
     }
 
 }
+
+/*- gestion bloc presentation version mobile -----*/
+
+@media screen and (max-width: 1400px) {
+    .presentation-float {
+        display: none;
+    }
+
+    .presentation-header-float {
+        display: none;
+    }
+
+    .value1-float {
+        display: none;
+    }
+
+    .value2-float {
+        display: none;
+    }
+}
+
+/*--------- gestion realisations  ------*/
+
 
 @media screen and (max-width: 1380px) {
     div#comparison1, div#comparison2, div#comparison3 {
@@ -818,22 +862,6 @@ border-radius: 6px;
 }
 
 
-@media screen and (max-width: 950px) {
-
-    .presentation {
-        height: 1150px;
-    }
-
-    .value1 {
-        width: 500px;
-    }
-
-    .value2 {
-        bottom: -32%;
-        width: 500px;
-    }
-}
-
 @media only screen and (min-width: 769px){
 
     .Conseilbackground-xs {
@@ -843,12 +871,29 @@ border-radius: 6px;
 
 @media (max-width: 768px) {
 
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
     .Conseilbackground-lg {
         display: none;
     }
 
     h4#accroche{
-        font-size: 60px;
+        font-size: 56px;
+        top: 33%;
     }
 
     .Blog {
@@ -873,46 +918,6 @@ border-radius: 6px;
     }
 }
 
-@media screen and (max-width: 760px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .presentation {
-        height: 1000px;
-    }
-
-    .presentation h2 {
-        font-size: 24px;
-    }
-
-}
-
-@media screen and (max-width: 680px) {
-
-    .presentation {
-        height: 1100px;
-    }
-
-    .value1 {
-        width: 400px;
-    }
-
-    .value2 {
-        bottom: -37%;
-        width: 400px;
-    }
-}
-
-
 @media screen and (max-width: 600px) {
 
     .Blog {
@@ -927,37 +932,6 @@ border-radius: 6px;
         margin-top: 15%;
     }
 
-}
-
-@media screen and (max-width: 560px) {
-
-    .presentation {
-        height: 1350px;
-    }
-
-    .value1 {;
-        width: 300px;
-    }
-
-    .value2 {
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 430px) {
-
-    .presentation {
-        height: 1700px;
-    }
-
-    .value1 {
-        width: 260px;
-    }
-
-    .value2 {
-        bottom: -40%;
-        width: 260px;
-    }
 }
 
 @media only screen and (max-width: 360px) {

@@ -14,7 +14,7 @@
 
         <div class="col-lg-12 bg-img1-lg visible-lg img-responsive parallax"></div>
         <div class="col-lg-12 bg-img1-md visible-md visible-sm img-responsive parallax"></div>
-        <div class="col-lg-12 bg-img1-xs visible-xs img-responsive parallax"></div>
+        <div class="col-lg-12 bg-img1-xs visible-xs img-responsive"></div>
         <h4 id="accroche">Jardinier par nature ...</h4>
     </div>
 
@@ -27,24 +27,54 @@
 
     <!-------    Paragraphe presentation  -------->
     <span id="presentationAnchor" class="ancre"></span>
-    <div class="row presentation">
+
+    <!--------  Version Desktop  ----------------->
+    <div class="row presentation-float">
         <div class="col-xs-offset-1 col-xs-10 text-center">
 
-            <div class="presentation-header">
+            <div class="presentation-header-float">
                 <h1>Les Jardins de Gaston<br/><span class="sous-titre">Entretien des parcs et jardins dans la région Orléannaise</span>
                 </h1>
                 <h2>{{ presentationH1.titre }}</h2>
                 <p>{{ presentationH1.contenu | nl2br }}</p>
             </div>
 
-            <div class="value1">
+            <div class="value1-float">
                 <h3>{{ presentationv1.titre }}</h3>
                 <p>{{ presentationv1.contenu | nl2br }}</p>
             </div>
 
-            <div class="value2">
+            <div class="value2-float">
                 <h3>{{ presentationv2.titre }}</h3>
                 <p>{{ presentationv2.contenu | nl2br }}</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!--------  Version Mobile  ----------------->
+    <div class="row presentation">
+        <div class="col-xs-offset-1 col-xs-10 text-center">
+
+            <div class="row presentation-header">
+                <h1>Les Jardins de Gaston<br/><span class="sous-titre">Entretien des parcs et jardins dans la région Orléannaise</span>
+                </h1>
+                <h2>{{ presentationH1.titre }}</h2>
+                <p>{{ presentationH1.contenu | nl2br }}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 value1">
+                    <h3>{{ presentationv1.titre }}</h3>
+                    <p>{{ presentationv1.contenu | nl2br }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 value2">
+                    <h3>{{ presentationv2.titre }}</h3>
+                    <p>{{ presentationv2.contenu | nl2br }}</p>
+                </div>
             </div>
 
         </div>
