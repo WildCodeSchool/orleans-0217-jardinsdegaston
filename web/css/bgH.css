@@ -1,0 +1,11 @@
+.bg-img1-lg, .bg-img1-md, .bg-img1-sm {
+    background-image: url("../img/imgB-4.jpg");
+    background-size: cover;
+}
+
+.bg-img1-xs {
+    background-image: url("../img/imgB-4.jpg");
+    background-size: 768px 480px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}

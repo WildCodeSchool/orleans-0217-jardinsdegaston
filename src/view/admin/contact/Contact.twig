@@ -1,0 +1,134 @@
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Messages Recus - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des Messages Recus</h1>
+{% endblock %}
+
+
+{% block content %}
+
+
+    {#affichage des messages en dynamique selon leur statut#}
+    <div class="col-xs-12 text-center">
+        <h3>Messages non lus</h3>
+    </div>
+    <div class="row padd-top">
+        {#<div class="col-xs-12">#}
+
+            <table>
+                <div class="row">
+                    <tr class="listeArticle">
+                        <td class="tdDate">Date</td>
+                        <td class="tdAuteur">Auteur</td>
+                        <td class="tdMessage">Message</td>
+                        <td class="tdTelephone">Téléphone</td>
+                        <td class="tdEmail">Email</td>
+                        <td class="tdAction">Action</td>
+                    </tr>
+
+                </div>
+                {% for contact in contacts if contact.statut == 0 %}
+                    <tr>
+                        <td class="tdDate">{{ contact.date|date('d-m-Y H:m') }}</td>
+                        <td class="tdAuteur">{{ contact.nom }} {{ contact.prenom }}</td>
+                        <td class="tdMessage">{{ contact.contenu }}</td>
+                        <td class="tdTelephone">{{ contact.telephone }}</td>
+                        <td class="tdEmail">{{ contact.email }}</td>
+                        <td class="tdAction">
+                            <form action="contact" method="post">
+                                <input type="hidden" name="id" value="{{ contact.id }}">
+                                <input class="btn btn-default" name="contactLus" value="Marquer comme lu" type="submit">
+                                <input class="btn btn-danger" name="contactDelete" value="Supprimer" type="submit">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {#</div>#}
+    </div>
+<br/>
+    <div class="col-xs-12 text-center">
+        <h3>Messages lus</h3>
+    </div>
+    <div class="row padd-top">
+        {#<div class="col-xs-12">#}
+
+
+            <table>
+                <div class="row">
+                    <tr class="listeArticle">
+                        <td class="tdDate">Date</td>
+                        <td class="tdAuteur">Auteur</td>
+                        <td class="tdMessage">Message</td>
+                        <td class="tdTelephone">Téléphone</td>
+                        <td class="tdEmail">Email</td>
+                        <td class="tdAction">Action</td>
+                    </tr>
+
+                </div>
+                {% for contact in contacts if contact.statut == 1 %}
+                    <tr>
+                        <td class="tdDate">{{ contact.date|date('d-m-Y H:m') }}</td>
+                        <td class="tdAuteur">{{ contact.nom }} {{ contact.prenom }}</td>
+                        <td class="tdMessage">{{ contact.contenu }}</td>
+                        <td class="tdTelephone">{{ contact.telephone }}</td>
+                        <td class="tdEmail">{{ contact.email }}</td>
+                        <td class="tdAction">
+                            <form action="contact" method="post">
+                                <input type="hidden" name="id" value="{{ contact.id }}">
+                                <input class="btn btn-default" name="contactArchive" value="Archiver" type="submit">
+                                <input class="btn btn-danger" name="contactDelete" value="Supprimer" type="submit">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {#</div>#}
+    </div>
+    <br/>
+    <div class="col-xs-12 text-center">
+        <h3>Messages archivés</h3>
+    </div>
+    <div class="row padd-top">
+        {#<div class="col-xs-12">#}
+
+            <table>
+                <div class="row">
+                    <tr class="listeArticle">
+                        <td class="tdDate">Date</td>
+                        <td class="tdAuteur">Auteur</td>
+                        <td class="tdMessage">Message</td>
+                        <td class="tdTelephone">Téléphone</td>
+                        <td class="tdEmail">Email</td>
+                        <td class="tdAction">Action</td>
+                    </tr>
+
+                </div>
+                {% for contact in contacts if contact.statut == 2 %}
+                    <tr>
+                        <td class="tdDate">{{ contact.date|date('d-m-Y H:m') }}</td>
+                        <td class="tdAuteur">{{ contact.nom }} {{ contact.prenom }}</td>
+                        <td class="tdMessage">{{ contact.contenu }}</td>
+                        <td class="tdTelephone">{{ contact.telephone }}</td>
+                        <td class="tdEmail">{{ contact.email }}</td>
+                        <td class="tdAction">
+                            <form action="contact" method="post">
+                                <input type="hidden" name="id" value="{{ contact.id }}">
+                                <input class="btn btn-danger" name="contactDelete" value="Supprimer" type="submit">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {#</div>#}
+    </div>
+
+
+{% endblock %}
+

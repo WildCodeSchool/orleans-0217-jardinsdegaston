@@ -1,0 +1,30 @@
+{# --- src/view/admin/Erreur.twig --- #}
+
+{% extends 'layout.twig' %}
+
+{% block headtitle %}
+    <title>Page introuvable - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>{{ titre }}</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-xs-12 text-center errtitre">
+            Erreur : Page introuvable
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <img class="img-responsive center-block" src="../img/jardinier.png" />
+            <p>{{ erreur }}</p>
+        </div>
+    </div>
+
+{% endblock %}

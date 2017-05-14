@@ -1,0 +1,86 @@
+{# --- src/view/admin/imageFond/ImageFond.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Images de fond - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des images de fond</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Image d'accueil ------------------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Image d'accueil - sélection actuelle
+        </div>
+        {% for saison in saisons %}
+            <div class="col-md-3 col-sm-6 col-xs-12 contenu text-center">
+                <img class="gimg" src="../img/imgB-{{ loop.index }}.jpg?{{ random(9999) }}"><br />
+                {{ saison }}
+            </div>
+        {% endfor %}
+
+
+        {# -- upload image ---------------------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Charger une nouvelle image
+        </div>
+        <div class="col-xs-12">
+            <div class="row contenu">
+                <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2 text-center">
+                    <img class="img-fluid pimg bloc-right" src="{{ formimage }}?{{ random(9999) }}" alt="" />
+                    <br />
+                    <form id="loadimg" method="post" action="imgFond" enctype="multipart/form-data">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+                        <input type="hidden" name="method" value="imgupload" />
+                        <input type="hidden" name="saison" id="saisonimg" value="" />
+                        <input class="cache" type="file" accept=".jpg" name="fichier" id="fichier" onchange="valide();"/>
+                        <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                    </form>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <form method="post" action="imgFond">
+                        <input type="hidden" name="method" value="imgswitch" />
+                        <p class="erreur">{%  if erreur=='' %}&nbsp;{% else %}ERREUR : {{ erreur }}{% endif %}</p>
+                        <p>
+                            <span class="label-like">Saison associée :</span><br />
+                            {% for saison in saisons %}
+                                {% if loop.index > 1 %} &nbsp;&nbsp;&nbsp;&nbsp; {% endif %}
+                                <input type="radio" name="saison" id="saison{{ saison | first }}" value="{{ saison | first }}" {% if saison | first == selected %} checked {% endif %} />
+                                <label class="normal-text" for="saison{{ saison | first }}">{{ saison }}</label>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            <input class="btn btn-default" type="submit" name="bgswitch" value="Remplacer l'image" /><br />
+                            <input class="btn btn-default" type="submit" name="annule" value="Réinitialiser le chargement" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+    <script>
+        function valide() {
+            var saison = '';
+            if ( document.getElementById('saisonP').checked ) saison = 'P';
+            else if ( document.getElementById('saisonE').checked ) saison = 'E';
+            else if ( document.getElementById('saisonA').checked ) saison = 'A';
+            else if ( document.getElementById('saisonH').checked ) saison = 'H';
+            document.getElementById('saisonimg').value = saison;
+            document.getElementById('loadimg').submit();
+        }
+    </script>
+
+{% endblock %}

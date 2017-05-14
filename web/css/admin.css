@@ -1,0 +1,227 @@
+.tdDate{
+    width: 15%;
+}
+
+.tdAuteur{
+    width: 15%;
+
+}
+
+.tdMessage{
+    width: 30%;
+
+}
+
+.tdEmail{
+    width: 15%;
+
+}
+
+.tdTelephone{
+    width: 10%;
+
+}
+
+.tdAction{
+    width: 15%;
+
+}
+
+body {
+    font-size: 16px;
+}
+
+tr {
+    border-top: 1px solid #2b542c;
+    border-bottom: 1px solid #2b542c;
+    padding: 5px 0 5px 0;
+}
+
+td {
+/*    border: 1px solid #2b542c;*/
+    width: 30%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.cache {
+    visibility: hidden;
+    height: 5px;
+}
+.btn-default
+{
+    /* --- surcharge du stylesheet --- */
+    background-color: #eef6ef;
+    border-color: #2b542c;
+    color: #2b542c;
+}
+
+.btn-xs {
+    padding: 0;
+    width: 100px;
+    height: 20px;
+}
+.form-control, .thumbnail {
+    border: 1px solid #2b542c;
+    border-radius: 6px;
+}
+
+.padd-top {
+    margin-top: 60px;
+}
+
+.erreur {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* --- navbar ---------------------------------------------------- */
+
+.navbar-inverse
+{
+    background-color: #2b542c;
+    border-bottom: 2px solid white;
+}
+.titre h1
+{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #2b542c;
+    font-size: 30px;
+    margin-top:120px;
+}
+#navbar {
+    margin-left: 250px;
+}
+ul.navbar-right{
+    height: 40px;
+    padding: 0 20px;
+}
+ul.navbar-right li {
+    height: 40px;
+  }
+#navbar a:hover {
+    text-transform: none;
+    color: #CDE5CD;
+}
+#logo {
+    max-width: 250px;
+    padding: 5%
+}
+
+/* --- blocs ----------------------------------------------------- */
+.bandeau {
+    height: 34px;
+    line-height: 34px;
+    font-size: 20px;
+    background-color: #2b542c;
+    color: white;
+    margin-top:20px;
+}
+.contenu {
+    background-color: white;
+    padding: 10px;
+}
+input.btn, label.btn {
+    width: 230px;
+    margin: 2px;
+}
+
+.normal-text {
+    font-weight: normal;
+}
+.label-like {
+    font-weight: 700;
+    font-size: 16px;
+}
+.textarea-like {
+    height: auto;
+    min-height: 34px;
+}
+
+/* --- grandes images -------------------------------------------- */
+.gimg {
+    max-height: 200px;
+    border: 0px;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* --- upload ---------------------------------------------------- */
+#faitchier {
+    display: inline-block;
+    color: red;
+}
+
+/* --- galerie petites images ------------------------------------ */
+.pimg {
+    max-width: 200px;
+    border: 0px;
+    margin: 20px 10px 10px 10px;
+}
+.blocimg {
+    background-color: #eef6ef;
+    padding:10px 0 30px 0;
+    margin-bottom: 20px;
+    /*
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    */
+}
+/* --- Livre d'Or ------------------------------------------------ */
+.thumbnail {
+    margin-left: 10px;
+}
+
+.ThumbLdor {
+    margin-top: 2%;
+}
+
+/* --- Conseils -------------------------------------------------- */
+.bloc-conseil {
+    margin-top: 5px;
+    padding: 10px 2px;
+    border-top: 1px solid #2b542c;
+    /*background-color: #eef6ef;*/
+}
+
+#TexteConseil {
+    margin-bottom: 10px;
+}
+
+/* --- Chez Gastoon ---------------------------------------------- */
+
+.listeArticle {
+    height: 30px;
+    background-color: #2b542c;
+    color: white;
+    font-size: 20px;
+}
+
+.rowAffichageJournal {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+/* --- footer ---------------------------------------------------- */
+.footer {
+    margin-top:20px;
+    height:70px;
+    padding-right: 50px;
+    background-color: #2b542c;
+}
+
+
+
+@media (max-width: 900px) {
+    ul.navbar-right li {
+        font-size:14px;
+    }
+}
+@media (max-width: 800px) {
+    ul.navbar-right li {
+        font-size:12px;
+    }
+}

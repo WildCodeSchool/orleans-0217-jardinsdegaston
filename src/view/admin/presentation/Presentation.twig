@@ -1,0 +1,44 @@
+{# --- src/view/admin/presentation/Presentation.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Presentation - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des textes de présentation</h1>
+    <p><input class="btn btn-default" form="modifpres" type="submit" name="valide" value="Valider les modifications" /></p>
+    {%  if erreur != '' %}<p class="erreur">ERREUR : {{ erreur }}</p>{% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+<form id="modifpres" method="post" action="presentation">
+    {% for info in infos %}
+        <div class="row">
+
+            {# --- Titre --- #}
+            <div class="col-xs-10 col-xs-offset-1 bandeau text-center">{{ rubriques[loop.index0] }}</div>
+
+            {# --- contenu de la presentation --- #}
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+                <P>
+                    <input type="hidden" name="method" value="modifiePresentation" />
+                    <input type="hidden" name="id" value="{{ loop.index }}" />
+                    <label for="titre{{ loop.index }}">Titre</label><br />
+                    <input class="form-control" type="text" name="titre{{ loop.index }}" id="titre{{ loop.index }}" value="{{ info.titre }}" /><br />
+                    <label for="contenu{{ loop.index }}">Présentation</label><br />
+                    <textarea class="form-control" rows="5" name="contenu{{ loop.index }}" id="contenu{{ loop.index }}">{{ info.contenu }}</textarea><br />
+                </p>
+            </div>
+
+        </div>
+    {% endfor %}
+</form>
+
+{% endblock %}
+

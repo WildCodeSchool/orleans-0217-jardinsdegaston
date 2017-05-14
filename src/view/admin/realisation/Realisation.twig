@@ -1,0 +1,71 @@
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Réalisations - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Gestion des plus belles réalisations</h1>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="row">
+
+        {# -- Bloc 2 images avec titre et contenu ----------------------- -- #}
+        {% for realisation in content %}
+            {# --- barre de titre --- #}
+            <div class="col-xs-12 bandeau text-center">
+                Réalisation {{ loop.index }}
+            </div>
+            {# --- bloc infos --- #}
+            <div class="col-xs-12">
+                <div class="row contenu">
+
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Avant</h3>
+                        <img class="gimg" src="../img/imgRav-{{ realisation.id }}.jpg?{{ random(9999) }}">
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <h3>Après</h3>
+                        <img class="gimg" src="../img/imgRap-{{ realisation.id }}.jpg?{{ random(9999) }}">
+                    </div>
+
+                    <div class="col-sm-12 col-md-4 ">
+                        <div class="hidden-xs hidden-sm"><br /></div>
+                        {% if realisation.activation == 1 %}<h4><em>La réalisation est visible sur le site</em></h4>{% endif %}
+                        {% if realisation.activation == 0 %}<h4><em>La réalisation n'est pas visible sur le site</em></h4>{% endif %}
+                        <p class="label-like">Titre de la rubrique</p>
+                        <p class="input-like form-control">{{ realisation.titre }}</p>
+                        <p class="label-like">Commentaires</p>
+                        <p class="textarea-like form-control">{{ realisation.contenu | nl2br }}</p>
+                        <p>
+                        <form method="post" action="realisation">
+                            <input type="hidden" name="method" value="modif">
+                            <input type="hidden" name="id" value="{{ realisation.id }}">
+                            <input class="btn btn-default" type="submit" name="valide" value="Modifier la réalisation" />
+                        </form>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}
+
+
+
+
+
+
+
+

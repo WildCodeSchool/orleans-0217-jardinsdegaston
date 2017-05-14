@@ -1,0 +1,79 @@
+{# --- src/view/admin/prestation/ModifiePrestation.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Prestations - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Modification d'une prestation</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Modifier une prestation ----------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Modifier une prestation
+        </div>
+        <div class="col-xs-12">
+            <div class="row contenu">
+                <div class="col-xs-6 col-md-3 col-lg-3 col-lg-offset-1 text-center">
+                    <p class="center-block"><img class="img-fluid pimg" src="../img/imgP-{{ prestation.id }}.jpg" alt="" /></p>
+                    <p>Image actuelle</p>
+                </div>
+                <div class="col-xs-6 col-md-3 col-lg-3 text-center">
+                    <p class="center-block"><img class="img-fluid pimg" src="{{ tmpimage }}?{{ random(9999) }}" alt="" /></p>
+                    <p>
+                        <form id="loadimg" method="post" action="prestation" enctype="multipart/form-data">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+                            <input type="hidden" name="method" value="imgupload" />
+                            <input type="hidden" name="id" value="{{ prestation.id }}" />
+                            <input type="hidden" name="titre" id="titreimg" value="" />
+                            <input type="hidden" name="contenu" id="detailimg" value="" />
+                            <input type="hidden" name="ordreaff" value="{{ prestation.ordreaff }}" />
+                            <input class="cache" type="file" accept=".jpg, .jpeg" name="fichier" id="fichier" onchange="valide();"/>
+                            <label for="fichier" class="btn btn-default">Nouvelle image</label><br />
+                        </form>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <p class="erreur">{%  if erreur=='' %}&nbsp{% else %}ERREUR : {{ erreur }}{% endif %}</p>
+                    <P>
+                        <form method="post" action="prestation">
+                            <input type="hidden" name="method" value="majpresta" />
+                            <input type="hidden" name="id" value="{{ prestation.id }}" />
+                            <label for="titre">Titre de la prestation </label><br />
+                            <input class="form-control" type="text" name="titre" id="titre" value="{{ prestation.titre }}" /><br />
+                            <label for="detail">Détails de la prestation</label><br />
+                            <textarea class="form-control" row="3" name="contenu" id="detail">{{ prestation.contenu }}</textarea><br />
+                            <input type="hidden" name="ordreaff" value="{{ prestation.ordreaff }}" />
+                            <input class="btn btn-default" type="submit" name="valide" value="Enregistrer la modification" />
+                            <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function valide() {
+                document.getElementById('titreimg').value = document.getElementById('titre').value;
+                document.getElementById('detailimg').value = document.getElementById('detail').value;
+                document.getElementById('loadimg').submit();
+            }
+        </script>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}
+
+
+
+

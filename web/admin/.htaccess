@@ -1,0 +1,26 @@
+
+ErrorDocument 404 /admin/index\.php?p=notfound
+
+RewriteEngine On
+
+RewriteBase /admin/
+
+
+RewriteRule ^imgFond$ index\.php?p=imgfond [QSA,L]
+
+RewriteRule ^presentation$ index\.php?p=presentation [QSA,L]
+
+RewriteRule ^realisation$ index\.php?p=realisation [QSA,L]
+
+RewriteRule ^prestation$ index\.php?p=prestation [QSA,L]
+
+RewriteRule ^conseil$ index\.php?p=conseil [QSA,L]
+
+RewriteRule ^livredor$ index\.php?p=livredor [QSA,L]
+
+RewriteRule ^contact$ index\.php?p=contact [QSA,L]
+
+RewriteRule ^chezGaston$ index\.php?p=chezgaston [QSA,L]
+
+RewriteRule ^admin$ index\.php [QSA,L]
+

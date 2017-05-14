@@ -1,0 +1,54 @@
+{# --- src/view/admin/SupprimePrestation.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Chez Gaston - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Suppression d'un article</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Supprimer une prestation ----------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Supprimer un article
+        </div>
+        <div class="col-xs-12">
+            <div class="row contenu">
+                <div class="col-xs-12 col-md-4 col-lg-3 col-lg-offset-2 text-center">
+                    <p class="center-block"><img class="img-fluid pimg" src="../img/imgJ-{{ article.id }}.jpg" alt="Image article {{ article.titre }}" /></p>
+                </div>
+                <div class="col-xs-12 col-md-8 col-lg-5">
+                    <p class="label-like">Date de parution de l'article</p>
+                    <p class="input-like form-control">{{ article.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="label-like">Titre de l'article</p>
+                    <p class="input-like form-control">{{ article.titre }}</p>
+                    <p class="label-like">Contenu de l'article</p>
+                    <p class="textarea-like form-control">{{ article.contenu }}</p>
+                    <br />
+                    <p>
+                        <form method="post" action="chezGaston">
+                            <input type="hidden" name="method" value="delArticle">
+                            <input type="hidden" name="id" value="{{ article.id }}">
+                            <input class="btn btn-default" type="submit" name="supprime" value="Confirmer la suppression" />
+                            &nbsp;&nbsp;
+                            <input class="btn btn-default" type="submit" name="annule" value="Ne pas supprimer" />
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}
+

@@ -1,0 +1,72 @@
+{# --- src/view/admin/ModifiePrestation.twig --- #}
+
+{% extends 'layout.twig' %}
+
+
+{% block headtitle %}
+    <title>Chez Gaston - Admin - Les Jardins de Gaston</title>
+{% endblock %}
+
+
+{% block pagetitle %}
+    <h1>Modification d'un article</h1>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="row">
+
+        {# -- Modifier une prestation ----------------------------------- -- #}
+
+        <div class="col-xs-12 bandeau text-center">
+            Modifier un article
+        </div>
+
+        <form method="post" action="chezGaston" enctype="multipart/form-data">
+
+            <div class="row contenu">
+                <div class="col-xs-12 col-md-6 col-lg-2 col-lg-offset-1 text-center">
+                    <p class="center-block"><img class="img-fluid pimg" src="../img/imgJ-{{ article.id }}.jpg" alt="" /></p>
+                    <p>Image actuelle</p>
+                </div>
+
+                <div class="col-xs-12 col-md-6 col-lg-2 text-center">
+
+                    <input class="cache" type="file" accept="image/jpeg" name="imgModif" id="imgModif"  />
+                    <label for="imgModif" class="btn btn-default">Nouvelle image</label><br />
+
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="titre">Date de parution de l'article</label><br />
+                            <input class="form-control" type="text" name="date" id="date" value="{{ article.date|date('Y-m-d H:i:s') }}" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="titre">Titre de l'article</label><br />
+                            <input class="form-control" type="text" name="titre" id="titre" value="{{ article.titre }}" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="detail">Contenu de l'article</label><br />
+                            <textarea class="form-control" row="3" name="contenu" id="contenu">{{ article.contenu }}</textarea>
+                        </div>
+
+                        <input type="hidden" name="method" value="majarticle" />
+                        <input type="hidden" name="id" value="{{ article.id }}" />
+                        <input class="btn btn-default" type="submit" name="valide" value="Enregistrer la modification" />
+                        <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    </div> {# -- fermeture de la row principale -- #}
+
+{% endblock %}
+
+
+
+
