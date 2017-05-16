@@ -21,8 +21,8 @@
     {# -- row afficher/masquer l'accès au journal sur le site -- #}
 
     <div class="row bandeau">
-        <div class="col-xs-12">
-            <p>Activation des liens vers le journal</p>
+        <div class="col-xs-12 text-center">
+            <p>Activation/désactivation des liens vers le journal</p>
         </div>
     </div>
     <div class="row rowAffichageJournal">
@@ -39,7 +39,7 @@
     </div>
 
     <div class="row bandeau">
-        <div class="col-xs-12">
+        <div class="col-xs-12 text-center">
             <p>Ajout d'un article</p>
         </div>
     </div>
@@ -117,25 +117,22 @@
         <div class="col-xs-12">
 
             <table>
-                <div class="row">
+                <thead class="listeArticle">
+                    <td class="text-center" width="15%">Date de parution</td>
+                    <td class="text-center" width="10%">Image</tdwidth>
+                    <td width="20%">Titre de l'article</td>
+                    <td width="40%">Contenu de l'article</tdwidth>
+                    <td width="12%">Modification/Suppression</td>
+                </thead>
 
-                    <tr class="listeArticle">
-                        <div class="col-sm-2 col-lg-2"><td>Date de parution</td></div>
-                        <div class="col-sm-4 col-lg-2"><td>Titre de l'article</td></div>
-                        <div class=".hidden-sm-down col-lg-4"><td>Contenu de l'article</td></div>
-                        <div class="col-sm-6 col-lg-4"><td>Modification/Suppression</td></div>
-                    </tr>
-
-                </div>
-
-                <div class="row">
                 {% for article in articles %}
 
                     <tr>
-                        <td class="col-sm-2 col-lg-2">{{ article.date|date('d-m-Y H:m') }}</td>
-                        <td class="col-sm-4 col-lg-2">{{ article.titre }}</td>
-                        <td class=".hidden-sm-down col-lg-4">{{ article.contenu }}</td>
-                        <td class="col-sm-6 col-lg-4">
+                        <td class="text-center">{{ article.date|date('d-m-Y H:m') }}</td>
+                        <td class="text-center"><img src="../img/imgJ-{{ article.id }}.jpg" height="40" /></td>
+                        <td>{{ article.titre }}</td>
+                        <td>{{ article.contenu }}</td>
+                        <td>
                             <form method="post" action="chezGaston">
                                 <input type="hidden" name="method" value="modif" />
                                 <input type="hidden" name="id" value="{{ article.id }}" />
@@ -150,7 +147,6 @@
                     </tr>
 
                 {% endfor %}
-                </div>
 
             </table>
 
