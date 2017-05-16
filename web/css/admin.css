@@ -1,45 +1,32 @@
 .tdDate{
-    width: 15%;
+    width: 12%;
 }
-
 .tdAuteur{
     width: 15%;
-
 }
-
 .tdMessage{
     width: 30%;
-
 }
-
 .tdEmail{
     width: 15%;
-
 }
-
 .tdTelephone{
     width: 10%;
-
 }
-
 .tdAction{
     width: 15%;
-
 }
-
 body {
     font-size: 16px;
+}
+table {
+    width: 100%;
 }
 
 tr {
     border-top: 1px solid #2b542c;
     border-bottom: 1px solid #2b542c;
-    padding: 5px 0 5px 0;
-}
-
-td {
-/*    border: 1px solid #2b542c;*/
-    width: 30%;
+    padding: 5px;
 }
 
 .pointer {
@@ -86,10 +73,8 @@ td {
 .titre h1
 {
     font-family: 'Montserrat Alternates', sans-serif;
-    /*color: #00ab0c;*/
     color: #2b542c;
     font-size: 30px;
-    /*padding: 20px;*/
     margin-top:120px;
 }
 #navbar {

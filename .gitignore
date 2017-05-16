@@ -1,3 +1,4 @@
-/.idea
-/vendor/
-/src/model/connect.php
+.idea
+vendor/
+src/model/connect.php
+web/img/

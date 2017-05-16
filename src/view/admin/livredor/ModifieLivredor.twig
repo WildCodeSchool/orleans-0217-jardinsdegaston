@@ -21,13 +21,13 @@
 
         {# --- barre de titre --- #}
         <div class="col-xs-12 bandeau text-center">
-            Réalisation {{ realisation.id }}
+            Modifier un commentaire
         </div>
         {# --- bloc infos --- #}
         <div class="col-xs-12">
             <div class="row contenu">
 
-                <div class="col-sm-12 col-md-4 ">
+                <div class="col-sm-12 col-md-4 col-md-offset-4 text-center">
                     <div class="hidden-xs hidden-sm"><br /></div>
                     <form method="post" action="livredor">
                         <input type="hidden" name="method" value="addLdor" />
@@ -40,10 +40,9 @@
                         <input class="btn btn-default" type="submit" name="abandon" value="Abandonner la modification" />
                     </form>
                 </div>
+
             </div>
         </div>
-
-
 
     </div> {# -- fermeture de la row principale -- #}
 
