@@ -31,10 +31,10 @@ Gaston", dans le domaine de l’entretien de parcs et jardins.
 L’ensemble des scripts du site est disponible ici (dépôt github) :
 https://github.com/WildCodeSchool/orleans-0217-jardinsdegaston
 a) – cloner le dépôt (git clone)
-b) – Utiliser composer pour installer les modules nécessaires (composer install)
+b) – Utiliser composer pour installer les modules nécessaires (composer install + composer dump-autoload)
 c) – Changer le propriétaire de l’arborescence (chmod -R <userApache>:<groupApache>  <arborescence>)
 d) – Faire pointer la racine du site web sur le répertoire web (serveur virtuel apache)
- 
+e) - creer .htpassword pour l'arbo admin
 
 
 4°) - Base de données :
