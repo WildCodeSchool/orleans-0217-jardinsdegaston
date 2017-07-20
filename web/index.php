@@ -4,6 +4,7 @@
 // --- autoloader de composer ---
 require_once __DIR__ . '/../vendor/autoload.php';
 
+DEFINE('PATH_FILE_ZF_VALIDATE', '../language/fr_FR/Zend_Validate.php');
 
 // --- initialisation de la methode pour le controleur defini ci-dessus
 $method = 'index';

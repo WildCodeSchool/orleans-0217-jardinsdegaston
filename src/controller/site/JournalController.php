@@ -19,9 +19,26 @@ class JournalController extends Controller
 
     public function index()
     {
+
+        $mois = [
+            '01' => 'janvier',
+            '02' => 'février',
+            '03' => 'mars',
+            '04' => 'avril',
+            '05' => 'mai',
+            '06' => 'juin',
+            '07' => 'juillet',
+            '08' => 'août',
+            '09' => 'septembre',
+            '10' => 'octobre',
+            '11' => 'novembre',
+            '12' => 'décembre',
+        ];
+
         $journal = new JournalManager($this->bdd, Journal::class);
         $articles = $journal->findAllReverse('journal');
-        return $this->twig->render('site/journal.twig', ['articles'=>$articles]);
+        return $this->twig->render('site/journal.twig', ['articles'=> $articles,
+                                                        'mois' => $mois]);
     }
 
 }

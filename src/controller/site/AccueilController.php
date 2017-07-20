@@ -21,6 +21,8 @@ use wcs\model\RealisationManager;
 use wcs\model\Parametre;
 use wcs\model\ParametreManager;
 use wcs\form\ContactFilter;
+use wcs\Service\Translator;
+use wcs\Service\TranslatorInterface;
 
 /*
  * class pour l'accueil
@@ -28,6 +30,17 @@ use wcs\form\ContactFilter;
 
 class AccueilController extends Controller
 {
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
+
+    public function __construct($twig, \PDO $bdd)
+    {
+        parent::__construct($twig, $bdd);
+        $translator = new Translator();
+        $this->translator = $translator;
+    }
 
     public function index()
     {
@@ -81,10 +94,15 @@ class AccueilController extends Controller
                 };
             } else {
                 $nomErr = $contactForm->get('NomContact')->getMessages();
+                $this->translator->translate($nomErr);
                 $prenomErr = $contactForm->get('PrenomContact')->getMessages();
+                $this->translator->translate($prenomErr);
                 $emailErr = $contactForm->get('EmailContact')->getMessages();
+                $this->translator->translate($emailErr);
                 $telErr = $contactForm->get('TelContact')->getMessages();
+                $this->translator->translate($telErr);
                 $contenuErr = $contactForm->get('TexteContact')->getMessages();
+                $this->translator->translate($contenuErr);
             }
             return $this->twig->render('site/Accueil.twig', array('nomErr' => $nomErr,
                                                                     'prenomErr' => $prenomErr,

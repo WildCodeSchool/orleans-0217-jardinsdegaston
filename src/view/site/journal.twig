@@ -61,7 +61,7 @@
 
                 {% set dateref = article.date|date('Y m') %}
 
-                <li><div class="tldate"><h3>{{ article.date|date('F Y') }}</h3></div></li>
+                <li><div class="tldate"><h3>{{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</h3></div></li>
 
                 {% endif %}
 
@@ -72,7 +72,7 @@
                     <div class="timeline-panel">
                         <div class="tl-heading">
                             <h2>{{ article.titre }}</h2>
-                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j F Y') }}</small></p>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j') }} {{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</small></p>
                         </div>
                         <div class="tl-body">
                             <p>{{ article.contenu }}.</p>
@@ -111,7 +111,7 @@
                     <div class="timeline-panel">
                         <div class="tl-heading">
                             <h2>{{ article.titre }}</h2>
-                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j F Y') }}</small></p>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ article.date|date('j') }} {{ mois[article.date|date('m')] }} {{ article.date|date('Y') }}</small></p>
                         </div>
                         <div class="tl-body">
                             <p>{{ article.contenu }}</p>
