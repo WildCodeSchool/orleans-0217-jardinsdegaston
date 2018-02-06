@@ -173,7 +173,7 @@ class AccueilController extends Controller
             $summer = new \DateTime('June 20');
             $fall = new \DateTime('September 22');
             $winter = new \DateTime('December 21');
-            $saison = '';
+            $saison = 'printemps';
 
             switch (true) {
                 case $today >= $spring && $today < $summer:
